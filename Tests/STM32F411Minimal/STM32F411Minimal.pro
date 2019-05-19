@@ -1,4 +1,4 @@
-update=Mon 06 May 2019 09:59:40 PM CDT
+update=Thu 09 May 2019 07:22:10 PM CDT
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=BreadboardPwr.net
+LastNetListRead=STM32F411Minimal.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0

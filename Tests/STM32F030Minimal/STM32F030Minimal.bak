@@ -340,7 +340,7 @@ L Connector_Generic:Conn_01x03 J1
 U 1 1 5CD32402
 P 3350 2900
 F 0 "J1" H 3268 2575 50  0000 C CNN
-F 1 "Conn_01x03" H 3268 2666 50  0000 C CNN
+F 1 "Aux" H 3268 2666 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3350 2900 50  0001 C CNN
 F 3 "~" H 3350 2900 50  0001 C CNN
 	1    3350 2900
@@ -363,7 +363,7 @@ L Connector_Generic:Conn_01x05 J2
 U 1 1 5CD35A96
 P 3350 3500
 F 0 "J2" H 3268 3075 50  0000 C CNN
-F 1 "Conn_01x05" H 3268 3166 50  0000 C CNN
+F 1 "Left" H 3268 3166 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3350 3500 50  0001 C CNN
 F 3 "~" H 3350 3500 50  0001 C CNN
 	1    3350 3500
@@ -394,7 +394,7 @@ L Connector_Generic:Conn_01x06 J3
 U 1 1 5CD3FA78
 P 3350 4300
 F 0 "J3" H 3268 3775 50  0000 C CNN
-F 1 "Conn_01x06" H 3268 3866 50  0000 C CNN
+F 1 "Right" H 3268 3866 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3350 4300 50  0001 C CNN
 F 3 "~" H 3350 4300 50  0001 C CNN
 	1    3350 4300
@@ -429,7 +429,7 @@ L Connector_Generic:Conn_01x05 J4
 U 1 1 5CD4FE34
 P 3350 5050
 F 0 "J4" H 3268 4625 50  0000 C CNN
-F 1 "Conn_01x05" H 3268 4716 50  0000 C CNN
+F 1 "Prog" H 3268 4716 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3350 5050 50  0001 C CNN
 F 3 "~" H 3350 5050 50  0001 C CNN
 	1    3350 5050
@@ -461,9 +461,9 @@ Wire Wire Line
 	6100 4100 6100 4150
 Text GLabel 3600 5050 2    50   Input ~ 0
 RST
-Text GLabel 3600 5150 2    50   Input ~ 0
-SWDIO
 Text GLabel 3600 5250 2    50   Input ~ 0
+SWDIO
+Text GLabel 3600 5150 2    50   Input ~ 0
 SWCLK
 Wire Wire Line
 	6100 2050 6150 2050
