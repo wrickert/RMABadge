@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "Wrench")(type KiCad)(uri "$(KIPRJMOD)/Wrench.pretty")(options "")(descr ""))
+)

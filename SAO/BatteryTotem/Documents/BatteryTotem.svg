@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120.0mm"
+   height="120.0mm"
+   viewBox="0 0 120.0 120.0"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="BatteryTotem.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-113.83503"
+     inkscape:cy="171.87795"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g836"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     borderlayer="true">
+    <inkscape:grid
+       spacingx="2.54"
+       spacingy="2.54"
+       empspacing="1"
+       type="xygrid"
+       units="mm"
+       id="grid816" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g822"
+     sodipodi:insensitive="true"
+     inkscape:groupmode="layer"
+     inkscape:label="[fixed] BG">
+    <rect
+       id="rect820"
+       style="stroke:none;fill-opacity:1;fill:#FFFFFF"
+       height="120.0"
+       width="120.0"
+       y="0"
+       x="0" />
+  </g>
+  <g
+     id="g824"
+     inkscape:groupmode="layer"
+     inkscape:label="Edge.Cuts">
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="rect854"
+       d="M12.993298 7.674372L9.118878 11.54878L11.138268 13.573403L7.949968 16.795926L97.413067 106.25902L107.68028 95.991809L18.217198 6.528723L15.009638 9.711112L12.993298 7.674372"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.47999999;stroke-miterlimit:11.89999962;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <g
+     id="g826"
+     inkscape:groupmode="layer"
+     inkscape:label="B.Cu-disabled" />
+  <g
+     id="g828"
+     inkscape:groupmode="layer"
+     inkscape:label="B.Mask-disabled" />
+  <g
+     id="g830"
+     inkscape:groupmode="layer"
+     inkscape:label="B.Silk-disabled" />
+  <g
+     id="g832"
+     inkscape:groupmode="layer"
+     inkscape:label="F.Cu">
+    <rect
+       style="fill:#f50000;fill-opacity:1;stroke:none;stroke-width:0.47999999;stroke-miterlimit:11.89999962;stroke-dasharray:none;stroke-opacity:1"
+       id="rect863"
+       width="2.8595505"
+       height="5.4829578"
+       x="14.614253"
+       y="-3.76105"
+       transform="rotate(45)" />
+    <rect
+       style="fill:#f50000;fill-opacity:1;stroke:none;stroke-width:0.47999999;stroke-miterlimit:11.89999962;stroke-dasharray:none;stroke-opacity:1"
+       id="rect865"
+       width="2.2500565"
+       height="14.614335"
+       x="141.7679"
+       y="-8.3592939"
+       transform="rotate(45)" />
+  </g>
+  <g
+     id="g834"
+     inkscape:groupmode="layer"
+     inkscape:label="F.Mask-disabled" />
+  <g
+     id="g836"
+     inkscape:groupmode="layer"
+     inkscape:label="F.Silk"
+     style="opacity:0.98">
+    <rect
+       style="fill:#8de8c3;fill-opacity:1;stroke:none;stroke-width:0.47999999;stroke-miterlimit:11.89999962;stroke-dasharray:none;stroke-opacity:1"
+       id="rect867"
+       width="56.13327"
+       height="14.589516"
+       x="17.498058"
+       y="-8.2650099"
+       transform="rotate(45)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot869"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.18708867,0.18708867,-0.18708867,0.18708867,172.4027,36.497356)"><flowRegion
+         id="flowRegion871"
+         style=""><rect
+           id="rect873"
+           width="237.85712"
+           height="112.99863"
+           x="-279.99997"
+           y="311.97327"
+           style="" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara897">Copper Top SAO Rechargable</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="73.820312"
+       y="5.7575426"
+       id="text903"
+       transform="rotate(45)"><tspan
+         sodipodi:role="line"
+         id="tspan901"
+         x="73.820312"
+         y="5.7575426"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Totem</tspan></text>
+  </g>
+  <g
+     id="g838"
+     inkscape:groupmode="layer"
+     inkscape:label="Drill" />
+</svg>

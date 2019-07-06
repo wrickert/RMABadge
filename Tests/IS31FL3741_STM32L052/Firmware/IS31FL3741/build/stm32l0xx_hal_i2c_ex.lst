@@ -1,0 +1,928 @@
+ARM GAS  /tmp/cc5uUZ2M.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_hal_i2c_ex.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_I2CEx_ConfigAnalogFilter,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_I2CEx_ConfigAnalogFilter
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_I2CEx_ConfigAnalogFilter:
+  25              	.LVL0:
+  26              	.LFB34:
+  27              		.file 1 "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c"
+   1:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+   2:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ******************************************************************************
+   3:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @file    stm32l0xx_hal_i2c_ex.c
+   4:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @author  MCD Application Team
+   5:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief   I2C Extended HAL module driver.
+   6:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *          This file provides firmware functions to manage the following
+   7:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *          functionalities of I2C Extended peripheral:
+   8:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *           + Extended features functions
+   9:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *
+  10:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   @verbatim
+  11:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ==============================================================================
+  12:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****                ##### I2C peripheral Extended features  #####
+  13:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ==============================================================================
+  14:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  15:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   [..] Comparing to other previous devices, the I2C interface for STM32L0xx
+  16:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****        devices contains the following additional features
+  17:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  18:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****        (+) Possibility to disable or enable Analog Noise Filter
+  19:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****        (+) Use of a configured Digital Noise Filter
+  20:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****        (+) Disable or enable wakeup from Stop mode(s)
+  21:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****        (+) Disable or enable Fast Mode Plus
+  22:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  23:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****                      ##### How to use this driver #####
+  24:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ==============================================================================
+  25:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   [..] This driver provides functions to configure Noise Filter and Wake Up Feature
+  26:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     (#) Configure I2C Analog noise filter using the function HAL_I2CEx_ConfigAnalogFilter()
+  27:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     (#) Configure I2C Digital noise filter using the function HAL_I2CEx_ConfigDigitalFilter()
+  28:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     (#) Configure the enable or disable of I2C Wake Up Mode using the functions :
+  29:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_EnableWakeUp()
+  30:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_DisableWakeUp()
+  31:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     (#) Configure the enable or disable of fast mode plus driving capability using the functions :
+ARM GAS  /tmp/cc5uUZ2M.s 			page 2
+
+
+  32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_EnableFastModePlus()
+  33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_DisableFastModePlus()
+  34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   @endverbatim
+  35:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ******************************************************************************
+  36:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @attention
+  37:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *
+  38:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
+  39:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * All rights reserved.</center></h2>
+  40:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *
+  41:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  42:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * the "License"; You may not use this file except in compliance with the
+  43:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * License. You may obtain a copy of the License at:
+  44:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  45:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *
+  46:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   ******************************************************************************
+  47:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+  48:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  49:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Includes ------------------------------------------------------------------*/
+  50:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** #include "stm32l0xx_hal.h"
+  51:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  52:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /** @addtogroup STM32L0xx_HAL_Driver
+  53:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @{
+  54:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+  55:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  56:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /** @defgroup I2CEx I2CEx
+  57:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief I2C Extended HAL module driver
+  58:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @{
+  59:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+  60:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  61:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** #ifdef HAL_I2C_MODULE_ENABLED
+  62:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  63:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private typedef -----------------------------------------------------------*/
+  64:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private define ------------------------------------------------------------*/
+  65:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private macro -------------------------------------------------------------*/
+  66:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private variables ---------------------------------------------------------*/
+  67:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private function prototypes -----------------------------------------------*/
+  68:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /* Private functions ---------------------------------------------------------*/
+  69:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  70:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /** @defgroup I2CEx_Exported_Functions I2C Extended Exported Functions
+  71:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @{
+  72:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+  73:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  74:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /** @defgroup I2CEx_Exported_Functions_Group1 Extended features functions
+  75:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief    Extended features functions
+  76:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****  *
+  77:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** @verbatim
+  78:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****  ===============================================================================
+  79:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****                       ##### Extended features functions #####
+  80:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****  ===============================================================================
+  81:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     [..] This section provides functions allowing to:
+  82:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****       (+) Configure Noise Filters
+  83:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****       (+) Configure Wake Up Feature
+  84:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****       (+) Configure Fast Mode Plus
+  85:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  86:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** @endverbatim
+  87:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @{
+  88:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ARM GAS  /tmp/cc5uUZ2M.s 			page 3
+
+
+  89:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+  90:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+  91:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief  Configure I2C Analog noise filter.
+  92:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  hi2c Pointer to a I2C_HandleTypeDef structure that contains
+  93:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *                the configuration information for the specified I2Cx peripheral.
+  94:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  AnalogFilter New state of the Analog filter.
+  95:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval HAL status
+  96:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+  97:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** HAL_StatusTypeDef HAL_I2CEx_ConfigAnalogFilter(I2C_HandleTypeDef *hi2c, uint32_t AnalogFilter)
+  98:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+  28              		.loc 1 98 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 98 1 is_stmt 0 view .LVU1
+  33 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 20
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  99:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameters */
+ 100:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
+  41              		.loc 1 100 3 is_stmt 1 view .LVU2
+ 101:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_ANALOG_FILTER(AnalogFilter));
+  42              		.loc 1 101 3 view .LVU3
+ 102:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 103:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   if (hi2c->State == HAL_I2C_STATE_READY)
+  43              		.loc 1 103 3 view .LVU4
+  44              		.loc 1 103 11 is_stmt 0 view .LVU5
+  45 0002 4123     		movs	r3, #65
+  46 0004 C35C     		ldrb	r3, [r0, r3]
+  47              		.loc 1 103 6 view .LVU6
+  48 0006 202B     		cmp	r3, #32
+  49 0008 20D1     		bne	.L3
+ 104:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 105:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Locked */
+ 106:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_LOCK(hi2c);
+  50              		.loc 1 106 5 is_stmt 1 view .LVU7
+  51              		.loc 1 106 5 view .LVU8
+  52 000a 2033     		adds	r3, r3, #32
+  53 000c C35C     		ldrb	r3, [r0, r3]
+  54 000e 012B     		cmp	r3, #1
+  55 0010 1ED0     		beq	.L4
+  56              		.loc 1 106 5 discriminator 2 view .LVU9
+  57 0012 4024     		movs	r4, #64
+  58 0014 0122     		movs	r2, #1
+  59 0016 0255     		strb	r2, [r0, r4]
+ 107:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 108:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
+  60              		.loc 1 108 5 discriminator 2 view .LVU10
+  61              		.loc 1 108 17 is_stmt 0 discriminator 2 view .LVU11
+  62 0018 4125     		movs	r5, #65
+  63 001a 2423     		movs	r3, #36
+  64 001c 4355     		strb	r3, [r0, r5]
+ARM GAS  /tmp/cc5uUZ2M.s 			page 4
+
+
+ 109:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 110:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Disable the selected I2C peripheral */
+ 111:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_DISABLE(hi2c);
+  65              		.loc 1 111 5 is_stmt 1 discriminator 2 view .LVU12
+  66 001e 0668     		ldr	r6, [r0]
+  67 0020 3368     		ldr	r3, [r6]
+  68 0022 9343     		bics	r3, r2
+  69 0024 3360     		str	r3, [r6]
+ 112:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 113:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Reset I2Cx ANOFF bit */
+ 114:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 &= ~(I2C_CR1_ANFOFF);
+  70              		.loc 1 114 5 discriminator 2 view .LVU13
+  71              		.loc 1 114 9 is_stmt 0 discriminator 2 view .LVU14
+  72 0026 0668     		ldr	r6, [r0]
+  73              		.loc 1 114 25 discriminator 2 view .LVU15
+  74 0028 3368     		ldr	r3, [r6]
+  75 002a 0A4F     		ldr	r7, .L5
+  76 002c 3B40     		ands	r3, r7
+  77 002e 3360     		str	r3, [r6]
+ 115:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 116:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Set analog filter bit*/
+ 117:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 |= AnalogFilter;
+  78              		.loc 1 117 5 is_stmt 1 discriminator 2 view .LVU16
+  79              		.loc 1 117 9 is_stmt 0 discriminator 2 view .LVU17
+  80 0030 0668     		ldr	r6, [r0]
+  81              		.loc 1 117 25 discriminator 2 view .LVU18
+  82 0032 3368     		ldr	r3, [r6]
+  83 0034 1943     		orrs	r1, r3
+  84              	.LVL1:
+  85              		.loc 1 117 25 discriminator 2 view .LVU19
+  86 0036 3160     		str	r1, [r6]
+ 118:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 119:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
+  87              		.loc 1 119 5 is_stmt 1 discriminator 2 view .LVU20
+  88 0038 0168     		ldr	r1, [r0]
+  89 003a 0B68     		ldr	r3, [r1]
+  90 003c 1343     		orrs	r3, r2
+  91 003e 0B60     		str	r3, [r1]
+ 120:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 121:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_READY;
+  92              		.loc 1 121 5 discriminator 2 view .LVU21
+  93              		.loc 1 121 17 is_stmt 0 discriminator 2 view .LVU22
+  94 0040 2023     		movs	r3, #32
+  95 0042 4355     		strb	r3, [r0, r5]
+ 122:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 123:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Unlocked */
+ 124:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_UNLOCK(hi2c);
+  96              		.loc 1 124 5 is_stmt 1 discriminator 2 view .LVU23
+  97              		.loc 1 124 5 discriminator 2 view .LVU24
+  98 0044 0023     		movs	r3, #0
+  99 0046 0355     		strb	r3, [r0, r4]
+ 125:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 126:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_OK;
+ 100              		.loc 1 126 5 discriminator 2 view .LVU25
+ 101              		.loc 1 126 12 is_stmt 0 discriminator 2 view .LVU26
+ 102 0048 0020     		movs	r0, #0
+ 103              	.LVL2:
+ARM GAS  /tmp/cc5uUZ2M.s 			page 5
+
+
+ 104              	.L2:
+ 127:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 128:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   else
+ 129:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 130:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_BUSY;
+ 131:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 132:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 105              		.loc 1 132 1 view .LVU27
+ 106              		@ sp needed
+ 107 004a F0BD     		pop	{r4, r5, r6, r7, pc}
+ 108              	.LVL3:
+ 109              	.L3:
+ 130:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 110              		.loc 1 130 12 view .LVU28
+ 111 004c 0220     		movs	r0, #2
+ 112              	.LVL4:
+ 130:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 113              		.loc 1 130 12 view .LVU29
+ 114 004e FCE7     		b	.L2
+ 115              	.LVL5:
+ 116              	.L4:
+ 106:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 117              		.loc 1 106 5 view .LVU30
+ 118 0050 0220     		movs	r0, #2
+ 119              	.LVL6:
+ 106:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 120              		.loc 1 106 5 view .LVU31
+ 121 0052 FAE7     		b	.L2
+ 122              	.L6:
+ 123              		.align	2
+ 124              	.L5:
+ 125 0054 FFEFFFFF 		.word	-4097
+ 126              		.cfi_endproc
+ 127              	.LFE34:
+ 129              		.section	.text.HAL_I2CEx_ConfigDigitalFilter,"ax",%progbits
+ 130              		.align	1
+ 131              		.global	HAL_I2CEx_ConfigDigitalFilter
+ 132              		.syntax unified
+ 133              		.code	16
+ 134              		.thumb_func
+ 135              		.fpu softvfp
+ 137              	HAL_I2CEx_ConfigDigitalFilter:
+ 138              	.LVL7:
+ 139              	.LFB35:
+ 133:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 134:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+ 135:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief  Configure I2C Digital noise filter.
+ 136:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  hi2c Pointer to a I2C_HandleTypeDef structure that contains
+ 137:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *                the configuration information for the specified I2Cx peripheral.
+ 138:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  DigitalFilter Coefficient of digital noise filter between Min_Data=0x00 and Max_Data=0x
+ 139:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval HAL status
+ 140:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ 141:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** HAL_StatusTypeDef HAL_I2CEx_ConfigDigitalFilter(I2C_HandleTypeDef *hi2c, uint32_t DigitalFilter)
+ 142:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+ 140              		.loc 1 142 1 is_stmt 1 view -0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cc5uUZ2M.s 			page 6
+
+
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144              		.loc 1 142 1 is_stmt 0 view .LVU33
+ 145 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 146              	.LCFI1:
+ 147              		.cfi_def_cfa_offset 20
+ 148              		.cfi_offset 4, -20
+ 149              		.cfi_offset 5, -16
+ 150              		.cfi_offset 6, -12
+ 151              		.cfi_offset 7, -8
+ 152              		.cfi_offset 14, -4
+ 143:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   uint32_t tmpreg;
+ 153              		.loc 1 143 3 is_stmt 1 view .LVU34
+ 144:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 145:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameters */
+ 146:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
+ 154              		.loc 1 146 3 view .LVU35
+ 147:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_DIGITAL_FILTER(DigitalFilter));
+ 155              		.loc 1 147 3 view .LVU36
+ 148:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 149:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   if (hi2c->State == HAL_I2C_STATE_READY)
+ 156              		.loc 1 149 3 view .LVU37
+ 157              		.loc 1 149 11 is_stmt 0 view .LVU38
+ 158 0002 4123     		movs	r3, #65
+ 159 0004 C35C     		ldrb	r3, [r0, r3]
+ 160              		.loc 1 149 6 view .LVU39
+ 161 0006 202B     		cmp	r3, #32
+ 162 0008 1ED1     		bne	.L9
+ 150:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 151:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Locked */
+ 152:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_LOCK(hi2c);
+ 163              		.loc 1 152 5 is_stmt 1 view .LVU40
+ 164              		.loc 1 152 5 view .LVU41
+ 165 000a 2033     		adds	r3, r3, #32
+ 166 000c C35C     		ldrb	r3, [r0, r3]
+ 167 000e 012B     		cmp	r3, #1
+ 168 0010 1CD0     		beq	.L10
+ 169              		.loc 1 152 5 discriminator 2 view .LVU42
+ 170 0012 4024     		movs	r4, #64
+ 171 0014 0122     		movs	r2, #1
+ 172 0016 0255     		strb	r2, [r0, r4]
+ 153:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 154:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
+ 173              		.loc 1 154 5 discriminator 2 view .LVU43
+ 174              		.loc 1 154 17 is_stmt 0 discriminator 2 view .LVU44
+ 175 0018 4125     		movs	r5, #65
+ 176 001a 2423     		movs	r3, #36
+ 177 001c 4355     		strb	r3, [r0, r5]
+ 155:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 156:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Disable the selected I2C peripheral */
+ 157:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_DISABLE(hi2c);
+ 178              		.loc 1 157 5 is_stmt 1 discriminator 2 view .LVU45
+ 179 001e 0668     		ldr	r6, [r0]
+ 180 0020 3368     		ldr	r3, [r6]
+ 181 0022 9343     		bics	r3, r2
+ 182 0024 3360     		str	r3, [r6]
+ 158:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 159:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Get the old register value */
+ARM GAS  /tmp/cc5uUZ2M.s 			page 7
+
+
+ 160:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     tmpreg = hi2c->Instance->CR1;
+ 183              		.loc 1 160 5 discriminator 2 view .LVU46
+ 184              		.loc 1 160 18 is_stmt 0 discriminator 2 view .LVU47
+ 185 0026 0668     		ldr	r6, [r0]
+ 186              		.loc 1 160 12 discriminator 2 view .LVU48
+ 187 0028 3368     		ldr	r3, [r6]
+ 188              	.LVL8:
+ 161:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 162:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Reset I2Cx DNF bits [11:8] */
+ 163:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     tmpreg &= ~(I2C_CR1_DNF);
+ 189              		.loc 1 163 5 is_stmt 1 discriminator 2 view .LVU49
+ 190              		.loc 1 163 12 is_stmt 0 discriminator 2 view .LVU50
+ 191 002a 094F     		ldr	r7, .L11
+ 192 002c 3B40     		ands	r3, r7
+ 193              	.LVL9:
+ 164:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 165:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Set I2Cx DNF coefficient */
+ 166:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     tmpreg |= DigitalFilter << 8U;
+ 194              		.loc 1 166 5 is_stmt 1 discriminator 2 view .LVU51
+ 195              		.loc 1 166 29 is_stmt 0 discriminator 2 view .LVU52
+ 196 002e 0902     		lsls	r1, r1, #8
+ 197              	.LVL10:
+ 198              		.loc 1 166 12 discriminator 2 view .LVU53
+ 199 0030 1943     		orrs	r1, r3
+ 200              	.LVL11:
+ 167:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 168:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Store the new register value */
+ 169:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 = tmpreg;
+ 201              		.loc 1 169 5 is_stmt 1 discriminator 2 view .LVU54
+ 202              		.loc 1 169 25 is_stmt 0 discriminator 2 view .LVU55
+ 203 0032 3160     		str	r1, [r6]
+ 170:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 171:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
+ 204              		.loc 1 171 5 is_stmt 1 discriminator 2 view .LVU56
+ 205 0034 0168     		ldr	r1, [r0]
+ 206              	.LVL12:
+ 207              		.loc 1 171 5 is_stmt 0 discriminator 2 view .LVU57
+ 208 0036 0B68     		ldr	r3, [r1]
+ 209 0038 1343     		orrs	r3, r2
+ 210 003a 0B60     		str	r3, [r1]
+ 211              	.LVL13:
+ 172:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 173:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_READY;
+ 212              		.loc 1 173 5 is_stmt 1 discriminator 2 view .LVU58
+ 213              		.loc 1 173 17 is_stmt 0 discriminator 2 view .LVU59
+ 214 003c 2023     		movs	r3, #32
+ 215 003e 4355     		strb	r3, [r0, r5]
+ 174:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 175:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Unlocked */
+ 176:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_UNLOCK(hi2c);
+ 216              		.loc 1 176 5 is_stmt 1 discriminator 2 view .LVU60
+ 217              		.loc 1 176 5 discriminator 2 view .LVU61
+ 218 0040 0023     		movs	r3, #0
+ 219 0042 0355     		strb	r3, [r0, r4]
+ 177:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 178:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_OK;
+ 220              		.loc 1 178 5 discriminator 2 view .LVU62
+ARM GAS  /tmp/cc5uUZ2M.s 			page 8
+
+
+ 221              		.loc 1 178 12 is_stmt 0 discriminator 2 view .LVU63
+ 222 0044 0020     		movs	r0, #0
+ 223              	.LVL14:
+ 224              	.L8:
+ 179:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 180:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   else
+ 181:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 182:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_BUSY;
+ 183:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 184:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 225              		.loc 1 184 1 view .LVU64
+ 226              		@ sp needed
+ 227 0046 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 228              	.LVL15:
+ 229              	.L9:
+ 182:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 230              		.loc 1 182 12 view .LVU65
+ 231 0048 0220     		movs	r0, #2
+ 232              	.LVL16:
+ 182:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 233              		.loc 1 182 12 view .LVU66
+ 234 004a FCE7     		b	.L8
+ 235              	.LVL17:
+ 236              	.L10:
+ 152:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 237              		.loc 1 152 5 view .LVU67
+ 238 004c 0220     		movs	r0, #2
+ 239              	.LVL18:
+ 152:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 240              		.loc 1 152 5 view .LVU68
+ 241 004e FAE7     		b	.L8
+ 242              	.L12:
+ 243              		.align	2
+ 244              	.L11:
+ 245 0050 FFF0FFFF 		.word	-3841
+ 246              		.cfi_endproc
+ 247              	.LFE35:
+ 249              		.section	.text.HAL_I2CEx_EnableWakeUp,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	HAL_I2CEx_EnableWakeUp
+ 252              		.syntax unified
+ 253              		.code	16
+ 254              		.thumb_func
+ 255              		.fpu softvfp
+ 257              	HAL_I2CEx_EnableWakeUp:
+ 258              	.LVL19:
+ 259              	.LFB36:
+ 185:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 186:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+ 187:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief  Enable I2C wakeup from Stop mode(s).
+ 188:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  hi2c Pointer to a I2C_HandleTypeDef structure that contains
+ 189:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *                the configuration information for the specified I2Cx peripheral.
+ 190:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval HAL status
+ 191:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ 192:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** HAL_StatusTypeDef HAL_I2CEx_EnableWakeUp(I2C_HandleTypeDef *hi2c)
+ 193:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+ 260              		.loc 1 193 1 is_stmt 1 view -0
+ARM GAS  /tmp/cc5uUZ2M.s 			page 9
+
+
+ 261              		.cfi_startproc
+ 262              		@ args = 0, pretend = 0, frame = 0
+ 263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 264              		.loc 1 193 1 is_stmt 0 view .LVU70
+ 265 0000 70B5     		push	{r4, r5, r6, lr}
+ 266              	.LCFI2:
+ 267              		.cfi_def_cfa_offset 16
+ 268              		.cfi_offset 4, -16
+ 269              		.cfi_offset 5, -12
+ 270              		.cfi_offset 6, -8
+ 271              		.cfi_offset 14, -4
+ 194:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameters */
+ 195:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_WAKEUP_FROMSTOP_INSTANCE(hi2c->Instance));
+ 272              		.loc 1 195 3 is_stmt 1 view .LVU71
+ 196:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 197:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   if (hi2c->State == HAL_I2C_STATE_READY)
+ 273              		.loc 1 197 3 view .LVU72
+ 274              		.loc 1 197 11 is_stmt 0 view .LVU73
+ 275 0002 4123     		movs	r3, #65
+ 276 0004 C35C     		ldrb	r3, [r0, r3]
+ 277              		.loc 1 197 6 view .LVU74
+ 278 0006 202B     		cmp	r3, #32
+ 279 0008 1DD1     		bne	.L15
+ 198:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 199:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Locked */
+ 200:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_LOCK(hi2c);
+ 280              		.loc 1 200 5 is_stmt 1 view .LVU75
+ 281              		.loc 1 200 5 view .LVU76
+ 282 000a 2033     		adds	r3, r3, #32
+ 283 000c C35C     		ldrb	r3, [r0, r3]
+ 284 000e 012B     		cmp	r3, #1
+ 285 0010 1BD0     		beq	.L16
+ 286              		.loc 1 200 5 discriminator 2 view .LVU77
+ 287 0012 4021     		movs	r1, #64
+ 288 0014 0122     		movs	r2, #1
+ 289 0016 4254     		strb	r2, [r0, r1]
+ 201:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 202:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
+ 290              		.loc 1 202 5 discriminator 2 view .LVU78
+ 291              		.loc 1 202 17 is_stmt 0 discriminator 2 view .LVU79
+ 292 0018 4124     		movs	r4, #65
+ 293 001a 2423     		movs	r3, #36
+ 294 001c 0355     		strb	r3, [r0, r4]
+ 203:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 204:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Disable the selected I2C peripheral */
+ 205:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_DISABLE(hi2c);
+ 295              		.loc 1 205 5 is_stmt 1 discriminator 2 view .LVU80
+ 296 001e 0568     		ldr	r5, [r0]
+ 297 0020 2B68     		ldr	r3, [r5]
+ 298 0022 9343     		bics	r3, r2
+ 299 0024 2B60     		str	r3, [r5]
+ 206:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 207:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Enable wakeup from stop mode */
+ 208:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 |= I2C_CR1_WUPEN;
+ 300              		.loc 1 208 5 discriminator 2 view .LVU81
+ 301              		.loc 1 208 9 is_stmt 0 discriminator 2 view .LVU82
+ 302 0026 0568     		ldr	r5, [r0]
+ARM GAS  /tmp/cc5uUZ2M.s 			page 10
+
+
+ 303              		.loc 1 208 25 discriminator 2 view .LVU83
+ 304 0028 2E68     		ldr	r6, [r5]
+ 305 002a 8023     		movs	r3, #128
+ 306 002c DB02     		lsls	r3, r3, #11
+ 307 002e 3343     		orrs	r3, r6
+ 308 0030 2B60     		str	r3, [r5]
+ 209:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 210:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
+ 309              		.loc 1 210 5 is_stmt 1 discriminator 2 view .LVU84
+ 310 0032 0568     		ldr	r5, [r0]
+ 311 0034 2B68     		ldr	r3, [r5]
+ 312 0036 1343     		orrs	r3, r2
+ 313 0038 2B60     		str	r3, [r5]
+ 211:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 212:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_READY;
+ 314              		.loc 1 212 5 discriminator 2 view .LVU85
+ 315              		.loc 1 212 17 is_stmt 0 discriminator 2 view .LVU86
+ 316 003a 2023     		movs	r3, #32
+ 317 003c 0355     		strb	r3, [r0, r4]
+ 213:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 214:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Unlocked */
+ 215:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_UNLOCK(hi2c);
+ 318              		.loc 1 215 5 is_stmt 1 discriminator 2 view .LVU87
+ 319              		.loc 1 215 5 discriminator 2 view .LVU88
+ 320 003e 0023     		movs	r3, #0
+ 321 0040 4354     		strb	r3, [r0, r1]
+ 216:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 217:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_OK;
+ 322              		.loc 1 217 5 discriminator 2 view .LVU89
+ 323              		.loc 1 217 12 is_stmt 0 discriminator 2 view .LVU90
+ 324 0042 0020     		movs	r0, #0
+ 325              	.LVL20:
+ 326              	.L14:
+ 218:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 219:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   else
+ 220:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 221:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_BUSY;
+ 222:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 223:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 327              		.loc 1 223 1 view .LVU91
+ 328              		@ sp needed
+ 329 0044 70BD     		pop	{r4, r5, r6, pc}
+ 330              	.LVL21:
+ 331              	.L15:
+ 221:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 332              		.loc 1 221 12 view .LVU92
+ 333 0046 0220     		movs	r0, #2
+ 334              	.LVL22:
+ 221:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 335              		.loc 1 221 12 view .LVU93
+ 336 0048 FCE7     		b	.L14
+ 337              	.LVL23:
+ 338              	.L16:
+ 200:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 339              		.loc 1 200 5 view .LVU94
+ 340 004a 0220     		movs	r0, #2
+ 341              	.LVL24:
+ARM GAS  /tmp/cc5uUZ2M.s 			page 11
+
+
+ 200:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 342              		.loc 1 200 5 view .LVU95
+ 343 004c FAE7     		b	.L14
+ 344              		.cfi_endproc
+ 345              	.LFE36:
+ 347              		.section	.text.HAL_I2CEx_DisableWakeUp,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	HAL_I2CEx_DisableWakeUp
+ 350              		.syntax unified
+ 351              		.code	16
+ 352              		.thumb_func
+ 353              		.fpu softvfp
+ 355              	HAL_I2CEx_DisableWakeUp:
+ 356              	.LVL25:
+ 357              	.LFB37:
+ 224:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 225:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+ 226:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief  Disable I2C wakeup from Stop mode(s).
+ 227:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param  hi2c Pointer to a I2C_HandleTypeDef structure that contains
+ 228:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *                the configuration information for the specified I2Cx peripheral.
+ 229:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval HAL status
+ 230:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ 231:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** HAL_StatusTypeDef HAL_I2CEx_DisableWakeUp(I2C_HandleTypeDef *hi2c)
+ 232:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+ 358              		.loc 1 232 1 is_stmt 1 view -0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		.loc 1 232 1 is_stmt 0 view .LVU97
+ 363 0000 70B5     		push	{r4, r5, r6, lr}
+ 364              	.LCFI3:
+ 365              		.cfi_def_cfa_offset 16
+ 366              		.cfi_offset 4, -16
+ 367              		.cfi_offset 5, -12
+ 368              		.cfi_offset 6, -8
+ 369              		.cfi_offset 14, -4
+ 233:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameters */
+ 234:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_WAKEUP_FROMSTOP_INSTANCE(hi2c->Instance));
+ 370              		.loc 1 234 3 is_stmt 1 view .LVU98
+ 235:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 236:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   if (hi2c->State == HAL_I2C_STATE_READY)
+ 371              		.loc 1 236 3 view .LVU99
+ 372              		.loc 1 236 11 is_stmt 0 view .LVU100
+ 373 0002 4123     		movs	r3, #65
+ 374 0004 C35C     		ldrb	r3, [r0, r3]
+ 375              		.loc 1 236 6 view .LVU101
+ 376 0006 202B     		cmp	r3, #32
+ 377 0008 1CD1     		bne	.L19
+ 237:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 238:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Locked */
+ 239:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_LOCK(hi2c);
+ 378              		.loc 1 239 5 is_stmt 1 view .LVU102
+ 379              		.loc 1 239 5 view .LVU103
+ 380 000a 2033     		adds	r3, r3, #32
+ 381 000c C35C     		ldrb	r3, [r0, r3]
+ 382 000e 012B     		cmp	r3, #1
+ 383 0010 1AD0     		beq	.L20
+ARM GAS  /tmp/cc5uUZ2M.s 			page 12
+
+
+ 384              		.loc 1 239 5 discriminator 2 view .LVU104
+ 385 0012 4021     		movs	r1, #64
+ 386 0014 0122     		movs	r2, #1
+ 387 0016 4254     		strb	r2, [r0, r1]
+ 240:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 241:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
+ 388              		.loc 1 241 5 discriminator 2 view .LVU105
+ 389              		.loc 1 241 17 is_stmt 0 discriminator 2 view .LVU106
+ 390 0018 4124     		movs	r4, #65
+ 391 001a 2423     		movs	r3, #36
+ 392 001c 0355     		strb	r3, [r0, r4]
+ 242:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 243:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Disable the selected I2C peripheral */
+ 244:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_DISABLE(hi2c);
+ 393              		.loc 1 244 5 is_stmt 1 discriminator 2 view .LVU107
+ 394 001e 0568     		ldr	r5, [r0]
+ 395 0020 2B68     		ldr	r3, [r5]
+ 396 0022 9343     		bics	r3, r2
+ 397 0024 2B60     		str	r3, [r5]
+ 245:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 246:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Enable wakeup from stop mode */
+ 247:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 &= ~(I2C_CR1_WUPEN);
+ 398              		.loc 1 247 5 discriminator 2 view .LVU108
+ 399              		.loc 1 247 9 is_stmt 0 discriminator 2 view .LVU109
+ 400 0026 0568     		ldr	r5, [r0]
+ 401              		.loc 1 247 25 discriminator 2 view .LVU110
+ 402 0028 2B68     		ldr	r3, [r5]
+ 403 002a 084E     		ldr	r6, .L21
+ 404 002c 3340     		ands	r3, r6
+ 405 002e 2B60     		str	r3, [r5]
+ 248:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 249:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
+ 406              		.loc 1 249 5 is_stmt 1 discriminator 2 view .LVU111
+ 407 0030 0568     		ldr	r5, [r0]
+ 408 0032 2B68     		ldr	r3, [r5]
+ 409 0034 1343     		orrs	r3, r2
+ 410 0036 2B60     		str	r3, [r5]
+ 250:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 251:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_READY;
+ 411              		.loc 1 251 5 discriminator 2 view .LVU112
+ 412              		.loc 1 251 17 is_stmt 0 discriminator 2 view .LVU113
+ 413 0038 2023     		movs	r3, #32
+ 414 003a 0355     		strb	r3, [r0, r4]
+ 252:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 253:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     /* Process Unlocked */
+ 254:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_UNLOCK(hi2c);
+ 415              		.loc 1 254 5 is_stmt 1 discriminator 2 view .LVU114
+ 416              		.loc 1 254 5 discriminator 2 view .LVU115
+ 417 003c 0023     		movs	r3, #0
+ 418 003e 4354     		strb	r3, [r0, r1]
+ 255:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 256:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_OK;
+ 419              		.loc 1 256 5 discriminator 2 view .LVU116
+ 420              		.loc 1 256 12 is_stmt 0 discriminator 2 view .LVU117
+ 421 0040 0020     		movs	r0, #0
+ 422              	.LVL26:
+ 423              	.L18:
+ARM GAS  /tmp/cc5uUZ2M.s 			page 13
+
+
+ 257:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 258:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   else
+ 259:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
+ 260:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     return HAL_BUSY;
+ 261:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 262:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 424              		.loc 1 262 1 view .LVU118
+ 425              		@ sp needed
+ 426 0042 70BD     		pop	{r4, r5, r6, pc}
+ 427              	.LVL27:
+ 428              	.L19:
+ 260:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 429              		.loc 1 260 12 view .LVU119
+ 430 0044 0220     		movs	r0, #2
+ 431              	.LVL28:
+ 260:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   }
+ 432              		.loc 1 260 12 view .LVU120
+ 433 0046 FCE7     		b	.L18
+ 434              	.LVL29:
+ 435              	.L20:
+ 239:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 436              		.loc 1 239 5 view .LVU121
+ 437 0048 0220     		movs	r0, #2
+ 438              	.LVL30:
+ 239:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 439              		.loc 1 239 5 view .LVU122
+ 440 004a FAE7     		b	.L18
+ 441              	.L22:
+ 442              		.align	2
+ 443              	.L21:
+ 444 004c FFFFFBFF 		.word	-262145
+ 445              		.cfi_endproc
+ 446              	.LFE37:
+ 448              		.section	.text.HAL_I2CEx_EnableFastModePlus,"ax",%progbits
+ 449              		.align	1
+ 450              		.global	HAL_I2CEx_EnableFastModePlus
+ 451              		.syntax unified
+ 452              		.code	16
+ 453              		.thumb_func
+ 454              		.fpu softvfp
+ 456              	HAL_I2CEx_EnableFastModePlus:
+ 457              	.LVL31:
+ 458              	.LFB38:
+ 263:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 264:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** #if  (defined(SYSCFG_CFGR2_I2C_PB6_FMP) || defined(SYSCFG_CFGR2_I2C_PB7_FMP)) || (defined(SYSCFG_CF
+ 265:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+ 266:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief Enable the I2C fast mode plus driving capability.
+ 267:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param ConfigFastModePlus Selects the pin.
+ 268:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *   This parameter can be one of the @ref I2CEx_FastModePlus values
+ 269:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For I2C1, fast mode plus driving capability can be enabled on all selected
+ 270:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        I2C1 pins using I2C_FASTMODEPLUS_I2C1 parameter or independently
+ 271:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        on each one of the following pins PB6, PB7, PB8 and PB9.
+ 272:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For remaining I2C1 pins (PA14, PA15...) fast mode plus driving capability
+ 273:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        can be enabled only by using I2C_FASTMODEPLUS_I2C1 parameter.
+ 274:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For all I2C2 pins fast mode plus driving capability can be enabled
+ 275:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C2 parameter.
+ 276:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For all I2C3 pins fast mode plus driving capability can be enabled
+ARM GAS  /tmp/cc5uUZ2M.s 			page 14
+
+
+ 277:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C3 parameter.
+ 278:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval None
+ 279:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ 280:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** void HAL_I2CEx_EnableFastModePlus(uint32_t ConfigFastModePlus)
+ 281:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+ 459              		.loc 1 281 1 is_stmt 1 view -0
+ 460              		.cfi_startproc
+ 461              		@ args = 0, pretend = 0, frame = 0
+ 462              		@ frame_needed = 0, uses_anonymous_args = 0
+ 463              		@ link register save eliminated.
+ 282:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameter */
+ 283:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_FASTMODEPLUS(ConfigFastModePlus));
+ 464              		.loc 1 283 3 view .LVU124
+ 284:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 285:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Enable SYSCFG clock */
+ 286:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+ 465              		.loc 1 286 3 view .LVU125
+ 466 0000 0449     		ldr	r1, .L24
+ 467 0002 4A6B     		ldr	r2, [r1, #52]
+ 468 0004 0123     		movs	r3, #1
+ 469 0006 1A43     		orrs	r2, r3
+ 470 0008 4A63     		str	r2, [r1, #52]
+ 287:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 288:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Enable fast mode plus driving capability for selected pin */
+ 289:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   SET_BIT(SYSCFG->CFGR2, (uint32_t)ConfigFastModePlus);
+ 471              		.loc 1 289 3 view .LVU126
+ 472 000a 034A     		ldr	r2, .L24+4
+ 473 000c 5368     		ldr	r3, [r2, #4]
+ 474 000e 0343     		orrs	r3, r0
+ 475 0010 5360     		str	r3, [r2, #4]
+ 290:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 476              		.loc 1 290 1 is_stmt 0 view .LVU127
+ 477              		@ sp needed
+ 478 0012 7047     		bx	lr
+ 479              	.L25:
+ 480              		.align	2
+ 481              	.L24:
+ 482 0014 00100240 		.word	1073876992
+ 483 0018 00000140 		.word	1073807360
+ 484              		.cfi_endproc
+ 485              	.LFE38:
+ 487              		.section	.text.HAL_I2CEx_DisableFastModePlus,"ax",%progbits
+ 488              		.align	1
+ 489              		.global	HAL_I2CEx_DisableFastModePlus
+ 490              		.syntax unified
+ 491              		.code	16
+ 492              		.thumb_func
+ 493              		.fpu softvfp
+ 495              	HAL_I2CEx_DisableFastModePlus:
+ 496              	.LVL32:
+ 497              	.LFB39:
+ 291:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 292:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
+ 293:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief Disable the I2C fast mode plus driving capability.
+ 294:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @param ConfigFastModePlus Selects the pin.
+ 295:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *   This parameter can be one of the @ref I2CEx_FastModePlus values
+ 296:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For I2C1, fast mode plus driving capability can be disabled on all selected
+ARM GAS  /tmp/cc5uUZ2M.s 			page 15
+
+
+ 297:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        I2C1 pins using I2C_FASTMODEPLUS_I2C1 parameter or independently
+ 298:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        on each one of the following pins PB6, PB7, PB8 and PB9.
+ 299:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For remaining I2C1 pins (PA14, PA15...) fast mode plus driving capability
+ 300:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        can be disabled only by using I2C_FASTMODEPLUS_I2C1 parameter.
+ 301:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For all I2C2 pins fast mode plus driving capability can be disabled
+ 302:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C2 parameter.
+ 303:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @note  For all I2C3 pins fast mode plus driving capability can be disabled
+ 304:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C3 parameter.
+ 305:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @retval None
+ 306:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
+ 307:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** void HAL_I2CEx_DisableFastModePlus(uint32_t ConfigFastModePlus)
+ 308:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** {
+ 498              		.loc 1 308 1 is_stmt 1 view -0
+ 499              		.cfi_startproc
+ 500              		@ args = 0, pretend = 0, frame = 0
+ 501              		@ frame_needed = 0, uses_anonymous_args = 0
+ 502              		@ link register save eliminated.
+ 309:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameter */
+ 310:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_FASTMODEPLUS(ConfigFastModePlus));
+ 503              		.loc 1 310 3 view .LVU129
+ 311:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 312:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Enable SYSCFG clock */
+ 313:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+ 504              		.loc 1 313 3 view .LVU130
+ 505 0000 044A     		ldr	r2, .L27
+ 506 0002 536B     		ldr	r3, [r2, #52]
+ 507 0004 0121     		movs	r1, #1
+ 508 0006 0B43     		orrs	r3, r1
+ 509 0008 5363     		str	r3, [r2, #52]
+ 314:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
+ 315:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Disable fast mode plus driving capability for selected pin */
+ 316:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   CLEAR_BIT(SYSCFG->CFGR2, (uint32_t)ConfigFastModePlus);
+ 510              		.loc 1 316 3 view .LVU131
+ 511 000a 034A     		ldr	r2, .L27+4
+ 512 000c 5368     		ldr	r3, [r2, #4]
+ 513 000e 8343     		bics	r3, r0
+ 514 0010 5360     		str	r3, [r2, #4]
+ 317:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
+ 515              		.loc 1 317 1 is_stmt 0 view .LVU132
+ 516              		@ sp needed
+ 517 0012 7047     		bx	lr
+ 518              	.L28:
+ 519              		.align	2
+ 520              	.L27:
+ 521 0014 00100240 		.word	1073876992
+ 522 0018 00000140 		.word	1073807360
+ 523              		.cfi_endproc
+ 524              	.LFE39:
+ 526              		.text
+ 527              	.Letext0:
+ 528              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 529              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 530              		.file 4 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
+ 531              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l052xx.h"
+ 532              		.file 6 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h"
+ 533              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h"
+ 534              		.file 8 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h"
+ARM GAS  /tmp/cc5uUZ2M.s 			page 16
+
+
+ 535              		.file 9 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
+ARM GAS  /tmp/cc5uUZ2M.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l0xx_hal_i2c_ex.c
+     /tmp/cc5uUZ2M.s:16     .text.HAL_I2CEx_ConfigAnalogFilter:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:24     .text.HAL_I2CEx_ConfigAnalogFilter:0000000000000000 HAL_I2CEx_ConfigAnalogFilter
+     /tmp/cc5uUZ2M.s:125    .text.HAL_I2CEx_ConfigAnalogFilter:0000000000000054 $d
+     /tmp/cc5uUZ2M.s:130    .text.HAL_I2CEx_ConfigDigitalFilter:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:137    .text.HAL_I2CEx_ConfigDigitalFilter:0000000000000000 HAL_I2CEx_ConfigDigitalFilter
+     /tmp/cc5uUZ2M.s:245    .text.HAL_I2CEx_ConfigDigitalFilter:0000000000000050 $d
+     /tmp/cc5uUZ2M.s:250    .text.HAL_I2CEx_EnableWakeUp:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:257    .text.HAL_I2CEx_EnableWakeUp:0000000000000000 HAL_I2CEx_EnableWakeUp
+     /tmp/cc5uUZ2M.s:348    .text.HAL_I2CEx_DisableWakeUp:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:355    .text.HAL_I2CEx_DisableWakeUp:0000000000000000 HAL_I2CEx_DisableWakeUp
+     /tmp/cc5uUZ2M.s:444    .text.HAL_I2CEx_DisableWakeUp:000000000000004c $d
+     /tmp/cc5uUZ2M.s:449    .text.HAL_I2CEx_EnableFastModePlus:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:456    .text.HAL_I2CEx_EnableFastModePlus:0000000000000000 HAL_I2CEx_EnableFastModePlus
+     /tmp/cc5uUZ2M.s:482    .text.HAL_I2CEx_EnableFastModePlus:0000000000000014 $d
+     /tmp/cc5uUZ2M.s:488    .text.HAL_I2CEx_DisableFastModePlus:0000000000000000 $t
+     /tmp/cc5uUZ2M.s:495    .text.HAL_I2CEx_DisableFastModePlus:0000000000000000 HAL_I2CEx_DisableFastModePlus
+     /tmp/cc5uUZ2M.s:521    .text.HAL_I2CEx_DisableFastModePlus:0000000000000014 $d
+
+NO UNDEFINED SYMBOLS

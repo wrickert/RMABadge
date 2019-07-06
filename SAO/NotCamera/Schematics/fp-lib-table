@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Camera)(type KiCad)(uri "$(KIPRJMOD)/Camera.pretty")(options "")(descr ""))
+  (lib (name NotCamera)(type KiCad)(uri /home/william/Documents/Projects/BadgePirates/SAO/NotCamera/Footprints/NotCamera.pretty)(options "")(descr ""))
+)
