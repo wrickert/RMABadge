@@ -4826,19 +4826,6 @@ F 3 "" H 4600 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 4600 7350
-Wire Wire Line
-	4600 7350 4650 7350
-$Comp
-L power:VBUS #PWR028
-U 1 1 5C34F2AC
-P 4650 7350
-F 0 "#PWR028" H 4650 7200 50  0001 C CNN
-F 1 "VBUS" H 4665 7523 50  0000 C CNN
-F 2 "" H 4650 7350 50  0001 C CNN
-F 3 "" H 4650 7350 50  0001 C CNN
-	1    4650 7350
-	-1   0    0    1   
-$EndComp
 $Comp
 L badge-rescue:R R11
 U 1 1 5C37B5B5
@@ -4864,11 +4851,8 @@ F 3 "" H 5400 7500 50  0001 C CNN
 	1    5500 7500
 	1    0    0    -1  
 $EndComp
-Connection ~ 4650 7350
 Wire Wire Line
 	5000 7350 5000 7400
-Wire Wire Line
-	4650 7350 5000 7350
 $Comp
 L Device:R_Small R10
 U 1 1 5C9B4547
@@ -5071,4 +5055,18 @@ F 3 "" H 4600 6750 50  0001 C CNN
 	1    4600 6750
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	4600 7350 5000 7350
+$Comp
+L power:+5V #PWR?
+U 1 1 5DF660D3
+P 4500 7500
+F 0 "#PWR?" H 4500 7350 50  0001 C CNN
+F 1 "+5V" V 4515 7628 50  0000 L CNN
+F 2 "" H 4500 7500 50  0001 C CNN
+F 3 "" H 4500 7500 50  0001 C CNN
+	1    4500 7500
+	-1   0    0    1   
+$EndComp
+Connection ~ 4500 7500
 $EndSCHEMATC

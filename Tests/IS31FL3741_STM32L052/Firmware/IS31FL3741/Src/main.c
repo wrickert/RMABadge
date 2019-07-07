@@ -35,6 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+volatile uint8_t Mode_NO =1;
 
 /* USER CODE END PD */
 
@@ -70,7 +71,7 @@ static void MX_I2C1_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-   uint8_t buffer[] = "Hello World\r\n";
+   uint8_t buffer[] = "HeartBeat\r\n";
 
   /* USER CODE END 1 */
   
@@ -99,10 +100,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_10,GPIO_PIN_SET);
    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_9,GPIO_PIN_SET);
-   IS31FL3741_Init(&hi2c1);
+   IS31FL3741_Init();
+   //IS31FL3741_Init(&hi2c1);
 
    Hello();
-  put_char("h");
 
    
 
@@ -120,14 +121,22 @@ int main(void)
    //HAL_I2C_Mem_Write(&hi2c1   ,0x60,0xFE,8,(uint8_t*)0xC5,8,100); //Command Registrer Write Lock, Enable write once
       HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
 
-     HAL_I2C_Master_Transmit(&hi2c1,0x60,(uint8_t*)255,8,100);
+   HAL_Delay(1000);
+   CDC_Transmit_FS(buffer,sizeof(buffer));
+     //HAL_I2C_Master_Transmit(&hi2c1,0x60,(uint8_t*)255,8,100);
  //  put_char("h");
 
+   Play_IS31FL3741_Demo_mode();   
+
    HAL_Delay(1000);
-   //CDC_Transmit_FS(buffer,sizeof(buffer));
-   HAL_Delay(1000);
+   CDC_Transmit_FS(buffer,sizeof(buffer));
+  // HAL_Delay(1000);
   }
   /* USER CODE END 3 */
+}
+
+void I2C_WriteByte(int DeviceAddress, int WriteAddress, int SendByte){
+   HAL_I2C_Mem_Write(&hi2c1, 0x60, WriteAddress,2, (uint8_t*)SendByte,2,100);
 }
 
 /**
