@@ -1,5 +1,5 @@
-(module SK-3296S_switch (layer F.Cu) (tedit 5CCB3656)
-  (fp_text reference REF** (at -2.54 5.08) (layer F.SilkS)
+(module SK-3296S_switch (layer F.Cu) (tedit 5D27664E)
+  (fp_text reference REF** (at -2.2 3.7) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value SK-3296S_switch (at 0 -2.54) (layer F.Fab)

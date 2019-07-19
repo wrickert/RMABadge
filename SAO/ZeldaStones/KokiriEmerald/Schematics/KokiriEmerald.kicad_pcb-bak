@@ -2607,9 +2607,9 @@
     )
   )
 
-  (gr_line (start 124.63 92) (end 132.85 91.93) (layer Eco1.User) (width 0.15))
-  (gr_line (start 125.82 127.94) (end 131.74 127.99) (layer Eco1.User) (width 0.15))
-  (gr_line (start 107.85 109.33) (end 109.16 115.14) (layer Eco1.User) (width 0.15))
+  (gr_line (start 125.73 92.02) (end 131.28 92.03) (layer Eco1.User) (width 0.15))
+  (gr_line (start 126.15 127.93) (end 130.93 127.95) (layer Eco1.User) (width 0.15))
+  (gr_line (start 108.02 109.74) (end 108.98 113.98) (layer Eco1.User) (width 0.15))
   (gr_line (start 140.93 115.65) (end 140.89 115.62) (layer Eco1.User) (width 0.15))
   (gr_line (start 139.19 110.36) (end 140.46 114.47) (layer Eco1.User) (width 0.15))
   (gr_text "Made for\nDefcon 27" (at 105.83 144.55) (layer B.SilkS) (tstamp 5D1FED01)

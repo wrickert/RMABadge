@@ -1,4 +1,4 @@
-16012065413852483
+16047961118291340
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -2264,6 +2264,55 @@ Calibration_Scale
 Gauge_100mm_Type2_SilkScreenTop
 Gauge, Massstab, 100mm, SilkScreenTop, Type 2,
 Gauge Massstab 100mm SilkScreenTop Type 2
+0
+0
+0
+Camera
+F.Cu_g857
+
+
+0
+0
+0
+Campfire
+Campfire
+
+
+0
+0
+0
+Campfire
+Flame
+
+
+0
+0
+0
+Campfire
+FlameSoldermask
+
+
+0
+0
+0
+Campfire
+FlameSoldermaskB
+
+
+0
+0
+0
+Campfire
+Logs
+
+
+0
+0
+0
+Campfire
+LogsSoldermask
+
+
 0
 0
 0
@@ -42314,6 +42363,41 @@ SMD SMT ceramic resonator filter filter hand-soldering
 0
 3
 3
+defcon
+C
+
+
+0
+0
+0
+defcon-sao
+middle
+
+
+0
+12
+12
+defcon-sao
+middle_min
+
+
+0
+6
+6
+defcon-sao
+middle_mirrored
+
+
+0
+6
+6
+defcon-sao
+middle_mirrored_min
+
+
+0
+6
+6
 Diode_SMD
 Diode_Bridge_Diotec_ABS
 SMD diode bridge ABS (Diotec), see https://diotec.com/tl_files/diotec/files/pdf/datasheets/abs2.pdf
@@ -50198,6 +50282,13 @@ Top
 0
 NFCBuisness
 W
+
+
+0
+0
+0
+NotCamera
+Camera
 
 
 0
@@ -65540,6 +65631,48 @@ rotary encoder
 0
 5
 4
+SAO
+BPSkull
+
+
+0
+0
+0
+SAO
+dumpsterFireMiddle
+
+
+0
+0
+0
+SAO
+LED_0603_ReverseMount
+LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+diode
+0
+2
+2
+SAO
+LED_0805_2012Metric
+LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+diode
+0
+2
+2
+SAO
+LED_0805_ReverseMount
+LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+diode
+0
+2
+2
+SAO
+LED_1206_ReverseMount
+LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+diode
+0
+2
+2
 Sensor
 Aosong_DHT11_5.5x12.0_P2.54mm
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/DHT11.pdf
@@ -70658,12 +70791,40 @@ test point THT pad
 1
 1
 Tests
+CameraEye
+
+
+0
+0
+0
+Tests
 Dongguan14500
 
 
 0
 4
 2
+Tests
+LED_0805_ReverseWithHole
+LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+diode
+0
+2
+2
+Tests
+QFN40P700X700X75-61N
+
+
+0
+61
+61
+Tests
+USB_C_Receptical-Jing
+
+
+0
+20
+16
 Transformer_SMD
 Pulse_P0926NL
 SMT Gate Drive Transformer, 1:1:1, 8.0x6.3x5.3mm (https://productfinder.pulseeng.com/products/datasheets/SPM2007_61.pdf)
