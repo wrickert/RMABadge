@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "WordClockBottom")(type KiCad)(uri "$(KIPRJMOD)/WordClockBottom.pretty")(options "")(descr ""))
+)
