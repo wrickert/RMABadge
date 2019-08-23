@@ -1,0 +1,239 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:74xx
+LIBS:WordClock-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J6
+U 1 1 5D5AB316
+P 8450 2500
+F 0 "J6" V 8546 2312 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 8455 2312 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 8450 2500 50  0001 C CNN
+F 3 "~" H 8450 2500 50  0001 C CNN
+	1    8450 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5D5ACB93
+P 8350 2700
+F 0 "#PWR0101" H 8350 2550 50  0001 C CNN
+F 1 "+3.3V" H 8365 2873 50  0000 C CNN
+F 2 "" H 8350 2700 50  0001 C CNN
+F 3 "" H 8350 2700 50  0001 C CNN
+	1    8350 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D5ACFC3
+P 8350 2200
+F 0 "#PWR0102" H 8350 1950 50  0001 C CNN
+F 1 "GND" H 8355 2027 50  0000 C CNN
+F 2 "" H 8350 2200 50  0001 C CNN
+F 3 "" H 8350 2200 50  0001 C CNN
+	1    8350 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J5
+U 1 1 5D5AE00F
+P 7000 2500
+F 0 "J5" V 7096 2312 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 7005 2312 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 7000 2500 50  0001 C CNN
+F 3 "~" H 7000 2500 50  0001 C CNN
+	1    7000 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5D5AE019
+P 6900 2700
+F 0 "#PWR0103" H 6900 2550 50  0001 C CNN
+F 1 "+3.3V" H 6915 2873 50  0000 C CNN
+F 2 "" H 6900 2700 50  0001 C CNN
+F 3 "" H 6900 2700 50  0001 C CNN
+	1    6900 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D5AE023
+P 6900 2200
+F 0 "#PWR0104" H 6900 1950 50  0001 C CNN
+F 1 "GND" H 6905 2027 50  0000 C CNN
+F 2 "" H 6900 2200 50  0001 C CNN
+F 3 "" H 6900 2200 50  0001 C CNN
+	1    6900 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5D5AEEA2
+P 5500 2200
+F 0 "#PWR0105" H 5500 1950 50  0001 C CNN
+F 1 "GND" H 5505 2027 50  0000 C CNN
+F 2 "" H 5500 2200 50  0001 C CNN
+F 3 "" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5D5AEE98
+P 5500 2700
+F 0 "#PWR0106" H 5500 2550 50  0001 C CNN
+F 1 "+3.3V" H 5515 2873 50  0000 C CNN
+F 2 "" H 5500 2700 50  0001 C CNN
+F 3 "" H 5500 2700 50  0001 C CNN
+	1    5500 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J4
+U 1 1 5D5AEE8E
+P 5600 2500
+F 0 "J4" V 5696 2312 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 5605 2312 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 5600 2500 50  0001 C CNN
+F 3 "~" H 5600 2500 50  0001 C CNN
+	1    5600 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5D5B0F8B
+P 3800 2200
+F 0 "#PWR0107" H 3800 1950 50  0001 C CNN
+F 1 "GND" H 3805 2027 50  0000 C CNN
+F 2 "" H 3800 2200 50  0001 C CNN
+F 3 "" H 3800 2200 50  0001 C CNN
+	1    3800 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5D5B0F95
+P 3800 2700
+F 0 "#PWR0108" H 3800 2550 50  0001 C CNN
+F 1 "+3.3V" H 3815 2873 50  0000 C CNN
+F 2 "" H 3800 2700 50  0001 C CNN
+F 3 "" H 3800 2700 50  0001 C CNN
+	1    3800 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 5D5B0F9F
+P 3900 2500
+F 0 "J3" V 3996 2312 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 3905 2312 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 3900 2500 50  0001 C CNN
+F 3 "~" H 3900 2500 50  0001 C CNN
+	1    3900 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L badge-rescue:Conn_01x01 J1
+U 1 1 5D5B2821
+P 2250 2000
+F 0 "J1" H 2168 1775 50  0000 C CNN
+F 1 "Conn_01x01" H 2168 1866 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 2000 50  0001 C CNN
+F 3 "" H 2250 2000 50  0001 C CNN
+	1    2250 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L badge-rescue:Conn_01x01 J2
+U 1 1 5D5B2FAD
+P 2250 2250
+F 0 "J2" H 2168 2025 50  0000 C CNN
+F 1 "Conn_01x01" H 2168 2116 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 2250 50  0001 C CNN
+F 3 "" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 2250 2650 2250
+Wire Wire Line
+	2650 2250 2650 2100
+Wire Wire Line
+	2650 2000 2450 2000
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5D5B32E9
+P 2700 2100
+F 0 "#PWR0109" H 2700 1950 50  0001 C CNN
+F 1 "+3.3V" V 2715 2228 50  0000 L CNN
+F 2 "" H 2700 2100 50  0001 C CNN
+F 3 "" H 2700 2100 50  0001 C CNN
+	1    2700 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:Conn_01x01 J7
+U 1 1 5D5B3A6F
+P 2250 2650
+F 0 "J7" H 2168 2425 50  0000 C CNN
+F 1 "Conn_01x01" H 2168 2516 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 2650 50  0001 C CNN
+F 3 "" H 2250 2650 50  0001 C CNN
+	1    2250 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L badge-rescue:Conn_01x01 J8
+U 1 1 5D5B3A79
+P 2250 2900
+F 0 "J8" H 2168 2675 50  0000 C CNN
+F 1 "Conn_01x01" H 2168 2766 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 2900 50  0001 C CNN
+F 3 "" H 2250 2900 50  0001 C CNN
+	1    2250 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 2900 2650 2900
+Wire Wire Line
+	2650 2900 2650 2750
+Wire Wire Line
+	2650 2650 2450 2650
+$Comp
+L power:GND #PWR0110
+U 1 1 5D5B4C19
+P 2700 2750
+F 0 "#PWR0110" H 2700 2500 50  0001 C CNN
+F 1 "GND" V 2705 2622 50  0000 R CNN
+F 2 "" H 2700 2750 50  0001 C CNN
+F 3 "" H 2700 2750 50  0001 C CNN
+	1    2700 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 2750 2650 2750
+Connection ~ 2650 2750
+Wire Wire Line
+	2650 2750 2650 2650
+Wire Wire Line
+	2700 2100 2650 2100
+Connection ~ 2650 2100
+Wire Wire Line
+	2650 2100 2650 2000
+$EndSCHEMATC
