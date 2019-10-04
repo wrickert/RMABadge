@@ -411,7 +411,7 @@ U 1 1 5D6311A3
 P 14250 7400
 F 0 "J3" H 14300 7817 50  0000 C CNN
 F 1 "CC2530-ISP" H 14300 7726 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 14250 7400 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_2x05_P1.00mm_Vertical" H 14250 7400 50  0001 C CNN
 F 3 "~" H 14250 7400 50  0001 C CNN
 	1    14250 7400
 	1    0    0    -1  
@@ -1344,7 +1344,7 @@ U 1 1 5CFFCD78
 P 8600 4800
 F 0 "J5" H 8518 4275 50  0000 C CNN
 F 1 "Prog" H 8518 4366 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8600 4800 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Vertical" H 8600 4800 50  0001 C CNN
 F 3 "~" H 8600 4800 50  0001 C CNN
 	1    8600 4800
 	-1   0    0    1   
@@ -1544,8 +1544,6 @@ Wire Wire Line
 	8950 3850 9050 3850
 Wire Wire Line
 	8250 3850 8350 3850
-Text GLabel 8250 3850 0    50   Input ~ 0
-PA3
 $Comp
 L Connector_Generic:Conn_01x02 J9
 U 1 1 5CE05269
@@ -1738,9 +1736,9 @@ PA1
 Text GLabel 6100 5600 0    50   Input ~ 0
 PA2
 Text GLabel 6100 5700 0    50   Input ~ 0
-PA3
+PC3
 Text GLabel 6100 5900 0    50   Input ~ 0
-PA4
+PC2
 $Comp
 L power:VSS #PWR0146
 U 1 1 5D7338F5
@@ -1860,7 +1858,7 @@ U 1 1 5D769542
 P 3250 6400
 F 0 "U6" H 3333 8115 50  0000 C CNN
 F 1 "Formike-OLED" H 3333 8024 50  0000 C CNN
-F 2 "" H 3550 7250 50  0001 C CNN
+F 2 "Connector_FFC-FPC:Hirose_FH12-30S-0.5SH_1x30-1MP_P0.50mm_Horizontal" H 3550 7250 50  0001 C CNN
 F 3 "" H 3550 7250 50  0001 C CNN
 	1    3250 6400
 	1    0    0    -1  
@@ -2163,4 +2161,6 @@ Wire Wire Line
 Connection ~ 4950 7550
 Text GLabel 3550 6250 2    50   Input ~ 0
 PB9
+Text GLabel 8250 3850 0    50   Input ~ 0
+PB0
 $EndSCHEMATC
