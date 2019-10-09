@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Dragos)(type Legacy)(uri /home/william/Documents/Projects/RMABadge/Badges/Dragos/Footprints/Dragos.lib)(options "")(descr ""))
+  (lib (name dragos-rescue)(type Legacy)(uri ${KIPRJMOD}/dragos-rescue.lib)(options "")(descr ""))
+)
