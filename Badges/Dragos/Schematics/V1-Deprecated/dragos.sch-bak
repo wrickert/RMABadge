@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:power
 LIBS:74xx
 LIBS:dragos-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -66,7 +66,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 3500 2850 3500
 $Comp
-L dragos-rescue:Battery_Cell-badge-rescue BT1
+L badge-rescue:Battery_Cell BT1
 U 1 1 5AD687D0
 P 6900 10550
 F 0 "BT1" H 7000 10650 50  0000 L CNN
@@ -103,7 +103,7 @@ Wire Wire Line
 Wire Wire Line
 	7900 10400 7800 10400
 $Comp
-L dragos-rescue:C-badge-rescue C10
+L badge-rescue:C C10
 U 1 1 5C332E52
 P 7800 10550
 F 0 "C10" H 7915 10596 50  0000 L CNN
@@ -117,7 +117,7 @@ Connection ~ 7800 10400
 Wire Wire Line
 	7800 10400 7700 10400
 $Comp
-L dragos-rescue:C-badge-rescue C11
+L badge-rescue:C C11
 U 1 1 5C332F0A
 P 8600 10550
 F 0 "C11" H 8715 10596 50  0000 L CNN
@@ -140,7 +140,7 @@ F 3 "" H 6250 10400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L dragos-rescue:C-badge-rescue C9
+L badge-rescue:C C9
 U 1 1 5C33B6A8
 P 6000 10250
 F 0 "C9" H 6115 10296 50  0000 L CNN
@@ -156,7 +156,7 @@ Wire Wire Line
 Wire Wire Line
 	5800 10400 6000 10400
 $Comp
-L dragos-rescue:C-badge-rescue C8
+L badge-rescue:C C8
 U 1 1 5C344660
 P 4600 10250
 F 0 "C8" H 4715 10296 50  0000 L CNN
@@ -167,7 +167,7 @@ F 3 "" H 4600 10250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dragos-rescue:R-badge-rescue R6
+L badge-rescue:R R6
 U 1 1 5C37B5B5
 P 5950 10500
 F 0 "R6" V 6050 10500 50  0000 C CNN
@@ -231,7 +231,7 @@ NoConn ~ 3450 2900
 NoConn ~ 3450 3100
 NoConn ~ 3450 3200
 $Comp
-L dragos-rescue:HX4056-badge-rescue U3
+L badge-rescue:HX4056 U3
 U 1 1 5C6DE973
 P 5400 10500
 F 0 "U3" H 5350 10825 50  0000 C CNN
