@@ -1,8 +1,9 @@
 import Dragos
 import os
 
+#Init, self test code
 Dragos.eye.value(1)
-Dragos.dragos.colorwheelonce()
+Dragos.ledtest()
 
 name = open('name','r')
 title = open('title','r')

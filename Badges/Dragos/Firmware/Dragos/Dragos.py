@@ -32,29 +32,8 @@ class dragos(object):
    def get_name(self):
       return self.name
 
-   def colorwheel():
-      for i in range(10):
-         for i in range(3):
-            if i == 0:
-               red.value(0)
-               blue.value(1)
-               green.value(1)
-               sleep_ms(1000)               
-            if i == 1:
-               red.value(1)
-               blue.value(0)
-               green.value(1)
-               sleep_ms(1000)               
-            if i == 2:
-               red.value(1)
-               blue.value(1)
-               green.value(0)
-               sleep_ms(1000)               
-      red.value(1)
-      blue.value(1)
-      green.value(1)
-
-   def colorwheelonce():
+def colorwheel():
+   for i in range(10):
       for i in range(3):
          if i == 0:
             red.value(0)
@@ -71,6 +50,27 @@ class dragos(object):
             blue.value(1)
             green.value(0)
             sleep_ms(1000)               
-      red.value(1)
-      blue.value(1)
-      green.value(1)
+   red.value(1)
+   blue.value(1)
+   green.value(1)
+
+def colorwheelonce():
+   for i in range(3):
+      if i == 0:
+         red.value(0)
+         blue.value(1)
+         green.value(1)
+         sleep_ms(1000)               
+      if i == 1:
+         red.value(1)
+         blue.value(0)
+         green.value(1)
+         sleep_ms(1000)               
+      if i == 2:
+         red.value(1)
+         blue.value(1)
+         green.value(0)
+         sleep_ms(1000)               
+   red.value(1)
+   blue.value(1)
+   green.value(1)
