@@ -2,8 +2,6 @@ from machine import Pin, I2C
 from ssd1306_mod import SSD1306_I2C_Mod
 from time import sleep_ms
 
-i2c = I2C(0,Pin.board.P38,Pin.board.P37)
-disp = SSD1306_I2C_Mod(128, 64, i2c)
 
 up = Pin(Pin.board.P2,Pin.IN,Pin.PULL_UP)
 left = Pin(Pin.board.P2,Pin.IN,Pin.PULL_UP)
@@ -23,6 +21,8 @@ class dragos(object):
       self.name = name
       self.company = company
       self.title = title
+      self.i2c = I2C(0,Pin.board.P38,Pin.board.P37)
+      self.disp = SSD1306_I2C_Mod(128, 64, i2c)
       
       disp.text(name,0,0)
       disp.text(title,0,10)
@@ -33,7 +33,7 @@ class dragos(object):
       return self.name
 
 def colorwheel():
-   for i in range(10):
+   for i in range(5):
       for i in range(3):
          if i == 0:
             red.value(0)
@@ -54,7 +54,7 @@ def colorwheel():
    blue.value(1)
    green.value(1)
 
-def colorwheelonce():
+def ledtest():
    for i in range(3):
       if i == 0:
          red.value(0)
