@@ -24,10 +24,18 @@ class dragos(object):
       self.company = company
       self.title = title
       
-      disp.text(name,0,0)
-      disp.text(title,0,10)
-      disp.text(company,0,20)
-      disp.show()
+      if len(name) < 16:
+         disp.text(name,0,0)
+         disp.text(title,0,10)
+         disp.text(company,0,20)
+         disp.show()
+
+      else:
+         disp.text(name.split()[0],0,0)
+         disp.text(name.split()[1],20,10)
+         disp.text(title,0,20)
+         disp.text(company,0,30)
+         disp.show()
 
    def get_name(self):
       return self.name
@@ -54,7 +62,7 @@ def colorwheel():
    blue.value(1)
    green.value(1)
 
-def colorwheelonce():
+def ledtest():
    for i in range(3):
       if i == 0:
          red.value(0)
