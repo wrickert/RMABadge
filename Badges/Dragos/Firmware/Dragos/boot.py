@@ -5,8 +5,8 @@ import os
 Dragos.eye.value(1)
 #Dragos.ledtest()
 
-name = open('name','r')
-title = open('title','r')
-company = open('company','r')
+name = open('name.txt','r')
+title = open('title.txt','r')
+company = open('company.txt','r')
 
 badge = Dragos.dragos(name.read(), title.read(), company.read())
