@@ -3,7 +3,7 @@ import os
 
 #Init, self test code
 Dragos.eye.value(1)
-#Dragos.ledtest()
+Dragos.ledtest()
 
 name = open('name.txt','r')
 title = open('title.txt','r')

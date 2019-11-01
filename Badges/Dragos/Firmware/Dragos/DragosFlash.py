@@ -25,7 +25,7 @@ def nameProg(startPos):
       
       print("\n\nflashing badge for " + name)
       print("running command: make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../Dragos/frozen SD=s140 flash\n")
-      os.system("make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../Dragos/frozen SD=s140 sd")
+#      os.system("make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../Dragos/frozen SD=s140 sd")
 
       # Allow time to pass for usb to connect
       print("Sleeping to wait for usb connection")
