@@ -19,5 +19,5 @@ def printLabel(name):
 
    qlr = BrotherQLRaster('QL-1050')
    #qlr = BrotherQLRaster('QL-800')
-   create_label(qlr, renderPM.drawToPIL(d), LABEL_NAME, rotate=90, cut=True, dpi_600=DPI_600)
+   create_label(qlr, renderPM.drawToPIL(d), LABEL_NAME, rotate=0, cut=True, dpi_600=DPI_600)
    send(qlr.data, PRINTER)

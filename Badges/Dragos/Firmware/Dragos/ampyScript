@@ -1,0 +1,21 @@
+#!/bin/bash
+echo Name
+ampy -p /dev/ttyACM0 put name.txt
+echo company
+ampy -p /dev/ttyACM0 put company.txt
+echo title
+ampy -p /dev/ttyACM0 put title.txt
+echo main
+ampy -p /dev/ttyACM0 put main.py
+echo boot
+ampy -p /dev/ttyACM0 put boot.py
+echo Dragos 
+ampy -p /dev/ttyACM0 put Dragos.py
+echo DragosBle
+ampy -p /dev/ttyACM0 put DragosBle.py
+echo ubluepy_scan
+ampy -p /dev/ttyACM0 put ubluepy_scan.py
+echo ssd1306
+ampy -p /dev/ttyACM0 put frozen/ssd1306.py
+echo ssd1306_mod
+ampy -p /dev/ttyACM0 put frozen/ssd1306_mod.py
