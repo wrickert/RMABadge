@@ -86,7 +86,7 @@ def encodeName(badge):
 
    # bad fix because its late
    if len(u0) > 36:
-      for i in range(32):
+      for i in range(36):
          u1 += u0[i]
       print("Endoded UUID: u1 " + u1)
       print("UUID Length: " +str(len(u1)))

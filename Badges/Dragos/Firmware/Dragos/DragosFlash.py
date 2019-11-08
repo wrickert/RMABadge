@@ -4,13 +4,14 @@ import os
 import sys
 from time import sleep
 
-loc=('~/Downloads/Dragos Employee List-DISC 2019.xlsx')
+#loc=('/home/william/Downloads/Dragos Customer List-DISC 2019.xlsx')
+loc=('/home/william/Downloads/Dragos Employee List-DISC 2019.xlsx')
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 
 #buildDir = '~/Documents/Projects/RMABadge/Badges/Dragos/Firmware/Dragos/build/'
-frozenDir = '~/Documents/Projects/RMABadge/Badges/Dragos/Firmware/Dragos/frozen'
-makeDir = '~/Documents/Projects/RMABadge/Badges/Dragos/Firmware/new/micropython/ports/nrf/'
+frozenDir = '/home/william/Documents/Projects/RMABadge/Badges/Dragos/Firmware/Dragos/frozen'
+makeDir = '/home/william/Documents/Projects/RMABadge/Badges/Dragos/Firmware/new/micropython/ports/nrf/'
 
 lineOne = "def get():"
 
@@ -49,11 +50,11 @@ def nameProg(startPos):
       companyFile.close()
       sleep(3)
          
-      print("\n\nflashing badge for " + name)
-      print("running command: make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../Dragos/frozen SD=s140 flash\n")
-      os.system("make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../../Dragos/frozen SD=s140 sd")
+#      print("\n\nflashing badge for " + name)
+#      print("running command: make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../Dragos/frozen SD=s140 flash\n")
+#      os.system("make -C " + makeDir + " BOARD=pca10056 FROZEN_MPY_DIR=../../../../Dragos/frozen SD=s140 sd")
 
-      QL800.printLabel(name)
+#      QL800.printLabel(name)
 
       var = input("\nWhats next? q for Quit, n for next: ")
       if var == "q":
