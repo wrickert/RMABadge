@@ -18,7 +18,7 @@ def get_device_names(scan_entries):
 
 def find_device_by_name(name):
     s = Scanner()
-    scan_res = s.scan(20000)
+    scan_res = s.scan(5000)
     
     device_names = get_device_names(scan_res)
     for dev in device_names:

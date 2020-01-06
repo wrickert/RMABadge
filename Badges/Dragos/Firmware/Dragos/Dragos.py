@@ -57,7 +57,6 @@ class dragos(object):
          green.value(0)
          
       
-      
    def nametag(self):
       two = 10
       three = 20
@@ -70,21 +69,32 @@ class dragos(object):
          two += 10
          three += 10
 
-      if len(self.company) < 16:
+      if len(self.company) < 18:
          self.disp.text(self.company,0,two)
       else:
          self.disp.text(self.company.split()[0],0,two)
          self.disp.text(self.company.split()[1],10,(two+10))
+#         try:
+#            two += 10
+#            self.disp.text(self.company.split()[2],20,(two+10))
+#            three += 10
+#         except IndexError:
+#            print("whoops")
          three += 10
-         if len(self.company.split()) == 3:
-            self.disp.text(self.company.split()[2],20,(two+20))
-            three += 10
+#         if len(self.company.split()) == 3:
+#            self.disp.text(self.company.split()[2],20,(two+20))
+#            three += 10
       
       if len(self.title) < 16:
          self.disp.text(self.title,0,three)
       else:
          self.disp.text(self.title.split()[0],0,three)
          self.disp.text(self.title.split()[1],20,(three+10))
+         try:
+            three += 10
+            self.disp.text(self.title.split()[2],30,(three+10))
+         except IndexError:
+            print("whoops2")
       self.disp.show()
 
    def get_name(self):

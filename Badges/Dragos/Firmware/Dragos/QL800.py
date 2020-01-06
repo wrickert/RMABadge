@@ -6,15 +6,15 @@ from brother_ql import BrotherQLRaster, create_label
 from brother_ql.backends.helpers import send
 
 PRINTER = 'usb://0x04f9:0x20a7'
-LABEL_NAME = '62'
+LABEL_NAME = '102'
 DPI_600 = True
 
 def printLabel(name):
    width = 500
-   height = 100
+   height = 80
 
    d = Drawing(width, height)
-   d.add(String(5, 5, name, fontSize=40, fontName='Helvetica'))
+   d.add(String(125, 40, name, fontSize=40, fontName='Helvetica'))
    #d.add(String(5, 5, name, fontSize=60, fontName='Helvetica'))
 
    qlr = BrotherQLRaster('QL-1050')
