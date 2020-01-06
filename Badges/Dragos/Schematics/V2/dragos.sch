@@ -1,7 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:power
-LIBS:74xx
-LIBS:dragos-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
@@ -686,7 +683,7 @@ $EndComp
 Wire Wire Line
 	5900 4150 6000 4150
 $Comp
-L badge-rescue:Conn_01x04 J2
+L dragos-rescue:Conn_01x04-badge-rescue J2
 U 1 1 5DA2C918
 P 8600 6450
 F 0 "J2" H 8518 6025 50  0000 C CNN
@@ -939,7 +936,7 @@ $EndComp
 Wire Wire Line
 	13650 2400 13800 2400
 $Comp
-L badge-rescue:Conn_01x02 J1
+L dragos-rescue:Conn_01x02-badge-rescue J1
 U 1 1 5DAB1D17
 P 3850 7950
 F 0 "J1" H 3768 7625 50  0000 C CNN

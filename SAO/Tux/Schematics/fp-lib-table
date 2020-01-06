@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "Tux")(type KiCad)(uri "$(KIPRJMOD)/Tux.pretty")(options "")(descr ""))
+)

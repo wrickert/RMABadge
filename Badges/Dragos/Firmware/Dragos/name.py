@@ -1,2 +1,2 @@
 def get():
-   return "John Glass"
+   return "William Rickert"
