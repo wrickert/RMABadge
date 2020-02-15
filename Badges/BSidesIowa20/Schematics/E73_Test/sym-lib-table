@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name badge-rescue)(type Legacy)(uri /home/william/Documents/Projects/badge/Schematic/Badge/badge-rescue.lib)(options "")(descr ""))
+  (lib (name dragos-rescue)(type Legacy)(uri /home/william/Documents/Projects/RMABadge/Badges/Dragos/Schematics/V2/dragos-rescue.lib)(options "")(descr ""))
+)

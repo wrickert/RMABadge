@@ -1,0 +1,267 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LN4890-rescue:LN4890-Tests U1
+U 1 1 5D082A72
+P 4850 2500
+F 0 "U1" H 4850 3075 50  0000 C CNN
+F 1 "LN4890" H 4850 2984 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5200 2550 50  0001 C CNN
+F 3 "" H 5200 2550 50  0001 C CNN
+	1    4850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5D0833F1
+P 4250 2000
+F 0 "R1" H 4309 2046 50  0000 L CNN
+F 1 "20k" H 4309 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4250 2000 50  0001 C CNN
+F 3 "~" H 4250 2000 50  0001 C CNN
+	1    4250 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4100 2150 0    50   Input ~ 0
+Shutdown
+Wire Wire Line
+	4100 2150 4250 2150
+Wire Wire Line
+	4250 2150 4250 2100
+Connection ~ 4250 2150
+Wire Wire Line
+	4250 2150 4400 2150
+$Comp
+L power:VCC #PWR0101
+U 1 1 5D08372D
+P 4250 1850
+F 0 "#PWR0101" H 4250 1700 50  0001 C CNN
+F 1 "VCC" H 4267 2023 50  0000 C CNN
+F 2 "" H 4250 1850 50  0001 C CNN
+F 3 "" H 4250 1850 50  0001 C CNN
+	1    4250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1850 4250 1900
+$Comp
+L Device:R_Small R3
+U 1 1 5D083996
+P 4850 2650
+F 0 "R3" V 4654 2650 50  0000 C CNN
+F 1 "20k" V 4745 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4850 2650 50  0001 C CNN
+F 3 "~" H 4850 2650 50  0001 C CNN
+	1    4850 2650
+	0    1    1    0   
+$EndComp
+Text GLabel 3600 2450 0    50   Input ~ 0
+Audio
+$Comp
+L Device:R_Small R2
+U 1 1 5D083EB6
+P 4000 2450
+F 0 "R2" V 3804 2450 50  0000 C CNN
+F 1 "20k" V 3895 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 2450 50  0001 C CNN
+F 3 "~" H 4000 2450 50  0001 C CNN
+	1    4000 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5D084496
+P 3750 2450
+F 0 "C2" V 3521 2450 50  0000 C CNN
+F 1 "0.39uF" V 3612 2450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3750 2450 50  0001 C CNN
+F 3 "~" H 3750 2450 50  0001 C CNN
+	1    3750 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 2450 3650 2450
+Wire Wire Line
+	3850 2450 3900 2450
+Wire Wire Line
+	4100 2450 4300 2450
+$Comp
+L Device:C_Small C1
+U 1 1 5D084ED0
+P 4150 2250
+F 0 "C1" V 3921 2250 50  0000 C CNN
+F 1 "1uF" V 4012 2250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4150 2250 50  0001 C CNN
+F 3 "~" H 4150 2250 50  0001 C CNN
+	1    4150 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VSS #PWR0102
+U 1 1 5D085443
+P 3600 2250
+F 0 "#PWR0102" H 3600 2100 50  0001 C CNN
+F 1 "VSS" V 3618 2378 50  0000 L CNN
+F 2 "" H 3600 2250 50  0001 C CNN
+F 3 "" H 3600 2250 50  0001 C CNN
+	1    3600 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR0103
+U 1 1 5D0858B8
+P 5350 2250
+F 0 "#PWR0103" H 5350 2100 50  0001 C CNN
+F 1 "VSS" V 5367 2378 50  0000 L CNN
+F 2 "" H 5350 2250 50  0001 C CNN
+F 3 "" H 5350 2250 50  0001 C CNN
+	1    5350 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2450 5400 2450
+Wire Wire Line
+	5750 2450 5750 2350
+Wire Wire Line
+	5750 2350 5900 2350
+Wire Wire Line
+	4950 2650 5400 2650
+Wire Wire Line
+	5400 2650 5400 2450
+Connection ~ 5400 2450
+Wire Wire Line
+	5400 2450 5750 2450
+Wire Wire Line
+	4750 2650 4300 2650
+Wire Wire Line
+	4300 2650 4300 2450
+Connection ~ 4300 2450
+Wire Wire Line
+	4300 2450 4400 2450
+Wire Wire Line
+	5300 2150 5750 2150
+Wire Wire Line
+	5750 2150 5750 2250
+Wire Wire Line
+	5750 2250 5900 2250
+Wire Wire Line
+	5300 2250 5350 2250
+Wire Wire Line
+	4250 2250 4400 2250
+Wire Wire Line
+	4050 2250 3600 2250
+$Comp
+L LN4890-rescue:Conn_01x01-badge-rescue J2
+U 1 1 5D0881D0
+P 4200 2350
+F 0 "J2" H 4118 2125 50  0000 C CNN
+F 1 "Conn_01x01" H 4118 2216 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4200 2350 50  0001 C CNN
+F 3 "" H 4200 2350 50  0001 C CNN
+	1    4200 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5D0885AA
+P 5350 2600
+F 0 "C3" H 5258 2554 50  0000 R CNN
+F 1 "1uF" H 5258 2645 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5350 2600 50  0001 C CNN
+F 3 "~" H 5350 2600 50  0001 C CNN
+	1    5350 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR0104
+U 1 1 5D089677
+P 5350 2750
+F 0 "#PWR0104" H 5350 2600 50  0001 C CNN
+F 1 "VSS" H 5368 2923 50  0000 C CNN
+F 2 "" H 5350 2750 50  0001 C CNN
+F 3 "" H 5350 2750 50  0001 C CNN
+	1    5350 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 5D089B81
+P 5400 2350
+F 0 "#PWR0105" H 5400 2200 50  0001 C CNN
+F 1 "VCC" V 5417 2478 50  0000 L CNN
+F 2 "" H 5400 2350 50  0001 C CNN
+F 3 "" H 5400 2350 50  0001 C CNN
+	1    5400 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2350 5350 2350
+Wire Wire Line
+	5350 2350 5350 2500
+Connection ~ 5350 2350
+Wire Wire Line
+	5350 2350 5400 2350
+Wire Wire Line
+	5350 2700 5350 2750
+$Comp
+L power:VCC #PWR0106
+U 1 1 5D0CA898
+P 1600 2250
+F 0 "#PWR0106" H 1600 2100 50  0001 C CNN
+F 1 "VCC" V 1617 2378 50  0000 L CNN
+F 2 "" H 1600 2250 50  0001 C CNN
+F 3 "" H 1600 2250 50  0001 C CNN
+	1    1600 2250
+	0    1    1    0   
+$EndComp
+Text GLabel 1600 2450 2    50   Input ~ 0
+Shutdown
+Text GLabel 1600 2550 2    50   Input ~ 0
+Audio
+$Comp
+L LN4890-rescue:Conn_01x02-badge-rescue J1
+U 1 1 5D1C9714
+P 6100 2250
+F 0 "J1" H 6018 1925 50  0000 C CNN
+F 1 "Out" H 6018 2016 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 6100 2250 50  0001 C CNN
+F 3 "" H 6100 2250 50  0001 C CNN
+	1    6100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR0107
+U 1 1 5D1CC87C
+P 1600 2350
+F 0 "#PWR0107" H 1600 2200 50  0001 C CNN
+F 1 "VSS" V 1600 2550 50  0000 C CNN
+F 2 "" H 1600 2350 50  0001 C CNN
+F 3 "" H 1600 2350 50  0001 C CNN
+	1    1600 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L LN4890-rescue:Conn_01x04-badge-rescue J3
+U 1 1 5D1CFB8D
+P 1400 2450
+F 0 "J3" H 1318 2025 50  0000 C CNN
+F 1 "Conn_01x04" H 1318 2116 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1400 2450 50  0001 C CNN
+F 3 "" H 1400 2450 50  0001 C CNN
+	1    1400 2450
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

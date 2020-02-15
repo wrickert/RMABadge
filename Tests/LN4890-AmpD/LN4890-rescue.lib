@@ -1,0 +1,98 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Conn_01x01-badge-rescue
+#
+DEF Conn_01x01-badge-rescue J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Conn_01x01-badge-rescue" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -50 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_01x02-badge-rescue
+#
+DEF Conn_01x02-badge-rescue J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Conn_01x02-badge-rescue" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_01x04-badge-rescue
+#
+DEF Conn_01x04-badge-rescue J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Conn_01x04-badge-rescue" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -250 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+X Pin_4 4 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LN4890-Tests
+#
+DEF LN4890-Tests U 0 40 Y Y 1 F N
+F0 "U" 300 -50 50 H V C CNN
+F1 "LN4890-Tests" -200 -50 50 H V C CNN
+F2 "" 350 50 50 H I C CNN
+F3 "" 350 50 50 H I C CNN
+DRAW
+S -350 400 350 0 0 1 0 f
+X SHUTDOWN 1 -450 350 100 R 50 50 1 1 I
+X BYPASS 2 -450 250 100 R 50 50 1 1 I
+X +IN 3 -450 150 100 R 50 50 1 1 I
+X -IN 4 -450 50 100 R 50 50 1 1 I
+X VO1 5 450 50 100 L 50 50 1 1 I
+X VDD 6 450 150 100 L 50 50 1 1 I
+X GND 7 450 250 100 L 50 50 1 1 I
+X VO2 8 450 350 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

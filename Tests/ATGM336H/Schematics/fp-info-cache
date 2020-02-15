@@ -1,4 +1,4 @@
-16969717323994784
+16971313313211784
 ATGM336H
 ATGM336H
 
@@ -19,7 +19,14 @@ ECT818000071
 
 0
 3
-3
+2
+ATGM336H
+GPSLogo
+
+
+0
+0
+0
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -74093,7 +74100,7 @@ USB_C_Receptical-Jing
 
 0
 20
-16
+17
 Transformer_SMD
 Pulse_P0926NL
 SMT Gate Drive Transformer, 1:1:1, 8.0x6.3x5.3mm (https://productfinder.pulseeng.com/products/datasheets/SPM2007_61.pdf)

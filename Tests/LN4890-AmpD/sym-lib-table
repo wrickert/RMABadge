@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LN4890-rescue)(type Legacy)(uri ${KIPRJMOD}/LN4890-rescue.lib)(options "")(descr ""))
+)

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccGdlH6E.s 			page 1
+ARM GAS  /tmp/ccFkWFqK.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
   28:Src/system_stm32l4xx.c ****   *        System Clock source                    | MSI
   29:Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
   30:Src/system_stm32l4xx.c ****   *        SYSCLK(Hz)                             | 4000000
-ARM GAS  /tmp/ccGdlH6E.s 			page 2
+ARM GAS  /tmp/ccFkWFqK.s 			page 2
 
 
   31:Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
   85:Src/system_stm32l4xx.c ****   * @{
   86:Src/system_stm32l4xx.c ****   */
   87:Src/system_stm32l4xx.c **** 
-ARM GAS  /tmp/ccGdlH6E.s 			page 3
+ARM GAS  /tmp/ccFkWFqK.s 			page 3
 
 
   88:Src/system_stm32l4xx.c **** /** @addtogroup STM32L4xx_System_Private_Includes
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  142:Src/system_stm32l4xx.c ****   * @{
  143:Src/system_stm32l4xx.c ****   */
  144:Src/system_stm32l4xx.c ****   /* The SystemCoreClock variable is updated in three ways:
-ARM GAS  /tmp/ccGdlH6E.s 			page 4
+ARM GAS  /tmp/ccFkWFqK.s 			page 4
 
 
  145:Src/system_stm32l4xx.c ****       1) by calling CMSIS function SystemCoreClockUpdate()
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  188:Src/system_stm32l4xx.c ****   /* Set MSION bit */
  189:Src/system_stm32l4xx.c ****   RCC->CR |= RCC_CR_MSION;
   40              		.loc 1 189 3 is_stmt 1 view .LVU3
-ARM GAS  /tmp/ccGdlH6E.s 			page 5
+ARM GAS  /tmp/ccFkWFqK.s 			page 5
 
 
   41              		.loc 1 189 11 is_stmt 0 view .LVU4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
   72              		.loc 1 212 1 view .LVU17
   73 003e 7047     		bx	lr
   74              	.L3:
-ARM GAS  /tmp/ccGdlH6E.s 			page 6
+ARM GAS  /tmp/ccFkWFqK.s 			page 6
 
 
   75              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  252:Src/system_stm32l4xx.c ****   *
  253:Src/system_stm32l4xx.c ****   * @param  None
  254:Src/system_stm32l4xx.c ****   * @retval None
-ARM GAS  /tmp/ccGdlH6E.s 			page 7
+ARM GAS  /tmp/ccFkWFqK.s 			page 7
 
 
  255:Src/system_stm32l4xx.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  127 0026 DFE803F0 		tbb	[pc, r3]
  128              	.L9:
  129 002a 0C       		.byte	(.L12-.L9)/2
-ARM GAS  /tmp/ccGdlH6E.s 			page 8
+ARM GAS  /tmp/ccFkWFqK.s 			page 8
 
 
  130 002b 47       		.byte	(.L7-.L9)/2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  291:Src/system_stm32l4xx.c ****       pllsource = (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC);
  292:Src/system_stm32l4xx.c ****       pllm = ((RCC->PLLCFGR & RCC_PLLCFGR_PLLM) >> 4U) + 1U ;
  293:Src/system_stm32l4xx.c **** 
-ARM GAS  /tmp/ccGdlH6E.s 			page 9
+ARM GAS  /tmp/ccFkWFqK.s 			page 9
 
 
  294:Src/system_stm32l4xx.c ****       switch (pllsource)
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  186 005e 1C4A     		ldr	r2, .L19+16
  187 0060 1A60     		str	r2, [r3]
  281:Src/system_stm32l4xx.c **** 
-ARM GAS  /tmp/ccGdlH6E.s 			page 10
+ARM GAS  /tmp/ccFkWFqK.s 			page 10
 
 
  188              		.loc 1 281 7 is_stmt 1 view .LVU47
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  227              		.loc 1 297 11 view .LVU62
  297:Src/system_stm32l4xx.c ****           break;
  228              		.loc 1 297 18 is_stmt 0 view .LVU63
-ARM GAS  /tmp/ccGdlH6E.s 			page 11
+ARM GAS  /tmp/ccFkWFqK.s 			page 11
 
 
  229 008a 114A     		ldr	r2, .L19+16
@@ -635,7 +635,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  250              		.loc 1 309 50 view .LVU73
  251 009e C2F34162 		ubfx	r2, r2, #25, #2
  309:Src/system_stm32l4xx.c ****       SystemCoreClock = pllvco/pllr;
- 252              		.loc 1 309 64 view .LVU74
+ 252              		.loc 1 309 58 view .LVU74
  253 00a2 0132     		adds	r2, r2, #1
  309:Src/system_stm32l4xx.c ****       SystemCoreClock = pllvco/pllr;
  254              		.loc 1 309 12 view .LVU75
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  266              		.loc 1 311 7 is_stmt 1 view .LVU80
  267 00ae CAE7     		b	.L13
  268              	.LVL20:
-ARM GAS  /tmp/ccGdlH6E.s 			page 12
+ARM GAS  /tmp/ccFkWFqK.s 			page 12
 
 
  269              	.L15:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  318              		.section	.rodata.APBPrescTable,"a"
  319              		.align	2
  322              	APBPrescTable:
-ARM GAS  /tmp/ccGdlH6E.s 			page 13
+ARM GAS  /tmp/ccFkWFqK.s 			page 13
 
 
  323 0000 00000000 		.ascii	"\000\000\000\000\001\002\003\004"
@@ -750,27 +750,27 @@ ARM GAS  /tmp/ccGdlH6E.s 			page 1
  350              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  351              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
  352              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /tmp/ccGdlH6E.s 			page 14
+ARM GAS  /tmp/ccFkWFqK.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32l4xx.c
-     /tmp/ccGdlH6E.s:18     .text.SystemInit:0000000000000000 $t
-     /tmp/ccGdlH6E.s:26     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/ccGdlH6E.s:77     .text.SystemInit:0000000000000040 $d
-     /tmp/ccGdlH6E.s:83     .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/ccGdlH6E.s:90     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/ccGdlH6E.s:129    .text.SystemCoreClockUpdate:000000000000002a $d
-     /tmp/ccGdlH6E.s:290    .text.SystemCoreClockUpdate:00000000000000c0 $d
-     /tmp/ccGdlH6E.s:329    .rodata.MSIRangeTable:0000000000000000 MSIRangeTable
-     /tmp/ccGdlH6E.s:322    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-     /tmp/ccGdlH6E.s:315    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-     /tmp/ccGdlH6E.s:308    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/ccGdlH6E.s:304    .data.SystemCoreClock:0000000000000000 $d
-     /tmp/ccGdlH6E.s:311    .rodata.AHBPrescTable:0000000000000000 $d
-     /tmp/ccGdlH6E.s:319    .rodata.APBPrescTable:0000000000000000 $d
-     /tmp/ccGdlH6E.s:325    .rodata.MSIRangeTable:0000000000000000 $d
-     /tmp/ccGdlH6E.s:143    .text.SystemCoreClockUpdate:0000000000000037 $d
-     /tmp/ccGdlH6E.s:143    .text.SystemCoreClockUpdate:0000000000000038 $t
+     /tmp/ccFkWFqK.s:18     .text.SystemInit:0000000000000000 $t
+     /tmp/ccFkWFqK.s:26     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccFkWFqK.s:77     .text.SystemInit:0000000000000040 $d
+     /tmp/ccFkWFqK.s:83     .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccFkWFqK.s:90     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccFkWFqK.s:129    .text.SystemCoreClockUpdate:000000000000002a $d
+     /tmp/ccFkWFqK.s:290    .text.SystemCoreClockUpdate:00000000000000c0 $d
+     /tmp/ccFkWFqK.s:329    .rodata.MSIRangeTable:0000000000000000 MSIRangeTable
+     /tmp/ccFkWFqK.s:322    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+     /tmp/ccFkWFqK.s:315    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+     /tmp/ccFkWFqK.s:308    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccFkWFqK.s:304    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccFkWFqK.s:311    .rodata.AHBPrescTable:0000000000000000 $d
+     /tmp/ccFkWFqK.s:319    .rodata.APBPrescTable:0000000000000000 $d
+     /tmp/ccFkWFqK.s:325    .rodata.MSIRangeTable:0000000000000000 $d
+     /tmp/ccFkWFqK.s:143    .text.SystemCoreClockUpdate:0000000000000037 $d
+     /tmp/ccFkWFqK.s:143    .text.SystemCoreClockUpdate:0000000000000038 $t
 
 NO UNDEFINED SYMBOLS
