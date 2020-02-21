@@ -364,36 +364,6 @@ Wire Wire Line
 Text Notes 3450 2300 0    50   ~ 0
 Eye Light, Reverse mount LED
 $Comp
-L dragos-rescue:K1-5202UA-03(5Way_Switch)-Dragos U5
-U 1 1 5D705426
-P 4150 3500
-F 0 "U5" H 4150 3975 50  0000 C CNN
-F 1 "K1-5202UA-03(5Way_Switch)" H 4150 3884 50  0000 C CNN
-F 2 "Dragos:K1-5202UA-03(5way-switch)" H 3800 3150 50  0001 C CNN
-F 3 "" H 3800 3150 50  0001 C CNN
-	1    4150 3500
-	1    0    0    -1  
-$EndComp
-Text GLabel 3800 3250 0    50   Input ~ 0
-Left
-Text GLabel 3800 3350 0    50   Input ~ 0
-Center
-Text GLabel 3800 3450 0    50   Input ~ 0
-Down
-Text GLabel 3800 3750 0    50   Input ~ 0
-Right
-$Comp
-L power:VSS #PWR0146
-U 1 1 5D7338F5
-P 4500 3650
-F 0 "#PWR0146" H 4500 3500 50  0001 C CNN
-F 1 "VSS" V 4518 3778 50  0000 L CNN
-F 2 "" H 4500 3650 50  0001 C CNN
-F 3 "" H 4500 3650 50  0001 C CNN
-	1    4500 3650
-	0    1    1    0   
-$EndComp
-$Comp
 L Switch:SW_DIP_x01 SW2
 U 1 1 5D74F880
 P 4100 4250
@@ -421,34 +391,34 @@ Wire Wire Line
 	4500 4250 4400 4250
 Text GLabel 3750 4250 0    50   Input ~ 0
 ButtonB
-Text GLabel 3750 4700 0    50   Input ~ 0
+Text GLabel 3750 3800 0    50   Input ~ 0
 ButtonA
 $Comp
 L Switch:SW_DIP_x01 SW4
 U 1 1 5D7857CD
-P 4100 4700
-F 0 "SW4" H 4100 4967 50  0000 C CNN
-F 1 "SW_DIP_x01" H 4100 4876 50  0000 C CNN
-F 2 "Dragos:1TS002E-2500-2500-CT-HYP-Button" H 4100 4700 50  0001 C CNN
-F 3 "~" H 4100 4700 50  0001 C CNN
-	1    4100 4700
+P 4100 3800
+F 0 "SW4" H 4100 4067 50  0000 C CNN
+F 1 "SW_DIP_x01" H 4100 3976 50  0000 C CNN
+F 2 "Dragos:1TS002E-2500-2500-CT-HYP-Button" H 4100 3800 50  0001 C CNN
+F 3 "~" H 4100 3800 50  0001 C CNN
+	1    4100 3800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3750 4700 3800 4700
+	3750 3800 3800 3800
 $Comp
 L power:VSS #PWR0148
 U 1 1 5D7857D8
-P 4500 4700
-F 0 "#PWR0148" H 4500 4550 50  0001 C CNN
-F 1 "VSS" V 4518 4828 50  0000 L CNN
-F 2 "" H 4500 4700 50  0001 C CNN
-F 3 "" H 4500 4700 50  0001 C CNN
-	1    4500 4700
+P 4500 3800
+F 0 "#PWR0148" H 4500 3650 50  0001 C CNN
+F 1 "VSS" V 4518 3928 50  0000 L CNN
+F 2 "" H 4500 3800 50  0001 C CNN
+F 3 "" H 4500 3800 50  0001 C CNN
+	1    4500 3800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4500 4700 4400 4700
+	4500 3800 4400 3800
 $Comp
 L Device:R_Pack02 RN1
 U 1 1 5D75E08C
@@ -795,8 +765,6 @@ F 3 "" H 3600 2000 50  0001 C CNN
 	1    3600 2000
 	0    -1   -1   0   
 $EndComp
-Text GLabel 3800 3550 0    50   Input ~ 0
-Up
 $Comp
 L power:+5V #PWR0102
 U 1 1 5DAA8DF2
@@ -1043,5 +1011,39 @@ $EndComp
 Wire Wire Line
 	9650 4600 9750 4600
 Text GLabel 9750 5300 0    50   Input ~ 0
+MIC
+Text GLabel 6800 2600 0    50   Input ~ 0
+COL1
+Text GLabel 6800 2500 0    50   Input ~ 0
+COL2
+Text GLabel 6800 2400 0    50   Input ~ 0
+COL3
+Text GLabel 6800 2300 0    50   Input ~ 0
+COL4
+Text GLabel 6800 2200 0    50   Input ~ 0
+COL5
+Text GLabel 6800 2000 0    50   Input ~ 0
+ROW1
+Text GLabel 6800 1900 0    50   Input ~ 0
+ROW2
+Text GLabel 6800 1800 0    50   Input ~ 0
+ROW3
+Text GLabel 6800 1700 0    50   Input ~ 0
+ROW4
+Text GLabel 6800 1600 0    50   Input ~ 0
+ROW5
+Text GLabel 6800 1500 0    50   Input ~ 0
+ROW6
+Text GLabel 6800 1400 0    50   Input ~ 0
+ROW7
+Text GLabel 6850 2800 0    50   Input ~ 0
+LEDA1
+Text GLabel 6850 2900 0    50   Input ~ 0
+LEDA2
+Text GLabel 6850 3000 0    50   Input ~ 0
+LEDK1
+Text GLabel 6850 3100 0    50   Input ~ 0
+LEDK2
+Text GLabel 6850 3300 0    50   Input ~ 0
 MIC
 $EndSCHEMATC
