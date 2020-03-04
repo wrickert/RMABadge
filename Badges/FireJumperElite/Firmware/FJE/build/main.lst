@@ -1,0 +1,2544 @@
+ARM GAS  /tmp/ccSD2iu1.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv6s-m
+  18              		.syntax unified
+  19              		.code	16
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	MX_GPIO_Init:
+  24              	.LFB50:
+  25              		.file 1 "Src/main.c"
+   1:Src/main.c    **** /* USER CODE BEGIN Header */
+   2:Src/main.c    **** /**
+   3:Src/main.c    ****   ******************************************************************************
+   4:Src/main.c    ****   * @file           : main.c
+   5:Src/main.c    ****   * @brief          : Main program body
+   6:Src/main.c    ****   ******************************************************************************
+   7:Src/main.c    ****   * @attention
+   8:Src/main.c    ****   *
+   9:Src/main.c    ****   * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  10:Src/main.c    ****   * All rights reserved.</center></h2>
+  11:Src/main.c    ****   *
+  12:Src/main.c    ****   * This software component is licensed by ST under Ultimate Liberty license
+  13:Src/main.c    ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Src/main.c    ****   * the License. You may obtain a copy of the License at:
+  15:Src/main.c    ****   *                             www.st.com/SLA0044
+  16:Src/main.c    ****   *
+  17:Src/main.c    ****   ******************************************************************************
+  18:Src/main.c    ****   */
+  19:Src/main.c    **** /* USER CODE END Header */
+  20:Src/main.c    **** 
+  21:Src/main.c    **** /* Includes ------------------------------------------------------------------*/
+  22:Src/main.c    **** #include "main.h"
+  23:Src/main.c    **** #include "usb_device.h"
+  24:Src/main.c    **** 
+  25:Src/main.c    **** /* Private includes ----------------------------------------------------------*/
+  26:Src/main.c    **** /* USER CODE BEGIN Includes */
+  27:Src/main.c    **** #include "charlie.c"
+  28:Src/main.c    **** 
+  29:Src/main.c    **** /* USER CODE END Includes */
+  30:Src/main.c    **** 
+  31:Src/main.c    **** /* Private typedef -----------------------------------------------------------*/
+  32:Src/main.c    **** /* USER CODE BEGIN PTD */
+  33:Src/main.c    **** 
+ARM GAS  /tmp/ccSD2iu1.s 			page 2
+
+
+  34:Src/main.c    **** /* USER CODE END PTD */
+  35:Src/main.c    **** 
+  36:Src/main.c    **** /* Private define ------------------------------------------------------------*/
+  37:Src/main.c    **** /* USER CODE BEGIN PD */
+  38:Src/main.c    **** /* USER CODE END PD */
+  39:Src/main.c    **** 
+  40:Src/main.c    **** /* Private macro -------------------------------------------------------------*/
+  41:Src/main.c    **** /* USER CODE BEGIN PM */
+  42:Src/main.c    **** 
+  43:Src/main.c    **** /* USER CODE END PM */
+  44:Src/main.c    **** 
+  45:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  46:Src/main.c    **** 
+  47:Src/main.c    **** /* USER CODE BEGIN PV */
+  48:Src/main.c    **** 
+  49:Src/main.c    **** /* USER CODE END PV */
+  50:Src/main.c    **** 
+  51:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  52:Src/main.c    **** void SystemClock_Config(void);
+  53:Src/main.c    **** static void MX_GPIO_Init(void);
+  54:Src/main.c    **** /* USER CODE BEGIN PFP */
+  55:Src/main.c    **** 
+  56:Src/main.c    **** /* USER CODE END PFP */
+  57:Src/main.c    **** 
+  58:Src/main.c    **** /* Private user code ---------------------------------------------------------*/
+  59:Src/main.c    **** /* USER CODE BEGIN 0 */
+  60:Src/main.c    **** 
+  61:Src/main.c    **** /* USER CODE END 0 */
+  62:Src/main.c    **** 
+  63:Src/main.c    **** /**
+  64:Src/main.c    ****   * @brief  The application entry point.
+  65:Src/main.c    ****   * @retval int
+  66:Src/main.c    ****   */
+  67:Src/main.c    **** int main(void)
+  68:Src/main.c    **** {
+  69:Src/main.c    ****   /* USER CODE BEGIN 1 */
+  70:Src/main.c    **** 
+  71:Src/main.c    ****   /* USER CODE END 1 */
+  72:Src/main.c    ****   
+  73:Src/main.c    **** 
+  74:Src/main.c    ****   /* MCU Configuration--------------------------------------------------------*/
+  75:Src/main.c    **** 
+  76:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  77:Src/main.c    ****   HAL_Init();
+  78:Src/main.c    **** 
+  79:Src/main.c    ****   /* USER CODE BEGIN Init */
+  80:Src/main.c    **** 
+  81:Src/main.c    ****   /* USER CODE END Init */
+  82:Src/main.c    **** 
+  83:Src/main.c    ****   /* Configure the system clock */
+  84:Src/main.c    ****   SystemClock_Config();
+  85:Src/main.c    **** 
+  86:Src/main.c    ****   /* USER CODE BEGIN SysInit */
+  87:Src/main.c    **** 
+  88:Src/main.c    ****   /* USER CODE END SysInit */
+  89:Src/main.c    **** 
+  90:Src/main.c    ****   /* Initialize all configured peripherals */
+ARM GAS  /tmp/ccSD2iu1.s 			page 3
+
+
+  91:Src/main.c    ****   MX_GPIO_Init();
+  92:Src/main.c    ****   MX_USB_DEVICE_Init();
+  93:Src/main.c    ****   /* USER CODE BEGIN 2 */
+  94:Src/main.c    ****   GPIO_InitTypeDef PinA = initA();
+  95:Src/main.c    ****   GPIO_InitTypeDef PinB = initB();
+  96:Src/main.c    ****   GPIO_InitTypeDef PinC = initC();
+  97:Src/main.c    ****   GPIO_InitTypeDef PinD = initD();
+  98:Src/main.c    **** 
+  99:Src/main.c    ****   
+ 100:Src/main.c    **** //  HAL_GPIO_Init(GPIOA, &PinA);
+ 101:Src/main.c    **** //  HAL_GPIO_Init(GPIOA, &PinB);
+ 102:Src/main.c    **** 
+ 103:Src/main.c    ****   /* USER CODE END 2 */
+ 104:Src/main.c    ****  
+ 105:Src/main.c    ****  
+ 106:Src/main.c    **** 
+ 107:Src/main.c    ****   /* Infinite loop */
+ 108:Src/main.c    ****   /* USER CODE BEGIN WHILE */
+ 109:Src/main.c    ****   while (1)
+ 110:Src/main.c    ****   {
+ 111:Src/main.c    ****     /* USER CODE END WHILE */
+ 112:Src/main.c    **** 
+ 113:Src/main.c    ****     /* USER CODE BEGIN 3 */
+ 114:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 0);
+ 115:Src/main.c    ****     HAL_Delay(1000);
+ 116:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 1);
+ 117:Src/main.c    ****     HAL_Delay(1000);
+ 118:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 2);
+ 119:Src/main.c    ****     HAL_Delay(1000);
+ 120:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 3);
+ 121:Src/main.c    ****     HAL_Delay(1000);
+ 122:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 4);
+ 123:Src/main.c    ****     HAL_Delay(1000);
+ 124:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 5);
+ 125:Src/main.c    ****     HAL_Delay(1000);
+ 126:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 6);
+ 127:Src/main.c    ****     HAL_Delay(1000);
+ 128:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 7);
+ 129:Src/main.c    ****     HAL_Delay(1000);
+ 130:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 8);
+ 131:Src/main.c    ****     HAL_Delay(1000);
+ 132:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 9);
+ 133:Src/main.c    ****     HAL_Delay(1000);
+ 134:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 10);
+ 135:Src/main.c    ****     HAL_Delay(1000);
+ 136:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 11);
+ 137:Src/main.c    ****     HAL_Delay(1000);
+ 138:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 12);
+ 139:Src/main.c    ****     HAL_Delay(1000);
+ 140:Src/main.c    **** 
+ 141:Src/main.c    ****   }
+ 142:Src/main.c    ****   /* USER CODE END 3 */
+ 143:Src/main.c    **** }
+ 144:Src/main.c    **** 
+ 145:Src/main.c    **** /**
+ 146:Src/main.c    ****   * @brief System Clock Configuration
+ 147:Src/main.c    ****   * @retval None
+ARM GAS  /tmp/ccSD2iu1.s 			page 4
+
+
+ 148:Src/main.c    ****   */
+ 149:Src/main.c    **** void SystemClock_Config(void)
+ 150:Src/main.c    **** {
+ 151:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 152:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 153:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 154:Src/main.c    **** 
+ 155:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
+ 156:Src/main.c    ****   */
+ 157:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48;
+ 158:Src/main.c    ****   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+ 159:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 160:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 161:Src/main.c    ****   {
+ 162:Src/main.c    ****     Error_Handler();
+ 163:Src/main.c    ****   }
+ 164:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
+ 165:Src/main.c    ****   */
+ 166:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 167:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
+ 168:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI48;
+ 169:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 170:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 171:Src/main.c    **** 
+ 172:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+ 173:Src/main.c    ****   {
+ 174:Src/main.c    ****     Error_Handler();
+ 175:Src/main.c    ****   }
+ 176:Src/main.c    ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+ 177:Src/main.c    ****   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
+ 178:Src/main.c    **** 
+ 179:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 180:Src/main.c    ****   {
+ 181:Src/main.c    ****     Error_Handler();
+ 182:Src/main.c    ****   }
+ 183:Src/main.c    **** }
+ 184:Src/main.c    **** 
+ 185:Src/main.c    **** /**
+ 186:Src/main.c    ****   * @brief GPIO Initialization Function
+ 187:Src/main.c    ****   * @param None
+ 188:Src/main.c    ****   * @retval None
+ 189:Src/main.c    ****   */
+ 190:Src/main.c    **** static void MX_GPIO_Init(void)
+ 191:Src/main.c    **** {
+  26              		.loc 1 191 1 view -0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 32
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 00B5     		push	{lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 4
+  33              		.cfi_offset 14, -4
+  34 0002 89B0     		sub	sp, sp, #36
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_offset 40
+ 192:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  37              		.loc 1 192 3 view .LVU1
+ARM GAS  /tmp/ccSD2iu1.s 			page 5
+
+
+  38              		.loc 1 192 20 is_stmt 0 view .LVU2
+  39 0004 1022     		movs	r2, #16
+  40 0006 0021     		movs	r1, #0
+  41 0008 04A8     		add	r0, sp, #16
+  42 000a FFF7FEFF 		bl	memset
+  43              	.LVL0:
+ 193:Src/main.c    **** 
+ 194:Src/main.c    ****   /* GPIO Ports Clock Enable */
+ 195:Src/main.c    ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  44              		.loc 1 195 3 is_stmt 1 view .LVU3
+  45              	.LBB2:
+  46              		.loc 1 195 3 view .LVU4
+  47              		.loc 1 195 3 view .LVU5
+  48 000e 0F4B     		ldr	r3, .L2
+  49 0010 5969     		ldr	r1, [r3, #20]
+  50 0012 8020     		movs	r0, #128
+  51 0014 C002     		lsls	r0, r0, #11
+  52 0016 0143     		orrs	r1, r0
+  53 0018 5961     		str	r1, [r3, #20]
+  54              		.loc 1 195 3 view .LVU6
+  55 001a 5A69     		ldr	r2, [r3, #20]
+  56 001c 0240     		ands	r2, r0
+  57 001e 0192     		str	r2, [sp, #4]
+  58              		.loc 1 195 3 view .LVU7
+  59 0020 019A     		ldr	r2, [sp, #4]
+  60              	.LBE2:
+  61              		.loc 1 195 3 view .LVU8
+ 196:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  62              		.loc 1 196 3 view .LVU9
+  63              	.LBB3:
+  64              		.loc 1 196 3 view .LVU10
+  65              		.loc 1 196 3 view .LVU11
+  66 0022 5A69     		ldr	r2, [r3, #20]
+  67 0024 8021     		movs	r1, #128
+  68 0026 8902     		lsls	r1, r1, #10
+  69 0028 0A43     		orrs	r2, r1
+  70 002a 5A61     		str	r2, [r3, #20]
+  71              		.loc 1 196 3 view .LVU12
+  72 002c 5B69     		ldr	r3, [r3, #20]
+  73 002e 0B40     		ands	r3, r1
+  74 0030 0293     		str	r3, [sp, #8]
+  75              		.loc 1 196 3 view .LVU13
+  76 0032 029B     		ldr	r3, [sp, #8]
+  77              	.LBE3:
+  78              		.loc 1 196 3 view .LVU14
+ 197:Src/main.c    **** /*
+ 198:Src/main.c    ****   //Configure GPIO pin Output Level 
+ 199:Src/main.c    ****   HAL_GPIO_WritePin(GPIOA, A_Pin|B_Pin|C_Pin|D_Pin, GPIO_PIN_RESET);
+ 200:Src/main.c    **** 
+ 201:Src/main.c    ****   //Configure GPIO pin : Mode_Pin 
+ 202:Src/main.c    ****   GPIO_InitStruct.Pin = Mode_Pin;
+ 203:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 204:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 205:Src/main.c    ****   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+ 206:Src/main.c    **** 
+ 207:Src/main.c    ****   //Configure GPIO pins : A_Pin B_Pin C_Pin D_Pin 
+ 208:Src/main.c    ****   GPIO_InitStruct.Pin = A_Pin|B_Pin|C_Pin|D_Pin;
+ARM GAS  /tmp/ccSD2iu1.s 			page 6
+
+
+ 209:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 210:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 211:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 212:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 213:Src/main.c    **** */
+ 214:Src/main.c    ****   /*Configure GPIO pins : Hour_Pin Minute_Pin */
+ 215:Src/main.c    ****   GPIO_InitStruct.Pin = Hour_Pin|Minute_Pin;
+  79              		.loc 1 215 3 view .LVU15
+  80              		.loc 1 215 23 is_stmt 0 view .LVU16
+  81 0034 6023     		movs	r3, #96
+  82 0036 0393     		str	r3, [sp, #12]
+ 216:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  83              		.loc 1 216 3 is_stmt 1 view .LVU17
+ 217:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+  84              		.loc 1 217 3 view .LVU18
+  85              		.loc 1 217 24 is_stmt 0 view .LVU19
+  86 0038 5F3B     		subs	r3, r3, #95
+  87 003a 0593     		str	r3, [sp, #20]
+ 218:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  88              		.loc 1 218 3 is_stmt 1 view .LVU20
+  89 003c 9020     		movs	r0, #144
+  90 003e 03A9     		add	r1, sp, #12
+  91 0040 C005     		lsls	r0, r0, #23
+  92 0042 FFF7FEFF 		bl	HAL_GPIO_Init
+  93              	.LVL1:
+ 219:Src/main.c    **** 
+ 220:Src/main.c    **** }
+  94              		.loc 1 220 1 is_stmt 0 view .LVU21
+  95 0046 09B0     		add	sp, sp, #36
+  96              		@ sp needed
+  97 0048 00BD     		pop	{pc}
+  98              	.L3:
+  99 004a C046     		.align	2
+ 100              	.L2:
+ 101 004c 00100240 		.word	1073876992
+ 102              		.cfi_endproc
+ 103              	.LFE50:
+ 105              		.section	.text.charlie,"ax",%progbits
+ 106              		.align	1
+ 107              		.global	charlie
+ 108              		.syntax unified
+ 109              		.code	16
+ 110              		.thumb_func
+ 111              		.fpu softvfp
+ 113              	charlie:
+ 114              	.LVL2:
+ 115              	.LFB43:
+ 116              		.file 2 "Src/charlie.c"
+   1:Src/charlie.c **** 
+   2:Src/charlie.c **** 
+   3:Src/charlie.c **** void charlie(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef 
+ 117              		.loc 2 3 114 is_stmt 1 view -0
+ 118              		.cfi_startproc
+ 119              		@ args = 84, pretend = 16, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		.loc 2 3 114 is_stmt 0 view .LVU23
+ 122 0000 84B0     		sub	sp, sp, #16
+ARM GAS  /tmp/ccSD2iu1.s 			page 7
+
+
+ 123              	.LCFI2:
+ 124              		.cfi_def_cfa_offset 16
+ 125 0002 70B5     		push	{r4, r5, r6, lr}
+ 126              	.LCFI3:
+ 127              		.cfi_def_cfa_offset 32
+ 128              		.cfi_offset 4, -32
+ 129              		.cfi_offset 5, -28
+ 130              		.cfi_offset 6, -24
+ 131              		.cfi_offset 14, -20
+ 132 0004 0490     		str	r0, [sp, #16]
+ 133 0006 0591     		str	r1, [sp, #20]
+ 134 0008 0692     		str	r2, [sp, #24]
+ 135 000a 0793     		str	r3, [sp, #28]
+ 136 000c 189C     		ldr	r4, [sp, #96]
+   4:Src/charlie.c ****    if(pos == 0){
+ 137              		.loc 2 4 4 is_stmt 1 view .LVU24
+ 138              		.loc 2 4 6 is_stmt 0 view .LVU25
+ 139 000e 002C     		cmp	r4, #0
+ 140 0010 24D0     		beq	.L18
+ 141              	.L5:
+   5:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+   6:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+   7:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+   8:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+   9:Src/charlie.c ****    }
+  10:Src/charlie.c **** 
+  11:Src/charlie.c **** 
+  12:Src/charlie.c ****    // 12'oclock
+  13:Src/charlie.c ****    // A = 1
+  14:Src/charlie.c ****    // B = Z
+  15:Src/charlie.c ****    // C = 0
+  16:Src/charlie.c ****    // D = Z
+  17:Src/charlie.c ****    if(pos == 12){
+ 142              		.loc 2 17 4 is_stmt 1 view .LVU26
+ 143              		.loc 2 17 6 is_stmt 0 view .LVU27
+ 144 0012 0C2C     		cmp	r4, #12
+ 145 0014 35D0     		beq	.L19
+ 146              	.L6:
+  18:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+  19:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+  20:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+  21:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+  22:Src/charlie.c **** 
+  23:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+  24:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+  25:Src/charlie.c ****       }
+  26:Src/charlie.c **** 
+  27:Src/charlie.c ****    // ?'oclock
+  28:Src/charlie.c ****    // A = 1
+  29:Src/charlie.c ****    // B = Z
+  30:Src/charlie.c ****    // C = 0
+  31:Src/charlie.c ****    // D = Z
+  32:Src/charlie.c ****    if(pos == 1){
+ 147              		.loc 2 32 4 is_stmt 1 view .LVU28
+ 148              		.loc 2 32 6 is_stmt 0 view .LVU29
+ 149 0016 012C     		cmp	r4, #1
+ 150 0018 50D0     		beq	.L20
+ARM GAS  /tmp/ccSD2iu1.s 			page 8
+
+
+ 151              	.L7:
+  33:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+  34:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+  35:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+  36:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+  37:Src/charlie.c **** 
+  38:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+  39:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+  40:Src/charlie.c ****       }
+  41:Src/charlie.c **** 
+  42:Src/charlie.c **** 
+  43:Src/charlie.c ****    // 2'oclock
+  44:Src/charlie.c ****    // A = Z
+  45:Src/charlie.c ****    // B = 1
+  46:Src/charlie.c ****    // C = Z
+  47:Src/charlie.c ****    // D = 0
+  48:Src/charlie.c ****    if(pos == 2){
+ 152              		.loc 2 48 4 is_stmt 1 view .LVU30
+ 153              		.loc 2 48 6 is_stmt 0 view .LVU31
+ 154 001a 022C     		cmp	r4, #2
+ 155 001c 6BD0     		beq	.L21
+ 156              	.L8:
+  49:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+  50:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+  51:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+  52:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+  53:Src/charlie.c **** 
+  54:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+  55:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+  56:Src/charlie.c ****       }
+  57:Src/charlie.c **** 
+  58:Src/charlie.c ****    // 3'oclock
+  59:Src/charlie.c ****    // A = Z
+  60:Src/charlie.c ****    // B = 1
+  61:Src/charlie.c ****    // C = Z
+  62:Src/charlie.c ****    // D = 0
+  63:Src/charlie.c ****    if(pos == 3){
+ 157              		.loc 2 63 4 is_stmt 1 view .LVU32
+ 158              		.loc 2 63 6 is_stmt 0 view .LVU33
+ 159 001e 032C     		cmp	r4, #3
+ 160 0020 00D1     		bne	.LCB116
+ 161 0022 85E0     		b	.L22	@long jump
+ 162              	.LCB116:
+ 163              	.L9:
+  64:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+  65:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+  66:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+  67:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+  68:Src/charlie.c **** 
+  69:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+  70:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+  71:Src/charlie.c ****       }
+  72:Src/charlie.c **** 
+  73:Src/charlie.c ****    // 8'oclock
+  74:Src/charlie.c ****    // A = Z
+  75:Src/charlie.c ****    // B = 1
+  76:Src/charlie.c ****    // C = 0
+ARM GAS  /tmp/ccSD2iu1.s 			page 9
+
+
+  77:Src/charlie.c ****    // D = Z
+  78:Src/charlie.c ****    if(pos == 8){
+ 164              		.loc 2 78 4 is_stmt 1 view .LVU34
+ 165              		.loc 2 78 6 is_stmt 0 view .LVU35
+ 166 0024 082C     		cmp	r4, #8
+ 167 0026 00D1     		bne	.LCB120
+ 168 0028 9FE0     		b	.L23	@long jump
+ 169              	.LCB120:
+ 170              	.L10:
+  79:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+  80:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+  81:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+  82:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+  83:Src/charlie.c **** 
+  84:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+  85:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+  86:Src/charlie.c ****       }
+  87:Src/charlie.c **** 
+  88:Src/charlie.c ****    // 9'oclock
+  89:Src/charlie.c ****    // A = Z
+  90:Src/charlie.c ****    // B = 1
+  91:Src/charlie.c ****    // C = 0
+  92:Src/charlie.c ****    // D = Z
+  93:Src/charlie.c ****    if(pos == 9){
+ 171              		.loc 2 93 4 is_stmt 1 view .LVU36
+ 172              		.loc 2 93 6 is_stmt 0 view .LVU37
+ 173 002a 092C     		cmp	r4, #9
+ 174 002c 00D1     		bne	.LCB124
+ 175 002e B9E0     		b	.L24	@long jump
+ 176              	.LCB124:
+ 177              	.L11:
+  94:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+  95:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+  96:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+  97:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+  98:Src/charlie.c **** 
+  99:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+ 100:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+ 101:Src/charlie.c ****       }
+ 102:Src/charlie.c **** 
+ 103:Src/charlie.c **** 
+ 104:Src/charlie.c ****    // 4'oclock
+ 105:Src/charlie.c ****    // A = 1
+ 106:Src/charlie.c ****    // B = Z
+ 107:Src/charlie.c ****    // C = Z
+ 108:Src/charlie.c ****    // D = 0
+ 109:Src/charlie.c ****    if(pos == 4){
+ 178              		.loc 2 109 4 is_stmt 1 view .LVU38
+ 179              		.loc 2 109 6 is_stmt 0 view .LVU39
+ 180 0030 042C     		cmp	r4, #4
+ 181 0032 00D1     		bne	.LCB128
+ 182 0034 D3E0     		b	.L25	@long jump
+ 183              	.LCB128:
+ 184              	.L12:
+ 110:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+ 111:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 112:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ARM GAS  /tmp/ccSD2iu1.s 			page 10
+
+
+ 113:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 114:Src/charlie.c **** 
+ 115:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+ 116:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+ 117:Src/charlie.c ****       }
+ 118:Src/charlie.c **** 
+ 119:Src/charlie.c ****    // 5'oclock
+ 120:Src/charlie.c ****    // A = 0
+ 121:Src/charlie.c ****    // B = Z
+ 122:Src/charlie.c ****    // C = Z
+ 123:Src/charlie.c ****    // D = 1
+ 124:Src/charlie.c ****    if(pos == 5){
+ 185              		.loc 2 124 4 is_stmt 1 view .LVU40
+ 186              		.loc 2 124 6 is_stmt 0 view .LVU41
+ 187 0036 052C     		cmp	r4, #5
+ 188 0038 00D1     		bne	.LCB132
+ 189 003a EDE0     		b	.L26	@long jump
+ 190              	.LCB132:
+ 191              	.L13:
+ 125:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+ 126:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 127:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 128:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 129:Src/charlie.c **** 
+ 130:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+ 131:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+ 132:Src/charlie.c ****       }
+ 133:Src/charlie.c **** 
+ 134:Src/charlie.c ****    // 10'oclock
+ 135:Src/charlie.c ****    // A = Z
+ 136:Src/charlie.c ****    // B = Z
+ 137:Src/charlie.c ****    // C = 0
+ 138:Src/charlie.c ****    // D = 1
+ 139:Src/charlie.c ****    if(pos == 10){
+ 192              		.loc 2 139 4 is_stmt 1 view .LVU42
+ 193              		.loc 2 139 6 is_stmt 0 view .LVU43
+ 194 003c 0A2C     		cmp	r4, #10
+ 195 003e 00D1     		bne	.LCB136
+ 196 0040 07E1     		b	.L27	@long jump
+ 197              	.LCB136:
+ 198              	.L14:
+ 140:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 141:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 142:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 143:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 144:Src/charlie.c **** 
+ 145:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+ 146:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+ 147:Src/charlie.c ****       }
+ 148:Src/charlie.c ****    
+ 149:Src/charlie.c ****    // 11'oclock
+ 150:Src/charlie.c ****    // A = Z
+ 151:Src/charlie.c ****    // B = Z
+ 152:Src/charlie.c ****    // C = 1
+ 153:Src/charlie.c ****    // D = 0
+ 154:Src/charlie.c ****    if(pos == 11){
+ 199              		.loc 2 154 4 is_stmt 1 view .LVU44
+ARM GAS  /tmp/ccSD2iu1.s 			page 11
+
+
+ 200              		.loc 2 154 6 is_stmt 0 view .LVU45
+ 201 0042 0B2C     		cmp	r4, #11
+ 202 0044 00D1     		bne	.LCB140
+ 203 0046 21E1     		b	.L28	@long jump
+ 204              	.LCB140:
+ 205              	.L15:
+ 155:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 156:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 157:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 158:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 159:Src/charlie.c ****             
+ 160:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+ 161:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+ 162:Src/charlie.c ****       }
+ 163:Src/charlie.c **** 
+ 164:Src/charlie.c ****    // 6'oclock
+ 165:Src/charlie.c ****    if(pos == 6){
+ 206              		.loc 2 165 4 is_stmt 1 view .LVU46
+ 207              		.loc 2 165 6 is_stmt 0 view .LVU47
+ 208 0048 062C     		cmp	r4, #6
+ 209 004a 00D1     		bne	.LCB144
+ 210 004c 3BE1     		b	.L29	@long jump
+ 211              	.LCB144:
+ 212              	.L16:
+ 166:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+ 167:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+ 168:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 169:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 170:Src/charlie.c **** 
+ 171:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+ 172:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+ 173:Src/charlie.c ****       }
+ 174:Src/charlie.c **** 
+ 175:Src/charlie.c ****    // 7'oclock
+ 176:Src/charlie.c ****    if(pos == 7){
+ 213              		.loc 2 176 4 is_stmt 1 view .LVU48
+ 214              		.loc 2 176 6 is_stmt 0 view .LVU49
+ 215 004e 072C     		cmp	r4, #7
+ 216 0050 00D1     		bne	.LCB148
+ 217 0052 55E1     		b	.L30	@long jump
+ 218              	.LCB148:
+ 219              	.L4:
+ 177:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinA);
+ 178:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+ 179:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 180:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 181:Src/charlie.c ****       
+ 182:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+ 183:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+ 184:Src/charlie.c ****       }
+ 185:Src/charlie.c **** 
+ 186:Src/charlie.c **** 
+ 187:Src/charlie.c **** }
+ 220              		.loc 2 187 1 view .LVU50
+ 221              		@ sp needed
+ 222 0054 70BC     		pop	{r4, r5, r6}
+ 223 0056 08BC     		pop	{r3}
+ARM GAS  /tmp/ccSD2iu1.s 			page 12
+
+
+ 224 0058 04B0     		add	sp, sp, #16
+ 225 005a 1847     		bx	r3
+ 226              	.L18:
+   5:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 227              		.loc 2 5 7 is_stmt 1 view .LVU51
+ 228 005c 9025     		movs	r5, #144
+ 229 005e ED05     		lsls	r5, r5, #23
+ 230 0060 0121     		movs	r1, #1
+ 231 0062 2800     		movs	r0, r5
+ 232 0064 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 233              	.LVL3:
+   6:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 234              		.loc 2 6 7 view .LVU52
+ 235 0068 0221     		movs	r1, #2
+ 236 006a 2800     		movs	r0, r5
+ 237 006c FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 238              	.LVL4:
+   7:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 239              		.loc 2 7 7 view .LVU53
+ 240 0070 0421     		movs	r1, #4
+ 241 0072 2800     		movs	r0, r5
+ 242 0074 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 243              	.LVL5:
+   8:Src/charlie.c ****    }
+ 244              		.loc 2 8 7 view .LVU54
+ 245 0078 0821     		movs	r1, #8
+ 246 007a 2800     		movs	r0, r5
+ 247 007c FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 248              	.LVL6:
+ 249 0080 C7E7     		b	.L5
+ 250              	.L19:
+  18:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 251              		.loc 2 18 7 view .LVU55
+ 252 0082 9025     		movs	r5, #144
+ 253 0084 ED05     		lsls	r5, r5, #23
+ 254 0086 04A9     		add	r1, sp, #16
+ 255 0088 2800     		movs	r0, r5
+ 256 008a FFF7FEFF 		bl	HAL_GPIO_Init
+ 257              	.LVL7:
+  19:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 258              		.loc 2 19 7 view .LVU56
+ 259 008e 0EA9     		add	r1, sp, #56
+ 260 0090 2800     		movs	r0, r5
+ 261 0092 FFF7FEFF 		bl	HAL_GPIO_Init
+ 262              	.LVL8:
+  20:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 263              		.loc 2 20 7 view .LVU57
+ 264 0096 0221     		movs	r1, #2
+ 265 0098 2800     		movs	r0, r5
+ 266 009a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 267              	.LVL9:
+  21:Src/charlie.c **** 
+ 268              		.loc 2 21 7 view .LVU58
+ 269 009e 0821     		movs	r1, #8
+ 270 00a0 2800     		movs	r0, r5
+ 271 00a2 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 272              	.LVL10:
+ARM GAS  /tmp/ccSD2iu1.s 			page 13
+
+
+  23:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+ 273              		.loc 2 23 7 view .LVU59
+ 274 00a6 0122     		movs	r2, #1
+ 275 00a8 0121     		movs	r1, #1
+ 276 00aa 2800     		movs	r0, r5
+ 277 00ac FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 278              	.LVL11:
+  24:Src/charlie.c ****       }
+ 279              		.loc 2 24 7 view .LVU60
+ 280 00b0 0022     		movs	r2, #0
+ 281 00b2 0421     		movs	r1, #4
+ 282 00b4 2800     		movs	r0, r5
+ 283 00b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 284              	.LVL12:
+ 285 00ba ACE7     		b	.L6
+ 286              	.L20:
+  33:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 287              		.loc 2 33 7 view .LVU61
+ 288 00bc 9025     		movs	r5, #144
+ 289 00be ED05     		lsls	r5, r5, #23
+ 290 00c0 04A9     		add	r1, sp, #16
+ 291 00c2 2800     		movs	r0, r5
+ 292 00c4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 293              	.LVL13:
+  34:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 294              		.loc 2 34 7 view .LVU62
+ 295 00c8 0EA9     		add	r1, sp, #56
+ 296 00ca 2800     		movs	r0, r5
+ 297 00cc FFF7FEFF 		bl	HAL_GPIO_Init
+ 298              	.LVL14:
+  35:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 299              		.loc 2 35 7 view .LVU63
+ 300 00d0 0221     		movs	r1, #2
+ 301 00d2 2800     		movs	r0, r5
+ 302 00d4 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 303              	.LVL15:
+  36:Src/charlie.c **** 
+ 304              		.loc 2 36 7 view .LVU64
+ 305 00d8 0821     		movs	r1, #8
+ 306 00da 2800     		movs	r0, r5
+ 307 00dc FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 308              	.LVL16:
+  38:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+ 309              		.loc 2 38 7 view .LVU65
+ 310 00e0 0022     		movs	r2, #0
+ 311 00e2 0121     		movs	r1, #1
+ 312 00e4 2800     		movs	r0, r5
+ 313 00e6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 314              	.LVL17:
+  39:Src/charlie.c ****       }
+ 315              		.loc 2 39 7 view .LVU66
+ 316 00ea 0122     		movs	r2, #1
+ 317 00ec 0421     		movs	r1, #4
+ 318 00ee 2800     		movs	r0, r5
+ 319 00f0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 320              	.LVL18:
+ 321 00f4 91E7     		b	.L7
+ARM GAS  /tmp/ccSD2iu1.s 			page 14
+
+
+ 322              	.L21:
+  49:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 323              		.loc 2 49 7 view .LVU67
+ 324 00f6 9025     		movs	r5, #144
+ 325 00f8 ED05     		lsls	r5, r5, #23
+ 326 00fa 09A9     		add	r1, sp, #36
+ 327 00fc 2800     		movs	r0, r5
+ 328 00fe FFF7FEFF 		bl	HAL_GPIO_Init
+ 329              	.LVL19:
+  50:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 330              		.loc 2 50 7 view .LVU68
+ 331 0102 13A9     		add	r1, sp, #76
+ 332 0104 2800     		movs	r0, r5
+ 333 0106 FFF7FEFF 		bl	HAL_GPIO_Init
+ 334              	.LVL20:
+  51:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 335              		.loc 2 51 7 view .LVU69
+ 336 010a 0121     		movs	r1, #1
+ 337 010c 2800     		movs	r0, r5
+ 338 010e FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 339              	.LVL21:
+  52:Src/charlie.c **** 
+ 340              		.loc 2 52 7 view .LVU70
+ 341 0112 0421     		movs	r1, #4
+ 342 0114 2800     		movs	r0, r5
+ 343 0116 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 344              	.LVL22:
+  54:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+ 345              		.loc 2 54 7 view .LVU71
+ 346 011a 0122     		movs	r2, #1
+ 347 011c 0221     		movs	r1, #2
+ 348 011e 2800     		movs	r0, r5
+ 349 0120 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 350              	.LVL23:
+  55:Src/charlie.c ****       }
+ 351              		.loc 2 55 7 view .LVU72
+ 352 0124 0022     		movs	r2, #0
+ 353 0126 0821     		movs	r1, #8
+ 354 0128 2800     		movs	r0, r5
+ 355 012a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 356              	.LVL24:
+ 357 012e 76E7     		b	.L8
+ 358              	.L22:
+  64:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 359              		.loc 2 64 7 view .LVU73
+ 360 0130 9025     		movs	r5, #144
+ 361 0132 ED05     		lsls	r5, r5, #23
+ 362 0134 09A9     		add	r1, sp, #36
+ 363 0136 2800     		movs	r0, r5
+ 364 0138 FFF7FEFF 		bl	HAL_GPIO_Init
+ 365              	.LVL25:
+  65:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 366              		.loc 2 65 7 view .LVU74
+ 367 013c 13A9     		add	r1, sp, #76
+ 368 013e 2800     		movs	r0, r5
+ 369 0140 FFF7FEFF 		bl	HAL_GPIO_Init
+ 370              	.LVL26:
+ARM GAS  /tmp/ccSD2iu1.s 			page 15
+
+
+  66:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 371              		.loc 2 66 7 view .LVU75
+ 372 0144 0121     		movs	r1, #1
+ 373 0146 2800     		movs	r0, r5
+ 374 0148 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 375              	.LVL27:
+  67:Src/charlie.c **** 
+ 376              		.loc 2 67 7 view .LVU76
+ 377 014c 0421     		movs	r1, #4
+ 378 014e 2800     		movs	r0, r5
+ 379 0150 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 380              	.LVL28:
+  69:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+ 381              		.loc 2 69 7 view .LVU77
+ 382 0154 0022     		movs	r2, #0
+ 383 0156 0221     		movs	r1, #2
+ 384 0158 2800     		movs	r0, r5
+ 385 015a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 386              	.LVL29:
+  70:Src/charlie.c ****       }
+ 387              		.loc 2 70 7 view .LVU78
+ 388 015e 0122     		movs	r2, #1
+ 389 0160 0821     		movs	r1, #8
+ 390 0162 2800     		movs	r0, r5
+ 391 0164 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 392              	.LVL30:
+ 393 0168 5CE7     		b	.L9
+ 394              	.L23:
+  79:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 395              		.loc 2 79 7 view .LVU79
+ 396 016a 9025     		movs	r5, #144
+ 397 016c ED05     		lsls	r5, r5, #23
+ 398 016e 09A9     		add	r1, sp, #36
+ 399 0170 2800     		movs	r0, r5
+ 400 0172 FFF7FEFF 		bl	HAL_GPIO_Init
+ 401              	.LVL31:
+  80:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 402              		.loc 2 80 7 view .LVU80
+ 403 0176 0EA9     		add	r1, sp, #56
+ 404 0178 2800     		movs	r0, r5
+ 405 017a FFF7FEFF 		bl	HAL_GPIO_Init
+ 406              	.LVL32:
+  81:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 407              		.loc 2 81 7 view .LVU81
+ 408 017e 0121     		movs	r1, #1
+ 409 0180 2800     		movs	r0, r5
+ 410 0182 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 411              	.LVL33:
+  82:Src/charlie.c **** 
+ 412              		.loc 2 82 7 view .LVU82
+ 413 0186 0821     		movs	r1, #8
+ 414 0188 2800     		movs	r0, r5
+ 415 018a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 416              	.LVL34:
+  84:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+ 417              		.loc 2 84 7 view .LVU83
+ 418 018e 0122     		movs	r2, #1
+ARM GAS  /tmp/ccSD2iu1.s 			page 16
+
+
+ 419 0190 0221     		movs	r1, #2
+ 420 0192 2800     		movs	r0, r5
+ 421 0194 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 422              	.LVL35:
+  85:Src/charlie.c ****       }
+ 423              		.loc 2 85 7 view .LVU84
+ 424 0198 0022     		movs	r2, #0
+ 425 019a 0421     		movs	r1, #4
+ 426 019c 2800     		movs	r0, r5
+ 427 019e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 428              	.LVL36:
+ 429 01a2 42E7     		b	.L10
+ 430              	.L24:
+  94:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinC);
+ 431              		.loc 2 94 7 view .LVU85
+ 432 01a4 9025     		movs	r5, #144
+ 433 01a6 ED05     		lsls	r5, r5, #23
+ 434 01a8 09A9     		add	r1, sp, #36
+ 435 01aa 2800     		movs	r0, r5
+ 436 01ac FFF7FEFF 		bl	HAL_GPIO_Init
+ 437              	.LVL37:
+  95:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 438              		.loc 2 95 7 view .LVU86
+ 439 01b0 0EA9     		add	r1, sp, #56
+ 440 01b2 2800     		movs	r0, r5
+ 441 01b4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 442              	.LVL38:
+  96:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 443              		.loc 2 96 7 view .LVU87
+ 444 01b8 0121     		movs	r1, #1
+ 445 01ba 2800     		movs	r0, r5
+ 446 01bc FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 447              	.LVL39:
+  97:Src/charlie.c **** 
+ 448              		.loc 2 97 7 view .LVU88
+ 449 01c0 0821     		movs	r1, #8
+ 450 01c2 2800     		movs	r0, r5
+ 451 01c4 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 452              	.LVL40:
+  99:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+ 453              		.loc 2 99 7 view .LVU89
+ 454 01c8 0022     		movs	r2, #0
+ 455 01ca 0221     		movs	r1, #2
+ 456 01cc 2800     		movs	r0, r5
+ 457 01ce FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 458              	.LVL41:
+ 100:Src/charlie.c ****       }
+ 459              		.loc 2 100 7 view .LVU90
+ 460 01d2 0122     		movs	r2, #1
+ 461 01d4 0421     		movs	r1, #4
+ 462 01d6 2800     		movs	r0, r5
+ 463 01d8 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 464              	.LVL42:
+ 465 01dc 28E7     		b	.L11
+ 466              	.L25:
+ 110:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 467              		.loc 2 110 7 view .LVU91
+ARM GAS  /tmp/ccSD2iu1.s 			page 17
+
+
+ 468 01de 9025     		movs	r5, #144
+ 469 01e0 ED05     		lsls	r5, r5, #23
+ 470 01e2 04A9     		add	r1, sp, #16
+ 471 01e4 2800     		movs	r0, r5
+ 472 01e6 FFF7FEFF 		bl	HAL_GPIO_Init
+ 473              	.LVL43:
+ 111:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 474              		.loc 2 111 7 view .LVU92
+ 475 01ea 13A9     		add	r1, sp, #76
+ 476 01ec 2800     		movs	r0, r5
+ 477 01ee FFF7FEFF 		bl	HAL_GPIO_Init
+ 478              	.LVL44:
+ 112:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 479              		.loc 2 112 7 view .LVU93
+ 480 01f2 0221     		movs	r1, #2
+ 481 01f4 2800     		movs	r0, r5
+ 482 01f6 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 483              	.LVL45:
+ 113:Src/charlie.c **** 
+ 484              		.loc 2 113 7 view .LVU94
+ 485 01fa 0421     		movs	r1, #4
+ 486 01fc 2800     		movs	r0, r5
+ 487 01fe FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 488              	.LVL46:
+ 115:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+ 489              		.loc 2 115 7 view .LVU95
+ 490 0202 0122     		movs	r2, #1
+ 491 0204 0121     		movs	r1, #1
+ 492 0206 2800     		movs	r0, r5
+ 493 0208 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 494              	.LVL47:
+ 116:Src/charlie.c ****       }
+ 495              		.loc 2 116 7 view .LVU96
+ 496 020c 0022     		movs	r2, #0
+ 497 020e 0821     		movs	r1, #8
+ 498 0210 2800     		movs	r0, r5
+ 499 0212 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 500              	.LVL48:
+ 501 0216 0EE7     		b	.L12
+ 502              	.L26:
+ 125:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 503              		.loc 2 125 7 view .LVU97
+ 504 0218 9025     		movs	r5, #144
+ 505 021a ED05     		lsls	r5, r5, #23
+ 506 021c 04A9     		add	r1, sp, #16
+ 507 021e 2800     		movs	r0, r5
+ 508 0220 FFF7FEFF 		bl	HAL_GPIO_Init
+ 509              	.LVL49:
+ 126:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 510              		.loc 2 126 7 view .LVU98
+ 511 0224 13A9     		add	r1, sp, #76
+ 512 0226 2800     		movs	r0, r5
+ 513 0228 FFF7FEFF 		bl	HAL_GPIO_Init
+ 514              	.LVL50:
+ 127:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 515              		.loc 2 127 7 view .LVU99
+ 516 022c 0221     		movs	r1, #2
+ARM GAS  /tmp/ccSD2iu1.s 			page 18
+
+
+ 517 022e 2800     		movs	r0, r5
+ 518 0230 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 519              	.LVL51:
+ 128:Src/charlie.c **** 
+ 520              		.loc 2 128 7 view .LVU100
+ 521 0234 0421     		movs	r1, #4
+ 522 0236 2800     		movs	r0, r5
+ 523 0238 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 524              	.LVL52:
+ 130:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+ 525              		.loc 2 130 7 view .LVU101
+ 526 023c 0022     		movs	r2, #0
+ 527 023e 0121     		movs	r1, #1
+ 528 0240 2800     		movs	r0, r5
+ 529 0242 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 530              	.LVL53:
+ 131:Src/charlie.c ****       }
+ 531              		.loc 2 131 7 view .LVU102
+ 532 0246 0122     		movs	r2, #1
+ 533 0248 0821     		movs	r1, #8
+ 534 024a 2800     		movs	r0, r5
+ 535 024c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 536              	.LVL54:
+ 537 0250 F4E6     		b	.L13
+ 538              	.L27:
+ 140:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 539              		.loc 2 140 7 view .LVU103
+ 540 0252 9025     		movs	r5, #144
+ 541 0254 ED05     		lsls	r5, r5, #23
+ 542 0256 0EA9     		add	r1, sp, #56
+ 543 0258 2800     		movs	r0, r5
+ 544 025a FFF7FEFF 		bl	HAL_GPIO_Init
+ 545              	.LVL55:
+ 141:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 546              		.loc 2 141 7 view .LVU104
+ 547 025e 13A9     		add	r1, sp, #76
+ 548 0260 2800     		movs	r0, r5
+ 549 0262 FFF7FEFF 		bl	HAL_GPIO_Init
+ 550              	.LVL56:
+ 142:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 551              		.loc 2 142 7 view .LVU105
+ 552 0266 0121     		movs	r1, #1
+ 553 0268 2800     		movs	r0, r5
+ 554 026a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 555              	.LVL57:
+ 143:Src/charlie.c **** 
+ 556              		.loc 2 143 7 view .LVU106
+ 557 026e 0221     		movs	r1, #2
+ 558 0270 2800     		movs	r0, r5
+ 559 0272 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 560              	.LVL58:
+ 145:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+ 561              		.loc 2 145 7 view .LVU107
+ 562 0276 0122     		movs	r2, #1
+ 563 0278 0421     		movs	r1, #4
+ 564 027a 2800     		movs	r0, r5
+ 565 027c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  /tmp/ccSD2iu1.s 			page 19
+
+
+ 566              	.LVL59:
+ 146:Src/charlie.c ****       }
+ 567              		.loc 2 146 7 view .LVU108
+ 568 0280 0022     		movs	r2, #0
+ 569 0282 0821     		movs	r1, #8
+ 570 0284 2800     		movs	r0, r5
+ 571 0286 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 572              	.LVL60:
+ 573 028a DAE6     		b	.L14
+ 574              	.L28:
+ 155:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinD);
+ 575              		.loc 2 155 7 view .LVU109
+ 576 028c 9025     		movs	r5, #144
+ 577 028e ED05     		lsls	r5, r5, #23
+ 578 0290 0EA9     		add	r1, sp, #56
+ 579 0292 2800     		movs	r0, r5
+ 580 0294 FFF7FEFF 		bl	HAL_GPIO_Init
+ 581              	.LVL61:
+ 156:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0);
+ 582              		.loc 2 156 7 view .LVU110
+ 583 0298 13A9     		add	r1, sp, #76
+ 584 029a 2800     		movs	r0, r5
+ 585 029c FFF7FEFF 		bl	HAL_GPIO_Init
+ 586              	.LVL62:
+ 157:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 587              		.loc 2 157 7 view .LVU111
+ 588 02a0 0121     		movs	r1, #1
+ 589 02a2 2800     		movs	r0, r5
+ 590 02a4 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 591              	.LVL63:
+ 158:Src/charlie.c ****             
+ 592              		.loc 2 158 7 view .LVU112
+ 593 02a8 0221     		movs	r1, #2
+ 594 02aa 2800     		movs	r0, r5
+ 595 02ac FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 596              	.LVL64:
+ 160:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+ 597              		.loc 2 160 7 view .LVU113
+ 598 02b0 0022     		movs	r2, #0
+ 599 02b2 0421     		movs	r1, #4
+ 600 02b4 2800     		movs	r0, r5
+ 601 02b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 602              	.LVL65:
+ 161:Src/charlie.c ****       }
+ 603              		.loc 2 161 7 view .LVU114
+ 604 02ba 0122     		movs	r2, #1
+ 605 02bc 0821     		movs	r1, #8
+ 606 02be 2800     		movs	r0, r5
+ 607 02c0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 608              	.LVL66:
+ 609 02c4 C0E6     		b	.L15
+ 610              	.L29:
+ 166:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+ 611              		.loc 2 166 7 view .LVU115
+ 612 02c6 9025     		movs	r5, #144
+ 613 02c8 ED05     		lsls	r5, r5, #23
+ 614 02ca 04A9     		add	r1, sp, #16
+ARM GAS  /tmp/ccSD2iu1.s 			page 20
+
+
+ 615 02cc 2800     		movs	r0, r5
+ 616 02ce FFF7FEFF 		bl	HAL_GPIO_Init
+ 617              	.LVL67:
+ 167:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 618              		.loc 2 167 7 view .LVU116
+ 619 02d2 09A9     		add	r1, sp, #36
+ 620 02d4 2800     		movs	r0, r5
+ 621 02d6 FFF7FEFF 		bl	HAL_GPIO_Init
+ 622              	.LVL68:
+ 168:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 623              		.loc 2 168 7 view .LVU117
+ 624 02da 0421     		movs	r1, #4
+ 625 02dc 2800     		movs	r0, r5
+ 626 02de FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 627              	.LVL69:
+ 169:Src/charlie.c **** 
+ 628              		.loc 2 169 7 view .LVU118
+ 629 02e2 0821     		movs	r1, #8
+ 630 02e4 2800     		movs	r0, r5
+ 631 02e6 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 632              	.LVL70:
+ 171:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+ 633              		.loc 2 171 7 view .LVU119
+ 634 02ea 0122     		movs	r2, #1
+ 635 02ec 0121     		movs	r1, #1
+ 636 02ee 2800     		movs	r0, r5
+ 637 02f0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 638              	.LVL71:
+ 172:Src/charlie.c ****       }
+ 639              		.loc 2 172 7 view .LVU120
+ 640 02f4 0022     		movs	r2, #0
+ 641 02f6 0221     		movs	r1, #2
+ 642 02f8 2800     		movs	r0, r5
+ 643 02fa FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 644              	.LVL72:
+ 645 02fe A6E6     		b	.L16
+ 646              	.L30:
+ 177:Src/charlie.c ****       HAL_GPIO_Init(GPIOA, &PinB);
+ 647              		.loc 2 177 7 view .LVU121
+ 648 0300 9024     		movs	r4, #144
+ 649 0302 E405     		lsls	r4, r4, #23
+ 650 0304 04A9     		add	r1, sp, #16
+ 651 0306 2000     		movs	r0, r4
+ 652 0308 FFF7FEFF 		bl	HAL_GPIO_Init
+ 653              	.LVL73:
+ 178:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2);
+ 654              		.loc 2 178 7 view .LVU122
+ 655 030c 09A9     		add	r1, sp, #36
+ 656 030e 2000     		movs	r0, r4
+ 657 0310 FFF7FEFF 		bl	HAL_GPIO_Init
+ 658              	.LVL74:
+ 179:Src/charlie.c ****       HAL_GPIO_DeInit(GPIOA, GPIO_PIN_3);
+ 659              		.loc 2 179 7 view .LVU123
+ 660 0314 0421     		movs	r1, #4
+ 661 0316 2000     		movs	r0, r4
+ 662 0318 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 663              	.LVL75:
+ARM GAS  /tmp/ccSD2iu1.s 			page 21
+
+
+ 180:Src/charlie.c ****       
+ 664              		.loc 2 180 7 view .LVU124
+ 665 031c 0821     		movs	r1, #8
+ 666 031e 2000     		movs	r0, r4
+ 667 0320 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 668              	.LVL76:
+ 182:Src/charlie.c ****       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+ 669              		.loc 2 182 7 view .LVU125
+ 670 0324 0022     		movs	r2, #0
+ 671 0326 0121     		movs	r1, #1
+ 672 0328 2000     		movs	r0, r4
+ 673 032a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 674              	.LVL77:
+ 183:Src/charlie.c ****       }
+ 675              		.loc 2 183 7 view .LVU126
+ 676 032e 0122     		movs	r2, #1
+ 677 0330 0221     		movs	r1, #2
+ 678 0332 2000     		movs	r0, r4
+ 679 0334 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 680              	.LVL78:
+ 681              		.loc 2 187 1 is_stmt 0 view .LVU127
+ 682 0338 8CE6     		b	.L4
+ 683              		.cfi_endproc
+ 684              	.LFE43:
+ 686              		.section	.text.initA,"ax",%progbits
+ 687              		.align	1
+ 688              		.global	initA
+ 689              		.syntax unified
+ 690              		.code	16
+ 691              		.thumb_func
+ 692              		.fpu softvfp
+ 694              	initA:
+ 695              	.LVL79:
+ 696              	.LFB44:
+ 188:Src/charlie.c **** 
+ 189:Src/charlie.c **** GPIO_InitTypeDef initA(){
+ 697              		.loc 2 189 25 is_stmt 1 view -0
+ 698              		.cfi_startproc
+ 699              		@ args = 0, pretend = 0, frame = 24
+ 700              		@ frame_needed = 0, uses_anonymous_args = 0
+ 701              		.loc 2 189 25 is_stmt 0 view .LVU129
+ 702 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 703              	.LCFI4:
+ 704              		.cfi_def_cfa_offset 20
+ 705              		.cfi_offset 4, -20
+ 706              		.cfi_offset 5, -16
+ 707              		.cfi_offset 6, -12
+ 708              		.cfi_offset 7, -8
+ 709              		.cfi_offset 14, -4
+ 710 0002 87B0     		sub	sp, sp, #28
+ 711              	.LCFI5:
+ 712              		.cfi_def_cfa_offset 48
+ 713 0004 0500     		movs	r5, r0
+ 190:Src/charlie.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 714              		.loc 2 190 3 is_stmt 1 view .LVU130
+ 715              		.loc 2 190 20 is_stmt 0 view .LVU131
+ 716 0006 01AC     		add	r4, sp, #4
+ARM GAS  /tmp/ccSD2iu1.s 			page 22
+
+
+ 717 0008 1422     		movs	r2, #20
+ 718 000a 0021     		movs	r1, #0
+ 719 000c 2000     		movs	r0, r4
+ 720              	.LVL80:
+ 721              		.loc 2 190 20 view .LVU132
+ 722 000e FFF7FEFF 		bl	memset
+ 723              	.LVL81:
+ 191:Src/charlie.c **** 
+ 192:Src/charlie.c ****   /*Configure GPIO pin Output Level */
+ 193:Src/charlie.c ****   HAL_GPIO_WritePin(GPIOA, A_Pin, GPIO_PIN_RESET);
+ 724              		.loc 2 193 3 is_stmt 1 view .LVU133
+ 725 0012 9020     		movs	r0, #144
+ 726 0014 0022     		movs	r2, #0
+ 727 0016 0121     		movs	r1, #1
+ 728 0018 C005     		lsls	r0, r0, #23
+ 729 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 730              	.LVL82:
+ 194:Src/charlie.c **** 
+ 195:Src/charlie.c ****   /*Configure GPIO pin : Mode_Pin */
+ 196:Src/charlie.c ****   GPIO_InitStruct.Pin = Mode_Pin;
+ 731              		.loc 2 196 3 view .LVU134
+ 732              		.loc 2 196 23 is_stmt 0 view .LVU135
+ 733 001e 8023     		movs	r3, #128
+ 734 0020 5B00     		lsls	r3, r3, #1
+ 735 0022 0193     		str	r3, [sp, #4]
+ 197:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 736              		.loc 2 197 3 is_stmt 1 view .LVU136
+ 737              		.loc 2 197 24 is_stmt 0 view .LVU137
+ 738 0024 0026     		movs	r6, #0
+ 739 0026 6660     		str	r6, [r4, #4]
+ 198:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 740              		.loc 2 198 3 is_stmt 1 view .LVU138
+ 741              		.loc 2 198 24 is_stmt 0 view .LVU139
+ 742 0028 0127     		movs	r7, #1
+ 743 002a A760     		str	r7, [r4, #8]
+ 199:Src/charlie.c ****   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+ 744              		.loc 2 199 3 is_stmt 1 view .LVU140
+ 745 002c 2100     		movs	r1, r4
+ 746 002e 0748     		ldr	r0, .L32
+ 747 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 748              	.LVL83:
+ 200:Src/charlie.c **** 
+ 201:Src/charlie.c ****   /*Configure GPIO pins : A_Pin */
+ 202:Src/charlie.c ****   GPIO_InitStruct.Pin = A_Pin;
+ 749              		.loc 2 202 3 view .LVU141
+ 750              		.loc 2 202 23 is_stmt 0 view .LVU142
+ 751 0034 0197     		str	r7, [sp, #4]
+ 203:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 752              		.loc 2 203 3 is_stmt 1 view .LVU143
+ 753              		.loc 2 203 24 is_stmt 0 view .LVU144
+ 754 0036 6760     		str	r7, [r4, #4]
+ 204:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 755              		.loc 2 204 3 is_stmt 1 view .LVU145
+ 756              		.loc 2 204 24 is_stmt 0 view .LVU146
+ 757 0038 A660     		str	r6, [r4, #8]
+ 205:Src/charlie.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 758              		.loc 2 205 3 is_stmt 1 view .LVU147
+ARM GAS  /tmp/ccSD2iu1.s 			page 23
+
+
+ 759              		.loc 2 205 25 is_stmt 0 view .LVU148
+ 760 003a E660     		str	r6, [r4, #12]
+ 206:Src/charlie.c **** //  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 207:Src/charlie.c **** 
+ 208:Src/charlie.c ****   return GPIO_InitStruct;
+ 761              		.loc 2 208 3 is_stmt 1 view .LVU149
+ 762              		.loc 2 208 10 is_stmt 0 view .LVU150
+ 763 003c 2B00     		movs	r3, r5
+ 764 003e 07CC     		ldmia	r4!, {r0, r1, r2}
+ 765 0040 07C3     		stmia	r3!, {r0, r1, r2}
+ 766 0042 06CC     		ldmia	r4!, {r1, r2}
+ 767 0044 06C3     		stmia	r3!, {r1, r2}
+ 209:Src/charlie.c **** }
+ 768              		.loc 2 209 1 view .LVU151
+ 769 0046 2800     		movs	r0, r5
+ 770 0048 07B0     		add	sp, sp, #28
+ 771              		@ sp needed
+ 772              	.LVL84:
+ 773              		.loc 2 209 1 view .LVU152
+ 774 004a F0BD     		pop	{r4, r5, r6, r7, pc}
+ 775              	.L33:
+ 776              		.align	2
+ 777              	.L32:
+ 778 004c 00040048 		.word	1207960576
+ 779              		.cfi_endproc
+ 780              	.LFE44:
+ 782              		.section	.text.initB,"ax",%progbits
+ 783              		.align	1
+ 784              		.global	initB
+ 785              		.syntax unified
+ 786              		.code	16
+ 787              		.thumb_func
+ 788              		.fpu softvfp
+ 790              	initB:
+ 791              	.LVL85:
+ 792              	.LFB45:
+ 210:Src/charlie.c **** 
+ 211:Src/charlie.c **** GPIO_InitTypeDef initB(){
+ 793              		.loc 2 211 25 is_stmt 1 view -0
+ 794              		.cfi_startproc
+ 795              		@ args = 0, pretend = 0, frame = 24
+ 796              		@ frame_needed = 0, uses_anonymous_args = 0
+ 797              		.loc 2 211 25 is_stmt 0 view .LVU154
+ 798 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 799              	.LCFI6:
+ 800              		.cfi_def_cfa_offset 20
+ 801              		.cfi_offset 4, -20
+ 802              		.cfi_offset 5, -16
+ 803              		.cfi_offset 6, -12
+ 804              		.cfi_offset 7, -8
+ 805              		.cfi_offset 14, -4
+ 806 0002 87B0     		sub	sp, sp, #28
+ 807              	.LCFI7:
+ 808              		.cfi_def_cfa_offset 48
+ 809 0004 0500     		movs	r5, r0
+ 212:Src/charlie.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 810              		.loc 2 212 3 is_stmt 1 view .LVU155
+ARM GAS  /tmp/ccSD2iu1.s 			page 24
+
+
+ 811              		.loc 2 212 20 is_stmt 0 view .LVU156
+ 812 0006 01AC     		add	r4, sp, #4
+ 813 0008 1422     		movs	r2, #20
+ 814 000a 0021     		movs	r1, #0
+ 815 000c 2000     		movs	r0, r4
+ 816              	.LVL86:
+ 817              		.loc 2 212 20 view .LVU157
+ 818 000e FFF7FEFF 		bl	memset
+ 819              	.LVL87:
+ 213:Src/charlie.c **** 
+ 214:Src/charlie.c ****   /*Configure GPIO pin Output Level */
+ 215:Src/charlie.c ****   HAL_GPIO_WritePin(GPIOA, B_Pin, GPIO_PIN_RESET);
+ 820              		.loc 2 215 3 is_stmt 1 view .LVU158
+ 821 0012 9020     		movs	r0, #144
+ 822 0014 0022     		movs	r2, #0
+ 823 0016 0221     		movs	r1, #2
+ 824 0018 C005     		lsls	r0, r0, #23
+ 825 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 826              	.LVL88:
+ 216:Src/charlie.c **** 
+ 217:Src/charlie.c ****   /*Configure GPIO pin : Mode_Pin */
+ 218:Src/charlie.c ****   GPIO_InitStruct.Pin = Mode_Pin;
+ 827              		.loc 2 218 3 view .LVU159
+ 828              		.loc 2 218 23 is_stmt 0 view .LVU160
+ 829 001e 8023     		movs	r3, #128
+ 830 0020 5B00     		lsls	r3, r3, #1
+ 831 0022 0193     		str	r3, [sp, #4]
+ 219:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 832              		.loc 2 219 3 is_stmt 1 view .LVU161
+ 833              		.loc 2 219 24 is_stmt 0 view .LVU162
+ 834 0024 0026     		movs	r6, #0
+ 835 0026 6660     		str	r6, [r4, #4]
+ 220:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 836              		.loc 2 220 3 is_stmt 1 view .LVU163
+ 837              		.loc 2 220 24 is_stmt 0 view .LVU164
+ 838 0028 0127     		movs	r7, #1
+ 839 002a A760     		str	r7, [r4, #8]
+ 221:Src/charlie.c ****   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+ 840              		.loc 2 221 3 is_stmt 1 view .LVU165
+ 841 002c 2100     		movs	r1, r4
+ 842 002e 0848     		ldr	r0, .L35
+ 843 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 844              	.LVL89:
+ 222:Src/charlie.c **** 
+ 223:Src/charlie.c ****   /*Configure GPIO pins : A_Pin */
+ 224:Src/charlie.c ****   GPIO_InitStruct.Pin = B_Pin;
+ 845              		.loc 2 224 3 view .LVU166
+ 846              		.loc 2 224 23 is_stmt 0 view .LVU167
+ 847 0034 0223     		movs	r3, #2
+ 848 0036 0193     		str	r3, [sp, #4]
+ 225:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 849              		.loc 2 225 3 is_stmt 1 view .LVU168
+ 850              		.loc 2 225 24 is_stmt 0 view .LVU169
+ 851 0038 6760     		str	r7, [r4, #4]
+ 226:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 852              		.loc 2 226 3 is_stmt 1 view .LVU170
+ 853              		.loc 2 226 24 is_stmt 0 view .LVU171
+ARM GAS  /tmp/ccSD2iu1.s 			page 25
+
+
+ 854 003a A660     		str	r6, [r4, #8]
+ 227:Src/charlie.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 855              		.loc 2 227 3 is_stmt 1 view .LVU172
+ 856              		.loc 2 227 25 is_stmt 0 view .LVU173
+ 857 003c E660     		str	r6, [r4, #12]
+ 228:Src/charlie.c **** //  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 229:Src/charlie.c **** 
+ 230:Src/charlie.c ****   return GPIO_InitStruct;
+ 858              		.loc 2 230 3 is_stmt 1 view .LVU174
+ 859              		.loc 2 230 10 is_stmt 0 view .LVU175
+ 860 003e 2B00     		movs	r3, r5
+ 861 0040 07CC     		ldmia	r4!, {r0, r1, r2}
+ 862 0042 07C3     		stmia	r3!, {r0, r1, r2}
+ 863 0044 06CC     		ldmia	r4!, {r1, r2}
+ 864 0046 06C3     		stmia	r3!, {r1, r2}
+ 231:Src/charlie.c **** }
+ 865              		.loc 2 231 1 view .LVU176
+ 866 0048 2800     		movs	r0, r5
+ 867 004a 07B0     		add	sp, sp, #28
+ 868              		@ sp needed
+ 869              	.LVL90:
+ 870              		.loc 2 231 1 view .LVU177
+ 871 004c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 872              	.L36:
+ 873 004e C046     		.align	2
+ 874              	.L35:
+ 875 0050 00040048 		.word	1207960576
+ 876              		.cfi_endproc
+ 877              	.LFE45:
+ 879              		.section	.text.initC,"ax",%progbits
+ 880              		.align	1
+ 881              		.global	initC
+ 882              		.syntax unified
+ 883              		.code	16
+ 884              		.thumb_func
+ 885              		.fpu softvfp
+ 887              	initC:
+ 888              	.LVL91:
+ 889              	.LFB46:
+ 232:Src/charlie.c **** 
+ 233:Src/charlie.c **** GPIO_InitTypeDef initC(){
+ 890              		.loc 2 233 25 is_stmt 1 view -0
+ 891              		.cfi_startproc
+ 892              		@ args = 0, pretend = 0, frame = 24
+ 893              		@ frame_needed = 0, uses_anonymous_args = 0
+ 894              		.loc 2 233 25 is_stmt 0 view .LVU179
+ 895 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 896              	.LCFI8:
+ 897              		.cfi_def_cfa_offset 20
+ 898              		.cfi_offset 4, -20
+ 899              		.cfi_offset 5, -16
+ 900              		.cfi_offset 6, -12
+ 901              		.cfi_offset 7, -8
+ 902              		.cfi_offset 14, -4
+ 903 0002 87B0     		sub	sp, sp, #28
+ 904              	.LCFI9:
+ 905              		.cfi_def_cfa_offset 48
+ARM GAS  /tmp/ccSD2iu1.s 			page 26
+
+
+ 906 0004 0500     		movs	r5, r0
+ 234:Src/charlie.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 907              		.loc 2 234 3 is_stmt 1 view .LVU180
+ 908              		.loc 2 234 20 is_stmt 0 view .LVU181
+ 909 0006 01AC     		add	r4, sp, #4
+ 910 0008 1422     		movs	r2, #20
+ 911 000a 0021     		movs	r1, #0
+ 912 000c 2000     		movs	r0, r4
+ 913              	.LVL92:
+ 914              		.loc 2 234 20 view .LVU182
+ 915 000e FFF7FEFF 		bl	memset
+ 916              	.LVL93:
+ 235:Src/charlie.c **** 
+ 236:Src/charlie.c ****   /*Configure GPIO pin Output Level */
+ 237:Src/charlie.c ****   HAL_GPIO_WritePin(GPIOA, C_Pin, GPIO_PIN_RESET);
+ 917              		.loc 2 237 3 is_stmt 1 view .LVU183
+ 918 0012 9020     		movs	r0, #144
+ 919 0014 0022     		movs	r2, #0
+ 920 0016 0421     		movs	r1, #4
+ 921 0018 C005     		lsls	r0, r0, #23
+ 922 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 923              	.LVL94:
+ 238:Src/charlie.c **** 
+ 239:Src/charlie.c ****   /*Configure GPIO pin : Mode_Pin */
+ 240:Src/charlie.c ****   GPIO_InitStruct.Pin = Mode_Pin;
+ 924              		.loc 2 240 3 view .LVU184
+ 925              		.loc 2 240 23 is_stmt 0 view .LVU185
+ 926 001e 8023     		movs	r3, #128
+ 927 0020 5B00     		lsls	r3, r3, #1
+ 928 0022 0193     		str	r3, [sp, #4]
+ 241:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 929              		.loc 2 241 3 is_stmt 1 view .LVU186
+ 930              		.loc 2 241 24 is_stmt 0 view .LVU187
+ 931 0024 0026     		movs	r6, #0
+ 932 0026 6660     		str	r6, [r4, #4]
+ 242:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 933              		.loc 2 242 3 is_stmt 1 view .LVU188
+ 934              		.loc 2 242 24 is_stmt 0 view .LVU189
+ 935 0028 0127     		movs	r7, #1
+ 936 002a A760     		str	r7, [r4, #8]
+ 243:Src/charlie.c ****   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+ 937              		.loc 2 243 3 is_stmt 1 view .LVU190
+ 938 002c 2100     		movs	r1, r4
+ 939 002e 0848     		ldr	r0, .L38
+ 940 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 941              	.LVL95:
+ 244:Src/charlie.c **** 
+ 245:Src/charlie.c ****   /*Configure GPIO pins : A_Pin */
+ 246:Src/charlie.c ****   GPIO_InitStruct.Pin = C_Pin;
+ 942              		.loc 2 246 3 view .LVU191
+ 943              		.loc 2 246 23 is_stmt 0 view .LVU192
+ 944 0034 0423     		movs	r3, #4
+ 945 0036 0193     		str	r3, [sp, #4]
+ 247:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 946              		.loc 2 247 3 is_stmt 1 view .LVU193
+ 947              		.loc 2 247 24 is_stmt 0 view .LVU194
+ 948 0038 6760     		str	r7, [r4, #4]
+ARM GAS  /tmp/ccSD2iu1.s 			page 27
+
+
+ 248:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 949              		.loc 2 248 3 is_stmt 1 view .LVU195
+ 950              		.loc 2 248 24 is_stmt 0 view .LVU196
+ 951 003a A660     		str	r6, [r4, #8]
+ 249:Src/charlie.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 952              		.loc 2 249 3 is_stmt 1 view .LVU197
+ 953              		.loc 2 249 25 is_stmt 0 view .LVU198
+ 954 003c E660     		str	r6, [r4, #12]
+ 250:Src/charlie.c **** //  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 251:Src/charlie.c **** 
+ 252:Src/charlie.c ****   return GPIO_InitStruct;
+ 955              		.loc 2 252 3 is_stmt 1 view .LVU199
+ 956              		.loc 2 252 10 is_stmt 0 view .LVU200
+ 957 003e 2B00     		movs	r3, r5
+ 958 0040 07CC     		ldmia	r4!, {r0, r1, r2}
+ 959 0042 07C3     		stmia	r3!, {r0, r1, r2}
+ 960 0044 06CC     		ldmia	r4!, {r1, r2}
+ 961 0046 06C3     		stmia	r3!, {r1, r2}
+ 253:Src/charlie.c **** }
+ 962              		.loc 2 253 1 view .LVU201
+ 963 0048 2800     		movs	r0, r5
+ 964 004a 07B0     		add	sp, sp, #28
+ 965              		@ sp needed
+ 966              	.LVL96:
+ 967              		.loc 2 253 1 view .LVU202
+ 968 004c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 969              	.L39:
+ 970 004e C046     		.align	2
+ 971              	.L38:
+ 972 0050 00040048 		.word	1207960576
+ 973              		.cfi_endproc
+ 974              	.LFE46:
+ 976              		.section	.text.initD,"ax",%progbits
+ 977              		.align	1
+ 978              		.global	initD
+ 979              		.syntax unified
+ 980              		.code	16
+ 981              		.thumb_func
+ 982              		.fpu softvfp
+ 984              	initD:
+ 985              	.LVL97:
+ 986              	.LFB47:
+ 254:Src/charlie.c **** 
+ 255:Src/charlie.c **** GPIO_InitTypeDef initD(){
+ 987              		.loc 2 255 25 is_stmt 1 view -0
+ 988              		.cfi_startproc
+ 989              		@ args = 0, pretend = 0, frame = 24
+ 990              		@ frame_needed = 0, uses_anonymous_args = 0
+ 991              		.loc 2 255 25 is_stmt 0 view .LVU204
+ 992 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 993              	.LCFI10:
+ 994              		.cfi_def_cfa_offset 20
+ 995              		.cfi_offset 4, -20
+ 996              		.cfi_offset 5, -16
+ 997              		.cfi_offset 6, -12
+ 998              		.cfi_offset 7, -8
+ 999              		.cfi_offset 14, -4
+ARM GAS  /tmp/ccSD2iu1.s 			page 28
+
+
+ 1000 0002 87B0     		sub	sp, sp, #28
+ 1001              	.LCFI11:
+ 1002              		.cfi_def_cfa_offset 48
+ 1003 0004 0500     		movs	r5, r0
+ 256:Src/charlie.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 1004              		.loc 2 256 3 is_stmt 1 view .LVU205
+ 1005              		.loc 2 256 20 is_stmt 0 view .LVU206
+ 1006 0006 01AC     		add	r4, sp, #4
+ 1007 0008 1422     		movs	r2, #20
+ 1008 000a 0021     		movs	r1, #0
+ 1009 000c 2000     		movs	r0, r4
+ 1010              	.LVL98:
+ 1011              		.loc 2 256 20 view .LVU207
+ 1012 000e FFF7FEFF 		bl	memset
+ 1013              	.LVL99:
+ 257:Src/charlie.c **** 
+ 258:Src/charlie.c ****   /*Configure GPIO pin Output Level */
+ 259:Src/charlie.c ****   HAL_GPIO_WritePin(GPIOA, D_Pin, GPIO_PIN_RESET);
+ 1014              		.loc 2 259 3 is_stmt 1 view .LVU208
+ 1015 0012 9020     		movs	r0, #144
+ 1016 0014 0022     		movs	r2, #0
+ 1017 0016 0821     		movs	r1, #8
+ 1018 0018 C005     		lsls	r0, r0, #23
+ 1019 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1020              	.LVL100:
+ 260:Src/charlie.c **** 
+ 261:Src/charlie.c ****   /*Configure GPIO pin : Mode_Pin */
+ 262:Src/charlie.c ****   GPIO_InitStruct.Pin = Mode_Pin;
+ 1021              		.loc 2 262 3 view .LVU209
+ 1022              		.loc 2 262 23 is_stmt 0 view .LVU210
+ 1023 001e 8023     		movs	r3, #128
+ 1024 0020 5B00     		lsls	r3, r3, #1
+ 1025 0022 0193     		str	r3, [sp, #4]
+ 263:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 1026              		.loc 2 263 3 is_stmt 1 view .LVU211
+ 1027              		.loc 2 263 24 is_stmt 0 view .LVU212
+ 1028 0024 0026     		movs	r6, #0
+ 1029 0026 6660     		str	r6, [r4, #4]
+ 264:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 1030              		.loc 2 264 3 is_stmt 1 view .LVU213
+ 1031              		.loc 2 264 24 is_stmt 0 view .LVU214
+ 1032 0028 0127     		movs	r7, #1
+ 1033 002a A760     		str	r7, [r4, #8]
+ 265:Src/charlie.c ****   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+ 1034              		.loc 2 265 3 is_stmt 1 view .LVU215
+ 1035 002c 2100     		movs	r1, r4
+ 1036 002e 0848     		ldr	r0, .L41
+ 1037 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 1038              	.LVL101:
+ 266:Src/charlie.c **** 
+ 267:Src/charlie.c ****   /*Configure GPIO pins : A_Pin */
+ 268:Src/charlie.c ****   GPIO_InitStruct.Pin = D_Pin;
+ 1039              		.loc 2 268 3 view .LVU216
+ 1040              		.loc 2 268 23 is_stmt 0 view .LVU217
+ 1041 0034 0823     		movs	r3, #8
+ 1042 0036 0193     		str	r3, [sp, #4]
+ 269:Src/charlie.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ARM GAS  /tmp/ccSD2iu1.s 			page 29
+
+
+ 1043              		.loc 2 269 3 is_stmt 1 view .LVU218
+ 1044              		.loc 2 269 24 is_stmt 0 view .LVU219
+ 1045 0038 6760     		str	r7, [r4, #4]
+ 270:Src/charlie.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 1046              		.loc 2 270 3 is_stmt 1 view .LVU220
+ 1047              		.loc 2 270 24 is_stmt 0 view .LVU221
+ 1048 003a A660     		str	r6, [r4, #8]
+ 271:Src/charlie.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 1049              		.loc 2 271 3 is_stmt 1 view .LVU222
+ 1050              		.loc 2 271 25 is_stmt 0 view .LVU223
+ 1051 003c E660     		str	r6, [r4, #12]
+ 272:Src/charlie.c **** //  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 273:Src/charlie.c **** 
+ 274:Src/charlie.c ****   return GPIO_InitStruct;
+ 1052              		.loc 2 274 3 is_stmt 1 view .LVU224
+ 1053              		.loc 2 274 10 is_stmt 0 view .LVU225
+ 1054 003e 2B00     		movs	r3, r5
+ 1055 0040 07CC     		ldmia	r4!, {r0, r1, r2}
+ 1056 0042 07C3     		stmia	r3!, {r0, r1, r2}
+ 1057 0044 06CC     		ldmia	r4!, {r1, r2}
+ 1058 0046 06C3     		stmia	r3!, {r1, r2}
+ 275:Src/charlie.c **** }
+ 1059              		.loc 2 275 1 view .LVU226
+ 1060 0048 2800     		movs	r0, r5
+ 1061 004a 07B0     		add	sp, sp, #28
+ 1062              		@ sp needed
+ 1063              	.LVL102:
+ 1064              		.loc 2 275 1 view .LVU227
+ 1065 004c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1066              	.L42:
+ 1067 004e C046     		.align	2
+ 1068              	.L41:
+ 1069 0050 00040048 		.word	1207960576
+ 1070              		.cfi_endproc
+ 1071              	.LFE47:
+ 1073              		.section	.text.SystemClock_Config,"ax",%progbits
+ 1074              		.align	1
+ 1075              		.global	SystemClock_Config
+ 1076              		.syntax unified
+ 1077              		.code	16
+ 1078              		.thumb_func
+ 1079              		.fpu softvfp
+ 1081              	SystemClock_Config:
+ 1082              	.LFB49:
+ 150:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 1083              		.loc 1 150 1 is_stmt 1 view -0
+ 1084              		.cfi_startproc
+ 1085              		@ args = 0, pretend = 0, frame = 96
+ 1086              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1087 0000 10B5     		push	{r4, lr}
+ 1088              	.LCFI12:
+ 1089              		.cfi_def_cfa_offset 8
+ 1090              		.cfi_offset 4, -8
+ 1091              		.cfi_offset 14, -4
+ 1092 0002 98B0     		sub	sp, sp, #96
+ 1093              	.LCFI13:
+ 1094              		.cfi_def_cfa_offset 104
+ARM GAS  /tmp/ccSD2iu1.s 			page 30
+
+
+ 151:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 1095              		.loc 1 151 3 view .LVU229
+ 151:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 1096              		.loc 1 151 22 is_stmt 0 view .LVU230
+ 1097 0004 3022     		movs	r2, #48
+ 1098 0006 0021     		movs	r1, #0
+ 1099 0008 0CA8     		add	r0, sp, #48
+ 1100 000a FFF7FEFF 		bl	memset
+ 1101              	.LVL103:
+ 152:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 1102              		.loc 1 152 3 is_stmt 1 view .LVU231
+ 152:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 1103              		.loc 1 152 22 is_stmt 0 view .LVU232
+ 1104 000e 1022     		movs	r2, #16
+ 1105 0010 0021     		movs	r1, #0
+ 1106 0012 07A8     		add	r0, sp, #28
+ 1107 0014 FFF7FEFF 		bl	memset
+ 1108              	.LVL104:
+ 153:Src/main.c    **** 
+ 1109              		.loc 1 153 3 is_stmt 1 view .LVU233
+ 153:Src/main.c    **** 
+ 1110              		.loc 1 153 28 is_stmt 0 view .LVU234
+ 1111 0018 1822     		movs	r2, #24
+ 1112 001a 0021     		movs	r1, #0
+ 1113 001c 01A8     		add	r0, sp, #4
+ 1114 001e FFF7FEFF 		bl	memset
+ 1115              	.LVL105:
+ 157:Src/main.c    ****   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+ 1116              		.loc 1 157 3 is_stmt 1 view .LVU235
+ 157:Src/main.c    ****   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+ 1117              		.loc 1 157 36 is_stmt 0 view .LVU236
+ 1118 0022 2023     		movs	r3, #32
+ 1119 0024 0B93     		str	r3, [sp, #44]
+ 158:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 1120              		.loc 1 158 3 is_stmt 1 view .LVU237
+ 158:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 1121              		.loc 1 158 32 is_stmt 0 view .LVU238
+ 1122 0026 1F3B     		subs	r3, r3, #31
+ 1123 0028 1393     		str	r3, [sp, #76]
+ 159:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 1124              		.loc 1 159 3 is_stmt 1 view .LVU239
+ 160:Src/main.c    ****   {
+ 1125              		.loc 1 160 3 view .LVU240
+ 160:Src/main.c    ****   {
+ 1126              		.loc 1 160 7 is_stmt 0 view .LVU241
+ 1127 002a 0BA8     		add	r0, sp, #44
+ 1128 002c FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 1129              	.LVL106:
+ 166:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
+ 1130              		.loc 1 166 3 is_stmt 1 view .LVU242
+ 166:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
+ 1131              		.loc 1 166 31 is_stmt 0 view .LVU243
+ 1132 0030 0723     		movs	r3, #7
+ 1133 0032 0793     		str	r3, [sp, #28]
+ 168:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 1134              		.loc 1 168 3 is_stmt 1 view .LVU244
+ 168:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ARM GAS  /tmp/ccSD2iu1.s 			page 31
+
+
+ 1135              		.loc 1 168 34 is_stmt 0 view .LVU245
+ 1136 0034 043B     		subs	r3, r3, #4
+ 1137 0036 0893     		str	r3, [sp, #32]
+ 169:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 1138              		.loc 1 169 3 is_stmt 1 view .LVU246
+ 169:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 1139              		.loc 1 169 35 is_stmt 0 view .LVU247
+ 1140 0038 0024     		movs	r4, #0
+ 1141 003a 0994     		str	r4, [sp, #36]
+ 170:Src/main.c    **** 
+ 1142              		.loc 1 170 3 is_stmt 1 view .LVU248
+ 170:Src/main.c    **** 
+ 1143              		.loc 1 170 36 is_stmt 0 view .LVU249
+ 1144 003c 0A94     		str	r4, [sp, #40]
+ 172:Src/main.c    ****   {
+ 1145              		.loc 1 172 3 is_stmt 1 view .LVU250
+ 172:Src/main.c    ****   {
+ 1146              		.loc 1 172 7 is_stmt 0 view .LVU251
+ 1147 003e 0121     		movs	r1, #1
+ 1148 0040 07A8     		add	r0, sp, #28
+ 1149 0042 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 1150              	.LVL107:
+ 176:Src/main.c    ****   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
+ 1151              		.loc 1 176 3 is_stmt 1 view .LVU252
+ 176:Src/main.c    ****   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
+ 1152              		.loc 1 176 38 is_stmt 0 view .LVU253
+ 1153 0046 8023     		movs	r3, #128
+ 1154 0048 9B02     		lsls	r3, r3, #10
+ 1155 004a 0193     		str	r3, [sp, #4]
+ 177:Src/main.c    **** 
+ 1156              		.loc 1 177 3 is_stmt 1 view .LVU254
+ 177:Src/main.c    **** 
+ 1157              		.loc 1 177 35 is_stmt 0 view .LVU255
+ 1158 004c 0694     		str	r4, [sp, #24]
+ 179:Src/main.c    ****   {
+ 1159              		.loc 1 179 3 is_stmt 1 view .LVU256
+ 179:Src/main.c    ****   {
+ 1160              		.loc 1 179 7 is_stmt 0 view .LVU257
+ 1161 004e 01A8     		add	r0, sp, #4
+ 1162 0050 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 1163              	.LVL108:
+ 183:Src/main.c    **** 
+ 1164              		.loc 1 183 1 view .LVU258
+ 1165 0054 18B0     		add	sp, sp, #96
+ 1166              		@ sp needed
+ 1167 0056 10BD     		pop	{r4, pc}
+ 1168              		.cfi_endproc
+ 1169              	.LFE49:
+ 1171              		.section	.text.main,"ax",%progbits
+ 1172              		.align	1
+ 1173              		.global	main
+ 1174              		.syntax unified
+ 1175              		.code	16
+ 1176              		.thumb_func
+ 1177              		.fpu softvfp
+ 1179              	main:
+ 1180              	.LFB48:
+ARM GAS  /tmp/ccSD2iu1.s 			page 32
+
+
+  68:Src/main.c    ****   /* USER CODE BEGIN 1 */
+ 1181              		.loc 1 68 1 is_stmt 1 view -0
+ 1182              		.cfi_startproc
+ 1183              		@ Volatile: function does not return.
+ 1184              		@ args = 0, pretend = 0, frame = 88
+ 1185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1186 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 1187              	.LCFI14:
+ 1188              		.cfi_def_cfa_offset 20
+ 1189              		.cfi_offset 4, -20
+ 1190              		.cfi_offset 5, -16
+ 1191              		.cfi_offset 6, -12
+ 1192              		.cfi_offset 7, -8
+ 1193              		.cfi_offset 14, -4
+ 1194 0002 DE46     		mov	lr, fp
+ 1195 0004 5746     		mov	r7, r10
+ 1196 0006 4E46     		mov	r6, r9
+ 1197 0008 4546     		mov	r5, r8
+ 1198 000a E0B5     		push	{r5, r6, r7, lr}
+ 1199              	.LCFI15:
+ 1200              		.cfi_def_cfa_offset 36
+ 1201              		.cfi_offset 8, -36
+ 1202              		.cfi_offset 9, -32
+ 1203              		.cfi_offset 10, -28
+ 1204              		.cfi_offset 11, -24
+ 1205 000c A9B0     		sub	sp, sp, #164
+ 1206              	.LCFI16:
+ 1207              		.cfi_def_cfa_offset 200
+  77:Src/main.c    **** 
+ 1208              		.loc 1 77 3 view .LVU260
+ 1209 000e FFF7FEFF 		bl	HAL_Init
+ 1210              	.LVL109:
+  84:Src/main.c    **** 
+ 1211              		.loc 1 84 3 view .LVU261
+ 1212 0012 FFF7FEFF 		bl	SystemClock_Config
+ 1213              	.LVL110:
+  91:Src/main.c    ****   MX_USB_DEVICE_Init();
+ 1214              		.loc 1 91 3 view .LVU262
+ 1215 0016 FFF7FEFF 		bl	MX_GPIO_Init
+ 1216              	.LVL111:
+  92:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 1217              		.loc 1 92 3 view .LVU263
+ 1218 001a FFF7FEFF 		bl	MX_USB_DEVICE_Init
+ 1219              	.LVL112:
+  94:Src/main.c    ****   GPIO_InitTypeDef PinB = initB();
+ 1220              		.loc 1 94 3 view .LVU264
+  94:Src/main.c    ****   GPIO_InitTypeDef PinB = initB();
+ 1221              		.loc 1 94 27 is_stmt 0 view .LVU265
+ 1222 001e 23A8     		add	r0, sp, #140
+ 1223 0020 FFF7FEFF 		bl	initA
+ 1224              	.LVL113:
+  95:Src/main.c    ****   GPIO_InitTypeDef PinC = initC();
+ 1225              		.loc 1 95 3 is_stmt 1 view .LVU266
+  95:Src/main.c    ****   GPIO_InitTypeDef PinC = initC();
+ 1226              		.loc 1 95 27 is_stmt 0 view .LVU267
+ 1227 0024 1EA8     		add	r0, sp, #120
+ 1228 0026 FFF7FEFF 		bl	initB
+ARM GAS  /tmp/ccSD2iu1.s 			page 33
+
+
+ 1229              	.LVL114:
+  96:Src/main.c    ****   GPIO_InitTypeDef PinD = initD();
+ 1230              		.loc 1 96 3 is_stmt 1 view .LVU268
+  96:Src/main.c    ****   GPIO_InitTypeDef PinD = initD();
+ 1231              		.loc 1 96 27 is_stmt 0 view .LVU269
+ 1232 002a 19A8     		add	r0, sp, #100
+ 1233 002c FFF7FEFF 		bl	initC
+ 1234              	.LVL115:
+  97:Src/main.c    **** 
+ 1235              		.loc 1 97 3 is_stmt 1 view .LVU270
+  97:Src/main.c    **** 
+ 1236              		.loc 1 97 27 is_stmt 0 view .LVU271
+ 1237 0030 14A8     		add	r0, sp, #80
+ 1238 0032 FFF7FEFF 		bl	initD
+ 1239              	.LVL116:
+ 1240              	.L45:
+ 109:Src/main.c    ****   {
+ 1241              		.loc 1 109 3 is_stmt 1 discriminator 1 view .LVU272
+ 114:Src/main.c    ****     HAL_Delay(1000);
+ 1242              		.loc 1 114 5 discriminator 1 view .LVU273
+ 1243 0036 0023     		movs	r3, #0
+ 1244 0038 1093     		str	r3, [sp, #64]
+ 1245 003a 14AB     		add	r3, sp, #80
+ 1246 003c 9946     		mov	r9, r3
+ 1247 003e 0BAB     		add	r3, sp, #44
+ 1248 0040 9846     		mov	r8, r3
+ 1249 0042 4A46     		mov	r2, r9
+ 1250 0044 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1251 0046 13C3     		stmia	r3!, {r0, r1, r4}
+ 1252 0048 03CA     		ldmia	r2!, {r0, r1}
+ 1253 004a 03C3     		stmia	r3!, {r0, r1}
+ 1254 004c 19AF     		add	r7, sp, #100
+ 1255 004e 06AE     		add	r6, sp, #24
+ 1256 0050 3300     		movs	r3, r6
+ 1257 0052 3A00     		movs	r2, r7
+ 1258 0054 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1259 0056 13C3     		stmia	r3!, {r0, r1, r4}
+ 1260 0058 03CA     		ldmia	r2!, {r0, r1}
+ 1261 005a 03C3     		stmia	r3!, {r0, r1}
+ 1262 005c 1EAD     		add	r5, sp, #120
+ 1263 005e 01AB     		add	r3, sp, #4
+ 1264 0060 9B46     		mov	fp, r3
+ 1265 0062 2A00     		movs	r2, r5
+ 1266 0064 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1267 0066 13C3     		stmia	r3!, {r0, r1, r4}
+ 1268 0068 03CA     		ldmia	r2!, {r0, r1}
+ 1269 006a 03C3     		stmia	r3!, {r0, r1}
+ 1270 006c 279B     		ldr	r3, [sp, #156]
+ 1271 006e 1393     		str	r3, [sp, #76]
+ 1272 0070 0093     		str	r3, [sp]
+ 1273 0072 2398     		ldr	r0, [sp, #140]
+ 1274 0074 2499     		ldr	r1, [sp, #144]
+ 1275 0076 259A     		ldr	r2, [sp, #148]
+ 1276 0078 269B     		ldr	r3, [sp, #152]
+ 1277 007a FFF7FEFF 		bl	charlie
+ 1278              	.LVL117:
+ 115:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 1);
+ARM GAS  /tmp/ccSD2iu1.s 			page 34
+
+
+ 1279              		.loc 1 115 5 discriminator 1 view .LVU274
+ 1280 007e FA23     		movs	r3, #250
+ 1281 0080 9B00     		lsls	r3, r3, #2
+ 1282 0082 9A46     		mov	r10, r3
+ 1283 0084 1800     		movs	r0, r3
+ 1284 0086 FFF7FEFF 		bl	HAL_Delay
+ 1285              	.LVL118:
+ 116:Src/main.c    ****     HAL_Delay(1000);
+ 1286              		.loc 1 116 5 discriminator 1 view .LVU275
+ 1287 008a 0123     		movs	r3, #1
+ 1288 008c 1093     		str	r3, [sp, #64]
+ 1289 008e 4346     		mov	r3, r8
+ 1290 0090 4A46     		mov	r2, r9
+ 1291 0092 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1292 0094 13C3     		stmia	r3!, {r0, r1, r4}
+ 1293 0096 03CA     		ldmia	r2!, {r0, r1}
+ 1294 0098 03C3     		stmia	r3!, {r0, r1}
+ 1295 009a 3300     		movs	r3, r6
+ 1296 009c 3A00     		movs	r2, r7
+ 1297 009e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1298 00a0 13C3     		stmia	r3!, {r0, r1, r4}
+ 1299 00a2 03CA     		ldmia	r2!, {r0, r1}
+ 1300 00a4 03C3     		stmia	r3!, {r0, r1}
+ 1301 00a6 5B46     		mov	r3, fp
+ 1302 00a8 2A00     		movs	r2, r5
+ 1303 00aa 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1304 00ac 13C3     		stmia	r3!, {r0, r1, r4}
+ 1305 00ae 03CA     		ldmia	r2!, {r0, r1}
+ 1306 00b0 03C3     		stmia	r3!, {r0, r1}
+ 1307 00b2 279B     		ldr	r3, [sp, #156]
+ 1308 00b4 1393     		str	r3, [sp, #76]
+ 1309 00b6 0093     		str	r3, [sp]
+ 1310 00b8 2398     		ldr	r0, [sp, #140]
+ 1311 00ba 2499     		ldr	r1, [sp, #144]
+ 1312 00bc 259A     		ldr	r2, [sp, #148]
+ 1313 00be 269B     		ldr	r3, [sp, #152]
+ 1314 00c0 FFF7FEFF 		bl	charlie
+ 1315              	.LVL119:
+ 117:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 2);
+ 1316              		.loc 1 117 5 discriminator 1 view .LVU276
+ 1317 00c4 5046     		mov	r0, r10
+ 1318 00c6 FFF7FEFF 		bl	HAL_Delay
+ 1319              	.LVL120:
+ 118:Src/main.c    ****     HAL_Delay(1000);
+ 1320              		.loc 1 118 5 discriminator 1 view .LVU277
+ 1321 00ca 0223     		movs	r3, #2
+ 1322 00cc 1093     		str	r3, [sp, #64]
+ 1323 00ce 4346     		mov	r3, r8
+ 1324 00d0 4A46     		mov	r2, r9
+ 1325 00d2 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1326 00d4 13C3     		stmia	r3!, {r0, r1, r4}
+ 1327 00d6 03CA     		ldmia	r2!, {r0, r1}
+ 1328 00d8 03C3     		stmia	r3!, {r0, r1}
+ 1329 00da 3300     		movs	r3, r6
+ 1330 00dc 3A00     		movs	r2, r7
+ 1331 00de 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1332 00e0 13C3     		stmia	r3!, {r0, r1, r4}
+ARM GAS  /tmp/ccSD2iu1.s 			page 35
+
+
+ 1333 00e2 03CA     		ldmia	r2!, {r0, r1}
+ 1334 00e4 03C3     		stmia	r3!, {r0, r1}
+ 1335 00e6 5B46     		mov	r3, fp
+ 1336 00e8 2A00     		movs	r2, r5
+ 1337 00ea 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1338 00ec 13C3     		stmia	r3!, {r0, r1, r4}
+ 1339 00ee 03CA     		ldmia	r2!, {r0, r1}
+ 1340 00f0 03C3     		stmia	r3!, {r0, r1}
+ 1341 00f2 279B     		ldr	r3, [sp, #156]
+ 1342 00f4 1393     		str	r3, [sp, #76]
+ 1343 00f6 0093     		str	r3, [sp]
+ 1344 00f8 2398     		ldr	r0, [sp, #140]
+ 1345 00fa 2499     		ldr	r1, [sp, #144]
+ 1346 00fc 259A     		ldr	r2, [sp, #148]
+ 1347 00fe 269B     		ldr	r3, [sp, #152]
+ 1348 0100 FFF7FEFF 		bl	charlie
+ 1349              	.LVL121:
+ 119:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 3);
+ 1350              		.loc 1 119 5 discriminator 1 view .LVU278
+ 1351 0104 5046     		mov	r0, r10
+ 1352 0106 FFF7FEFF 		bl	HAL_Delay
+ 1353              	.LVL122:
+ 120:Src/main.c    ****     HAL_Delay(1000);
+ 1354              		.loc 1 120 5 discriminator 1 view .LVU279
+ 1355 010a 0323     		movs	r3, #3
+ 1356 010c 1093     		str	r3, [sp, #64]
+ 1357 010e 4346     		mov	r3, r8
+ 1358 0110 4A46     		mov	r2, r9
+ 1359 0112 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1360 0114 13C3     		stmia	r3!, {r0, r1, r4}
+ 1361 0116 03CA     		ldmia	r2!, {r0, r1}
+ 1362 0118 03C3     		stmia	r3!, {r0, r1}
+ 1363 011a 3300     		movs	r3, r6
+ 1364 011c 3A00     		movs	r2, r7
+ 1365 011e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1366 0120 13C3     		stmia	r3!, {r0, r1, r4}
+ 1367 0122 03CA     		ldmia	r2!, {r0, r1}
+ 1368 0124 03C3     		stmia	r3!, {r0, r1}
+ 1369 0126 5B46     		mov	r3, fp
+ 1370 0128 2A00     		movs	r2, r5
+ 1371 012a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1372 012c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1373 012e 03CA     		ldmia	r2!, {r0, r1}
+ 1374 0130 03C3     		stmia	r3!, {r0, r1}
+ 1375 0132 279B     		ldr	r3, [sp, #156]
+ 1376 0134 1393     		str	r3, [sp, #76]
+ 1377 0136 0093     		str	r3, [sp]
+ 1378 0138 2398     		ldr	r0, [sp, #140]
+ 1379 013a 2499     		ldr	r1, [sp, #144]
+ 1380 013c 259A     		ldr	r2, [sp, #148]
+ 1381 013e 269B     		ldr	r3, [sp, #152]
+ 1382 0140 FFF7FEFF 		bl	charlie
+ 1383              	.LVL123:
+ 121:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 4);
+ 1384              		.loc 1 121 5 discriminator 1 view .LVU280
+ 1385 0144 5046     		mov	r0, r10
+ 1386 0146 FFF7FEFF 		bl	HAL_Delay
+ARM GAS  /tmp/ccSD2iu1.s 			page 36
+
+
+ 1387              	.LVL124:
+ 122:Src/main.c    ****     HAL_Delay(1000);
+ 1388              		.loc 1 122 5 discriminator 1 view .LVU281
+ 1389 014a 0423     		movs	r3, #4
+ 1390 014c 1093     		str	r3, [sp, #64]
+ 1391 014e 4346     		mov	r3, r8
+ 1392 0150 4A46     		mov	r2, r9
+ 1393 0152 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1394 0154 13C3     		stmia	r3!, {r0, r1, r4}
+ 1395 0156 03CA     		ldmia	r2!, {r0, r1}
+ 1396 0158 03C3     		stmia	r3!, {r0, r1}
+ 1397 015a 3300     		movs	r3, r6
+ 1398 015c 3A00     		movs	r2, r7
+ 1399 015e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1400 0160 13C3     		stmia	r3!, {r0, r1, r4}
+ 1401 0162 03CA     		ldmia	r2!, {r0, r1}
+ 1402 0164 03C3     		stmia	r3!, {r0, r1}
+ 1403 0166 5B46     		mov	r3, fp
+ 1404 0168 2A00     		movs	r2, r5
+ 1405 016a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1406 016c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1407 016e 03CA     		ldmia	r2!, {r0, r1}
+ 1408 0170 03C3     		stmia	r3!, {r0, r1}
+ 1409 0172 279B     		ldr	r3, [sp, #156]
+ 1410 0174 1393     		str	r3, [sp, #76]
+ 1411 0176 0093     		str	r3, [sp]
+ 1412 0178 2398     		ldr	r0, [sp, #140]
+ 1413 017a 2499     		ldr	r1, [sp, #144]
+ 1414 017c 259A     		ldr	r2, [sp, #148]
+ 1415 017e 269B     		ldr	r3, [sp, #152]
+ 1416 0180 FFF7FEFF 		bl	charlie
+ 1417              	.LVL125:
+ 123:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 5);
+ 1418              		.loc 1 123 5 discriminator 1 view .LVU282
+ 1419 0184 5046     		mov	r0, r10
+ 1420 0186 FFF7FEFF 		bl	HAL_Delay
+ 1421              	.LVL126:
+ 124:Src/main.c    ****     HAL_Delay(1000);
+ 1422              		.loc 1 124 5 discriminator 1 view .LVU283
+ 1423 018a 0523     		movs	r3, #5
+ 1424 018c 1093     		str	r3, [sp, #64]
+ 1425 018e 4346     		mov	r3, r8
+ 1426 0190 4A46     		mov	r2, r9
+ 1427 0192 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1428 0194 13C3     		stmia	r3!, {r0, r1, r4}
+ 1429 0196 03CA     		ldmia	r2!, {r0, r1}
+ 1430 0198 03C3     		stmia	r3!, {r0, r1}
+ 1431 019a 3300     		movs	r3, r6
+ 1432 019c 3A00     		movs	r2, r7
+ 1433 019e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1434 01a0 13C3     		stmia	r3!, {r0, r1, r4}
+ 1435 01a2 03CA     		ldmia	r2!, {r0, r1}
+ 1436 01a4 03C3     		stmia	r3!, {r0, r1}
+ 1437 01a6 5B46     		mov	r3, fp
+ 1438 01a8 2A00     		movs	r2, r5
+ 1439 01aa 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1440 01ac 13C3     		stmia	r3!, {r0, r1, r4}
+ARM GAS  /tmp/ccSD2iu1.s 			page 37
+
+
+ 1441 01ae 03CA     		ldmia	r2!, {r0, r1}
+ 1442 01b0 03C3     		stmia	r3!, {r0, r1}
+ 1443 01b2 279B     		ldr	r3, [sp, #156]
+ 1444 01b4 1393     		str	r3, [sp, #76]
+ 1445 01b6 0093     		str	r3, [sp]
+ 1446 01b8 2398     		ldr	r0, [sp, #140]
+ 1447 01ba 2499     		ldr	r1, [sp, #144]
+ 1448 01bc 259A     		ldr	r2, [sp, #148]
+ 1449 01be 269B     		ldr	r3, [sp, #152]
+ 1450 01c0 FFF7FEFF 		bl	charlie
+ 1451              	.LVL127:
+ 125:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 6);
+ 1452              		.loc 1 125 5 discriminator 1 view .LVU284
+ 1453 01c4 5046     		mov	r0, r10
+ 1454 01c6 FFF7FEFF 		bl	HAL_Delay
+ 1455              	.LVL128:
+ 126:Src/main.c    ****     HAL_Delay(1000);
+ 1456              		.loc 1 126 5 discriminator 1 view .LVU285
+ 1457 01ca 0623     		movs	r3, #6
+ 1458 01cc 1093     		str	r3, [sp, #64]
+ 1459 01ce 4346     		mov	r3, r8
+ 1460 01d0 4A46     		mov	r2, r9
+ 1461 01d2 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1462 01d4 13C3     		stmia	r3!, {r0, r1, r4}
+ 1463 01d6 03CA     		ldmia	r2!, {r0, r1}
+ 1464 01d8 03C3     		stmia	r3!, {r0, r1}
+ 1465 01da 3300     		movs	r3, r6
+ 1466 01dc 3A00     		movs	r2, r7
+ 1467 01de 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1468 01e0 13C3     		stmia	r3!, {r0, r1, r4}
+ 1469 01e2 03CA     		ldmia	r2!, {r0, r1}
+ 1470 01e4 03C3     		stmia	r3!, {r0, r1}
+ 1471 01e6 5B46     		mov	r3, fp
+ 1472 01e8 2A00     		movs	r2, r5
+ 1473 01ea 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1474 01ec 13C3     		stmia	r3!, {r0, r1, r4}
+ 1475 01ee 03CA     		ldmia	r2!, {r0, r1}
+ 1476 01f0 03C3     		stmia	r3!, {r0, r1}
+ 1477 01f2 279B     		ldr	r3, [sp, #156]
+ 1478 01f4 1393     		str	r3, [sp, #76]
+ 1479 01f6 0093     		str	r3, [sp]
+ 1480 01f8 2398     		ldr	r0, [sp, #140]
+ 1481 01fa 2499     		ldr	r1, [sp, #144]
+ 1482 01fc 259A     		ldr	r2, [sp, #148]
+ 1483 01fe 269B     		ldr	r3, [sp, #152]
+ 1484 0200 FFF7FEFF 		bl	charlie
+ 1485              	.LVL129:
+ 127:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 7);
+ 1486              		.loc 1 127 5 discriminator 1 view .LVU286
+ 1487 0204 5046     		mov	r0, r10
+ 1488 0206 FFF7FEFF 		bl	HAL_Delay
+ 1489              	.LVL130:
+ 128:Src/main.c    ****     HAL_Delay(1000);
+ 1490              		.loc 1 128 5 discriminator 1 view .LVU287
+ 1491 020a 0723     		movs	r3, #7
+ 1492 020c 1093     		str	r3, [sp, #64]
+ 1493 020e 4346     		mov	r3, r8
+ARM GAS  /tmp/ccSD2iu1.s 			page 38
+
+
+ 1494 0210 4A46     		mov	r2, r9
+ 1495 0212 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1496 0214 13C3     		stmia	r3!, {r0, r1, r4}
+ 1497 0216 03CA     		ldmia	r2!, {r0, r1}
+ 1498 0218 03C3     		stmia	r3!, {r0, r1}
+ 1499 021a 3300     		movs	r3, r6
+ 1500 021c 3A00     		movs	r2, r7
+ 1501 021e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1502 0220 13C3     		stmia	r3!, {r0, r1, r4}
+ 1503 0222 03CA     		ldmia	r2!, {r0, r1}
+ 1504 0224 03C3     		stmia	r3!, {r0, r1}
+ 1505 0226 5B46     		mov	r3, fp
+ 1506 0228 2A00     		movs	r2, r5
+ 1507 022a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1508 022c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1509 022e 03CA     		ldmia	r2!, {r0, r1}
+ 1510 0230 03C3     		stmia	r3!, {r0, r1}
+ 1511 0232 279B     		ldr	r3, [sp, #156]
+ 1512 0234 1393     		str	r3, [sp, #76]
+ 1513 0236 0093     		str	r3, [sp]
+ 1514 0238 2398     		ldr	r0, [sp, #140]
+ 1515 023a 2499     		ldr	r1, [sp, #144]
+ 1516 023c 259A     		ldr	r2, [sp, #148]
+ 1517 023e 269B     		ldr	r3, [sp, #152]
+ 1518 0240 FFF7FEFF 		bl	charlie
+ 1519              	.LVL131:
+ 129:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 8);
+ 1520              		.loc 1 129 5 discriminator 1 view .LVU288
+ 1521 0244 5046     		mov	r0, r10
+ 1522 0246 FFF7FEFF 		bl	HAL_Delay
+ 1523              	.LVL132:
+ 130:Src/main.c    ****     HAL_Delay(1000);
+ 1524              		.loc 1 130 5 discriminator 1 view .LVU289
+ 1525 024a 0823     		movs	r3, #8
+ 1526 024c 1093     		str	r3, [sp, #64]
+ 1527 024e 4346     		mov	r3, r8
+ 1528 0250 4A46     		mov	r2, r9
+ 1529 0252 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1530 0254 13C3     		stmia	r3!, {r0, r1, r4}
+ 1531 0256 03CA     		ldmia	r2!, {r0, r1}
+ 1532 0258 03C3     		stmia	r3!, {r0, r1}
+ 1533 025a 3300     		movs	r3, r6
+ 1534 025c 3A00     		movs	r2, r7
+ 1535 025e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1536 0260 13C3     		stmia	r3!, {r0, r1, r4}
+ 1537 0262 03CA     		ldmia	r2!, {r0, r1}
+ 1538 0264 03C3     		stmia	r3!, {r0, r1}
+ 1539 0266 5B46     		mov	r3, fp
+ 1540 0268 2A00     		movs	r2, r5
+ 1541 026a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1542 026c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1543 026e 03CA     		ldmia	r2!, {r0, r1}
+ 1544 0270 03C3     		stmia	r3!, {r0, r1}
+ 1545 0272 279B     		ldr	r3, [sp, #156]
+ 1546 0274 1393     		str	r3, [sp, #76]
+ 1547 0276 0093     		str	r3, [sp]
+ 1548 0278 2398     		ldr	r0, [sp, #140]
+ARM GAS  /tmp/ccSD2iu1.s 			page 39
+
+
+ 1549 027a 2499     		ldr	r1, [sp, #144]
+ 1550 027c 259A     		ldr	r2, [sp, #148]
+ 1551 027e 269B     		ldr	r3, [sp, #152]
+ 1552 0280 FFF7FEFF 		bl	charlie
+ 1553              	.LVL133:
+ 131:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 9);
+ 1554              		.loc 1 131 5 discriminator 1 view .LVU290
+ 1555 0284 5046     		mov	r0, r10
+ 1556 0286 FFF7FEFF 		bl	HAL_Delay
+ 1557              	.LVL134:
+ 132:Src/main.c    ****     HAL_Delay(1000);
+ 1558              		.loc 1 132 5 discriminator 1 view .LVU291
+ 1559 028a 0923     		movs	r3, #9
+ 1560 028c 1093     		str	r3, [sp, #64]
+ 1561 028e 4346     		mov	r3, r8
+ 1562 0290 4A46     		mov	r2, r9
+ 1563 0292 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1564 0294 13C3     		stmia	r3!, {r0, r1, r4}
+ 1565 0296 03CA     		ldmia	r2!, {r0, r1}
+ 1566 0298 03C3     		stmia	r3!, {r0, r1}
+ 1567 029a 3300     		movs	r3, r6
+ 1568 029c 3A00     		movs	r2, r7
+ 1569 029e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1570 02a0 13C3     		stmia	r3!, {r0, r1, r4}
+ 1571 02a2 03CA     		ldmia	r2!, {r0, r1}
+ 1572 02a4 03C3     		stmia	r3!, {r0, r1}
+ 1573 02a6 5B46     		mov	r3, fp
+ 1574 02a8 2A00     		movs	r2, r5
+ 1575 02aa 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1576 02ac 13C3     		stmia	r3!, {r0, r1, r4}
+ 1577 02ae 03CA     		ldmia	r2!, {r0, r1}
+ 1578 02b0 03C3     		stmia	r3!, {r0, r1}
+ 1579 02b2 279B     		ldr	r3, [sp, #156]
+ 1580 02b4 1393     		str	r3, [sp, #76]
+ 1581 02b6 0093     		str	r3, [sp]
+ 1582 02b8 2398     		ldr	r0, [sp, #140]
+ 1583 02ba 2499     		ldr	r1, [sp, #144]
+ 1584 02bc 259A     		ldr	r2, [sp, #148]
+ 1585 02be 269B     		ldr	r3, [sp, #152]
+ 1586 02c0 FFF7FEFF 		bl	charlie
+ 1587              	.LVL135:
+ 133:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 10);
+ 1588              		.loc 1 133 5 discriminator 1 view .LVU292
+ 1589 02c4 5046     		mov	r0, r10
+ 1590 02c6 FFF7FEFF 		bl	HAL_Delay
+ 1591              	.LVL136:
+ 134:Src/main.c    ****     HAL_Delay(1000);
+ 1592              		.loc 1 134 5 discriminator 1 view .LVU293
+ 1593 02ca 0A23     		movs	r3, #10
+ 1594 02cc 1093     		str	r3, [sp, #64]
+ 1595 02ce 4346     		mov	r3, r8
+ 1596 02d0 4A46     		mov	r2, r9
+ 1597 02d2 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1598 02d4 13C3     		stmia	r3!, {r0, r1, r4}
+ 1599 02d6 03CA     		ldmia	r2!, {r0, r1}
+ 1600 02d8 03C3     		stmia	r3!, {r0, r1}
+ 1601 02da 3300     		movs	r3, r6
+ARM GAS  /tmp/ccSD2iu1.s 			page 40
+
+
+ 1602 02dc 3A00     		movs	r2, r7
+ 1603 02de 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1604 02e0 13C3     		stmia	r3!, {r0, r1, r4}
+ 1605 02e2 03CA     		ldmia	r2!, {r0, r1}
+ 1606 02e4 03C3     		stmia	r3!, {r0, r1}
+ 1607 02e6 5B46     		mov	r3, fp
+ 1608 02e8 2A00     		movs	r2, r5
+ 1609 02ea 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1610 02ec 13C3     		stmia	r3!, {r0, r1, r4}
+ 1611 02ee 03CA     		ldmia	r2!, {r0, r1}
+ 1612 02f0 03C3     		stmia	r3!, {r0, r1}
+ 1613 02f2 279B     		ldr	r3, [sp, #156]
+ 1614 02f4 1393     		str	r3, [sp, #76]
+ 1615 02f6 0093     		str	r3, [sp]
+ 1616 02f8 2398     		ldr	r0, [sp, #140]
+ 1617 02fa 2499     		ldr	r1, [sp, #144]
+ 1618 02fc 259A     		ldr	r2, [sp, #148]
+ 1619 02fe 269B     		ldr	r3, [sp, #152]
+ 1620 0300 FFF7FEFF 		bl	charlie
+ 1621              	.LVL137:
+ 135:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 11);
+ 1622              		.loc 1 135 5 discriminator 1 view .LVU294
+ 1623 0304 5046     		mov	r0, r10
+ 1624 0306 FFF7FEFF 		bl	HAL_Delay
+ 1625              	.LVL138:
+ 136:Src/main.c    ****     HAL_Delay(1000);
+ 1626              		.loc 1 136 5 discriminator 1 view .LVU295
+ 1627 030a 0B23     		movs	r3, #11
+ 1628 030c 1093     		str	r3, [sp, #64]
+ 1629 030e 4346     		mov	r3, r8
+ 1630 0310 4A46     		mov	r2, r9
+ 1631 0312 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1632 0314 13C3     		stmia	r3!, {r0, r1, r4}
+ 1633 0316 03CA     		ldmia	r2!, {r0, r1}
+ 1634 0318 03C3     		stmia	r3!, {r0, r1}
+ 1635 031a 3300     		movs	r3, r6
+ 1636 031c 3A00     		movs	r2, r7
+ 1637 031e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1638 0320 13C3     		stmia	r3!, {r0, r1, r4}
+ 1639 0322 03CA     		ldmia	r2!, {r0, r1}
+ 1640 0324 03C3     		stmia	r3!, {r0, r1}
+ 1641 0326 5B46     		mov	r3, fp
+ 1642 0328 2A00     		movs	r2, r5
+ 1643 032a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1644 032c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1645 032e 03CA     		ldmia	r2!, {r0, r1}
+ 1646 0330 03C3     		stmia	r3!, {r0, r1}
+ 1647 0332 279B     		ldr	r3, [sp, #156]
+ 1648 0334 1393     		str	r3, [sp, #76]
+ 1649 0336 0093     		str	r3, [sp]
+ 1650 0338 2398     		ldr	r0, [sp, #140]
+ 1651 033a 2499     		ldr	r1, [sp, #144]
+ 1652 033c 259A     		ldr	r2, [sp, #148]
+ 1653 033e 269B     		ldr	r3, [sp, #152]
+ 1654 0340 FFF7FEFF 		bl	charlie
+ 1655              	.LVL139:
+ 137:Src/main.c    ****     charlie(PinA, PinB, PinC, PinD, 12);
+ARM GAS  /tmp/ccSD2iu1.s 			page 41
+
+
+ 1656              		.loc 1 137 5 discriminator 1 view .LVU296
+ 1657 0344 5046     		mov	r0, r10
+ 1658 0346 FFF7FEFF 		bl	HAL_Delay
+ 1659              	.LVL140:
+ 138:Src/main.c    ****     HAL_Delay(1000);
+ 1660              		.loc 1 138 5 discriminator 1 view .LVU297
+ 1661 034a 0C23     		movs	r3, #12
+ 1662 034c 1093     		str	r3, [sp, #64]
+ 1663 034e 4346     		mov	r3, r8
+ 1664 0350 4A46     		mov	r2, r9
+ 1665 0352 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1666 0354 13C3     		stmia	r3!, {r0, r1, r4}
+ 1667 0356 03CA     		ldmia	r2!, {r0, r1}
+ 1668 0358 03C3     		stmia	r3!, {r0, r1}
+ 1669 035a 3300     		movs	r3, r6
+ 1670 035c 3A00     		movs	r2, r7
+ 1671 035e 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1672 0360 13C3     		stmia	r3!, {r0, r1, r4}
+ 1673 0362 03CA     		ldmia	r2!, {r0, r1}
+ 1674 0364 03C3     		stmia	r3!, {r0, r1}
+ 1675 0366 5B46     		mov	r3, fp
+ 1676 0368 2A00     		movs	r2, r5
+ 1677 036a 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1678 036c 13C3     		stmia	r3!, {r0, r1, r4}
+ 1679 036e 03CA     		ldmia	r2!, {r0, r1}
+ 1680 0370 03C3     		stmia	r3!, {r0, r1}
+ 1681 0372 279B     		ldr	r3, [sp, #156]
+ 1682 0374 1393     		str	r3, [sp, #76]
+ 1683 0376 0093     		str	r3, [sp]
+ 1684 0378 2398     		ldr	r0, [sp, #140]
+ 1685 037a 2499     		ldr	r1, [sp, #144]
+ 1686 037c 259A     		ldr	r2, [sp, #148]
+ 1687 037e 269B     		ldr	r3, [sp, #152]
+ 1688 0380 FFF7FEFF 		bl	charlie
+ 1689              	.LVL141:
+ 139:Src/main.c    **** 
+ 1690              		.loc 1 139 5 discriminator 1 view .LVU298
+ 1691 0384 5046     		mov	r0, r10
+ 1692 0386 FFF7FEFF 		bl	HAL_Delay
+ 1693              	.LVL142:
+ 109:Src/main.c    ****   {
+ 1694              		.loc 1 109 9 discriminator 1 view .LVU299
+ 1695 038a 54E6     		b	.L45
+ 1696              		.cfi_endproc
+ 1697              	.LFE48:
+ 1699              		.section	.text.Error_Handler,"ax",%progbits
+ 1700              		.align	1
+ 1701              		.global	Error_Handler
+ 1702              		.syntax unified
+ 1703              		.code	16
+ 1704              		.thumb_func
+ 1705              		.fpu softvfp
+ 1707              	Error_Handler:
+ 1708              	.LFB51:
+ 221:Src/main.c    **** 
+ 222:Src/main.c    **** /* USER CODE BEGIN 4 */
+ 223:Src/main.c    **** 
+ARM GAS  /tmp/ccSD2iu1.s 			page 42
+
+
+ 224:Src/main.c    **** /* USER CODE END 4 */
+ 225:Src/main.c    **** 
+ 226:Src/main.c    **** /**
+ 227:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 228:Src/main.c    ****   * @retval None
+ 229:Src/main.c    ****   */
+ 230:Src/main.c    **** void Error_Handler(void)
+ 231:Src/main.c    **** {
+ 1709              		.loc 1 231 1 view -0
+ 1710              		.cfi_startproc
+ 1711              		@ args = 0, pretend = 0, frame = 0
+ 1712              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1713              		@ link register save eliminated.
+ 232:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 233:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
+ 234:Src/main.c    **** 
+ 235:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
+ 236:Src/main.c    **** }
+ 1714              		.loc 1 236 1 view .LVU301
+ 1715              		@ sp needed
+ 1716 0000 7047     		bx	lr
+ 1717              		.cfi_endproc
+ 1718              	.LFE51:
+ 1720              		.text
+ 1721              	.Letext0:
+ 1722              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 1723              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 1724              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
+ 1725              		.file 6 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f042x6.h"
+ 1726              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h"
+ 1727              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h"
+ 1728              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
+ 1729              		.file 10 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 1730              		.file 11 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ 1731              		.file 12 "/usr/arm-none-eabi/include/sys/lock.h"
+ 1732              		.file 13 "/usr/arm-none-eabi/include/sys/_types.h"
+ 1733              		.file 14 "/usr/lib/gcc/arm-none-eabi/9.2.0/include/stddef.h"
+ 1734              		.file 15 "/usr/arm-none-eabi/include/sys/reent.h"
+ 1735              		.file 16 "/usr/arm-none-eabi/include/stdlib.h"
+ 1736              		.file 17 "Inc/usb_device.h"
+ 1737              		.file 18 "<built-in>"
+ARM GAS  /tmp/ccSD2iu1.s 			page 43
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccSD2iu1.s:16     .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccSD2iu1.s:23     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccSD2iu1.s:101    .text.MX_GPIO_Init:000000000000004c $d
+     /tmp/ccSD2iu1.s:106    .text.charlie:0000000000000000 $t
+     /tmp/ccSD2iu1.s:113    .text.charlie:0000000000000000 charlie
+     /tmp/ccSD2iu1.s:687    .text.initA:0000000000000000 $t
+     /tmp/ccSD2iu1.s:694    .text.initA:0000000000000000 initA
+     /tmp/ccSD2iu1.s:778    .text.initA:000000000000004c $d
+     /tmp/ccSD2iu1.s:783    .text.initB:0000000000000000 $t
+     /tmp/ccSD2iu1.s:790    .text.initB:0000000000000000 initB
+     /tmp/ccSD2iu1.s:875    .text.initB:0000000000000050 $d
+     /tmp/ccSD2iu1.s:880    .text.initC:0000000000000000 $t
+     /tmp/ccSD2iu1.s:887    .text.initC:0000000000000000 initC
+     /tmp/ccSD2iu1.s:972    .text.initC:0000000000000050 $d
+     /tmp/ccSD2iu1.s:977    .text.initD:0000000000000000 $t
+     /tmp/ccSD2iu1.s:984    .text.initD:0000000000000000 initD
+     /tmp/ccSD2iu1.s:1069   .text.initD:0000000000000050 $d
+     /tmp/ccSD2iu1.s:1074   .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccSD2iu1.s:1081   .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccSD2iu1.s:1172   .text.main:0000000000000000 $t
+     /tmp/ccSD2iu1.s:1179   .text.main:0000000000000000 main
+     /tmp/ccSD2iu1.s:1700   .text.Error_Handler:0000000000000000 $t
+     /tmp/ccSD2iu1.s:1707   .text.Error_Handler:0000000000000000 Error_Handler
+
+UNDEFINED SYMBOLS
+memset
+HAL_GPIO_Init
+HAL_GPIO_DeInit
+HAL_GPIO_WritePin
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig
+HAL_Init
+MX_USB_DEVICE_Init
+HAL_Delay

@@ -1,0 +1,61 @@
+ARM GAS  /tmp/ccxV05Hl.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usbd_msc_data.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	MSC_Mode_Sense10_data
+  16              		.global	MSC_Mode_Sense6_data
+  17              		.global	MSC_Page00_Inquiry_Data
+  18              		.section	.rodata.MSC_Mode_Sense10_data,"a"
+  19              		.align	2
+  22              	MSC_Mode_Sense10_data:
+  23 0000 00060000 		.ascii	"\000\006\000\000\000\000\000\000"
+  23      00000000 
+  24              		.section	.rodata.MSC_Mode_Sense6_data,"a"
+  25              		.align	2
+  28              	MSC_Mode_Sense6_data:
+  29 0000 00000000 		.space	8
+  29      00000000 
+  30              		.section	.rodata.MSC_Page00_Inquiry_Data,"a"
+  31              		.align	2
+  34              	MSC_Page00_Inquiry_Data:
+  35 0000 00000003 		.ascii	"\000\000\000\003\000\200\203"
+  35      008083
+  36              		.text
+  37              	.Letext0:
+  38              		.file 1 "/usr/arm-none-eabi/include/machine/_default_types.h"
+  39              		.file 2 "/usr/arm-none-eabi/include/sys/lock.h"
+  40              		.file 3 "/usr/arm-none-eabi/include/sys/_types.h"
+  41              		.file 4 "/usr/lib/gcc/arm-none-eabi/9.2.0/include/stddef.h"
+  42              		.file 5 "/usr/arm-none-eabi/include/sys/reent.h"
+  43              		.file 6 "/usr/arm-none-eabi/include/sys/_stdint.h"
+  44              		.file 7 "/usr/arm-none-eabi/include/stdlib.h"
+  45              		.file 8 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
+  46              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+  47              		.file 10 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_data.h"
+  48              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c"
+ARM GAS  /tmp/ccxV05Hl.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usbd_msc_data.c
+     /tmp/ccxV05Hl.s:22     .rodata.MSC_Mode_Sense10_data:0000000000000000 MSC_Mode_Sense10_data
+     /tmp/ccxV05Hl.s:28     .rodata.MSC_Mode_Sense6_data:0000000000000000 MSC_Mode_Sense6_data
+     /tmp/ccxV05Hl.s:34     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 MSC_Page00_Inquiry_Data
+     /tmp/ccxV05Hl.s:19     .rodata.MSC_Mode_Sense10_data:0000000000000000 $d
+     /tmp/ccxV05Hl.s:25     .rodata.MSC_Mode_Sense6_data:0000000000000000 $d
+     /tmp/ccxV05Hl.s:31     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS
