@@ -23,7 +23,11 @@ build/system_stm32f0xx.o: Src/system_stm32f0xx.c \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_usb.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h \
- Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 
 Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:
 
@@ -78,3 +82,11 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h:
 
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h:
+
+Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h:
+
+Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h:
+
+Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h:
+
+Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:

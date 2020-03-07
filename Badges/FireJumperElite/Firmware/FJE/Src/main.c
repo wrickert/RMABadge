@@ -43,14 +43,32 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+RTC_HandleTypeDef hrtc;
+
+TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
+
+void dance();
+
+// Keep track of what dance we are on
+int mamboNumber = 4;
+// Stopper for the inturrupt funciton
+int stop = 0;
+// Flag to switch to time 
+int hour = 0;
+int minute = 0;
+
+// RTC defs
+RTC_TimeTypeDef RTCtime;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_RTC_Init(void);
+static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -69,7 +87,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
-  
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -90,19 +107,17 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
+  MX_RTC_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   GPIO_InitTypeDef PinA = initA();
   GPIO_InitTypeDef PinB = initB();
   GPIO_InitTypeDef PinC = initC();
   GPIO_InitTypeDef PinD = initD();
 
-  
-//  HAL_GPIO_Init(GPIOA, &PinA);
-//  HAL_GPIO_Init(GPIOA, &PinB);
+  stop = 0;
 
   /* USER CODE END 2 */
- 
- 
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -111,33 +126,40 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    charlie(PinA, PinB, PinC, PinD, 0);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 1);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 2);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 3);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 4);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 5);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 6);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 7);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 8);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 9);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 10);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 11);
-    HAL_Delay(1000);
-    charlie(PinA, PinB, PinC, PinD, 12);
-    HAL_Delay(1000);
 
+    // Ladies and gentlemen, this is Mambo Number Five
+    if(mamboNumber == 5)
+      clock(PinA, PinB, PinC, PinD, hrtc);
+    else{
+       dance(PinA, PinB, PinC, PinD, mamboNumber);
+    }
+
+    if(stop == 1 && hour == 1){
+      HAL_Delay(100);
+      stop =0;
+      mamboNumber = 5;
+      HAL_RTC_GetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
+      RTCtime.Hours++;
+      HAL_RTC_SetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
+
+
+    }
+    if(stop == 1 && minute == 1){
+      HAL_Delay(100);
+      stop =0;
+      mamboNumber = 5;
+      HAL_RTC_GetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
+      RTCtime.Minutes+5;
+      HAL_RTC_SetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
+
+    }
+    if(stop == 1){
+      HAL_Delay(100);
+      stop =0;
+      mamboNumber++;
+      if(mamboNumber > 5)
+         mamboNumber = 0;
+    }
   }
   /* USER CODE END 3 */
 }
@@ -154,8 +176,9 @@ void SystemClock_Config(void)
 
   /** Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -173,13 +196,94 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB|RCC_PERIPHCLK_RTC;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
 
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+  /** Initialize RTC Only 
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_12;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+
+  /* USER CODE BEGIN TIM1_Init 0 */
+
+  /* USER CODE END TIM1_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM1_Init 1 */
+
+  /* USER CODE END TIM1_Init 1 */
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 0;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM1_Init 2 */
+
+  /* USER CODE END TIM1_Init 2 */
+
 }
 
 /**
@@ -194,15 +298,10 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+
 /*
   //Configure GPIO pin Output Level 
   HAL_GPIO_WritePin(GPIOA, A_Pin|B_Pin|C_Pin|D_Pin, GPIO_PIN_RESET);
-
-  //Configure GPIO pin : Mode_Pin 
-  GPIO_InitStruct.Pin = Mode_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
 
   //Configure GPIO pins : A_Pin B_Pin C_Pin D_Pin 
   GPIO_InitStruct.Pin = A_Pin|B_Pin|C_Pin|D_Pin;
@@ -210,16 +309,49 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-*/
-  /*Configure GPIO pins : Hour_Pin Minute_Pin */
+  */
+
+  //Configure GPIO pin : Mode_Pin 
+  GPIO_InitStruct.Pin = Mode_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+
+  //Configure GPIO pins : Hour_Pin Minute_Pin 
   GPIO_InitStruct.Pin = Hour_Pin|Minute_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 }
 
 /* USER CODE BEGIN 4 */
+
+/**
+* @brief Interrupt callback for GPIOs
+*/
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    // Mode
+    if ( GPIO_Pin == GPIO_PIN_8) {
+      stop = 1;
+    }
+    // Minute  
+    else if ( GPIO_Pin == GPIO_PIN_6) {
+      stop = 1;
+      minute = 1;
+    }
+    // Hour 
+    else if ( GPIO_Pin == GPIO_PIN_5) {
+      stop = 1;
+      hour = 1;
+    }
+
+}
 
 /* USER CODE END 4 */
 
@@ -243,7 +375,7 @@ void Error_Handler(void)
   * @param  line: assert_param error line source number
   * @retval None
   */
-void assert_failed(char *file, uint32_t line)
+void assert_failed(uint8_t *file, uint32_t line)
 { 
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,

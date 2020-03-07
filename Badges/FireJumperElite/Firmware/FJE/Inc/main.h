@@ -60,6 +60,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define Mode_Pin GPIO_PIN_8
 #define Mode_GPIO_Port GPIOB
+#define Mode_EXTI_IRQn EXTI4_15_IRQn
 #define A_Pin GPIO_PIN_0
 #define A_GPIO_Port GPIOA
 #define B_Pin GPIO_PIN_1
@@ -70,8 +71,10 @@ void Error_Handler(void);
 #define D_GPIO_Port GPIOA
 #define Hour_Pin GPIO_PIN_5
 #define Hour_GPIO_Port GPIOA
+#define Hour_EXTI_IRQn EXTI4_15_IRQn
 #define Minute_Pin GPIO_PIN_6
 #define Minute_GPIO_Port GPIOA
+#define Minute_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
