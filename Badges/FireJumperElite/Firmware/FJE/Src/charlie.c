@@ -1,12 +1,80 @@
 //Charlieplexing Library
 //William Rickert March2020
 
-extern int stop;
+extern int stopFlag;
+extern int minuteFlag;
+extern int hourFlag;
 
 void charlie(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int pos);
+void hands(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int hours, int minutes);
 
+// Function to get current time and determine what to display
 void clock(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, RTC_HandleTypeDef whatTime){
+   RTC_TimeTypeDef RTCtime;
+   RTC_DateTypeDef RTCdate;
+   HAL_RTC_GetTime(&whatTime, &RTCtime, RTC_FORMAT_BIN);
+   HAL_RTC_GetDate(&whatTime, &RTCdate, RTC_FORMAT_BIN);
 
+   int minutes = RTCtime.Minutes;
+   int hours = RTCtime.Hours;
+   int displayMin = 0;
+
+   char buf[20];
+   sprintf(buf, "Current time is %d:%d\n",hours,minutes);
+   say(buf);
+
+   if(minutes > 0 && minutes < 3)
+      displayMin = 12;
+   else if(minutes > 3 && minutes < 7)
+      displayMin = 1;
+   else if(minutes > 7 && minutes < 12)
+      displayMin = 2;
+   else if(minutes > 12 && minutes < 17)
+      displayMin = 3;
+   else if(minutes > 17 && minutes < 22)
+      displayMin = 4;
+   else if(minutes > 22 && minutes < 27)
+      displayMin = 5;
+   else if(minutes > 27 && minutes < 32)
+      displayMin = 6;
+   else if(minutes > 32 && minutes < 37)
+      displayMin = 7;
+   else if(minutes > 37 && minutes < 42)
+      displayMin = 8;
+   else if(minutes > 42 && minutes < 47)
+      displayMin = 9;
+   else if(minutes > 47 && minutes < 52)
+      displayMin = 10;
+   else if(minutes > 52 && minutes < 57)
+      displayMin = 11;
+   else if(minutes > 57 && minutes < 61)
+      displayMin = 12;
+
+   hands(PinA, PinB, PinC, PinD, hours, displayMin);
+   
+}
+
+// Function to display current time
+void hands(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int hours, int minutes){
+
+//   say("in hands");
+   for(int i = 0; i < 100; i++){
+
+      for(int j = 0; j < 10; j++){
+ //     say("first\n");
+         charlie(PinA, PinB, PinC, PinD, hours);
+         HAL_Delay(100);
+         if(stopFlag == 1 || minutes == 1 || hours == 1)
+            return;
+      }
+      for(int k = 0; k < 500; k++){
+ //     say("second\n");
+         charlie(PinA, PinB, PinC, PinD, hours);
+         charlie(PinA, PinB, PinC, PinD, minutes);
+         if(stopFlag == 1 || minutes == 1 || hours == 1)
+            return;
+      }
+   }
 }
 
 void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int mambo){
@@ -18,55 +86,55 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
    // Slow Spin
    if(mambo == 1){
        charlie(PinA, PinB, PinC, PinD, 0);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 1);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 2);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 3);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 4);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 5);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 6);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 7);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 8);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 9);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 10);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 11);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
        charlie(PinA, PinB, PinC, PinD, 12);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(1000);
    }
@@ -74,55 +142,55 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
    // Fast Spin
    if(mambo == 2){
        charlie(PinA, PinB, PinC, PinD, 0);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 1);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 2);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 3);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 4);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 5);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 6);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 7);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 8);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 9);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 10);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 11);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
        charlie(PinA, PinB, PinC, PinD, 12);
-       if(stop == 1)
+       if(stopFlag == 1)
          return;
        HAL_Delay(500);
    }
@@ -134,7 +202,7 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
          for(int j=1; j<=12; j++){
              charlie(PinA, PinB, PinC, PinD, j);
        //      HAL_Delay(1);
-             if(stop == 1)
+             if(stopFlag == 1)
                return;
             
          } 
@@ -147,22 +215,23 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
          if(i == 1){
             charlie(PinA, PinB, PinC, PinD, 12);
             HAL_Delay(500);
-            if(stop == 1)
+            if(stopFlag == 1)
                return;
          }
          if(i == 2){
             for(int j =0; j<10000; j++){
-               charlie(PinA, PinB, PinC, PinD, 10);
+               charlie(PinA, PinB, PinC, PinD, 11);
                charlie(PinA, PinB, PinC, PinD, 1);
-               if(stop == 1)
+               if(stopFlag == 1)
                   return;
             }
+            HAL_Delay(10);
          }
          if(i == 3){
             for(int j =0; j<10000; j++){
                charlie(PinA, PinB, PinC, PinD, 2);
                charlie(PinA, PinB, PinC, PinD, 10);
-               if(stop == 1)
+               if(stopFlag == 1)
                   return;
             }
          }
@@ -170,7 +239,7 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
             for(int j =0; j<10000; j++){
                charlie(PinA, PinB, PinC, PinD, 3);
                charlie(PinA, PinB, PinC, PinD, 9);
-               if(stop == 1)
+               if(stopFlag == 1)
                   return;
             }
          }
@@ -178,7 +247,7 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
             for(int j =0; j<10000; j++){
                charlie(PinA, PinB, PinC, PinD, 4);
                charlie(PinA, PinB, PinC, PinD, 8);
-               if(stop == 1)
+               if(stopFlag == 1)
                   return;
             }
          }
@@ -186,14 +255,14 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
             for(int j =0; j<10000; j++){
                charlie(PinA, PinB, PinC, PinD, 5);
                charlie(PinA, PinB, PinC, PinD, 7);
-               if(stop == 1)
+               if(stopFlag == 1)
                   return;
             }
          }
          if(i == 7){
             charlie(PinA, PinB, PinC, PinD, 6);
             HAL_Delay(500);
-            if(stop == 1)
+            if(stopFlag == 1)
                return;
 
          }

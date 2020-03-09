@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "charlie.c"
+#include "semihosting.c"
 
 /* USER CODE END Includes */
 
@@ -49,15 +50,15 @@ TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
 
-void dance();
+//void dance();
 
 // Keep track of what dance we are on
-int mamboNumber = 4;
+int mamboNumber = 5;
 // Stopper for the inturrupt funciton
-int stop = 0;
+int stopFlag = 0;
 // Flag to switch to time 
-int hour = 0;
-int minute = 0;
+int hourFlag= 0;
+int minuteFlag = 0;
 
 // RTC defs
 RTC_TimeTypeDef RTCtime;
@@ -71,6 +72,7 @@ static void MX_RTC_Init(void);
 static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
+void dance();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -115,7 +117,10 @@ int main(void)
   GPIO_InitTypeDef PinC = initC();
   GPIO_InitTypeDef PinD = initD();
 
-  stop = 0;
+  stopFlag = 0;
+  int newMinutes = 0;
+  int newHours = 0;
+
 
   /* USER CODE END 2 */
 
@@ -130,39 +135,118 @@ int main(void)
     // Ladies and gentlemen, this is Mambo Number Five
     if(mamboNumber == 5)
       clock(PinA, PinB, PinC, PinD, hrtc);
-    else{
+
+    // Or not...
+    else
        dance(PinA, PinB, PinC, PinD, mamboNumber);
-    }
 
-    if(stop == 1 && hour == 1){
+
+    // Increase hour by one
+    if(stopFlag == 1 && hourFlag == 1){
+      HAL_StatusTypeDef res;
+      // Make new values, I got an oblique warning that this was needed to avoid a bug
+      RTC_TimeTypeDef newTime;
+      RTC_DateTypeDef currentDate;
+      RTC_TimeTypeDef currentTime;
+      memset(&newTime, 0, sizeof(newTime));
+      memset(&currentTime, 0, sizeof(currentTime));
+
+      say("In hour button\n");
       HAL_Delay(100);
-      stop =0;
+
+      
+      char buf[20];
+      
+      // Clear out our flags
+      stopFlag =0;
+      hourFlag =0;
       mamboNumber = 5;
-      HAL_RTC_GetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
-      RTCtime.Hours++;
-      HAL_RTC_SetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
 
+      
+      res = HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+      // Weird. We dont care about the date but unless we touch the date the registers
+      // for rtc time dont unlock...
+      // You dont want to know how long I fought this
+      res = HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+      newHours = currentTime.Hours;
+      sprintf(buf,"hour is %d \n", currentTime.Hours);
+      say(buf);
+
+      if(newHours >12)
+         newTime.Hours = 1;
+      else
+         newTime.Hours = ++newHours;
+
+      newTime.Minutes = 0; 
+      newTime.Seconds = 0; 
+
+
+      res = HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
+      if(res != 0){
+         sprintf(buf,"Set hour time error is %d \n", res);
+         say(buf);
+      }
 
     }
-    if(stop == 1 && minute == 1){
+
+    // Increase minute by 10
+    if(stopFlag == 1 && minuteFlag == 1){
+      HAL_StatusTypeDef res;
+      // Make new values, I got an oblique warning that this was needed to avoid a bug
+      RTC_TimeTypeDef newTime;
+      RTC_DateTypeDef currentDate;
+      RTC_TimeTypeDef currentTime;
+      say("In minute button\n");
       HAL_Delay(100);
-      stop =0;
+      char buf[20];
+
+      // Clear out flags
+      stopFlag =0;
+      minuteFlag =0;
       mamboNumber = 5;
-      HAL_RTC_GetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
-      RTCtime.Minutes+5;
-      HAL_RTC_SetTime(&hrtc, &RTCtime, RTC_FORMAT_BIN);
 
+      res = HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+      // Weird. We dont care about the date but unless we touch the date the registers
+      // for rtc time dont unlock...
+      // You dont want to know how long I fought this
+      res = HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+
+      newMinutes = currentTime.Minutes;
+
+      newTime.Seconds = 0; 
+      
+      if(newMinutes < 55){
+         newTime.Minutes = (newMinutes + 5);
+         newTime.Hours = currentTime.Hours;
+      }
+      else{
+         newTime.Minutes = 0;
+         newTime.Hours = (currentTime.Hours + 1);
+      }
+
+      sprintf(buf,"minute is %d \n", currentTime.Minutes);
+      say(buf);
+
+      res = HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
+      if(res != 0){
+         sprintf(buf,"Set minute time error is %d \n", res);
+         say(buf);
+      }
     }
-    if(stop == 1){
+
+    // Switch mode
+    if(stopFlag == 1){
+      say("In mode button\n");
       HAL_Delay(100);
-      stop =0;
+      stopFlag =0;
       mamboNumber++;
-      if(mamboNumber > 5)
+      if(mamboNumber > 6)
          mamboNumber = 0;
     }
   }
   /* USER CODE END 3 */
 }
+
 
 /**
   * @brief System Clock Configuration
@@ -338,21 +422,20 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     // Mode
     if ( GPIO_Pin == GPIO_PIN_8) {
-      stop = 1;
+      stopFlag = 1;
     }
     // Minute  
     else if ( GPIO_Pin == GPIO_PIN_6) {
-      stop = 1;
-      minute = 1;
+      stopFlag = 1;
+      minuteFlag = 1;
     }
     // Hour 
     else if ( GPIO_Pin == GPIO_PIN_5) {
-      stop = 1;
-      hour = 1;
+      stopFlag = 1;
+      hourFlag = 1;
     }
 
 }
-
 /* USER CODE END 4 */
 
 /**

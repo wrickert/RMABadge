@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccjhWVX9.s 			page 1
+ARM GAS  /tmp/cckjXK8L.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
   30:Src/usbd_storage_if.c **** /* Private define ------------------------------------------------------------*/
   31:Src/usbd_storage_if.c **** /* Private macro -------------------------------------------------------------*/
   32:Src/usbd_storage_if.c **** 
-ARM GAS  /tmp/ccjhWVX9.s 			page 2
+ARM GAS  /tmp/cckjXK8L.s 			page 2
 
 
   33:Src/usbd_storage_if.c **** /* USER CODE BEGIN PV */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
   87:Src/usbd_storage_if.c **** /**
   88:Src/usbd_storage_if.c ****   * @}
   89:Src/usbd_storage_if.c ****   */
-ARM GAS  /tmp/ccjhWVX9.s 			page 3
+ARM GAS  /tmp/cckjXK8L.s 			page 3
 
 
   90:Src/usbd_storage_if.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  144:Src/usbd_storage_if.c **** static int8_t STORAGE_Init_FS(uint8_t lun);
  145:Src/usbd_storage_if.c **** static int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_size);
  146:Src/usbd_storage_if.c **** static int8_t STORAGE_IsReady_FS(uint8_t lun);
-ARM GAS  /tmp/ccjhWVX9.s 			page 4
+ARM GAS  /tmp/cckjXK8L.s 			page 4
 
 
  147:Src/usbd_storage_if.c **** static int8_t STORAGE_IsWriteProtected_FS(uint8_t lun);
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
   45              		.code	16
   46              		.thumb_func
   47              		.fpu softvfp
-ARM GAS  /tmp/ccjhWVX9.s 			page 5
+ARM GAS  /tmp/cckjXK8L.s 			page 5
 
 
   49              	STORAGE_GetCapacity_FS:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  202:Src/usbd_storage_if.c ****   * @brief  .
  203:Src/usbd_storage_if.c ****   * @param  lun: .
  204:Src/usbd_storage_if.c ****   * @retval USBD_OK if all operations are OK else USBD_FAIL
-ARM GAS  /tmp/ccjhWVX9.s 			page 6
+ARM GAS  /tmp/cckjXK8L.s 			page 6
 
 
  205:Src/usbd_storage_if.c ****   */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  124              		.cfi_endproc
  125              	.LFE46:
  127              		.section	.text.STORAGE_Read_FS,"ax",%progbits
-ARM GAS  /tmp/ccjhWVX9.s 			page 7
+ARM GAS  /tmp/cckjXK8L.s 			page 7
 
 
  128              		.align	1
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  165              		@ frame_needed = 0, uses_anonymous_args = 0
  166              		@ link register save eliminated.
  244:Src/usbd_storage_if.c ****   /* USER CODE BEGIN 7 */
-ARM GAS  /tmp/ccjhWVX9.s 			page 8
+ARM GAS  /tmp/cckjXK8L.s 			page 8
 
 
  245:Src/usbd_storage_if.c ****   return (USBD_OK);
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  211 0014 00000000 		.word	STORAGE_Write_FS
  212 0018 00000000 		.word	STORAGE_GetMaxLun_FS
  213 001c 00000000 		.word	STORAGE_Inquirydata_FS
-ARM GAS  /tmp/ccjhWVX9.s 			page 9
+ARM GAS  /tmp/cckjXK8L.s 			page 9
 
 
  214              		.section	.rodata.STORAGE_Inquirydata_FS,"a"
@@ -507,28 +507,28 @@ ARM GAS  /tmp/ccjhWVX9.s 			page 1
  233              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h"
  234              		.file 13 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h"
  235              		.file 14 "Inc/usbd_storage_if.h"
-ARM GAS  /tmp/ccjhWVX9.s 			page 10
+ARM GAS  /tmp/cckjXK8L.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_storage_if.c
-     /tmp/ccjhWVX9.s:16     .text.STORAGE_Init_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:23     .text.STORAGE_Init_FS:0000000000000000 STORAGE_Init_FS
-     /tmp/ccjhWVX9.s:43     .text.STORAGE_GetCapacity_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:49     .text.STORAGE_GetCapacity_FS:0000000000000000 STORAGE_GetCapacity_FS
-     /tmp/ccjhWVX9.s:78     .text.STORAGE_IsReady_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:84     .text.STORAGE_IsReady_FS:0000000000000000 STORAGE_IsReady_FS
-     /tmp/ccjhWVX9.s:103    .text.STORAGE_IsWriteProtected_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:109    .text.STORAGE_IsWriteProtected_FS:0000000000000000 STORAGE_IsWriteProtected_FS
-     /tmp/ccjhWVX9.s:128    .text.STORAGE_Read_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:134    .text.STORAGE_Read_FS:0000000000000000 STORAGE_Read_FS
-     /tmp/ccjhWVX9.s:153    .text.STORAGE_Write_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:159    .text.STORAGE_Write_FS:0000000000000000 STORAGE_Write_FS
-     /tmp/ccjhWVX9.s:178    .text.STORAGE_GetMaxLun_FS:0000000000000000 $t
-     /tmp/ccjhWVX9.s:184    .text.STORAGE_GetMaxLun_FS:0000000000000000 STORAGE_GetMaxLun_FS
-     /tmp/ccjhWVX9.s:205    .data.USBD_Storage_Interface_fops_FS:0000000000000000 USBD_Storage_Interface_fops_FS
-     /tmp/ccjhWVX9.s:218    .rodata.STORAGE_Inquirydata_FS:0000000000000000 STORAGE_Inquirydata_FS
-     /tmp/ccjhWVX9.s:202    .data.USBD_Storage_Interface_fops_FS:0000000000000000 $d
-     /tmp/ccjhWVX9.s:215    .rodata.STORAGE_Inquirydata_FS:0000000000000000 $d
+     /tmp/cckjXK8L.s:16     .text.STORAGE_Init_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:23     .text.STORAGE_Init_FS:0000000000000000 STORAGE_Init_FS
+     /tmp/cckjXK8L.s:43     .text.STORAGE_GetCapacity_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:49     .text.STORAGE_GetCapacity_FS:0000000000000000 STORAGE_GetCapacity_FS
+     /tmp/cckjXK8L.s:78     .text.STORAGE_IsReady_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:84     .text.STORAGE_IsReady_FS:0000000000000000 STORAGE_IsReady_FS
+     /tmp/cckjXK8L.s:103    .text.STORAGE_IsWriteProtected_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:109    .text.STORAGE_IsWriteProtected_FS:0000000000000000 STORAGE_IsWriteProtected_FS
+     /tmp/cckjXK8L.s:128    .text.STORAGE_Read_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:134    .text.STORAGE_Read_FS:0000000000000000 STORAGE_Read_FS
+     /tmp/cckjXK8L.s:153    .text.STORAGE_Write_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:159    .text.STORAGE_Write_FS:0000000000000000 STORAGE_Write_FS
+     /tmp/cckjXK8L.s:178    .text.STORAGE_GetMaxLun_FS:0000000000000000 $t
+     /tmp/cckjXK8L.s:184    .text.STORAGE_GetMaxLun_FS:0000000000000000 STORAGE_GetMaxLun_FS
+     /tmp/cckjXK8L.s:205    .data.USBD_Storage_Interface_fops_FS:0000000000000000 USBD_Storage_Interface_fops_FS
+     /tmp/cckjXK8L.s:218    .rodata.STORAGE_Inquirydata_FS:0000000000000000 STORAGE_Inquirydata_FS
+     /tmp/cckjXK8L.s:202    .data.USBD_Storage_Interface_fops_FS:0000000000000000 $d
+     /tmp/cckjXK8L.s:215    .rodata.STORAGE_Inquirydata_FS:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

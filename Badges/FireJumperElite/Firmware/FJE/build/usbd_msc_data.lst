@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDUWDDh.s 			page 1
+ARM GAS  /tmp/cc0gf13e.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -46,16 +46,16 @@ ARM GAS  /tmp/ccDUWDDh.s 			page 1
   46              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
   47              		.file 10 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_data.h"
   48              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c"
-ARM GAS  /tmp/ccDUWDDh.s 			page 2
+ARM GAS  /tmp/cc0gf13e.s 			page 2
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_msc_data.c
-     /tmp/ccDUWDDh.s:22     .rodata.MSC_Mode_Sense10_data:0000000000000000 MSC_Mode_Sense10_data
-     /tmp/ccDUWDDh.s:28     .rodata.MSC_Mode_Sense6_data:0000000000000000 MSC_Mode_Sense6_data
-     /tmp/ccDUWDDh.s:34     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 MSC_Page00_Inquiry_Data
-     /tmp/ccDUWDDh.s:19     .rodata.MSC_Mode_Sense10_data:0000000000000000 $d
-     /tmp/ccDUWDDh.s:25     .rodata.MSC_Mode_Sense6_data:0000000000000000 $d
-     /tmp/ccDUWDDh.s:31     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 $d
+     /tmp/cc0gf13e.s:22     .rodata.MSC_Mode_Sense10_data:0000000000000000 MSC_Mode_Sense10_data
+     /tmp/cc0gf13e.s:28     .rodata.MSC_Mode_Sense6_data:0000000000000000 MSC_Mode_Sense6_data
+     /tmp/cc0gf13e.s:34     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 MSC_Page00_Inquiry_Data
+     /tmp/cc0gf13e.s:19     .rodata.MSC_Mode_Sense10_data:0000000000000000 $d
+     /tmp/cc0gf13e.s:25     .rodata.MSC_Mode_Sense6_data:0000000000000000 $d
+     /tmp/cc0gf13e.s:31     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS
