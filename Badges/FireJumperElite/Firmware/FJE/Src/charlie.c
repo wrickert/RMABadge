@@ -1,12 +1,15 @@
 //Charlieplexing Library
 //William Rickert March2020
 
+
 extern int stopFlag;
 extern int minuteFlag;
 extern int hourFlag;
 
 void charlie(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int pos);
 void hands(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int hours, int minutes);
+void StopOneSec();
+void say();
 
 // Function to get current time and determine what to display
 void clock(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, RTC_HandleTypeDef whatTime){
@@ -19,9 +22,6 @@ void clock(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
    int hours = RTCtime.Hours;
    int displayMin = 0;
 
-   char buf[20];
-   sprintf(buf, "Current time is %d:%d\n",hours,minutes);
-   say(buf);
 
    if(minutes > 0 && minutes < 3)
       displayMin = 12;
@@ -81,6 +81,62 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
    // Off
    if(mambo == 0){
        charlie(PinA, PinB, PinC, PinD, 0);
+   }
+
+   // Slow, low power, Spin
+   if(mambo == 8){
+       charlie(PinA, PinB, PinC, PinD, 0);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 1);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 2);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 3);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 4);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 5);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 6);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 7);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 8);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 9);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 10);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 11);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
+       charlie(PinA, PinB, PinC, PinD, 12);
+       if(stopFlag == 1)
+         return;
+       StopOneSec();
    }
 
    // Slow Spin

@@ -53,7 +53,7 @@ TIM_HandleTypeDef htim1;
 //void dance();
 
 // Keep track of what dance we are on
-int mamboNumber = 5;
+int mamboNumber = 1;
 // Stopper for the inturrupt funciton
 int stopFlag = 0;
 // Flag to switch to time 
@@ -136,6 +136,9 @@ int main(void)
     if(mamboNumber == 5)
       clock(PinA, PinB, PinC, PinD, hrtc);
 
+   // if(mamboNumber == 6)
+   //   trySleep(PinA, PinB, PinC, PinD, hrtc);
+
     // Or not...
     else
        dance(PinA, PinB, PinC, PinD, mamboNumber);
@@ -155,7 +158,7 @@ int main(void)
       HAL_Delay(100);
 
       
-      char buf[20];
+      char buf[30];
       
       // Clear out our flags
       stopFlag =0;
@@ -198,7 +201,7 @@ int main(void)
       RTC_TimeTypeDef currentTime;
       say("In minute button\n");
       HAL_Delay(100);
-      char buf[20];
+      char buf[30];
 
       // Clear out flags
       stopFlag =0;
@@ -229,18 +232,21 @@ int main(void)
 
       res = HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
       if(res != 0){
-         sprintf(buf,"Set minute time error is %d \n", res);
+         sprintf(buf,"minute time error %d \n", res);
          say(buf);
       }
     }
 
     // Switch mode
     if(stopFlag == 1){
-      say("In mode button\n");
+      char buf[20];
+      sprintf(buf,"We are in mode %d \n", mamboNumber);
+      say(buf);
+
       HAL_Delay(100);
       stopFlag =0;
       mamboNumber++;
-      if(mamboNumber > 6)
+      if(mamboNumber > 5)
          mamboNumber = 0;
     }
   }
@@ -435,6 +441,64 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
       hourFlag = 1;
     }
 
+}
+
+void trySleep( GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, RTC_HandleTypeDef whatTime){
+   RTC_AlarmTypeDef AlarmSet;
+   RTC_TimeTypeDef newTime;
+   RTC_DateTypeDef currentDate;
+   RTC_TimeTypeDef currentTime;
+   memset(&newTime, 0, sizeof(newTime));
+   memset(&currentTime, 0, sizeof(currentTime));
+
+   HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+   // Weird. We dont care about the date but unless we touch the date the registers
+   // for rtc time dont unlock...
+   // You dont want to know how long I fought this
+   HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+
+   newTime.Minutes = currentTime.Minutes; 
+   newTime.Seconds = (currentTime.Seconds +30); 
+
+   AlarmSet.AlarmTime = newTime;
+
+//      HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
+
+   
+   HAL_RTC_SetAlarm_IT(&whatTime, &AlarmSet, RTC_FORMAT_BIN);
+   say("Entering sleep mode");
+   // Standby Sets all pins to High Z, which does weird things with the charlieplexing
+   //HAL_PWR_EnterSTANDBYMode();
+   
+   HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+   say("exiting sleep mode");
+}
+
+void StopOneSec(){
+   RTC_AlarmTypeDef AlarmSet;
+   RTC_TimeTypeDef newTime;
+   RTC_DateTypeDef currentDate;
+   RTC_TimeTypeDef currentTime;
+   memset(&newTime, 0, sizeof(newTime));
+   memset(&currentTime, 0, sizeof(currentTime));
+
+   HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+   // Weird. We dont care about the date but unless we touch the date the registers
+   // for rtc time dont unlock...
+   // You dont want to know how long I fought this
+   HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+
+   newTime.Minutes = currentTime.Minutes; 
+   newTime.Seconds = (currentTime.Seconds +1); 
+
+   AlarmSet.AlarmTime = newTime;
+   
+   HAL_RTC_SetAlarm_IT(&hrtc, &AlarmSet, RTC_FORMAT_BIN);
+
+   // Standby Sets all pins to High Z, which does weird things with the charlieplexing
+   //HAL_PWR_EnterSTANDBYMode();
+   
+   HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 }
 /* USER CODE END 4 */
 

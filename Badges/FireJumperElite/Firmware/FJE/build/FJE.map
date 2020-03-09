@@ -109,6 +109,10 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 build/main.o
  .text.put_char
                 0x0000000000000000       0x10 build/main.o
+ .rodata.trySleep.str1.4
+                0x0000000000000000       0x27 build/main.o
+ .text.trySleep
+                0x0000000000000000       0x88 build/main.o
  .text          0x0000000000000000        0x0 build/usb_device.o
  .data          0x0000000000000000        0x0 build/usb_device.o
  .bss           0x0000000000000000        0x0 build/usb_device.o
@@ -615,8 +619,6 @@ Discarded input sections
                 0x0000000000000000       0x10 build/stm32f0xx_hal_pwr.o
  .text.HAL_PWR_EnterSLEEPMode
                 0x0000000000000000       0x20 build/stm32f0xx_hal_pwr.o
- .text.HAL_PWR_EnterSTOPMode
-                0x0000000000000000       0x3c build/stm32f0xx_hal_pwr.o
  .text.HAL_PWR_EnterSTANDBYMode
                 0x0000000000000000       0x20 build/stm32f0xx_hal_pwr.o
  .text.HAL_PWR_EnableSleepOnExit
@@ -627,18 +629,6 @@ Discarded input sections
                 0x0000000000000000       0x10 build/stm32f0xx_hal_pwr.o
  .text.HAL_PWR_DisableSEVOnPend
                 0x0000000000000000       0x10 build/stm32f0xx_hal_pwr.o
- .debug_info    0x0000000000000000      0x4f8 build/stm32f0xx_hal_pwr.o
- .debug_abbrev  0x0000000000000000      0x1af build/stm32f0xx_hal_pwr.o
- .debug_loc     0x0000000000000000       0xd0 build/stm32f0xx_hal_pwr.o
- .debug_aranges
-                0x0000000000000000       0x78 build/stm32f0xx_hal_pwr.o
- .debug_ranges  0x0000000000000000       0x68 build/stm32f0xx_hal_pwr.o
- .debug_line    0x0000000000000000      0x305 build/stm32f0xx_hal_pwr.o
- .debug_str     0x0000000000000000      0x445 build/stm32f0xx_hal_pwr.o
- .comment       0x0000000000000000       0x1e build/stm32f0xx_hal_pwr.o
- .debug_frame   0x0000000000000000       0xdc build/stm32f0xx_hal_pwr.o
- .ARM.attributes
-                0x0000000000000000       0x2c build/stm32f0xx_hal_pwr.o
  .text          0x0000000000000000        0x0 build/stm32f0xx_hal_pwr_ex.o
  .data          0x0000000000000000        0x0 build/stm32f0xx_hal_pwr_ex.o
  .bss           0x0000000000000000        0x0 build/stm32f0xx_hal_pwr_ex.o
@@ -1149,8 +1139,6 @@ Discarded input sections
                 0x0000000000000000       0xd8 build/stm32f0xx_hal_rtc.o
  .text.HAL_RTC_SetAlarm
                 0x0000000000000000      0x110 build/stm32f0xx_hal_rtc.o
- .text.HAL_RTC_SetAlarm_IT
-                0x0000000000000000      0x138 build/stm32f0xx_hal_rtc.o
  .text.HAL_RTC_GetAlarm
                 0x0000000000000000       0x88 build/stm32f0xx_hal_rtc.o
  .text          0x0000000000000000        0x0 build/stm32f0xx_hal_rtc_ex.o
@@ -1442,7 +1430,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0     0x6588
+.text           0x00000000080000c0     0x6ba8
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0        0xe /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-strlen.o)
@@ -1473,778 +1461,784 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
  *fill*         0x00000000080005f6        0x2 
  .text.hands    0x00000000080005f8      0x160 build/main.o
                 0x00000000080005f8                hands
- .text.dance    0x0000000008000758      0xe48 build/main.o
-                0x0000000008000758                dance
- .text.initA    0x00000000080015a0       0x50 build/main.o
-                0x00000000080015a0                initA
- .text.initB    0x00000000080015f0       0x54 build/main.o
-                0x00000000080015f0                initB
- .text.initC    0x0000000008001644       0x54 build/main.o
-                0x0000000008001644                initC
- .text.initD    0x0000000008001698       0x54 build/main.o
-                0x0000000008001698                initD
+ .text.clock    0x0000000008000758      0x104 build/main.o
+                0x0000000008000758                clock
+ .text.initA    0x000000000800085c       0x50 build/main.o
+                0x000000000800085c                initA
+ .text.initB    0x00000000080008ac       0x54 build/main.o
+                0x00000000080008ac                initB
+ .text.initC    0x0000000008000900       0x54 build/main.o
+                0x0000000008000900                initC
+ .text.initD    0x0000000008000954       0x54 build/main.o
+                0x0000000008000954                initD
  .text.send_command
-                0x00000000080016ec        0xc build/main.o
-                0x00000000080016ec                send_command
- .text.say      0x00000000080016f8       0x1c build/main.o
-                0x00000000080016f8                say
- .text.clock    0x0000000008001714      0x11c build/main.o
-                0x0000000008001714                clock
+                0x00000000080009a8        0xc build/main.o
+                0x00000000080009a8                send_command
+ .text.say      0x00000000080009b4       0x1c build/main.o
+                0x00000000080009b4                say
  .text.SystemClock_Config
-                0x0000000008001830       0x60 build/main.o
-                0x0000000008001830                SystemClock_Config
- .text.main     0x0000000008001890      0x278 build/main.o
-                0x0000000008001890                main
+                0x00000000080009d0       0x60 build/main.o
+                0x00000000080009d0                SystemClock_Config
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008001b08       0x3c build/main.o
-                0x0000000008001b08                HAL_GPIO_EXTI_Callback
+                0x0000000008000a30       0x3c build/main.o
+                0x0000000008000a30                HAL_GPIO_EXTI_Callback
+ .text.StopOneSec
+                0x0000000008000a6c       0x64 build/main.o
+                0x0000000008000a6c                StopOneSec
+ .text.dance    0x0000000008000ad0     0x12a0 build/main.o
+                0x0000000008000ad0                dance
+ .text.main     0x0000000008001d70      0x280 build/main.o
+                0x0000000008001d70                main
  .text.Error_Handler
-                0x0000000008001b44        0x2 build/main.o
-                0x0000000008001b44                Error_Handler
- *fill*         0x0000000008001b46        0x2 
+                0x0000000008001ff0        0x2 build/main.o
+                0x0000000008001ff0                Error_Handler
+ *fill*         0x0000000008001ff2        0x2 
  .text.MX_USB_DEVICE_Init
-                0x0000000008001b48       0x5c build/usb_device.o
-                0x0000000008001b48                MX_USB_DEVICE_Init
+                0x0000000008001ff4       0x5c build/usb_device.o
+                0x0000000008001ff4                MX_USB_DEVICE_Init
  .text.USBD_Get_USB_Status
-                0x0000000008001ba4       0x16 build/usbd_conf.o
+                0x0000000008002050       0x16 build/usbd_conf.o
  .text.SystemClockConfig_Resume
-                0x0000000008001bba        0x8 build/usbd_conf.o
- *fill*         0x0000000008001bc2        0x2 
+                0x0000000008002066        0x8 build/usbd_conf.o
+ *fill*         0x000000000800206e        0x2 
  .text.HAL_PCD_MspInit
-                0x0000000008001bc4       0x40 build/usbd_conf.o
-                0x0000000008001bc4                HAL_PCD_MspInit
+                0x0000000008002070       0x40 build/usbd_conf.o
+                0x0000000008002070                HAL_PCD_MspInit
  .text.HAL_PCD_SetupStageCallback
-                0x0000000008001c04       0x16 build/usbd_conf.o
-                0x0000000008001c04                HAL_PCD_SetupStageCallback
+                0x00000000080020b0       0x16 build/usbd_conf.o
+                0x00000000080020b0                HAL_PCD_SetupStageCallback
  .text.HAL_PCD_DataOutStageCallback
-                0x0000000008001c1a       0x1a build/usbd_conf.o
-                0x0000000008001c1a                HAL_PCD_DataOutStageCallback
+                0x00000000080020c6       0x1a build/usbd_conf.o
+                0x00000000080020c6                HAL_PCD_DataOutStageCallback
  .text.HAL_PCD_DataInStageCallback
-                0x0000000008001c34       0x16 build/usbd_conf.o
-                0x0000000008001c34                HAL_PCD_DataInStageCallback
+                0x00000000080020e0       0x16 build/usbd_conf.o
+                0x00000000080020e0                HAL_PCD_DataInStageCallback
  .text.HAL_PCD_SOFCallback
-                0x0000000008001c4a        0xe build/usbd_conf.o
-                0x0000000008001c4a                HAL_PCD_SOFCallback
+                0x00000000080020f6        0xe build/usbd_conf.o
+                0x00000000080020f6                HAL_PCD_SOFCallback
  .text.HAL_PCD_ResetCallback
-                0x0000000008001c58       0x24 build/usbd_conf.o
-                0x0000000008001c58                HAL_PCD_ResetCallback
+                0x0000000008002104       0x24 build/usbd_conf.o
+                0x0000000008002104                HAL_PCD_ResetCallback
  .text.HAL_PCD_SuspendCallback
-                0x0000000008001c7c       0x24 build/usbd_conf.o
-                0x0000000008001c7c                HAL_PCD_SuspendCallback
+                0x0000000008002128       0x24 build/usbd_conf.o
+                0x0000000008002128                HAL_PCD_SuspendCallback
  .text.HAL_PCD_ResumeCallback
-                0x0000000008001ca0       0x2c build/usbd_conf.o
-                0x0000000008001ca0                HAL_PCD_ResumeCallback
+                0x000000000800214c       0x2c build/usbd_conf.o
+                0x000000000800214c                HAL_PCD_ResumeCallback
  .text.USBD_LL_Init
-                0x0000000008001ccc       0x74 build/usbd_conf.o
-                0x0000000008001ccc                USBD_LL_Init
+                0x0000000008002178       0x74 build/usbd_conf.o
+                0x0000000008002178                USBD_LL_Init
  .text.USBD_LL_Start
-                0x0000000008001d40       0x12 build/usbd_conf.o
-                0x0000000008001d40                USBD_LL_Start
+                0x00000000080021ec       0x12 build/usbd_conf.o
+                0x00000000080021ec                USBD_LL_Start
  .text.USBD_LL_OpenEP
-                0x0000000008001d52       0x18 build/usbd_conf.o
-                0x0000000008001d52                USBD_LL_OpenEP
+                0x00000000080021fe       0x18 build/usbd_conf.o
+                0x00000000080021fe                USBD_LL_OpenEP
  .text.USBD_LL_CloseEP
-                0x0000000008001d6a       0x12 build/usbd_conf.o
-                0x0000000008001d6a                USBD_LL_CloseEP
+                0x0000000008002216       0x12 build/usbd_conf.o
+                0x0000000008002216                USBD_LL_CloseEP
  .text.USBD_LL_FlushEP
-                0x0000000008001d7c       0x12 build/usbd_conf.o
-                0x0000000008001d7c                USBD_LL_FlushEP
+                0x0000000008002228       0x12 build/usbd_conf.o
+                0x0000000008002228                USBD_LL_FlushEP
  .text.USBD_LL_StallEP
-                0x0000000008001d8e       0x12 build/usbd_conf.o
-                0x0000000008001d8e                USBD_LL_StallEP
+                0x000000000800223a       0x12 build/usbd_conf.o
+                0x000000000800223a                USBD_LL_StallEP
  .text.USBD_LL_ClearStallEP
-                0x0000000008001da0       0x12 build/usbd_conf.o
-                0x0000000008001da0                USBD_LL_ClearStallEP
+                0x000000000800224c       0x12 build/usbd_conf.o
+                0x000000000800224c                USBD_LL_ClearStallEP
  .text.USBD_LL_IsStallEP
-                0x0000000008001db2       0x2a build/usbd_conf.o
-                0x0000000008001db2                USBD_LL_IsStallEP
+                0x000000000800225e       0x2a build/usbd_conf.o
+                0x000000000800225e                USBD_LL_IsStallEP
  .text.USBD_LL_SetUSBAddress
-                0x0000000008001ddc       0x12 build/usbd_conf.o
-                0x0000000008001ddc                USBD_LL_SetUSBAddress
+                0x0000000008002288       0x12 build/usbd_conf.o
+                0x0000000008002288                USBD_LL_SetUSBAddress
  .text.USBD_LL_Transmit
-                0x0000000008001dee       0x12 build/usbd_conf.o
-                0x0000000008001dee                USBD_LL_Transmit
+                0x000000000800229a       0x12 build/usbd_conf.o
+                0x000000000800229a                USBD_LL_Transmit
  .text.USBD_LL_PrepareReceive
-                0x0000000008001e00       0x12 build/usbd_conf.o
-                0x0000000008001e00                USBD_LL_PrepareReceive
+                0x00000000080022ac       0x12 build/usbd_conf.o
+                0x00000000080022ac                USBD_LL_PrepareReceive
  .text.USBD_LL_GetRxDataSize
-                0x0000000008001e12        0xe build/usbd_conf.o
-                0x0000000008001e12                USBD_LL_GetRxDataSize
+                0x00000000080022be        0xe build/usbd_conf.o
+                0x00000000080022be                USBD_LL_GetRxDataSize
  .text.USBD_static_malloc
-                0x0000000008001e20        0x8 build/usbd_conf.o
-                0x0000000008001e20                USBD_static_malloc
+                0x00000000080022cc        0x8 build/usbd_conf.o
+                0x00000000080022cc                USBD_static_malloc
  .text.USBD_static_free
-                0x0000000008001e28        0x2 build/usbd_conf.o
-                0x0000000008001e28                USBD_static_free
- *fill*         0x0000000008001e2a        0x2 
+                0x00000000080022d4        0x2 build/usbd_conf.o
+                0x00000000080022d4                USBD_static_free
+ *fill*         0x00000000080022d6        0x2 
  .text.USBD_FS_DeviceDescriptor
-                0x0000000008001e2c        0xc build/usbd_desc.o
-                0x0000000008001e2c                USBD_FS_DeviceDescriptor
+                0x00000000080022d8        0xc build/usbd_desc.o
+                0x00000000080022d8                USBD_FS_DeviceDescriptor
  .text.USBD_FS_LangIDStrDescriptor
-                0x0000000008001e38        0xc build/usbd_desc.o
-                0x0000000008001e38                USBD_FS_LangIDStrDescriptor
+                0x00000000080022e4        0xc build/usbd_desc.o
+                0x00000000080022e4                USBD_FS_LangIDStrDescriptor
  .text.IntToUnicode
-                0x0000000008001e44       0x30 build/usbd_desc.o
+                0x00000000080022f0       0x30 build/usbd_desc.o
  .text.Get_SerialNum
-                0x0000000008001e74       0x40 build/usbd_desc.o
+                0x0000000008002320       0x40 build/usbd_desc.o
  .text.USBD_FS_SerialStrDescriptor
-                0x0000000008001eb4       0x14 build/usbd_desc.o
-                0x0000000008001eb4                USBD_FS_SerialStrDescriptor
+                0x0000000008002360       0x14 build/usbd_desc.o
+                0x0000000008002360                USBD_FS_SerialStrDescriptor
  .text.USBD_FS_ProductStrDescriptor
-                0x0000000008001ec8       0x28 build/usbd_desc.o
-                0x0000000008001ec8                USBD_FS_ProductStrDescriptor
+                0x0000000008002374       0x28 build/usbd_desc.o
+                0x0000000008002374                USBD_FS_ProductStrDescriptor
  .text.USBD_FS_ManufacturerStrDescriptor
-                0x0000000008001ef0       0x1c build/usbd_desc.o
-                0x0000000008001ef0                USBD_FS_ManufacturerStrDescriptor
+                0x000000000800239c       0x1c build/usbd_desc.o
+                0x000000000800239c                USBD_FS_ManufacturerStrDescriptor
  .text.USBD_FS_ConfigStrDescriptor
-                0x0000000008001f0c       0x28 build/usbd_desc.o
-                0x0000000008001f0c                USBD_FS_ConfigStrDescriptor
+                0x00000000080023b8       0x28 build/usbd_desc.o
+                0x00000000080023b8                USBD_FS_ConfigStrDescriptor
  .text.USBD_FS_InterfaceStrDescriptor
-                0x0000000008001f34       0x28 build/usbd_desc.o
-                0x0000000008001f34                USBD_FS_InterfaceStrDescriptor
+                0x00000000080023e0       0x28 build/usbd_desc.o
+                0x00000000080023e0                USBD_FS_InterfaceStrDescriptor
  .text.STORAGE_Init_FS
-                0x0000000008001f5c        0x4 build/usbd_storage_if.o
+                0x0000000008002408        0x4 build/usbd_storage_if.o
  .text.STORAGE_GetCapacity_FS
-                0x0000000008001f60       0x10 build/usbd_storage_if.o
+                0x000000000800240c       0x10 build/usbd_storage_if.o
  .text.STORAGE_IsReady_FS
-                0x0000000008001f70        0x4 build/usbd_storage_if.o
+                0x000000000800241c        0x4 build/usbd_storage_if.o
  .text.STORAGE_IsWriteProtected_FS
-                0x0000000008001f74        0x4 build/usbd_storage_if.o
+                0x0000000008002420        0x4 build/usbd_storage_if.o
  .text.STORAGE_Read_FS
-                0x0000000008001f78        0x4 build/usbd_storage_if.o
+                0x0000000008002424        0x4 build/usbd_storage_if.o
  .text.STORAGE_Write_FS
-                0x0000000008001f7c        0x4 build/usbd_storage_if.o
+                0x0000000008002428        0x4 build/usbd_storage_if.o
  .text.STORAGE_GetMaxLun_FS
-                0x0000000008001f80        0x4 build/usbd_storage_if.o
+                0x000000000800242c        0x4 build/usbd_storage_if.o
  .text.NMI_Handler
-                0x0000000008001f84        0x2 build/stm32f0xx_it.o
-                0x0000000008001f84                NMI_Handler
+                0x0000000008002430        0x2 build/stm32f0xx_it.o
+                0x0000000008002430                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008001f86        0x2 build/stm32f0xx_it.o
-                0x0000000008001f86                HardFault_Handler
+                0x0000000008002432        0x2 build/stm32f0xx_it.o
+                0x0000000008002432                HardFault_Handler
  .text.SVC_Handler
-                0x0000000008001f88        0x2 build/stm32f0xx_it.o
-                0x0000000008001f88                SVC_Handler
+                0x0000000008002434        0x2 build/stm32f0xx_it.o
+                0x0000000008002434                SVC_Handler
  .text.PendSV_Handler
-                0x0000000008001f8a        0x2 build/stm32f0xx_it.o
-                0x0000000008001f8a                PendSV_Handler
+                0x0000000008002436        0x2 build/stm32f0xx_it.o
+                0x0000000008002436                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008001f8c        0x8 build/stm32f0xx_it.o
-                0x0000000008001f8c                SysTick_Handler
+                0x0000000008002438        0x8 build/stm32f0xx_it.o
+                0x0000000008002438                SysTick_Handler
  .text.EXTI4_15_IRQHandler
-                0x0000000008001f94       0x18 build/stm32f0xx_it.o
-                0x0000000008001f94                EXTI4_15_IRQHandler
+                0x0000000008002440       0x18 build/stm32f0xx_it.o
+                0x0000000008002440                EXTI4_15_IRQHandler
  .text.TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x0000000008001fac       0x10 build/stm32f0xx_it.o
-                0x0000000008001fac                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x0000000008002458       0x10 build/stm32f0xx_it.o
+                0x0000000008002458                TIM1_BRK_UP_TRG_COM_IRQHandler
  .text.USB_IRQHandler
-                0x0000000008001fbc       0x10 build/stm32f0xx_it.o
-                0x0000000008001fbc                USB_IRQHandler
+                0x0000000008002468       0x10 build/stm32f0xx_it.o
+                0x0000000008002468                USB_IRQHandler
  .text.HAL_MspInit
-                0x0000000008001fcc       0x3c build/stm32f0xx_hal_msp.o
-                0x0000000008001fcc                HAL_MspInit
+                0x0000000008002478       0x3c build/stm32f0xx_hal_msp.o
+                0x0000000008002478                HAL_MspInit
  .text.HAL_RTC_MspInit
-                0x0000000008002008       0x20 build/stm32f0xx_hal_msp.o
-                0x0000000008002008                HAL_RTC_MspInit
+                0x00000000080024b4       0x20 build/stm32f0xx_hal_msp.o
+                0x00000000080024b4                HAL_RTC_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x0000000008002028       0x40 build/stm32f0xx_hal_msp.o
-                0x0000000008002028                HAL_TIM_Base_MspInit
+                0x00000000080024d4       0x40 build/stm32f0xx_hal_msp.o
+                0x00000000080024d4                HAL_TIM_Base_MspInit
  .text.USB_EnableGlobalInt
-                0x0000000008002068       0x14 build/stm32f0xx_ll_usb.o
-                0x0000000008002068                USB_EnableGlobalInt
+                0x0000000008002514       0x14 build/stm32f0xx_ll_usb.o
+                0x0000000008002514                USB_EnableGlobalInt
  .text.USB_DisableGlobalInt
-                0x000000000800207c       0x14 build/stm32f0xx_ll_usb.o
-                0x000000000800207c                USB_DisableGlobalInt
+                0x0000000008002528       0x14 build/stm32f0xx_ll_usb.o
+                0x0000000008002528                USB_DisableGlobalInt
  .text.USB_DevInit
-                0x0000000008002090       0x2a build/stm32f0xx_ll_usb.o
-                0x0000000008002090                USB_DevInit
- *fill*         0x00000000080020ba        0x2 
+                0x000000000800253c       0x2a build/stm32f0xx_ll_usb.o
+                0x000000000800253c                USB_DevInit
+ *fill*         0x0000000008002566        0x2 
  .text.USB_ActivateEndpoint
-                0x00000000080020bc      0x304 build/stm32f0xx_ll_usb.o
-                0x00000000080020bc                USB_ActivateEndpoint
+                0x0000000008002568      0x304 build/stm32f0xx_ll_usb.o
+                0x0000000008002568                USB_ActivateEndpoint
  .text.USB_DeactivateEndpoint
-                0x00000000080023c0      0x170 build/stm32f0xx_ll_usb.o
-                0x00000000080023c0                USB_DeactivateEndpoint
+                0x000000000800286c      0x170 build/stm32f0xx_ll_usb.o
+                0x000000000800286c                USB_DeactivateEndpoint
  .text.USB_EPSetStall
-                0x0000000008002530       0x4c build/stm32f0xx_ll_usb.o
-                0x0000000008002530                USB_EPSetStall
+                0x00000000080029dc       0x4c build/stm32f0xx_ll_usb.o
+                0x00000000080029dc                USB_EPSetStall
  .text.USB_EPClearStall
-                0x000000000800257c       0x98 build/stm32f0xx_ll_usb.o
-                0x000000000800257c                USB_EPClearStall
+                0x0000000008002a28       0x98 build/stm32f0xx_ll_usb.o
+                0x0000000008002a28                USB_EPClearStall
  .text.USB_SetDevAddress
-                0x0000000008002614        0xe build/stm32f0xx_ll_usb.o
-                0x0000000008002614                USB_SetDevAddress
- *fill*         0x0000000008002622        0x2 
+                0x0000000008002ac0        0xe build/stm32f0xx_ll_usb.o
+                0x0000000008002ac0                USB_SetDevAddress
+ *fill*         0x0000000008002ace        0x2 
  .text.USB_DevConnect
-                0x0000000008002624       0x14 build/stm32f0xx_ll_usb.o
-                0x0000000008002624                USB_DevConnect
+                0x0000000008002ad0       0x14 build/stm32f0xx_ll_usb.o
+                0x0000000008002ad0                USB_DevConnect
  .text.USB_ReadInterrupts
-                0x0000000008002638        0x8 build/stm32f0xx_ll_usb.o
-                0x0000000008002638                USB_ReadInterrupts
+                0x0000000008002ae4        0x8 build/stm32f0xx_ll_usb.o
+                0x0000000008002ae4                USB_ReadInterrupts
  .text.USB_EP0_OutStart
-                0x0000000008002640        0x4 build/stm32f0xx_ll_usb.o
-                0x0000000008002640                USB_EP0_OutStart
+                0x0000000008002aec        0x4 build/stm32f0xx_ll_usb.o
+                0x0000000008002aec                USB_EP0_OutStart
  .text.USB_WritePMA
-                0x0000000008002644       0x28 build/stm32f0xx_ll_usb.o
-                0x0000000008002644                USB_WritePMA
+                0x0000000008002af0       0x28 build/stm32f0xx_ll_usb.o
+                0x0000000008002af0                USB_WritePMA
  .text.USB_EPStartXfer
-                0x000000000800266c      0x2d8 build/stm32f0xx_ll_usb.o
-                0x000000000800266c                USB_EPStartXfer
+                0x0000000008002b18      0x2d8 build/stm32f0xx_ll_usb.o
+                0x0000000008002b18                USB_EPStartXfer
  .text.USB_ReadPMA
-                0x0000000008002944       0x2c build/stm32f0xx_ll_usb.o
-                0x0000000008002944                USB_ReadPMA
+                0x0000000008002df0       0x2c build/stm32f0xx_ll_usb.o
+                0x0000000008002df0                USB_ReadPMA
  .text.HAL_PCD_Init
-                0x0000000008002970       0xd4 build/stm32f0xx_hal_pcd.o
-                0x0000000008002970                HAL_PCD_Init
+                0x0000000008002e1c       0xd4 build/stm32f0xx_hal_pcd.o
+                0x0000000008002e1c                HAL_PCD_Init
  .text.HAL_PCD_Start
-                0x0000000008002a44       0x2e build/stm32f0xx_hal_pcd.o
-                0x0000000008002a44                HAL_PCD_Start
+                0x0000000008002ef0       0x2e build/stm32f0xx_hal_pcd.o
+                0x0000000008002ef0                HAL_PCD_Start
  .text.HAL_PCD_SetAddress
-                0x0000000008002a72       0x2c build/stm32f0xx_hal_pcd.o
-                0x0000000008002a72                HAL_PCD_SetAddress
+                0x0000000008002f1e       0x2c build/stm32f0xx_hal_pcd.o
+                0x0000000008002f1e                HAL_PCD_SetAddress
  .text.HAL_PCD_EP_Open
-                0x0000000008002a9e       0x7a build/stm32f0xx_hal_pcd.o
-                0x0000000008002a9e                HAL_PCD_EP_Open
+                0x0000000008002f4a       0x7a build/stm32f0xx_hal_pcd.o
+                0x0000000008002f4a                HAL_PCD_EP_Open
  .text.HAL_PCD_EP_Close
-                0x0000000008002b18       0x64 build/stm32f0xx_hal_pcd.o
-                0x0000000008002b18                HAL_PCD_EP_Close
+                0x0000000008002fc4       0x64 build/stm32f0xx_hal_pcd.o
+                0x0000000008002fc4                HAL_PCD_EP_Close
  .text.HAL_PCD_EP_Receive
-                0x0000000008002b7c       0x4c build/stm32f0xx_hal_pcd.o
-                0x0000000008002b7c                HAL_PCD_EP_Receive
+                0x0000000008003028       0x4c build/stm32f0xx_hal_pcd.o
+                0x0000000008003028                HAL_PCD_EP_Receive
  .text.HAL_PCD_EP_GetRxCount
-                0x0000000008002bc8        0xe build/stm32f0xx_hal_pcd.o
-                0x0000000008002bc8                HAL_PCD_EP_GetRxCount
+                0x0000000008003074        0xe build/stm32f0xx_hal_pcd.o
+                0x0000000008003074                HAL_PCD_EP_GetRxCount
  .text.HAL_PCD_EP_Transmit
-                0x0000000008002bd6       0x40 build/stm32f0xx_hal_pcd.o
-                0x0000000008002bd6                HAL_PCD_EP_Transmit
- *fill*         0x0000000008002c16        0x2 
+                0x0000000008003082       0x40 build/stm32f0xx_hal_pcd.o
+                0x0000000008003082                HAL_PCD_EP_Transmit
+ *fill*         0x00000000080030c2        0x2 
  .text.PCD_EP_ISR_Handler
-                0x0000000008002c18      0x3ac build/stm32f0xx_hal_pcd.o
+                0x00000000080030c4      0x3ac build/stm32f0xx_hal_pcd.o
  .text.HAL_PCD_IRQHandler
-                0x0000000008002fc4      0x1ac build/stm32f0xx_hal_pcd.o
-                0x0000000008002fc4                HAL_PCD_IRQHandler
+                0x0000000008003470      0x1ac build/stm32f0xx_hal_pcd.o
+                0x0000000008003470                HAL_PCD_IRQHandler
  .text.HAL_PCD_EP_SetStall
-                0x0000000008003170       0x7e build/stm32f0xx_hal_pcd.o
-                0x0000000008003170                HAL_PCD_EP_SetStall
+                0x000000000800361c       0x7e build/stm32f0xx_hal_pcd.o
+                0x000000000800361c                HAL_PCD_EP_SetStall
  .text.HAL_PCD_EP_ClrStall
-                0x00000000080031ee       0x76 build/stm32f0xx_hal_pcd.o
-                0x00000000080031ee                HAL_PCD_EP_ClrStall
+                0x000000000800369a       0x76 build/stm32f0xx_hal_pcd.o
+                0x000000000800369a                HAL_PCD_EP_ClrStall
  .text.HAL_PCD_EP_Flush
-                0x0000000008003264        0x4 build/stm32f0xx_hal_pcd.o
-                0x0000000008003264                HAL_PCD_EP_Flush
+                0x0000000008003710        0x4 build/stm32f0xx_hal_pcd.o
+                0x0000000008003710                HAL_PCD_EP_Flush
  .text.HAL_PCDEx_PMAConfig
-                0x0000000008003268       0x32 build/stm32f0xx_hal_pcd_ex.o
-                0x0000000008003268                HAL_PCDEx_PMAConfig
+                0x0000000008003714       0x32 build/stm32f0xx_hal_pcd_ex.o
+                0x0000000008003714                HAL_PCDEx_PMAConfig
  .text.HAL_PCDEx_ActivateLPM
-                0x000000000800329a       0x26 build/stm32f0xx_hal_pcd_ex.o
-                0x000000000800329a                HAL_PCDEx_ActivateLPM
+                0x0000000008003746       0x26 build/stm32f0xx_hal_pcd_ex.o
+                0x0000000008003746                HAL_PCDEx_ActivateLPM
  .text.HAL_PCDEx_LPM_Callback
-                0x00000000080032c0        0x2 build/stm32f0xx_hal_pcd_ex.o
-                0x00000000080032c0                HAL_PCDEx_LPM_Callback
- *fill*         0x00000000080032c2        0x2 
+                0x000000000800376c        0x2 build/stm32f0xx_hal_pcd_ex.o
+                0x000000000800376c                HAL_PCDEx_LPM_Callback
+ *fill*         0x000000000800376e        0x2 
  .text.HAL_RCC_OscConfig
-                0x00000000080032c4      0x544 build/stm32f0xx_hal_rcc.o
-                0x00000000080032c4                HAL_RCC_OscConfig
+                0x0000000008003770      0x544 build/stm32f0xx_hal_rcc.o
+                0x0000000008003770                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008003808       0x94 build/stm32f0xx_hal_rcc.o
-                0x0000000008003808                HAL_RCC_GetSysClockFreq
+                0x0000000008003cb4       0x94 build/stm32f0xx_hal_rcc.o
+                0x0000000008003cb4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x000000000800389c      0x144 build/stm32f0xx_hal_rcc.o
-                0x000000000800389c                HAL_RCC_ClockConfig
+                0x0000000008003d48      0x144 build/stm32f0xx_hal_rcc.o
+                0x0000000008003d48                HAL_RCC_ClockConfig
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x00000000080039e0      0x144 build/stm32f0xx_hal_rcc_ex.o
-                0x00000000080039e0                HAL_RCCEx_PeriphCLKConfig
+                0x0000000008003e8c      0x144 build/stm32f0xx_hal_rcc_ex.o
+                0x0000000008003e8c                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_InitTick
-                0x0000000008003b24       0x50 build/stm32f0xx_hal.o
-                0x0000000008003b24                HAL_InitTick
+                0x0000000008003fd0       0x50 build/stm32f0xx_hal.o
+                0x0000000008003fd0                HAL_InitTick
  .text.HAL_Init
-                0x0000000008003b74       0x20 build/stm32f0xx_hal.o
-                0x0000000008003b74                HAL_Init
+                0x0000000008004020       0x20 build/stm32f0xx_hal.o
+                0x0000000008004020                HAL_Init
  .text.HAL_IncTick
-                0x0000000008003b94       0x18 build/stm32f0xx_hal.o
-                0x0000000008003b94                HAL_IncTick
+                0x0000000008004040       0x18 build/stm32f0xx_hal.o
+                0x0000000008004040                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008003bac        0xc build/stm32f0xx_hal.o
-                0x0000000008003bac                HAL_GetTick
+                0x0000000008004058        0xc build/stm32f0xx_hal.o
+                0x0000000008004058                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008003bb8       0x24 build/stm32f0xx_hal.o
-                0x0000000008003bb8                HAL_Delay
+                0x0000000008004064       0x24 build/stm32f0xx_hal.o
+                0x0000000008004064                HAL_Delay
  .text.HAL_GPIO_Init
-                0x0000000008003bdc      0x1a0 build/stm32f0xx_hal_gpio.o
-                0x0000000008003bdc                HAL_GPIO_Init
+                0x0000000008004088      0x1a0 build/stm32f0xx_hal_gpio.o
+                0x0000000008004088                HAL_GPIO_Init
  .text.HAL_GPIO_DeInit
-                0x0000000008003d7c       0xe4 build/stm32f0xx_hal_gpio.o
-                0x0000000008003d7c                HAL_GPIO_DeInit
+                0x0000000008004228       0xe4 build/stm32f0xx_hal_gpio.o
+                0x0000000008004228                HAL_GPIO_DeInit
  .text.HAL_GPIO_WritePin
-                0x0000000008003e60        0xc build/stm32f0xx_hal_gpio.o
-                0x0000000008003e60                HAL_GPIO_WritePin
+                0x000000000800430c        0xc build/stm32f0xx_hal_gpio.o
+                0x000000000800430c                HAL_GPIO_WritePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x0000000008003e6c       0x1c build/stm32f0xx_hal_gpio.o
-                0x0000000008003e6c                HAL_GPIO_EXTI_IRQHandler
+                0x0000000008004318       0x1c build/stm32f0xx_hal_gpio.o
+                0x0000000008004318                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_NVIC_SetPriority
-                0x0000000008003e88       0x60 build/stm32f0xx_hal_cortex.o
-                0x0000000008003e88                HAL_NVIC_SetPriority
+                0x0000000008004334       0x60 build/stm32f0xx_hal_cortex.o
+                0x0000000008004334                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008003ee8       0x18 build/stm32f0xx_hal_cortex.o
-                0x0000000008003ee8                HAL_NVIC_EnableIRQ
+                0x0000000008004394       0x18 build/stm32f0xx_hal_cortex.o
+                0x0000000008004394                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008003f00       0x38 build/stm32f0xx_hal_cortex.o
-                0x0000000008003f00                HAL_SYSTICK_Config
+                0x00000000080043ac       0x38 build/stm32f0xx_hal_cortex.o
+                0x00000000080043ac                HAL_SYSTICK_Config
+ .text.HAL_PWR_EnterSTOPMode
+                0x00000000080043e4       0x3c build/stm32f0xx_hal_pwr.o
+                0x00000000080043e4                HAL_PWR_EnterSTOPMode
  .text.TIM_TI1_ConfigInputStage
-                0x0000000008003f38       0x22 build/stm32f0xx_hal_tim.o
- *fill*         0x0000000008003f5a        0x2 
+                0x0000000008004420       0x22 build/stm32f0xx_hal_tim.o
+ *fill*         0x0000000008004442        0x2 
  .text.TIM_TI2_ConfigInputStage
-                0x0000000008003f5c       0x28 build/stm32f0xx_hal_tim.o
+                0x0000000008004444       0x28 build/stm32f0xx_hal_tim.o
  .text.TIM_ITRx_SetConfig
-                0x0000000008003f84       0x10 build/stm32f0xx_hal_tim.o
+                0x000000000800446c       0x10 build/stm32f0xx_hal_tim.o
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008003f94        0x2 build/stm32f0xx_hal_tim.o
-                0x0000000008003f94                HAL_TIM_PeriodElapsedCallback
+                0x000000000800447c        0x2 build/stm32f0xx_hal_tim.o
+                0x000000000800447c                HAL_TIM_PeriodElapsedCallback
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x0000000008003f96        0x2 build/stm32f0xx_hal_tim.o
-                0x0000000008003f96                HAL_TIM_OC_DelayElapsedCallback
+                0x000000000800447e        0x2 build/stm32f0xx_hal_tim.o
+                0x000000000800447e                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008003f98        0x2 build/stm32f0xx_hal_tim.o
-                0x0000000008003f98                HAL_TIM_IC_CaptureCallback
+                0x0000000008004480        0x2 build/stm32f0xx_hal_tim.o
+                0x0000000008004480                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x0000000008003f9a        0x2 build/stm32f0xx_hal_tim.o
-                0x0000000008003f9a                HAL_TIM_PWM_PulseFinishedCallback
+                0x0000000008004482        0x2 build/stm32f0xx_hal_tim.o
+                0x0000000008004482                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0000000008003f9c        0x2 build/stm32f0xx_hal_tim.o
-                0x0000000008003f9c                HAL_TIM_TriggerCallback
+                0x0000000008004484        0x2 build/stm32f0xx_hal_tim.o
+                0x0000000008004484                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x0000000008003f9e      0x15a build/stm32f0xx_hal_tim.o
-                0x0000000008003f9e                HAL_TIM_IRQHandler
+                0x0000000008004486      0x15a build/stm32f0xx_hal_tim.o
+                0x0000000008004486                HAL_TIM_IRQHandler
  .text.TIM_Base_SetConfig
-                0x00000000080040f8       0x94 build/stm32f0xx_hal_tim.o
-                0x00000000080040f8                TIM_Base_SetConfig
+                0x00000000080045e0       0x94 build/stm32f0xx_hal_tim.o
+                0x00000000080045e0                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x000000000800418c       0x34 build/stm32f0xx_hal_tim.o
-                0x000000000800418c                HAL_TIM_Base_Init
+                0x0000000008004674       0x34 build/stm32f0xx_hal_tim.o
+                0x0000000008004674                HAL_TIM_Base_Init
  .text.TIM_ETR_SetConfig
-                0x00000000080041c0       0x18 build/stm32f0xx_hal_tim.o
-                0x00000000080041c0                TIM_ETR_SetConfig
+                0x00000000080046a8       0x18 build/stm32f0xx_hal_tim.o
+                0x00000000080046a8                TIM_ETR_SetConfig
  .text.HAL_TIM_ConfigClockSource
-                0x00000000080041d8       0xe4 build/stm32f0xx_hal_tim.o
-                0x00000000080041d8                HAL_TIM_ConfigClockSource
+                0x00000000080046c0       0xe4 build/stm32f0xx_hal_tim.o
+                0x00000000080046c0                HAL_TIM_ConfigClockSource
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x00000000080042bc       0x64 build/stm32f0xx_hal_tim_ex.o
-                0x00000000080042bc                HAL_TIMEx_MasterConfigSynchronization
+                0x00000000080047a4       0x64 build/stm32f0xx_hal_tim_ex.o
+                0x00000000080047a4                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x0000000008004320        0x2 build/stm32f0xx_hal_tim_ex.o
-                0x0000000008004320                HAL_TIMEx_CommutCallback
+                0x0000000008004808        0x2 build/stm32f0xx_hal_tim_ex.o
+                0x0000000008004808                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x0000000008004322        0x2 build/stm32f0xx_hal_tim_ex.o
-                0x0000000008004322                HAL_TIMEx_BreakCallback
+                0x000000000800480a        0x2 build/stm32f0xx_hal_tim_ex.o
+                0x000000000800480a                HAL_TIMEx_BreakCallback
  .text.SystemInit
-                0x0000000008004324        0x2 build/system_stm32f0xx.o
-                0x0000000008004324                SystemInit
+                0x000000000800480c        0x2 build/system_stm32f0xx.o
+                0x000000000800480c                SystemInit
  .text.USBD_Init
-                0x0000000008004326       0x38 build/usbd_core.o
-                0x0000000008004326                USBD_Init
+                0x000000000800480e       0x38 build/usbd_core.o
+                0x000000000800480e                USBD_Init
  .text.USBD_RegisterClass
-                0x000000000800435e       0x12 build/usbd_core.o
-                0x000000000800435e                USBD_RegisterClass
+                0x0000000008004846       0x12 build/usbd_core.o
+                0x0000000008004846                USBD_RegisterClass
  .text.USBD_Start
-                0x0000000008004370        0xa build/usbd_core.o
-                0x0000000008004370                USBD_Start
+                0x0000000008004858        0xa build/usbd_core.o
+                0x0000000008004858                USBD_Start
  .text.USBD_SetClassConfig
-                0x000000000800437a       0x1e build/usbd_core.o
-                0x000000000800437a                USBD_SetClassConfig
+                0x0000000008004862       0x1e build/usbd_core.o
+                0x0000000008004862                USBD_SetClassConfig
  .text.USBD_ClrClassConfig
-                0x0000000008004398       0x10 build/usbd_core.o
-                0x0000000008004398                USBD_ClrClassConfig
+                0x0000000008004880       0x10 build/usbd_core.o
+                0x0000000008004880                USBD_ClrClassConfig
  .text.USBD_LL_SetupStage
-                0x00000000080043a8       0x64 build/usbd_core.o
-                0x00000000080043a8                USBD_LL_SetupStage
+                0x0000000008004890       0x64 build/usbd_core.o
+                0x0000000008004890                USBD_LL_SetupStage
  .text.USBD_LL_DataOutStage
-                0x000000000800440c       0xa4 build/usbd_core.o
-                0x000000000800440c                USBD_LL_DataOutStage
+                0x00000000080048f4       0xa4 build/usbd_core.o
+                0x00000000080048f4                USBD_LL_DataOutStage
  .text.USBD_LL_DataInStage
-                0x00000000080044b0       0xea build/usbd_core.o
-                0x00000000080044b0                USBD_LL_DataInStage
+                0x0000000008004998       0xea build/usbd_core.o
+                0x0000000008004998                USBD_LL_DataInStage
  .text.USBD_LL_Reset
-                0x000000000800459a       0x5e build/usbd_core.o
-                0x000000000800459a                USBD_LL_Reset
+                0x0000000008004a82       0x5e build/usbd_core.o
+                0x0000000008004a82                USBD_LL_Reset
  .text.USBD_LL_SetSpeed
-                0x00000000080045f8        0x6 build/usbd_core.o
-                0x00000000080045f8                USBD_LL_SetSpeed
- *fill*         0x00000000080045fe        0x2 
+                0x0000000008004ae0        0x6 build/usbd_core.o
+                0x0000000008004ae0                USBD_LL_SetSpeed
+ *fill*         0x0000000008004ae6        0x2 
  .text.USBD_LL_Suspend
-                0x0000000008004600       0x18 build/usbd_core.o
-                0x0000000008004600                USBD_LL_Suspend
+                0x0000000008004ae8       0x18 build/usbd_core.o
+                0x0000000008004ae8                USBD_LL_Suspend
  .text.USBD_LL_Resume
-                0x0000000008004618       0x1c build/usbd_core.o
-                0x0000000008004618                USBD_LL_Resume
+                0x0000000008004b00       0x1c build/usbd_core.o
+                0x0000000008004b00                USBD_LL_Resume
  .text.USBD_LL_SOF
-                0x0000000008004634       0x20 build/usbd_core.o
-                0x0000000008004634                USBD_LL_SOF
+                0x0000000008004b1c       0x20 build/usbd_core.o
+                0x0000000008004b1c                USBD_LL_SOF
  .text.USBD_GetLen
-                0x0000000008004654       0x14 build/usbd_ctlreq.o
+                0x0000000008004b3c       0x14 build/usbd_ctlreq.o
  .text.USBD_SetFeature
-                0x0000000008004668       0x18 build/usbd_ctlreq.o
+                0x0000000008004b50       0x18 build/usbd_ctlreq.o
  .text.USBD_ParseSetupRequest
-                0x0000000008004680       0x28 build/usbd_ctlreq.o
-                0x0000000008004680                USBD_ParseSetupRequest
+                0x0000000008004b68       0x28 build/usbd_ctlreq.o
+                0x0000000008004b68                USBD_ParseSetupRequest
  .text.USBD_CtlError
-                0x00000000080046a8       0x14 build/usbd_ctlreq.o
-                0x00000000080046a8                USBD_CtlError
+                0x0000000008004b90       0x14 build/usbd_ctlreq.o
+                0x0000000008004b90                USBD_CtlError
  .text.USBD_GetDescriptor
-                0x00000000080046bc      0x1b8 build/usbd_ctlreq.o
+                0x0000000008004ba4      0x1b8 build/usbd_ctlreq.o
  .text.USBD_SetAddress
-                0x0000000008004874       0x60 build/usbd_ctlreq.o
+                0x0000000008004d5c       0x60 build/usbd_ctlreq.o
  .text.USBD_SetConfig
-                0x00000000080048d4       0xb8 build/usbd_ctlreq.o
+                0x0000000008004dbc       0xb8 build/usbd_ctlreq.o
  .text.USBD_GetConfig
-                0x000000000800498c       0x40 build/usbd_ctlreq.o
+                0x0000000008004e74       0x40 build/usbd_ctlreq.o
  .text.USBD_GetStatus
-                0x00000000080049cc       0x3e build/usbd_ctlreq.o
+                0x0000000008004eb4       0x3e build/usbd_ctlreq.o
  .text.USBD_ClrFeature
-                0x0000000008004a0a       0x2a build/usbd_ctlreq.o
+                0x0000000008004ef2       0x2a build/usbd_ctlreq.o
  .text.USBD_StdDevReq
-                0x0000000008004a34       0x6c build/usbd_ctlreq.o
-                0x0000000008004a34                USBD_StdDevReq
+                0x0000000008004f1c       0x6c build/usbd_ctlreq.o
+                0x0000000008004f1c                USBD_StdDevReq
  .text.USBD_StdItfReq
-                0x0000000008004aa0       0x66 build/usbd_ctlreq.o
-                0x0000000008004aa0                USBD_StdItfReq
+                0x0000000008004f88       0x66 build/usbd_ctlreq.o
+                0x0000000008004f88                USBD_StdItfReq
  .text.USBD_StdEPReq
-                0x0000000008004b06      0x210 build/usbd_ctlreq.o
-                0x0000000008004b06                USBD_StdEPReq
+                0x0000000008004fee      0x210 build/usbd_ctlreq.o
+                0x0000000008004fee                USBD_StdEPReq
  .text.USBD_GetString
-                0x0000000008004d16       0x3a build/usbd_ctlreq.o
-                0x0000000008004d16                USBD_GetString
+                0x00000000080051fe       0x3a build/usbd_ctlreq.o
+                0x00000000080051fe                USBD_GetString
  .text.USBD_CtlSendData
-                0x0000000008004d50       0x1c build/usbd_ioreq.o
-                0x0000000008004d50                USBD_CtlSendData
+                0x0000000008005238       0x1c build/usbd_ioreq.o
+                0x0000000008005238                USBD_CtlSendData
  .text.USBD_CtlContinueSendData
-                0x0000000008004d6c       0x10 build/usbd_ioreq.o
-                0x0000000008004d6c                USBD_CtlContinueSendData
+                0x0000000008005254       0x10 build/usbd_ioreq.o
+                0x0000000008005254                USBD_CtlContinueSendData
  .text.USBD_CtlContinueRx
-                0x0000000008004d7c       0x10 build/usbd_ioreq.o
-                0x0000000008004d7c                USBD_CtlContinueRx
+                0x0000000008005264       0x10 build/usbd_ioreq.o
+                0x0000000008005264                USBD_CtlContinueRx
  .text.USBD_CtlSendStatus
-                0x0000000008004d8c       0x18 build/usbd_ioreq.o
-                0x0000000008004d8c                USBD_CtlSendStatus
+                0x0000000008005274       0x18 build/usbd_ioreq.o
+                0x0000000008005274                USBD_CtlSendStatus
  .text.USBD_CtlReceiveStatus
-                0x0000000008004da4       0x18 build/usbd_ioreq.o
-                0x0000000008004da4                USBD_CtlReceiveStatus
+                0x000000000800528c       0x18 build/usbd_ioreq.o
+                0x000000000800528c                USBD_CtlReceiveStatus
  .text.USBD_MSC_GetHSCfgDesc
-                0x0000000008004dbc        0xc build/usbd_msc.o
-                0x0000000008004dbc                USBD_MSC_GetHSCfgDesc
+                0x00000000080052a4        0xc build/usbd_msc.o
+                0x00000000080052a4                USBD_MSC_GetHSCfgDesc
  .text.USBD_MSC_GetFSCfgDesc
-                0x0000000008004dc8        0xc build/usbd_msc.o
-                0x0000000008004dc8                USBD_MSC_GetFSCfgDesc
+                0x00000000080052b0        0xc build/usbd_msc.o
+                0x00000000080052b0                USBD_MSC_GetFSCfgDesc
  .text.USBD_MSC_GetOtherSpeedCfgDesc
-                0x0000000008004dd4        0xc build/usbd_msc.o
-                0x0000000008004dd4                USBD_MSC_GetOtherSpeedCfgDesc
+                0x00000000080052bc        0xc build/usbd_msc.o
+                0x00000000080052bc                USBD_MSC_GetOtherSpeedCfgDesc
  .text.USBD_MSC_GetDeviceQualifierDescriptor
-                0x0000000008004de0        0xc build/usbd_msc.o
-                0x0000000008004de0                USBD_MSC_GetDeviceQualifierDescriptor
+                0x00000000080052c8        0xc build/usbd_msc.o
+                0x00000000080052c8                USBD_MSC_GetDeviceQualifierDescriptor
  .text.USBD_MSC_Init
-                0x0000000008004dec       0x72 build/usbd_msc.o
-                0x0000000008004dec                USBD_MSC_Init
+                0x00000000080052d4       0x72 build/usbd_msc.o
+                0x00000000080052d4                USBD_MSC_Init
  .text.USBD_MSC_DeInit
-                0x0000000008004e5e       0x3c build/usbd_msc.o
-                0x0000000008004e5e                USBD_MSC_DeInit
+                0x0000000008005346       0x3c build/usbd_msc.o
+                0x0000000008005346                USBD_MSC_DeInit
  .text.USBD_MSC_Setup
-                0x0000000008004e9a      0x1be build/usbd_msc.o
-                0x0000000008004e9a                USBD_MSC_Setup
+                0x0000000008005382      0x1be build/usbd_msc.o
+                0x0000000008005382                USBD_MSC_Setup
  .text.USBD_MSC_DataIn
-                0x0000000008005058        0xa build/usbd_msc.o
-                0x0000000008005058                USBD_MSC_DataIn
+                0x0000000008005540        0xa build/usbd_msc.o
+                0x0000000008005540                USBD_MSC_DataIn
  .text.USBD_MSC_DataOut
-                0x0000000008005062        0xa build/usbd_msc.o
-                0x0000000008005062                USBD_MSC_DataOut
+                0x000000000800554a        0xa build/usbd_msc.o
+                0x000000000800554a                USBD_MSC_DataOut
  .text.USBD_MSC_RegisterStorage
-                0x000000000800506c        0xe build/usbd_msc.o
-                0x000000000800506c                USBD_MSC_RegisterStorage
+                0x0000000008005554        0xe build/usbd_msc.o
+                0x0000000008005554                USBD_MSC_RegisterStorage
  .text.MSC_BOT_SendData
-                0x000000000800507a       0x38 build/usbd_msc_bot.o
+                0x0000000008005562       0x38 build/usbd_msc_bot.o
  .text.MSC_BOT_Abort
-                0x00000000080050b2       0x4e build/usbd_msc_bot.o
+                0x000000000800559a       0x4e build/usbd_msc_bot.o
  .text.MSC_BOT_Init
-                0x0000000008005100       0x4c build/usbd_msc_bot.o
-                0x0000000008005100                MSC_BOT_Init
+                0x00000000080055e8       0x4c build/usbd_msc_bot.o
+                0x00000000080055e8                MSC_BOT_Init
  .text.MSC_BOT_Reset
-                0x000000000800514c       0x24 build/usbd_msc_bot.o
-                0x000000000800514c                MSC_BOT_Reset
+                0x0000000008005634       0x24 build/usbd_msc_bot.o
+                0x0000000008005634                MSC_BOT_Reset
  .text.MSC_BOT_DeInit
-                0x0000000008005170        0xc build/usbd_msc_bot.o
-                0x0000000008005170                MSC_BOT_DeInit
+                0x0000000008005658        0xc build/usbd_msc_bot.o
+                0x0000000008005658                MSC_BOT_DeInit
  .text.MSC_BOT_SendCSW
-                0x000000000800517c       0x40 build/usbd_msc_bot.o
-                0x000000000800517c                MSC_BOT_SendCSW
+                0x0000000008005664       0x40 build/usbd_msc_bot.o
+                0x0000000008005664                MSC_BOT_SendCSW
  .text.MSC_BOT_DataIn
-                0x00000000080051bc       0x44 build/usbd_msc_bot.o
-                0x00000000080051bc                MSC_BOT_DataIn
+                0x00000000080056a4       0x44 build/usbd_msc_bot.o
+                0x00000000080056a4                MSC_BOT_DataIn
  .text.MSC_BOT_CBW_Decode
-                0x0000000008005200       0xbc build/usbd_msc_bot.o
+                0x00000000080056e8       0xbc build/usbd_msc_bot.o
  .text.MSC_BOT_DataOut
-                0x00000000080052bc       0x40 build/usbd_msc_bot.o
-                0x00000000080052bc                MSC_BOT_DataOut
+                0x00000000080057a4       0x40 build/usbd_msc_bot.o
+                0x00000000080057a4                MSC_BOT_DataOut
  .text.MSC_BOT_CplClrFeature
-                0x00000000080052fc       0x2c build/usbd_msc_bot.o
-                0x00000000080052fc                MSC_BOT_CplClrFeature
+                0x00000000080057e4       0x2c build/usbd_msc_bot.o
+                0x00000000080057e4                MSC_BOT_CplClrFeature
  .text.SCSI_Inquiry
-                0x0000000008005328       0x5c build/usbd_msc_scsi.o
+                0x0000000008005810       0x5c build/usbd_msc_scsi.o
  .text.SCSI_ModeSense6
-                0x0000000008005384       0x24 build/usbd_msc_scsi.o
+                0x000000000800586c       0x24 build/usbd_msc_scsi.o
  .text.SCSI_ModeSense10
-                0x00000000080053a8       0x24 build/usbd_msc_scsi.o
+                0x0000000008005890       0x24 build/usbd_msc_scsi.o
  .text.SCSI_RequestSense
-                0x00000000080053cc       0x70 build/usbd_msc_scsi.o
+                0x00000000080058b4       0x70 build/usbd_msc_scsi.o
  .text.SCSI_StartStopUnit
-                0x000000000800543c        0xe build/usbd_msc_scsi.o
- *fill*         0x000000000800544a        0x2 
+                0x0000000008005924        0xe build/usbd_msc_scsi.o
+ *fill*         0x0000000008005932        0x2 
  .text.SCSI_SenseCode
-                0x000000000800544c       0x30 build/usbd_msc_scsi.o
-                0x000000000800544c                SCSI_SenseCode
+                0x0000000008005934       0x30 build/usbd_msc_scsi.o
+                0x0000000008005934                SCSI_SenseCode
  .text.SCSI_TestUnitReady
-                0x000000000800547c       0x58 build/usbd_msc_scsi.o
+                0x0000000008005964       0x58 build/usbd_msc_scsi.o
  .text.SCSI_ReadFormatCapacity
-                0x00000000080054d4       0x7c build/usbd_msc_scsi.o
+                0x00000000080059bc       0x7c build/usbd_msc_scsi.o
  .text.SCSI_ReadCapacity10
-                0x0000000008005550       0x68 build/usbd_msc_scsi.o
+                0x0000000008005a38       0x68 build/usbd_msc_scsi.o
  .text.SCSI_CheckAddressRange
-                0x00000000080055b8       0x26 build/usbd_msc_scsi.o
- *fill*         0x00000000080055de        0x2 
+                0x0000000008005aa0       0x26 build/usbd_msc_scsi.o
+ *fill*         0x0000000008005ac6        0x2 
  .text.SCSI_ProcessRead
-                0x00000000080055e0       0xa8 build/usbd_msc_scsi.o
+                0x0000000008005ac8       0xa8 build/usbd_msc_scsi.o
  .text.SCSI_Read10
-                0x0000000008005688       0xd4 build/usbd_msc_scsi.o
+                0x0000000008005b70       0xd4 build/usbd_msc_scsi.o
  .text.SCSI_ProcessWrite
-                0x000000000800575c       0xbc build/usbd_msc_scsi.o
+                0x0000000008005c44       0xbc build/usbd_msc_scsi.o
  .text.SCSI_Write10
-                0x0000000008005818      0x118 build/usbd_msc_scsi.o
+                0x0000000008005d00      0x118 build/usbd_msc_scsi.o
  .text.SCSI_Verify10
-                0x0000000008005930       0x3e build/usbd_msc_scsi.o
- *fill*         0x000000000800596e        0x2 
+                0x0000000008005e18       0x3e build/usbd_msc_scsi.o
+ *fill*         0x0000000008005e56        0x2 
  .text.SCSI_ProcessCmd
-                0x0000000008005970       0x84 build/usbd_msc_scsi.o
-                0x0000000008005970                SCSI_ProcessCmd
+                0x0000000008005e58       0x84 build/usbd_msc_scsi.o
+                0x0000000008005e58                SCSI_ProcessCmd
  .text.HAL_RTC_WaitForSynchro
-                0x00000000080059f4       0x32 build/stm32f0xx_hal_rtc.o
-                0x00000000080059f4                HAL_RTC_WaitForSynchro
+                0x0000000008005edc       0x32 build/stm32f0xx_hal_rtc.o
+                0x0000000008005edc                HAL_RTC_WaitForSynchro
  .text.RTC_EnterInitMode
-                0x0000000008005a26       0x3a build/stm32f0xx_hal_rtc.o
-                0x0000000008005a26                RTC_EnterInitMode
+                0x0000000008005f0e       0x3a build/stm32f0xx_hal_rtc.o
+                0x0000000008005f0e                RTC_EnterInitMode
  .text.HAL_RTC_Init
-                0x0000000008005a60       0xc4 build/stm32f0xx_hal_rtc.o
-                0x0000000008005a60                HAL_RTC_Init
+                0x0000000008005f48       0xc4 build/stm32f0xx_hal_rtc.o
+                0x0000000008005f48                HAL_RTC_Init
  .text.RTC_ByteToBcd2
-                0x0000000008005b24       0x16 build/stm32f0xx_hal_rtc.o
-                0x0000000008005b24                RTC_ByteToBcd2
- *fill*         0x0000000008005b3a        0x2 
+                0x000000000800600c       0x16 build/stm32f0xx_hal_rtc.o
+                0x000000000800600c                RTC_ByteToBcd2
+ *fill*         0x0000000008006022        0x2 
  .text.HAL_RTC_SetTime
-                0x0000000008005b3c       0xfc build/stm32f0xx_hal_rtc.o
-                0x0000000008005b3c                HAL_RTC_SetTime
+                0x0000000008006024       0xfc build/stm32f0xx_hal_rtc.o
+                0x0000000008006024                HAL_RTC_SetTime
+ .text.HAL_RTC_SetAlarm_IT
+                0x0000000008006120      0x138 build/stm32f0xx_hal_rtc.o
+                0x0000000008006120                HAL_RTC_SetAlarm_IT
  .text.RTC_Bcd2ToByte
-                0x0000000008005c38       0x14 build/stm32f0xx_hal_rtc.o
-                0x0000000008005c38                RTC_Bcd2ToByte
+                0x0000000008006258       0x14 build/stm32f0xx_hal_rtc.o
+                0x0000000008006258                RTC_Bcd2ToByte
  .text.HAL_RTC_GetTime
-                0x0000000008005c4c       0x58 build/stm32f0xx_hal_rtc.o
-                0x0000000008005c4c                HAL_RTC_GetTime
+                0x000000000800626c       0x58 build/stm32f0xx_hal_rtc.o
+                0x000000000800626c                HAL_RTC_GetTime
  .text.HAL_RTC_GetDate
-                0x0000000008005ca4       0x48 build/stm32f0xx_hal_rtc.o
-                0x0000000008005ca4                HAL_RTC_GetDate
+                0x00000000080062c4       0x48 build/stm32f0xx_hal_rtc.o
+                0x00000000080062c4                HAL_RTC_GetDate
  .text.Reset_Handler
-                0x0000000008005cec       0x80 build/startup_stm32f042x6.o
-                0x0000000008005cec                Reset_Handler
+                0x000000000800630c       0x80 build/startup_stm32f042x6.o
+                0x000000000800630c                Reset_Handler
  .text.Default_Handler
-                0x0000000008005d6c        0x2 build/startup_stm32f042x6.o
-                0x0000000008005d6c                TIM1_CC_IRQHandler
-                0x0000000008005d6c                TSC_IRQHandler
-                0x0000000008005d6c                I2C1_IRQHandler
-                0x0000000008005d6c                RCC_CRS_IRQHandler
-                0x0000000008005d6c                SPI1_IRQHandler
-                0x0000000008005d6c                EXTI2_3_IRQHandler
-                0x0000000008005d6c                ADC1_IRQHandler
-                0x0000000008005d6c                TIM17_IRQHandler
-                0x0000000008005d6c                CEC_CAN_IRQHandler
-                0x0000000008005d6c                RTC_IRQHandler
-                0x0000000008005d6c                PVD_VDDIO2_IRQHandler
-                0x0000000008005d6c                TIM16_IRQHandler
-                0x0000000008005d6c                TIM3_IRQHandler
-                0x0000000008005d6c                DMA1_Channel1_IRQHandler
-                0x0000000008005d6c                Default_Handler
-                0x0000000008005d6c                TIM14_IRQHandler
-                0x0000000008005d6c                DMA1_Channel4_5_IRQHandler
-                0x0000000008005d6c                EXTI0_1_IRQHandler
-                0x0000000008005d6c                SPI2_IRQHandler
-                0x0000000008005d6c                WWDG_IRQHandler
-                0x0000000008005d6c                TIM2_IRQHandler
-                0x0000000008005d6c                DMA1_Channel2_3_IRQHandler
-                0x0000000008005d6c                USART2_IRQHandler
-                0x0000000008005d6c                FLASH_IRQHandler
-                0x0000000008005d6c                USART1_IRQHandler
- *fill*         0x0000000008005d6e        0x2 
+                0x000000000800638c        0x2 build/startup_stm32f042x6.o
+                0x000000000800638c                TIM1_CC_IRQHandler
+                0x000000000800638c                TSC_IRQHandler
+                0x000000000800638c                I2C1_IRQHandler
+                0x000000000800638c                RCC_CRS_IRQHandler
+                0x000000000800638c                SPI1_IRQHandler
+                0x000000000800638c                EXTI2_3_IRQHandler
+                0x000000000800638c                ADC1_IRQHandler
+                0x000000000800638c                TIM17_IRQHandler
+                0x000000000800638c                CEC_CAN_IRQHandler
+                0x000000000800638c                RTC_IRQHandler
+                0x000000000800638c                PVD_VDDIO2_IRQHandler
+                0x000000000800638c                TIM16_IRQHandler
+                0x000000000800638c                TIM3_IRQHandler
+                0x000000000800638c                DMA1_Channel1_IRQHandler
+                0x000000000800638c                Default_Handler
+                0x000000000800638c                TIM14_IRQHandler
+                0x000000000800638c                DMA1_Channel4_5_IRQHandler
+                0x000000000800638c                EXTI0_1_IRQHandler
+                0x000000000800638c                SPI2_IRQHandler
+                0x000000000800638c                WWDG_IRQHandler
+                0x000000000800638c                TIM2_IRQHandler
+                0x000000000800638c                DMA1_Channel2_3_IRQHandler
+                0x000000000800638c                USART2_IRQHandler
+                0x000000000800638c                FLASH_IRQHandler
+                0x000000000800638c                USART1_IRQHandler
+ *fill*         0x000000000800638e        0x2 
  .text.__libc_init_array
-                0x0000000008005d70       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
-                0x0000000008005d70                __libc_init_array
- .text.memset   0x0000000008005db8       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x0000000008005db8                memset
- .text.sprintf  0x0000000008005dc8       0x40 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
-                0x0000000008005dc8                sprintf
-                0x0000000008005dc8                siprintf
+                0x0000000008006390       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000008006390                __libc_init_array
+ .text.memset   0x00000000080063d8       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x00000000080063d8                memset
+ .text.sprintf  0x00000000080063e8       0x40 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
+                0x00000000080063e8                sprintf
+                0x00000000080063e8                siprintf
  .text.__retarget_lock_acquire_recursive
-                0x0000000008005e08        0x2 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008005e08                __retarget_lock_acquire_recursive
+                0x0000000008006428        0x2 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x0000000008006428                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008005e0a        0x2 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008005e0a                __retarget_lock_release_recursive
+                0x000000000800642a        0x2 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x000000000800642a                __retarget_lock_release_recursive
  .text.__ssputs_r
-                0x0000000008005e0c       0xc4 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008005e0c                __ssputs_r
+                0x000000000800642c       0xc4 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000800642c                __ssputs_r
  .text._svfprintf_r
-                0x0000000008005ed0      0x200 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008005ed0                _svfprintf_r
-                0x0000000008005ed0                _svfiprintf_r
+                0x00000000080064f0      0x200 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000080064f0                _svfprintf_r
+                0x00000000080064f0                _svfiprintf_r
  .text._printf_common
-                0x00000000080060d0       0xde /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000080060d0                _printf_common
- *fill*         0x00000000080061ae        0x2 
+                0x00000000080066f0       0xde /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080066f0                _printf_common
+ *fill*         0x00000000080067ce        0x2 
  .text._printf_i
-                0x00000000080061b0      0x224 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000080061b0                _printf_i
- .text.memchr   0x00000000080063d4       0x16 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
-                0x00000000080063d4                memchr
- .text.memcpy   0x00000000080063ea       0x12 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
-                0x00000000080063ea                memcpy
- .text.memmove  0x00000000080063fc       0x26 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
-                0x00000000080063fc                memmove
- *fill*         0x0000000008006422        0x2 
- .text._free_r  0x0000000008006424       0x94 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008006424                _free_r
+                0x00000000080067d0      0x224 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080067d0                _printf_i
+ .text.memchr   0x00000000080069f4       0x16 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x00000000080069f4                memchr
+ .text.memcpy   0x0000000008006a0a       0x12 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008006a0a                memcpy
+ .text.memmove  0x0000000008006a1c       0x26 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
+                0x0000000008006a1c                memmove
+ *fill*         0x0000000008006a42        0x2 
+ .text._free_r  0x0000000008006a44       0x94 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008006a44                _free_r
  .text._malloc_r
-                0x00000000080064b8       0xbc /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
-                0x00000000080064b8                _malloc_r
+                0x0000000008006ad8       0xbc /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008006ad8                _malloc_r
  .text._realloc_r
-                0x0000000008006574       0x4c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000008006574                _realloc_r
- .text._sbrk_r  0x00000000080065c0       0x24 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
-                0x00000000080065c0                _sbrk_r
+                0x0000000008006b94       0x4c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000008006b94                _realloc_r
+ .text._sbrk_r  0x0000000008006be0       0x24 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008006be0                _sbrk_r
  .text.__malloc_lock
-                0x00000000080065e4       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x00000000080065e4                __malloc_lock
+                0x0000000008006c04       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x0000000008006c04                __malloc_lock
  .text.__malloc_unlock
-                0x00000000080065f4       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x00000000080065f4                __malloc_unlock
+                0x0000000008006c14       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x0000000008006c14                __malloc_unlock
  .text._malloc_usable_size_r
-                0x0000000008006604       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
-                0x0000000008006604                _malloc_usable_size_r
- .text._sbrk    0x0000000008006614       0x1c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
-                0x0000000008006614                _sbrk
+                0x0000000008006c24       0x10 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000008006c24                _malloc_usable_size_r
+ .text._sbrk    0x0000000008006c34       0x1c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
+                0x0000000008006c34                _sbrk
  *(.glue_7)
- .glue_7        0x0000000008006630        0x0 linker stubs
+ .glue_7        0x0000000008006c50        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008006630        0x0 linker stubs
+ .glue_7t       0x0000000008006c50        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008006630        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008006c50        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008006630        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crti.o
-                0x0000000008006630                _init
- .init          0x0000000008006634        0x8 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
+ .init          0x0000000008006c50        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crti.o
+                0x0000000008006c50                _init
+ .init          0x0000000008006c54        0x8 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x000000000800663c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crti.o
-                0x000000000800663c                _fini
- .fini          0x0000000008006640        0x8 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
-                0x0000000008006648                . = ALIGN (0x4)
-                0x0000000008006648                _etext = .
+ .fini          0x0000000008006c5c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crti.o
+                0x0000000008006c5c                _fini
+ .fini          0x0000000008006c60        0x8 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
+                0x0000000008006c68                . = ALIGN (0x4)
+                0x0000000008006c68                _etext = .
 
-.vfp11_veneer   0x0000000008006648        0x0
- .vfp11_veneer  0x0000000008006648        0x0 linker stubs
+.vfp11_veneer   0x0000000008006c68        0x0
+ .vfp11_veneer  0x0000000008006c68        0x0 linker stubs
 
-.v4_bx          0x0000000008006648        0x0
- .v4_bx         0x0000000008006648        0x0 linker stubs
+.v4_bx          0x0000000008006c68        0x0
+ .v4_bx         0x0000000008006c68        0x0 linker stubs
 
-.iplt           0x0000000008006648        0x0
- .iplt          0x0000000008006648        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000008006c68        0x0
+ .iplt          0x0000000008006c68        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000008006648      0x360
-                0x0000000008006648                . = ALIGN (0x4)
+.rodata         0x0000000008006c68      0x344
+                0x0000000008006c68                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
- .rodata.clock.str1.4
-                0x0000000008006648       0x17 build/main.o
- *fill*         0x000000000800665f        0x1 
  .rodata.main.str1.4
-                0x0000000008006660       0x90 build/main.o
+                0x0000000008006c68       0x8c build/main.o
  .rodata.USBD_FS_ProductStrDescriptor.str1.4
-                0x00000000080066f0       0x13 build/usbd_desc.o
- *fill*         0x0000000008006703        0x1 
+                0x0000000008006cf4       0x13 build/usbd_desc.o
+ *fill*         0x0000000008006d07        0x1 
  .rodata.USBD_FS_ManufacturerStrDescriptor.str1.4
-                0x0000000008006704       0x13 build/usbd_desc.o
- *fill*         0x0000000008006717        0x1 
+                0x0000000008006d08       0x13 build/usbd_desc.o
+ *fill*         0x0000000008006d1b        0x1 
  .rodata.USBD_FS_ConfigStrDescriptor.str1.4
-                0x0000000008006718        0xb build/usbd_desc.o
- *fill*         0x0000000008006723        0x1 
+                0x0000000008006d1c        0xb build/usbd_desc.o
+ *fill*         0x0000000008006d27        0x1 
  .rodata.USBD_FS_InterfaceStrDescriptor.str1.4
-                0x0000000008006724        0xe build/usbd_desc.o
- *fill*         0x0000000008006732        0x2 
+                0x0000000008006d28        0xe build/usbd_desc.o
+ *fill*         0x0000000008006d36        0x2 
  .rodata.STORAGE_Inquirydata_FS
-                0x0000000008006734       0x24 build/usbd_storage_if.o
-                0x0000000008006734                STORAGE_Inquirydata_FS
+                0x0000000008006d38       0x24 build/usbd_storage_if.o
+                0x0000000008006d38                STORAGE_Inquirydata_FS
  .rodata.HAL_RCC_GetSysClockFreq.str1.4
-                0x0000000008006758       0x25 build/stm32f0xx_hal_rcc.o
- *fill*         0x000000000800677d        0x3 
+                0x0000000008006d5c       0x25 build/stm32f0xx_hal_rcc.o
+ *fill*         0x0000000008006d81        0x3 
  .rodata.AHBPrescTable
-                0x0000000008006780       0x10 build/system_stm32f0xx.o
-                0x0000000008006780                AHBPrescTable
+                0x0000000008006d84       0x10 build/system_stm32f0xx.o
+                0x0000000008006d84                AHBPrescTable
  .rodata.USBD_GetDescriptor
-                0x0000000008006790       0x38 build/usbd_ctlreq.o
+                0x0000000008006d94       0x38 build/usbd_ctlreq.o
  .rodata.USBD_StdDevReq
-                0x00000000080067c8       0x28 build/usbd_ctlreq.o
+                0x0000000008006dcc       0x28 build/usbd_ctlreq.o
  .rodata.MSC_Mode_Sense10_data
-                0x00000000080067f0        0x8 build/usbd_msc_data.o
-                0x00000000080067f0                MSC_Mode_Sense10_data
+                0x0000000008006df4        0x8 build/usbd_msc_data.o
+                0x0000000008006df4                MSC_Mode_Sense10_data
  .rodata.MSC_Mode_Sense6_data
-                0x00000000080067f8        0x8 build/usbd_msc_data.o
-                0x00000000080067f8                MSC_Mode_Sense6_data
+                0x0000000008006dfc        0x8 build/usbd_msc_data.o
+                0x0000000008006dfc                MSC_Mode_Sense6_data
  .rodata.MSC_Page00_Inquiry_Data
-                0x0000000008006800        0x7 build/usbd_msc_data.o
-                0x0000000008006800                MSC_Page00_Inquiry_Data
- *fill*         0x0000000008006807        0x1 
+                0x0000000008006e04        0x7 build/usbd_msc_data.o
+                0x0000000008006e04                MSC_Page00_Inquiry_Data
+ *fill*         0x0000000008006e0b        0x1 
  .rodata.SCSI_ProcessCmd
-                0x0000000008006808      0x16c build/usbd_msc_scsi.o
+                0x0000000008006e0c      0x16c build/usbd_msc_scsi.o
  .rodata._svfprintf_r.str1.1
-                0x0000000008006974       0x11 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008006f78       0x11 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000008006985       0x22 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000080069a8                . = ALIGN (0x4)
- *fill*         0x00000000080069a7        0x1 
+                0x0000000008006f89       0x22 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008006fac                . = ALIGN (0x4)
+ *fill*         0x0000000008006fab        0x1 
 
-.rel.dyn        0x00000000080069a8        0x0
- .rel.iplt      0x00000000080069a8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008006fac        0x0
+ .rel.iplt      0x0000000008006fac        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00000000080069a8        0x0
-                0x00000000080069a8                __exidx_start = .
+.ARM            0x0000000008006fac        0x0
+                0x0000000008006fac                __exidx_start = .
  *(.ARM.exidx*)
-                0x00000000080069a8                __exidx_end = .
+                0x0000000008006fac                __exidx_end = .
 
-.preinit_array  0x00000000080069a8        0x0
-                0x00000000080069a8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008006fac        0x0
+                0x0000000008006fac                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x00000000080069a8                PROVIDE (__preinit_array_end = .)
+                0x0000000008006fac                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000000080069a8        0x4
-                0x00000000080069a8                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008006fac        0x4
+                0x0000000008006fac                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x00000000080069a8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
-                0x00000000080069ac                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008006fac        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008006fb0                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000000080069ac        0x4
-                0x00000000080069ac                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008006fb0        0x4
+                0x0000000008006fb0                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00000000080069ac        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
-                0x00000000080069b0                PROVIDE (__fini_array_end = .)
-                0x00000000080069b0                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008006fb0        0x4 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008006fb4                PROVIDE (__fini_array_end = .)
+                0x0000000008006fb4                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x188 load address 0x00000000080069b0
+.data           0x0000000020000000      0x188 load address 0x0000000008006fb4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -2302,11 +2296,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
                 0x0000000020000188                . = ALIGN (0x4)
                 0x0000000020000188                _edata = .
 
-.igot.plt       0x0000000020000188        0x0 load address 0x0000000008006b38
+.igot.plt       0x0000000020000188        0x0 load address 0x000000000800713c
  .igot.plt      0x0000000020000188        0x0 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtbegin.o
                 0x0000000020000188                . = ALIGN (0x4)
 
-.bss            0x0000000020000188      0xa68 load address 0x0000000008006b38
+.bss            0x0000000020000188      0xa68 load address 0x000000000800713c
                 0x0000000020000188                _sbss = .
                 0x0000000020000188                __bss_start__ = _sbss
  *(.bss)
@@ -2366,7 +2360,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
                 0x0000000020000bf0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000bf0      0x600 load address 0x0000000008006b38
+                0x0000000020000bf0      0x600 load address 0x000000000800713c
                 0x0000000020000bf0                . = ALIGN (0x8)
                 0x0000000020000bf0                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -2419,329 +2413,340 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
  .ARM.attributes
                 0x00000000000002b2       0x2c build/stm32f0xx_hal_cortex.o
  .ARM.attributes
-                0x00000000000002de       0x2c build/stm32f0xx_hal_tim.o
+                0x00000000000002de       0x2c build/stm32f0xx_hal_pwr.o
  .ARM.attributes
-                0x000000000000030a       0x2c build/stm32f0xx_hal_tim_ex.o
+                0x000000000000030a       0x2c build/stm32f0xx_hal_tim.o
  .ARM.attributes
-                0x0000000000000336       0x2c build/system_stm32f0xx.o
+                0x0000000000000336       0x2c build/stm32f0xx_hal_tim_ex.o
  .ARM.attributes
-                0x0000000000000362       0x2c build/usbd_core.o
+                0x0000000000000362       0x2c build/system_stm32f0xx.o
  .ARM.attributes
-                0x000000000000038e       0x2c build/usbd_ctlreq.o
+                0x000000000000038e       0x2c build/usbd_core.o
  .ARM.attributes
-                0x00000000000003ba       0x2c build/usbd_ioreq.o
+                0x00000000000003ba       0x2c build/usbd_ctlreq.o
  .ARM.attributes
-                0x00000000000003e6       0x2c build/usbd_msc.o
+                0x00000000000003e6       0x2c build/usbd_ioreq.o
  .ARM.attributes
-                0x0000000000000412       0x2c build/usbd_msc_bot.o
+                0x0000000000000412       0x2c build/usbd_msc.o
  .ARM.attributes
-                0x000000000000043e       0x31 build/usbd_msc_data.o
+                0x000000000000043e       0x2c build/usbd_msc_bot.o
  .ARM.attributes
-                0x000000000000046f       0x2c build/usbd_msc_scsi.o
+                0x000000000000046a       0x31 build/usbd_msc_data.o
  .ARM.attributes
-                0x000000000000049b       0x2c build/stm32f0xx_hal_rtc.o
+                0x000000000000049b       0x2c build/usbd_msc_scsi.o
  .ARM.attributes
-                0x00000000000004c7       0x21 build/startup_stm32f042x6.o
+                0x00000000000004c7       0x2c build/stm32f0xx_hal_rtc.o
  .ARM.attributes
-                0x00000000000004e8       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
+                0x00000000000004f3       0x21 build/startup_stm32f042x6.o
  .ARM.attributes
-                0x0000000000000514       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000000000514       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x0000000000000540       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x0000000000000540       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x000000000000056c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
+                0x000000000000056c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x0000000000000598       0x1c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-strlen.o)
+                0x0000000000000598       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
  .ARM.attributes
-                0x00000000000005b4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x00000000000005c4       0x1c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x00000000000005e0       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000000005e0       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
  .ARM.attributes
-                0x000000000000060c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000000060c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x0000000000000638       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x0000000000000638       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x0000000000000664       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000000000664       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x0000000000000690       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
+                0x0000000000000690       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000000000006bc       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x00000000000006bc       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000000000006e8       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000000006e8       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x0000000000000714       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000000714       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x0000000000000740       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000000740       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x000000000000076c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x000000000000076c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x0000000000000798       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000000000798       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x00000000000007c4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-reent.o)
+                0x00000000000007c4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
  .ARM.attributes
-                0x00000000000007f0       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
+                0x00000000000007f0       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-reent.o)
  .ARM.attributes
-                0x000000000000081c       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+                0x000000000000081c       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
  .ARM.attributes
-                0x000000000000083a       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x0000000000000848       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
  .ARM.attributes
-                0x0000000000000858       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000866       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x0000000000000876       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
+                0x0000000000000884       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000000008a2       0x1e /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/crtn.o
 OUTPUT(build/FJE.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x222c6
- .debug_info    0x0000000000000000     0x357e build/main.o
- .debug_info    0x000000000000357e     0x1263 build/usb_device.o
- .debug_info    0x00000000000047e1     0x2701 build/usbd_conf.o
- .debug_info    0x0000000000006ee2     0x1076 build/usbd_desc.o
- .debug_info    0x0000000000007f58     0x1355 build/usbd_storage_if.o
- .debug_info    0x00000000000092ad      0xd79 build/stm32f0xx_it.o
- .debug_info    0x000000000000a026      0xd1c build/stm32f0xx_hal_msp.o
- .debug_info    0x000000000000ad42     0x1a1d build/stm32f0xx_ll_usb.o
- .debug_info    0x000000000000c75f     0x159c build/stm32f0xx_hal_pcd.o
- .debug_info    0x000000000000dcfb      0xb40 build/stm32f0xx_hal_pcd_ex.o
- .debug_info    0x000000000000e83b      0xba9 build/stm32f0xx_hal_rcc.o
- .debug_info    0x000000000000f3e4      0x845 build/stm32f0xx_hal_rcc_ex.o
- .debug_info    0x000000000000fc29      0x846 build/stm32f0xx_hal.o
- .debug_info    0x000000000001046f      0x796 build/stm32f0xx_hal_gpio.o
- .debug_info    0x0000000000010c05      0x989 build/stm32f0xx_hal_cortex.o
- .debug_info    0x000000000001158e     0x3ada build/stm32f0xx_hal_tim.o
- .debug_info    0x0000000000015068     0x180a build/stm32f0xx_hal_tim_ex.o
- .debug_info    0x0000000000016872      0x308 build/system_stm32f0xx.o
- .debug_info    0x0000000000016b7a     0x18a3 build/usbd_core.o
- .debug_info    0x000000000001841d     0x1bb2 build/usbd_ctlreq.o
- .debug_info    0x0000000000019fcf     0x12c8 build/usbd_ioreq.o
- .debug_info    0x000000000001b297     0x1af0 build/usbd_msc.o
- .debug_info    0x000000000001cd87     0x1a08 build/usbd_msc_bot.o
- .debug_info    0x000000000001e78f      0xb4d build/usbd_msc_data.o
- .debug_info    0x000000000001f2dc     0x2014 build/usbd_msc_scsi.o
- .debug_info    0x00000000000212f0      0xfb4 build/stm32f0xx_hal_rtc.o
- .debug_info    0x00000000000222a4       0x22 build/startup_stm32f042x6.o
+.debug_info     0x0000000000000000    0x22bc5
+ .debug_info    0x0000000000000000     0x3985 build/main.o
+ .debug_info    0x0000000000003985     0x1263 build/usb_device.o
+ .debug_info    0x0000000000004be8     0x2701 build/usbd_conf.o
+ .debug_info    0x00000000000072e9     0x1076 build/usbd_desc.o
+ .debug_info    0x000000000000835f     0x1355 build/usbd_storage_if.o
+ .debug_info    0x00000000000096b4      0xd79 build/stm32f0xx_it.o
+ .debug_info    0x000000000000a42d      0xd1c build/stm32f0xx_hal_msp.o
+ .debug_info    0x000000000000b149     0x1a1d build/stm32f0xx_ll_usb.o
+ .debug_info    0x000000000000cb66     0x159c build/stm32f0xx_hal_pcd.o
+ .debug_info    0x000000000000e102      0xb40 build/stm32f0xx_hal_pcd_ex.o
+ .debug_info    0x000000000000ec42      0xba9 build/stm32f0xx_hal_rcc.o
+ .debug_info    0x000000000000f7eb      0x845 build/stm32f0xx_hal_rcc_ex.o
+ .debug_info    0x0000000000010030      0x846 build/stm32f0xx_hal.o
+ .debug_info    0x0000000000010876      0x796 build/stm32f0xx_hal_gpio.o
+ .debug_info    0x000000000001100c      0x989 build/stm32f0xx_hal_cortex.o
+ .debug_info    0x0000000000011995      0x4f8 build/stm32f0xx_hal_pwr.o
+ .debug_info    0x0000000000011e8d     0x3ada build/stm32f0xx_hal_tim.o
+ .debug_info    0x0000000000015967     0x180a build/stm32f0xx_hal_tim_ex.o
+ .debug_info    0x0000000000017171      0x308 build/system_stm32f0xx.o
+ .debug_info    0x0000000000017479     0x18a3 build/usbd_core.o
+ .debug_info    0x0000000000018d1c     0x1bb2 build/usbd_ctlreq.o
+ .debug_info    0x000000000001a8ce     0x12c8 build/usbd_ioreq.o
+ .debug_info    0x000000000001bb96     0x1af0 build/usbd_msc.o
+ .debug_info    0x000000000001d686     0x1a08 build/usbd_msc_bot.o
+ .debug_info    0x000000000001f08e      0xb4d build/usbd_msc_data.o
+ .debug_info    0x000000000001fbdb     0x2014 build/usbd_msc_scsi.o
+ .debug_info    0x0000000000021bef      0xfb4 build/stm32f0xx_hal_rtc.o
+ .debug_info    0x0000000000022ba3       0x22 build/startup_stm32f042x6.o
 
-.debug_abbrev   0x0000000000000000     0x46e9
- .debug_abbrev  0x0000000000000000      0x45e build/main.o
- .debug_abbrev  0x000000000000045e      0x22d build/usb_device.o
- .debug_abbrev  0x000000000000068b      0x3a1 build/usbd_conf.o
- .debug_abbrev  0x0000000000000a2c      0x320 build/usbd_desc.o
- .debug_abbrev  0x0000000000000d4c      0x26e build/usbd_storage_if.o
- .debug_abbrev  0x0000000000000fba      0x1da build/stm32f0xx_it.o
- .debug_abbrev  0x0000000000001194      0x204 build/stm32f0xx_hal_msp.o
- .debug_abbrev  0x0000000000001398      0x33d build/stm32f0xx_ll_usb.o
- .debug_abbrev  0x00000000000016d5      0x316 build/stm32f0xx_hal_pcd.o
- .debug_abbrev  0x00000000000019eb      0x288 build/stm32f0xx_hal_pcd_ex.o
- .debug_abbrev  0x0000000000001c73      0x2a4 build/stm32f0xx_hal_rcc.o
- .debug_abbrev  0x0000000000001f17      0x26f build/stm32f0xx_hal_rcc_ex.o
- .debug_abbrev  0x0000000000002186      0x26b build/stm32f0xx_hal.o
- .debug_abbrev  0x00000000000023f1      0x24f build/stm32f0xx_hal_gpio.o
- .debug_abbrev  0x0000000000002640      0x2d1 build/stm32f0xx_hal_cortex.o
- .debug_abbrev  0x0000000000002911      0x2c3 build/stm32f0xx_hal_tim.o
- .debug_abbrev  0x0000000000002bd4      0x2ab build/stm32f0xx_hal_tim_ex.o
- .debug_abbrev  0x0000000000002e7f      0x14a build/system_stm32f0xx.o
- .debug_abbrev  0x0000000000002fc9      0x334 build/usbd_core.o
- .debug_abbrev  0x00000000000032fd      0x387 build/usbd_ctlreq.o
- .debug_abbrev  0x0000000000003684      0x229 build/usbd_ioreq.o
- .debug_abbrev  0x00000000000038ad      0x321 build/usbd_msc.o
- .debug_abbrev  0x0000000000003bce      0x338 build/usbd_msc_bot.o
- .debug_abbrev  0x0000000000003f06      0x1c6 build/usbd_msc_data.o
- .debug_abbrev  0x00000000000040cc      0x3c6 build/usbd_msc_scsi.o
- .debug_abbrev  0x0000000000004492      0x245 build/stm32f0xx_hal_rtc.o
- .debug_abbrev  0x00000000000046d7       0x12 build/startup_stm32f042x6.o
+.debug_abbrev   0x0000000000000000     0x48ac
+ .debug_abbrev  0x0000000000000000      0x472 build/main.o
+ .debug_abbrev  0x0000000000000472      0x22d build/usb_device.o
+ .debug_abbrev  0x000000000000069f      0x3a1 build/usbd_conf.o
+ .debug_abbrev  0x0000000000000a40      0x320 build/usbd_desc.o
+ .debug_abbrev  0x0000000000000d60      0x26e build/usbd_storage_if.o
+ .debug_abbrev  0x0000000000000fce      0x1da build/stm32f0xx_it.o
+ .debug_abbrev  0x00000000000011a8      0x204 build/stm32f0xx_hal_msp.o
+ .debug_abbrev  0x00000000000013ac      0x33d build/stm32f0xx_ll_usb.o
+ .debug_abbrev  0x00000000000016e9      0x316 build/stm32f0xx_hal_pcd.o
+ .debug_abbrev  0x00000000000019ff      0x288 build/stm32f0xx_hal_pcd_ex.o
+ .debug_abbrev  0x0000000000001c87      0x2a4 build/stm32f0xx_hal_rcc.o
+ .debug_abbrev  0x0000000000001f2b      0x26f build/stm32f0xx_hal_rcc_ex.o
+ .debug_abbrev  0x000000000000219a      0x26b build/stm32f0xx_hal.o
+ .debug_abbrev  0x0000000000002405      0x24f build/stm32f0xx_hal_gpio.o
+ .debug_abbrev  0x0000000000002654      0x2d1 build/stm32f0xx_hal_cortex.o
+ .debug_abbrev  0x0000000000002925      0x1af build/stm32f0xx_hal_pwr.o
+ .debug_abbrev  0x0000000000002ad4      0x2c3 build/stm32f0xx_hal_tim.o
+ .debug_abbrev  0x0000000000002d97      0x2ab build/stm32f0xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000003042      0x14a build/system_stm32f0xx.o
+ .debug_abbrev  0x000000000000318c      0x334 build/usbd_core.o
+ .debug_abbrev  0x00000000000034c0      0x387 build/usbd_ctlreq.o
+ .debug_abbrev  0x0000000000003847      0x229 build/usbd_ioreq.o
+ .debug_abbrev  0x0000000000003a70      0x321 build/usbd_msc.o
+ .debug_abbrev  0x0000000000003d91      0x338 build/usbd_msc_bot.o
+ .debug_abbrev  0x00000000000040c9      0x1c6 build/usbd_msc_data.o
+ .debug_abbrev  0x000000000000428f      0x3c6 build/usbd_msc_scsi.o
+ .debug_abbrev  0x0000000000004655      0x245 build/stm32f0xx_hal_rtc.o
+ .debug_abbrev  0x000000000000489a       0x12 build/startup_stm32f042x6.o
 
-.debug_loc      0x0000000000000000    0x11562
- .debug_loc     0x0000000000000000      0x6e5 build/main.o
- .debug_loc     0x00000000000006e5       0x20 build/usb_device.o
- .debug_loc     0x0000000000000705      0xfa7 build/usbd_conf.o
- .debug_loc     0x00000000000016ac      0x45d build/usbd_desc.o
- .debug_loc     0x0000000000001b09       0xde build/usbd_storage_if.o
- .debug_loc     0x0000000000001be7       0x80 build/stm32f0xx_it.o
- .debug_loc     0x0000000000001c67       0xf0 build/stm32f0xx_hal_msp.o
- .debug_loc     0x0000000000001d57     0x15b1 build/stm32f0xx_ll_usb.o
- .debug_loc     0x0000000000003308      0xf10 build/stm32f0xx_hal_pcd.o
- .debug_loc     0x0000000000004218      0x2b8 build/stm32f0xx_hal_pcd_ex.o
- .debug_loc     0x00000000000044d0      0x7d8 build/stm32f0xx_hal_rcc.o
- .debug_loc     0x0000000000004ca8      0x856 build/stm32f0xx_hal_rcc_ex.o
- .debug_loc     0x00000000000054fe      0x1e1 build/stm32f0xx_hal.o
- .debug_loc     0x00000000000056df      0x474 build/stm32f0xx_hal_gpio.o
- .debug_loc     0x0000000000005b53      0x473 build/stm32f0xx_hal_cortex.o
- .debug_loc     0x0000000000005fc6     0x4ada build/stm32f0xx_hal_tim.o
- .debug_loc     0x000000000000aaa0     0x18a1 build/stm32f0xx_hal_tim_ex.o
- .debug_loc     0x000000000000c341      0x177 build/system_stm32f0xx.o
- .debug_loc     0x000000000000c4b8      0xa5a build/usbd_core.o
- .debug_loc     0x000000000000cf12     0x150f build/usbd_ctlreq.o
- .debug_loc     0x000000000000e421      0x364 build/usbd_ioreq.o
- .debug_loc     0x000000000000e785      0x6d5 build/usbd_msc.o
- .debug_loc     0x000000000000ee5a      0x5c7 build/usbd_msc_bot.o
- .debug_loc     0x000000000000f421     0x12de build/usbd_msc_scsi.o
- .debug_loc     0x00000000000106ff      0xe63 build/stm32f0xx_hal_rtc.o
+.debug_loc      0x0000000000000000    0x1184b
+ .debug_loc     0x0000000000000000      0x8fe build/main.o
+ .debug_loc     0x00000000000008fe       0x20 build/usb_device.o
+ .debug_loc     0x000000000000091e      0xfa7 build/usbd_conf.o
+ .debug_loc     0x00000000000018c5      0x45d build/usbd_desc.o
+ .debug_loc     0x0000000000001d22       0xde build/usbd_storage_if.o
+ .debug_loc     0x0000000000001e00       0x80 build/stm32f0xx_it.o
+ .debug_loc     0x0000000000001e80       0xf0 build/stm32f0xx_hal_msp.o
+ .debug_loc     0x0000000000001f70     0x15b1 build/stm32f0xx_ll_usb.o
+ .debug_loc     0x0000000000003521      0xf10 build/stm32f0xx_hal_pcd.o
+ .debug_loc     0x0000000000004431      0x2b8 build/stm32f0xx_hal_pcd_ex.o
+ .debug_loc     0x00000000000046e9      0x7d8 build/stm32f0xx_hal_rcc.o
+ .debug_loc     0x0000000000004ec1      0x856 build/stm32f0xx_hal_rcc_ex.o
+ .debug_loc     0x0000000000005717      0x1e1 build/stm32f0xx_hal.o
+ .debug_loc     0x00000000000058f8      0x474 build/stm32f0xx_hal_gpio.o
+ .debug_loc     0x0000000000005d6c      0x473 build/stm32f0xx_hal_cortex.o
+ .debug_loc     0x00000000000061df       0xd0 build/stm32f0xx_hal_pwr.o
+ .debug_loc     0x00000000000062af     0x4ada build/stm32f0xx_hal_tim.o
+ .debug_loc     0x000000000000ad89     0x18a1 build/stm32f0xx_hal_tim_ex.o
+ .debug_loc     0x000000000000c62a      0x177 build/system_stm32f0xx.o
+ .debug_loc     0x000000000000c7a1      0xa5a build/usbd_core.o
+ .debug_loc     0x000000000000d1fb     0x150f build/usbd_ctlreq.o
+ .debug_loc     0x000000000000e70a      0x364 build/usbd_ioreq.o
+ .debug_loc     0x000000000000ea6e      0x6d5 build/usbd_msc.o
+ .debug_loc     0x000000000000f143      0x5c7 build/usbd_msc_bot.o
+ .debug_loc     0x000000000000f70a     0x12de build/usbd_msc_scsi.o
+ .debug_loc     0x00000000000109e8      0xe63 build/stm32f0xx_hal_rtc.o
 
-.debug_aranges  0x0000000000000000     0x1160
+.debug_aranges  0x0000000000000000     0x11e8
  .debug_aranges
-                0x0000000000000000       0xa8 build/main.o
+                0x0000000000000000       0xb8 build/main.o
  .debug_aranges
-                0x00000000000000a8       0x20 build/usb_device.o
+                0x00000000000000b8       0x20 build/usb_device.o
  .debug_aranges
-                0x00000000000000c8      0x118 build/usbd_conf.o
+                0x00000000000000d8      0x118 build/usbd_conf.o
  .debug_aranges
-                0x00000000000001e0       0x60 build/usbd_desc.o
+                0x00000000000001f0       0x60 build/usbd_desc.o
  .debug_aranges
-                0x0000000000000240       0x50 build/usbd_storage_if.o
+                0x0000000000000250       0x50 build/usbd_storage_if.o
  .debug_aranges
-                0x0000000000000290       0x58 build/stm32f0xx_it.o
+                0x00000000000002a0       0x58 build/stm32f0xx_it.o
  .debug_aranges
-                0x00000000000002e8       0x40 build/stm32f0xx_hal_msp.o
+                0x00000000000002f8       0x40 build/stm32f0xx_hal_msp.o
  .debug_aranges
-                0x0000000000000328      0x108 build/stm32f0xx_ll_usb.o
+                0x0000000000000338      0x108 build/stm32f0xx_ll_usb.o
  .debug_aranges
-                0x0000000000000430      0x120 build/stm32f0xx_hal_pcd.o
+                0x0000000000000440      0x120 build/stm32f0xx_hal_pcd.o
  .debug_aranges
-                0x0000000000000550       0x58 build/stm32f0xx_hal_pcd_ex.o
+                0x0000000000000560       0x58 build/stm32f0xx_hal_pcd_ex.o
  .debug_aranges
-                0x00000000000005a8       0x80 build/stm32f0xx_hal_rcc.o
+                0x00000000000005b8       0x80 build/stm32f0xx_hal_rcc.o
  .debug_aranges
-                0x0000000000000628       0x78 build/stm32f0xx_hal_rcc_ex.o
+                0x0000000000000638       0x78 build/stm32f0xx_hal_rcc_ex.o
  .debug_aranges
-                0x00000000000006a0       0xd0 build/stm32f0xx_hal.o
+                0x00000000000006b0       0xd0 build/stm32f0xx_hal.o
  .debug_aranges
-                0x0000000000000770       0x58 build/stm32f0xx_hal_gpio.o
+                0x0000000000000780       0x58 build/stm32f0xx_hal_gpio.o
  .debug_aranges
-                0x00000000000007c8       0x78 build/stm32f0xx_hal_cortex.o
+                0x00000000000007d8       0x78 build/stm32f0xx_hal_cortex.o
  .debug_aranges
-                0x0000000000000840      0x3b8 build/stm32f0xx_hal_tim.o
+                0x0000000000000850       0x78 build/stm32f0xx_hal_pwr.o
  .debug_aranges
-                0x0000000000000bf8      0x150 build/stm32f0xx_hal_tim_ex.o
+                0x00000000000008c8      0x3b8 build/stm32f0xx_hal_tim.o
  .debug_aranges
-                0x0000000000000d48       0x28 build/system_stm32f0xx.o
+                0x0000000000000c80      0x150 build/stm32f0xx_hal_tim_ex.o
  .debug_aranges
-                0x0000000000000d70       0xb8 build/usbd_core.o
+                0x0000000000000dd0       0x28 build/system_stm32f0xx.o
  .debug_aranges
-                0x0000000000000e28       0x88 build/usbd_ctlreq.o
+                0x0000000000000df8       0xb8 build/usbd_core.o
  .debug_aranges
-                0x0000000000000eb0       0x50 build/usbd_ioreq.o
+                0x0000000000000eb0       0x88 build/usbd_ctlreq.o
  .debug_aranges
-                0x0000000000000f00       0x68 build/usbd_msc.o
+                0x0000000000000f38       0x50 build/usbd_ioreq.o
  .debug_aranges
-                0x0000000000000f68       0x68 build/usbd_msc_bot.o
+                0x0000000000000f88       0x68 build/usbd_msc.o
  .debug_aranges
-                0x0000000000000fd0       0x18 build/usbd_msc_data.o
+                0x0000000000000ff0       0x68 build/usbd_msc_bot.o
  .debug_aranges
-                0x0000000000000fe8       0x98 build/usbd_msc_scsi.o
+                0x0000000000001058       0x18 build/usbd_msc_data.o
  .debug_aranges
-                0x0000000000001080       0xb8 build/stm32f0xx_hal_rtc.o
+                0x0000000000001070       0x98 build/usbd_msc_scsi.o
  .debug_aranges
-                0x0000000000001138       0x28 build/startup_stm32f042x6.o
+                0x0000000000001108       0xb8 build/stm32f0xx_hal_rtc.o
+ .debug_aranges
+                0x00000000000011c0       0x28 build/startup_stm32f042x6.o
 
-.debug_ranges   0x0000000000000000     0x11c0
- .debug_ranges  0x0000000000000000       0xc8 build/main.o
- .debug_ranges  0x00000000000000c8       0x10 build/usb_device.o
- .debug_ranges  0x00000000000000d8      0x108 build/usbd_conf.o
- .debug_ranges  0x00000000000001e0       0x50 build/usbd_desc.o
- .debug_ranges  0x0000000000000230       0x40 build/usbd_storage_if.o
- .debug_ranges  0x0000000000000270       0x48 build/stm32f0xx_it.o
- .debug_ranges  0x00000000000002b8       0x30 build/stm32f0xx_hal_msp.o
- .debug_ranges  0x00000000000002e8      0x218 build/stm32f0xx_ll_usb.o
- .debug_ranges  0x0000000000000500      0x140 build/stm32f0xx_hal_pcd.o
- .debug_ranges  0x0000000000000640       0x48 build/stm32f0xx_hal_pcd_ex.o
- .debug_ranges  0x0000000000000688       0x88 build/stm32f0xx_hal_rcc.o
- .debug_ranges  0x0000000000000710       0x80 build/stm32f0xx_hal_rcc_ex.o
- .debug_ranges  0x0000000000000790       0xc0 build/stm32f0xx_hal.o
- .debug_ranges  0x0000000000000850       0x48 build/stm32f0xx_hal_gpio.o
- .debug_ranges  0x0000000000000898       0xc8 build/stm32f0xx_hal_cortex.o
- .debug_ranges  0x0000000000000960      0x3a8 build/stm32f0xx_hal_tim.o
- .debug_ranges  0x0000000000000d08      0x140 build/stm32f0xx_hal_tim_ex.o
- .debug_ranges  0x0000000000000e48       0x18 build/system_stm32f0xx.o
- .debug_ranges  0x0000000000000e60       0xa8 build/usbd_core.o
- .debug_ranges  0x0000000000000f08       0x78 build/usbd_ctlreq.o
- .debug_ranges  0x0000000000000f80       0x40 build/usbd_ioreq.o
- .debug_ranges  0x0000000000000fc0       0x58 build/usbd_msc.o
- .debug_ranges  0x0000000000001018       0x58 build/usbd_msc_bot.o
- .debug_ranges  0x0000000000001070       0x88 build/usbd_msc_scsi.o
- .debug_ranges  0x00000000000010f8       0xa8 build/stm32f0xx_hal_rtc.o
- .debug_ranges  0x00000000000011a0       0x20 build/startup_stm32f042x6.o
+.debug_ranges   0x0000000000000000     0x1238
+ .debug_ranges  0x0000000000000000       0xd8 build/main.o
+ .debug_ranges  0x00000000000000d8       0x10 build/usb_device.o
+ .debug_ranges  0x00000000000000e8      0x108 build/usbd_conf.o
+ .debug_ranges  0x00000000000001f0       0x50 build/usbd_desc.o
+ .debug_ranges  0x0000000000000240       0x40 build/usbd_storage_if.o
+ .debug_ranges  0x0000000000000280       0x48 build/stm32f0xx_it.o
+ .debug_ranges  0x00000000000002c8       0x30 build/stm32f0xx_hal_msp.o
+ .debug_ranges  0x00000000000002f8      0x218 build/stm32f0xx_ll_usb.o
+ .debug_ranges  0x0000000000000510      0x140 build/stm32f0xx_hal_pcd.o
+ .debug_ranges  0x0000000000000650       0x48 build/stm32f0xx_hal_pcd_ex.o
+ .debug_ranges  0x0000000000000698       0x88 build/stm32f0xx_hal_rcc.o
+ .debug_ranges  0x0000000000000720       0x80 build/stm32f0xx_hal_rcc_ex.o
+ .debug_ranges  0x00000000000007a0       0xc0 build/stm32f0xx_hal.o
+ .debug_ranges  0x0000000000000860       0x48 build/stm32f0xx_hal_gpio.o
+ .debug_ranges  0x00000000000008a8       0xc8 build/stm32f0xx_hal_cortex.o
+ .debug_ranges  0x0000000000000970       0x68 build/stm32f0xx_hal_pwr.o
+ .debug_ranges  0x00000000000009d8      0x3a8 build/stm32f0xx_hal_tim.o
+ .debug_ranges  0x0000000000000d80      0x140 build/stm32f0xx_hal_tim_ex.o
+ .debug_ranges  0x0000000000000ec0       0x18 build/system_stm32f0xx.o
+ .debug_ranges  0x0000000000000ed8       0xa8 build/usbd_core.o
+ .debug_ranges  0x0000000000000f80       0x78 build/usbd_ctlreq.o
+ .debug_ranges  0x0000000000000ff8       0x40 build/usbd_ioreq.o
+ .debug_ranges  0x0000000000001038       0x58 build/usbd_msc.o
+ .debug_ranges  0x0000000000001090       0x58 build/usbd_msc_bot.o
+ .debug_ranges  0x00000000000010e8       0x88 build/usbd_msc_scsi.o
+ .debug_ranges  0x0000000000001170       0xa8 build/stm32f0xx_hal_rtc.o
+ .debug_ranges  0x0000000000001218       0x20 build/startup_stm32f042x6.o
 
-.debug_line     0x0000000000000000     0xfac1
- .debug_line    0x0000000000000000      0xf7e build/main.o
- .debug_line    0x0000000000000f7e      0x2a9 build/usb_device.o
- .debug_line    0x0000000000001227      0x8a6 build/usbd_conf.o
- .debug_line    0x0000000000001acd      0x3f0 build/usbd_desc.o
- .debug_line    0x0000000000001ebd      0x2fe build/usbd_storage_if.o
- .debug_line    0x00000000000021bb      0x269 build/stm32f0xx_it.o
- .debug_line    0x0000000000002424      0x27c build/stm32f0xx_hal_msp.o
- .debug_line    0x00000000000026a0     0x1308 build/stm32f0xx_ll_usb.o
- .debug_line    0x00000000000039a8      0xf74 build/stm32f0xx_hal_pcd.o
- .debug_line    0x000000000000491c      0x3d6 build/stm32f0xx_hal_pcd_ex.o
- .debug_line    0x0000000000004cf2      0xbdd build/stm32f0xx_hal_rcc.o
- .debug_line    0x00000000000058cf      0x87e build/stm32f0xx_hal_rcc_ex.o
- .debug_line    0x000000000000614d      0x498 build/stm32f0xx_hal.o
- .debug_line    0x00000000000065e5      0x60c build/stm32f0xx_hal_gpio.o
- .debug_line    0x0000000000006bf1      0x4ee build/stm32f0xx_hal_cortex.o
- .debug_line    0x00000000000070df     0x37a1 build/stm32f0xx_hal_tim.o
- .debug_line    0x000000000000a880     0x115c build/stm32f0xx_hal_tim_ex.o
- .debug_line    0x000000000000b9dc      0x201 build/system_stm32f0xx.o
- .debug_line    0x000000000000bbdd      0x7ab build/usbd_core.o
- .debug_line    0x000000000000c388      0xb92 build/usbd_ctlreq.o
- .debug_line    0x000000000000cf1a      0x31d build/usbd_ioreq.o
- .debug_line    0x000000000000d237      0x621 build/usbd_msc.o
- .debug_line    0x000000000000d858      0x5e8 build/usbd_msc_bot.o
- .debug_line    0x000000000000de40      0x203 build/usbd_msc_data.o
- .debug_line    0x000000000000e043      0xba7 build/usbd_msc_scsi.o
- .debug_line    0x000000000000ebea      0xe4e build/stm32f0xx_hal_rtc.o
- .debug_line    0x000000000000fa38       0x89 build/startup_stm32f042x6.o
+.debug_line     0x0000000000000000     0xff41
+ .debug_line    0x0000000000000000     0x10f9 build/main.o
+ .debug_line    0x00000000000010f9      0x2a9 build/usb_device.o
+ .debug_line    0x00000000000013a2      0x8a6 build/usbd_conf.o
+ .debug_line    0x0000000000001c48      0x3f0 build/usbd_desc.o
+ .debug_line    0x0000000000002038      0x2fe build/usbd_storage_if.o
+ .debug_line    0x0000000000002336      0x269 build/stm32f0xx_it.o
+ .debug_line    0x000000000000259f      0x27c build/stm32f0xx_hal_msp.o
+ .debug_line    0x000000000000281b     0x1308 build/stm32f0xx_ll_usb.o
+ .debug_line    0x0000000000003b23      0xf74 build/stm32f0xx_hal_pcd.o
+ .debug_line    0x0000000000004a97      0x3d6 build/stm32f0xx_hal_pcd_ex.o
+ .debug_line    0x0000000000004e6d      0xbdd build/stm32f0xx_hal_rcc.o
+ .debug_line    0x0000000000005a4a      0x87e build/stm32f0xx_hal_rcc_ex.o
+ .debug_line    0x00000000000062c8      0x498 build/stm32f0xx_hal.o
+ .debug_line    0x0000000000006760      0x60c build/stm32f0xx_hal_gpio.o
+ .debug_line    0x0000000000006d6c      0x4ee build/stm32f0xx_hal_cortex.o
+ .debug_line    0x000000000000725a      0x305 build/stm32f0xx_hal_pwr.o
+ .debug_line    0x000000000000755f     0x37a1 build/stm32f0xx_hal_tim.o
+ .debug_line    0x000000000000ad00     0x115c build/stm32f0xx_hal_tim_ex.o
+ .debug_line    0x000000000000be5c      0x201 build/system_stm32f0xx.o
+ .debug_line    0x000000000000c05d      0x7ab build/usbd_core.o
+ .debug_line    0x000000000000c808      0xb92 build/usbd_ctlreq.o
+ .debug_line    0x000000000000d39a      0x31d build/usbd_ioreq.o
+ .debug_line    0x000000000000d6b7      0x621 build/usbd_msc.o
+ .debug_line    0x000000000000dcd8      0x5e8 build/usbd_msc_bot.o
+ .debug_line    0x000000000000e2c0      0x203 build/usbd_msc_data.o
+ .debug_line    0x000000000000e4c3      0xba7 build/usbd_msc_scsi.o
+ .debug_line    0x000000000000f06a      0xe4e build/stm32f0xx_hal_rtc.o
+ .debug_line    0x000000000000feb8       0x89 build/startup_stm32f042x6.o
 
-.debug_str      0x0000000000000000     0x4f93
- .debug_str     0x0000000000000000     0x12d8 build/main.o
-                                       0x13f6 (size before relaxing)
- .debug_str     0x00000000000012d8      0x484 build/usb_device.o
+.debug_str      0x0000000000000000     0x512e
+ .debug_str     0x0000000000000000     0x137c build/main.o
+                                       0x14a0 (size before relaxing)
+ .debug_str     0x000000000000137c      0x484 build/usb_device.o
                                         0xb93 (size before relaxing)
- .debug_str     0x000000000000175c      0x80a build/usbd_conf.o
+ .debug_str     0x0000000000001800      0x80a build/usbd_conf.o
                                        0x1593 (size before relaxing)
- .debug_str     0x0000000000001f66      0x171 build/usbd_desc.o
+ .debug_str     0x000000000000200a      0x171 build/usbd_desc.o
                                         0x8c5 (size before relaxing)
- .debug_str     0x00000000000020d7       0xce build/usbd_storage_if.o
+ .debug_str     0x000000000000217b       0xce build/usbd_storage_if.o
                                         0xbf7 (size before relaxing)
- .debug_str     0x00000000000021a5       0xe9 build/stm32f0xx_it.o
+ .debug_str     0x0000000000002249       0xe9 build/stm32f0xx_it.o
                                         0xa18 (size before relaxing)
- .debug_str     0x000000000000228e       0xa1 build/stm32f0xx_hal_msp.o
+ .debug_str     0x0000000000002332       0xa1 build/stm32f0xx_hal_msp.o
                                         0xa2d (size before relaxing)
- .debug_str     0x000000000000232f      0x34f build/stm32f0xx_ll_usb.o
+ .debug_str     0x00000000000023d3      0x34f build/stm32f0xx_ll_usb.o
                                         0x7d2 (size before relaxing)
- .debug_str     0x000000000000267e      0x11d build/stm32f0xx_hal_pcd.o
+ .debug_str     0x0000000000002722      0x11d build/stm32f0xx_hal_pcd.o
                                         0xad9 (size before relaxing)
- .debug_str     0x000000000000279b      0x193 build/stm32f0xx_hal_pcd_ex.o
+ .debug_str     0x000000000000283f      0x193 build/stm32f0xx_hal_pcd_ex.o
                                         0x802 (size before relaxing)
- .debug_str     0x000000000000292e      0x1fb build/stm32f0xx_hal_rcc.o
+ .debug_str     0x00000000000029d2      0x1fb build/stm32f0xx_hal_rcc.o
                                         0x6c0 (size before relaxing)
- .debug_str     0x0000000000002b29      0x296 build/stm32f0xx_hal_rcc_ex.o
+ .debug_str     0x0000000000002bcd      0x296 build/stm32f0xx_hal_rcc_ex.o
                                         0x6a3 (size before relaxing)
- .debug_str     0x0000000000002dbf      0x1db build/stm32f0xx_hal.o
+ .debug_str     0x0000000000002e63      0x1db build/stm32f0xx_hal.o
                                         0x6d0 (size before relaxing)
- .debug_str     0x0000000000002f9a       0xb9 build/stm32f0xx_hal_gpio.o
+ .debug_str     0x000000000000303e       0xb9 build/stm32f0xx_hal_gpio.o
                                         0x4ab (size before relaxing)
- .debug_str     0x0000000000003053      0x219 build/stm32f0xx_hal_cortex.o
+ .debug_str     0x00000000000030f7      0x219 build/stm32f0xx_hal_cortex.o
                                         0x6ba (size before relaxing)
- .debug_str     0x000000000000326c      0xdc0 build/stm32f0xx_hal_tim.o
+ .debug_str     0x0000000000003310      0x168 build/stm32f0xx_hal_pwr.o
+                                        0x445 (size before relaxing)
+ .debug_str     0x0000000000003478      0xdc0 build/stm32f0xx_hal_tim.o
                                        0x1528 (size before relaxing)
- .debug_str     0x000000000000402c      0x4d5 build/stm32f0xx_hal_tim_ex.o
+ .debug_str     0x0000000000004238      0x4d5 build/stm32f0xx_hal_tim_ex.o
                                         0xcf4 (size before relaxing)
- .debug_str     0x0000000000004501       0x38 build/system_stm32f0xx.o
+ .debug_str     0x000000000000470d       0x38 build/system_stm32f0xx.o
                                         0x2d7 (size before relaxing)
- .debug_str     0x0000000000004539      0x13e build/usbd_core.o
+ .debug_str     0x0000000000004745      0x13e build/usbd_core.o
                                         0xcb0 (size before relaxing)
- .debug_str     0x0000000000004677       0xe2 build/usbd_ctlreq.o
+ .debug_str     0x0000000000004883       0xe2 build/usbd_ctlreq.o
                                         0xbca (size before relaxing)
- .debug_str     0x0000000000004759       0x60 build/usbd_ioreq.o
+ .debug_str     0x0000000000004965       0x60 build/usbd_ioreq.o
                                         0xaf7 (size before relaxing)
- .debug_str     0x00000000000047b9      0x34a build/usbd_msc.o
+ .debug_str     0x00000000000049c5      0x34a build/usbd_msc.o
                                         0xeda (size before relaxing)
- .debug_str     0x0000000000004b03       0xb1 build/usbd_msc_bot.o
+ .debug_str     0x0000000000004d0f       0xb1 build/usbd_msc_bot.o
                                         0xdd2 (size before relaxing)
- .debug_str     0x0000000000004bb4       0x89 build/usbd_msc_data.o
+ .debug_str     0x0000000000004dc0       0x89 build/usbd_msc_data.o
                                         0x6a1 (size before relaxing)
- .debug_str     0x0000000000004c3d      0x156 build/usbd_msc_scsi.o
+ .debug_str     0x0000000000004e49      0x156 build/usbd_msc_scsi.o
                                         0xe53 (size before relaxing)
- .debug_str     0x0000000000004d93      0x1dc build/stm32f0xx_hal_rtc.o
+ .debug_str     0x0000000000004f9f      0x16b build/stm32f0xx_hal_rtc.o
                                         0x745 (size before relaxing)
- .debug_str     0x0000000000004f6f       0x24 build/startup_stm32f042x6.o
+ .debug_str     0x000000000000510a       0x24 build/startup_stm32f042x6.o
                                          0x72 (size before relaxing)
 
 .comment        0x0000000000000000       0x1d
@@ -2761,6 +2766,7 @@ OUTPUT(build/FJE.elf elf32-littlearm)
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal.o
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_gpio.o
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_cortex.o
+ .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_pwr.o
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_tim.o
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_tim_ex.o
  .comment       0x000000000000001d       0x1e build/system_stm32f0xx.o
@@ -2773,50 +2779,51 @@ OUTPUT(build/FJE.elf elf32-littlearm)
  .comment       0x000000000000001d       0x1e build/usbd_msc_scsi.o
  .comment       0x000000000000001d       0x1e build/stm32f0xx_hal_rtc.o
 
-.debug_frame    0x0000000000000000     0x33c8
- .debug_frame   0x0000000000000000      0x264 build/main.o
- .debug_frame   0x0000000000000264       0x2c build/usb_device.o
- .debug_frame   0x0000000000000290      0x368 build/usbd_conf.o
- .debug_frame   0x00000000000005f8       0xf8 build/usbd_desc.o
- .debug_frame   0x00000000000006f0       0x80 build/usbd_storage_if.o
- .debug_frame   0x0000000000000770       0xc0 build/stm32f0xx_it.o
- .debug_frame   0x0000000000000830       0x7c build/stm32f0xx_hal_msp.o
- .debug_frame   0x00000000000008ac      0x254 build/stm32f0xx_ll_usb.o
- .debug_frame   0x0000000000000b00      0x330 build/stm32f0xx_hal_pcd.o
- .debug_frame   0x0000000000000e30       0xac build/stm32f0xx_hal_pcd_ex.o
- .debug_frame   0x0000000000000edc      0x158 build/stm32f0xx_hal_rcc.o
- .debug_frame   0x0000000000001034      0x10c build/stm32f0xx_hal_rcc_ex.o
- .debug_frame   0x0000000000001140      0x1c0 build/stm32f0xx_hal.o
- .debug_frame   0x0000000000001300       0xe0 build/stm32f0xx_hal_gpio.o
- .debug_frame   0x00000000000013e0       0xec build/stm32f0xx_hal_cortex.o
- .debug_frame   0x00000000000014cc      0xb90 build/stm32f0xx_hal_tim.o
- .debug_frame   0x000000000000205c      0x420 build/stm32f0xx_hal_tim_ex.o
- .debug_frame   0x000000000000247c       0x3c build/system_stm32f0xx.o
- .debug_frame   0x00000000000024b8      0x1f8 build/usbd_core.o
- .debug_frame   0x00000000000026b0      0x198 build/usbd_ctlreq.o
- .debug_frame   0x0000000000002848       0xd4 build/usbd_ioreq.o
- .debug_frame   0x000000000000291c      0x104 build/usbd_msc.o
- .debug_frame   0x0000000000002a20      0x130 build/usbd_msc_bot.o
- .debug_frame   0x0000000000002b50      0x200 build/usbd_msc_scsi.o
- .debug_frame   0x0000000000002d50      0x25c build/stm32f0xx_hal_rtc.o
- .debug_frame   0x0000000000002fac       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000002fd8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000002ff8       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x0000000000003040       0xb0 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
- .debug_frame   0x00000000000030f0       0x74 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x0000000000003164       0x54 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000000000031b8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x00000000000031d8       0x28 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000003200       0x28 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x0000000000003228       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000003254       0x30 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000003284       0x30 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000000000032b4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000000000032e0       0x40 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000003320       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000003340       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000003388       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
- .debug_frame   0x00000000000033a8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+.debug_frame    0x0000000000000000     0x34e8
+ .debug_frame   0x0000000000000000      0x2a8 build/main.o
+ .debug_frame   0x00000000000002a8       0x2c build/usb_device.o
+ .debug_frame   0x00000000000002d4      0x368 build/usbd_conf.o
+ .debug_frame   0x000000000000063c       0xf8 build/usbd_desc.o
+ .debug_frame   0x0000000000000734       0x80 build/usbd_storage_if.o
+ .debug_frame   0x00000000000007b4       0xc0 build/stm32f0xx_it.o
+ .debug_frame   0x0000000000000874       0x7c build/stm32f0xx_hal_msp.o
+ .debug_frame   0x00000000000008f0      0x254 build/stm32f0xx_ll_usb.o
+ .debug_frame   0x0000000000000b44      0x330 build/stm32f0xx_hal_pcd.o
+ .debug_frame   0x0000000000000e74       0xac build/stm32f0xx_hal_pcd_ex.o
+ .debug_frame   0x0000000000000f20      0x158 build/stm32f0xx_hal_rcc.o
+ .debug_frame   0x0000000000001078      0x10c build/stm32f0xx_hal_rcc_ex.o
+ .debug_frame   0x0000000000001184      0x1c0 build/stm32f0xx_hal.o
+ .debug_frame   0x0000000000001344       0xe0 build/stm32f0xx_hal_gpio.o
+ .debug_frame   0x0000000000001424       0xec build/stm32f0xx_hal_cortex.o
+ .debug_frame   0x0000000000001510       0xdc build/stm32f0xx_hal_pwr.o
+ .debug_frame   0x00000000000015ec      0xb90 build/stm32f0xx_hal_tim.o
+ .debug_frame   0x000000000000217c      0x420 build/stm32f0xx_hal_tim_ex.o
+ .debug_frame   0x000000000000259c       0x3c build/system_stm32f0xx.o
+ .debug_frame   0x00000000000025d8      0x1f8 build/usbd_core.o
+ .debug_frame   0x00000000000027d0      0x198 build/usbd_ctlreq.o
+ .debug_frame   0x0000000000002968       0xd4 build/usbd_ioreq.o
+ .debug_frame   0x0000000000002a3c      0x104 build/usbd_msc.o
+ .debug_frame   0x0000000000002b40      0x130 build/usbd_msc_bot.o
+ .debug_frame   0x0000000000002c70      0x200 build/usbd_msc_scsi.o
+ .debug_frame   0x0000000000002e70      0x25c build/stm32f0xx_hal_rtc.o
+ .debug_frame   0x00000000000030cc       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000030f8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000003118       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000000000003160       0xb0 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x0000000000003210       0x74 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000003284       0x54 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000000000032d8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00000000000032f8       0x28 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000003320       0x28 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000003348       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000003374       0x30 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000000000033a4       0x30 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000000000033d4       0x2c /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000003400       0x40 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000003440       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000003460       0x48 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000000034a8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(sbrk.o)
+ .debug_frame   0x00000000000034c8       0x20 /usr/lib/gcc/arm-none-eabi/9.2.0/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
 
 Cross Reference Table
 
@@ -3083,6 +3090,7 @@ HAL_PWR_EnableWakeUpPin                           build/stm32f0xx_hal_pwr.o
 HAL_PWR_EnterSLEEPMode                            build/stm32f0xx_hal_pwr.o
 HAL_PWR_EnterSTANDBYMode                          build/stm32f0xx_hal_pwr.o
 HAL_PWR_EnterSTOPMode                             build/stm32f0xx_hal_pwr.o
+                                                  build/main.o
 HAL_PWR_PVDCallback                               build/stm32f0xx_hal_pwr_ex.o
 HAL_PWR_PVD_IRQHandler                            build/stm32f0xx_hal_pwr_ex.o
 HAL_RCCEx_CRSConfig                               build/stm32f0xx_hal_rcc_ex.o
@@ -3156,6 +3164,7 @@ HAL_RTC_MspInit                                   build/stm32f0xx_hal_msp.o
 HAL_RTC_PollForAlarmAEvent                        build/stm32f0xx_hal_rtc.o
 HAL_RTC_SetAlarm                                  build/stm32f0xx_hal_rtc.o
 HAL_RTC_SetAlarm_IT                               build/stm32f0xx_hal_rtc.o
+                                                  build/main.o
 HAL_RTC_SetDate                                   build/stm32f0xx_hal_rtc.o
 HAL_RTC_SetTime                                   build/stm32f0xx_hal_rtc.o
                                                   build/main.o
@@ -3347,6 +3356,7 @@ SPI1_IRQHandler                                   build/startup_stm32f042x6.o
 SPI2_IRQHandler                                   build/startup_stm32f042x6.o
 STORAGE_Inquirydata_FS                            build/usbd_storage_if.o
 SVC_Handler                                       build/stm32f0xx_it.o
+StopOneSec                                        build/main.o
 SysTick_Handler                                   build/stm32f0xx_it.o
 SystemClock_Config                                build/main.o
                                                   build/usbd_conf.o
@@ -3758,6 +3768,7 @@ sprintf                                           /usr/lib/gcc/arm-none-eabi/9.2
 stopFlag                                          build/main.o
 strlen                                            /usr/lib/gcc/arm-none-eabi/9.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-strlen.o)
                                                   build/main.o
+trySleep                                          build/main.o
 uwTick                                            build/stm32f0xx_hal.o
 uwTickFreq                                        build/stm32f0xx_hal.o
 uwTickPrio                                        build/stm32f0xx_hal.o
