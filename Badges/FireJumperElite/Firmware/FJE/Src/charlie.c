@@ -8,7 +8,7 @@ extern int hourFlag;
 
 void charlie(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int pos);
 void hands(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, int hours, int minutes);
-void StopOneSec();
+//void StopOneSec();
 void say();
 
 // Function to get current time and determine what to display
@@ -83,6 +83,7 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
        charlie(PinA, PinB, PinC, PinD, 0);
    }
 
+/*
    // Slow, low power, Spin
    if(mambo == 8){
        charlie(PinA, PinB, PinC, PinD, 0);
@@ -138,7 +139,7 @@ void dance(GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, 
          return;
        StopOneSec();
    }
-
+*/
    // Slow Spin
    if(mambo == 1){
        charlie(PinA, PinB, PinC, PinD, 0);

@@ -25,7 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "charlie.c"
-#include "semihosting.c"
+//#include "semihosting.c"
 
 /* USER CODE END Includes */
 
@@ -53,7 +53,7 @@ TIM_HandleTypeDef htim1;
 //void dance();
 
 // Keep track of what dance we are on
-int mamboNumber = 1;
+int mamboNumber = 4;
 // Stopper for the inturrupt funciton
 int stopFlag = 0;
 // Flag to switch to time 
@@ -154,7 +154,7 @@ int main(void)
       memset(&newTime, 0, sizeof(newTime));
       memset(&currentTime, 0, sizeof(currentTime));
 
-      say("In hour button\n");
+      //say("In hour button\n");
       HAL_Delay(100);
 
       
@@ -173,7 +173,7 @@ int main(void)
       res = HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
       newHours = currentTime.Hours;
       sprintf(buf,"hour is %d \n", currentTime.Hours);
-      say(buf);
+      //say(buf);
 
       if(newHours >12)
          newTime.Hours = 1;
@@ -187,7 +187,7 @@ int main(void)
       res = HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
       if(res != 0){
          sprintf(buf,"Set hour time error is %d \n", res);
-         say(buf);
+         //say(buf);
       }
 
     }
@@ -199,7 +199,7 @@ int main(void)
       RTC_TimeTypeDef newTime;
       RTC_DateTypeDef currentDate;
       RTC_TimeTypeDef currentTime;
-      say("In minute button\n");
+      //say("In minute button\n");
       HAL_Delay(100);
       char buf[30];
 
@@ -228,20 +228,22 @@ int main(void)
       }
 
       sprintf(buf,"minute is %d \n", currentTime.Minutes);
-      say(buf);
+      //say(buf);
 
       res = HAL_RTC_SetTime(&hrtc, &newTime, RTC_FORMAT_BIN);
       if(res != 0){
          sprintf(buf,"minute time error %d \n", res);
-         say(buf);
+         //say(buf);
       }
     }
 
     // Switch mode
     if(stopFlag == 1){
+    /*
       char buf[20];
       sprintf(buf,"We are in mode %d \n", mamboNumber);
       say(buf);
+      */
 
       HAL_Delay(100);
       stopFlag =0;
@@ -252,7 +254,6 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
-
 
 /**
   * @brief System Clock Configuration
@@ -389,25 +390,23 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
-/*
-  //Configure GPIO pin Output Level 
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, A_Pin|B_Pin|C_Pin|D_Pin, GPIO_PIN_RESET);
 
-  //Configure GPIO pins : A_Pin B_Pin C_Pin D_Pin 
-  GPIO_InitStruct.Pin = A_Pin|B_Pin|C_Pin|D_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-  */
-
-  //Configure GPIO pin : Mode_Pin 
+  /*Configure GPIO pin : Mode_Pin */
   GPIO_InitStruct.Pin = Mode_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
 
-  //Configure GPIO pins : Hour_Pin Minute_Pin 
+  /*Configure GPIO pins : A_Pin B_Pin C_Pin D_Pin */
+  GPIO_InitStruct.Pin = A_Pin|B_Pin|C_Pin|D_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : Hour_Pin Minute_Pin */
   GPIO_InitStruct.Pin = Hour_Pin|Minute_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
@@ -443,6 +442,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 }
 
+/*
 void trySleep( GPIO_InitTypeDef PinA, GPIO_InitTypeDef PinB, GPIO_InitTypeDef PinC, GPIO_InitTypeDef PinD, RTC_HandleTypeDef whatTime){
    RTC_AlarmTypeDef AlarmSet;
    RTC_TimeTypeDef newTime;
@@ -500,6 +500,7 @@ void StopOneSec(){
    
    HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 }
+*/
 /* USER CODE END 4 */
 
 /**

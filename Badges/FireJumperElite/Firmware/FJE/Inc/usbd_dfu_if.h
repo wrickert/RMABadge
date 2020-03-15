@@ -1,9 +1,8 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : usbd_storage_if.h
-  * @version        : v2.0_Cube
-  * @brief          : Header for usbd_storage_if.c file.
+  * @file           : usbd_dfu_if.h
+  * @brief          : Header for usbd_dfu_if.c file.
   ******************************************************************************
   * @attention
   *
@@ -20,31 +19,31 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __USBD_STORAGE_IF_H__
-#define __USBD_STORAGE_IF_H__
+#ifndef __USBD_DFU_IF_H__
+#define __USBD_DFU_IF_H__
 
 #ifdef __cplusplus
  extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "usbd_msc.h"
+#include "usbd_dfu.h"
 
 /* USER CODE BEGIN INCLUDE */
 
 /* USER CODE END INCLUDE */
 
-/** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
+/** @addtogroup STM32_USB_DEVICE_LIBRARY
   * @brief For Usb device.
   * @{
   */
 
-/** @defgroup USBD_STORAGE USBD_STORAGE
-  * @brief Header file for the usb_storage_if.c file
+/** @defgroup USBD_MEDIA USBD_MEDIA
+  * @brief Header file for the usbd_dfu_if.c file.
   * @{
   */
 
-/** @defgroup USBD_STORAGE_Exported_Defines USBD_STORAGE_Exported_Defines
+/** @defgroup USBD_MEDIA_Exported_Defines USBD_MEDIA_Exported_Defines
   * @brief Defines.
   * @{
   */
@@ -57,7 +56,7 @@
   * @}
   */
 
-/** @defgroup USBD_STORAGE_Exported_Types USBD_STORAGE_Exported_Types
+/** @defgroup USBD_MEDIA_Exported_Types USBD_MEDIA_Exported_Types
   * @brief Types.
   * @{
   */
@@ -70,7 +69,7 @@
   * @}
   */
 
-/** @defgroup USBD_STORAGE_Exported_Macros USBD_STORAGE_Exported_Macros
+/** @defgroup USBD_MEDIA_Exported_Macros USBD_MEDIA_Exported_Macros
   * @brief Aliases.
   * @{
   */
@@ -83,13 +82,13 @@
   * @}
   */
 
-/** @defgroup USBD_STORAGE_Exported_Variables USBD_STORAGE_Exported_Variables
+/** @defgroup USBD_MEDIA_Exported_Variables USBD_MEDIA_Exported_Variables
   * @brief Public variables.
   * @{
   */
 
-/** STORAGE Interface callback. */
-extern USBD_StorageTypeDef USBD_Storage_Interface_fops_FS;
+/** MEDIA Interface callback. */
+extern USBD_DFU_MediaTypeDef USBD_DFU_fops_FS;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
 
@@ -99,7 +98,7 @@ extern USBD_StorageTypeDef USBD_Storage_Interface_fops_FS;
   * @}
   */
 
-/** @defgroup USBD_STORAGE_Exported_FunctionsPrototype USBD_STORAGE_Exported_FunctionsPrototype
+/** @defgroup USBD_MEDIA_Exported_FunctionsPrototype USBD_MEDIA_Exported_FunctionsPrototype
   * @brief Public functions declaration.
   * @{
   */
@@ -124,6 +123,6 @@ extern USBD_StorageTypeDef USBD_Storage_Interface_fops_FS;
 }
 #endif
 
-#endif /* __USBD_STORAGE_IF_H__ */
+#endif /* __USBD_DFU_IF_H__ */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

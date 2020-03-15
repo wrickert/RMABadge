@@ -66,10 +66,10 @@
 #define USBD_VID     1155
 #define USBD_LANGID_STRING     1033
 #define USBD_MANUFACTURER_STRING     "STMicroelectronics"
-#define USBD_PID_FS     22314
-#define USBD_PRODUCT_STRING_FS     "STM32 Mass Storage"
-#define USBD_CONFIGURATION_STRING_FS     "MSC Config"
-#define USBD_INTERFACE_STRING_FS     "MSC Interface"
+#define USBD_PID_FS     57105
+#define USBD_PRODUCT_STRING_FS     "STM32 DownLoad Firmware Update"
+#define USBD_CONFIGURATION_STRING_FS     "DFU Config"
+#define USBD_INTERFACE_STRING_FS     "DFU Interface"
 
 /* USER CODE BEGIN PRIVATE_DEFINES */
 

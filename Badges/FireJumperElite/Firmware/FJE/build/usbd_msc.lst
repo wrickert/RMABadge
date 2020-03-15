@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPbIz0P.s 			page 1
+ARM GAS  /tmp/cctWGn3F.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
   29:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   * the License. You may obtain a copy of the License at:
   30:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   *                      www.st.com/SLA0044
   31:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   *
-ARM GAS  /tmp/ccPbIz0P.s 			page 2
+ARM GAS  /tmp/cctWGn3F.s 			page 2
 
 
   32:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
   86:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** uint8_t  USBD_MSC_DataIn(USBD_HandleTypeDef *pdev, uint8_t epnum);
   87:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** uint8_t  USBD_MSC_DataOut(USBD_HandleTypeDef *pdev, uint8_t epnum);
   88:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** 
-ARM GAS  /tmp/ccPbIz0P.s 			page 3
+ARM GAS  /tmp/cctWGn3F.s 			page 3
 
 
   89:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** uint8_t  *USBD_MSC_GetHSCfgDesc(uint16_t *length);
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  143:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x02,   /* bNumEndpoints*/
  144:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x08,   /* bInterfaceClass: MSC Class */
  145:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x06,   /* bInterfaceSubClass : SCSI transparent*/
-ARM GAS  /tmp/ccPbIz0P.s 			page 4
+ARM GAS  /tmp/cctWGn3F.s 			page 4
 
 
  146:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x50,   /* nInterfaceProtocol */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  200:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x07,   /*Endpoint descriptor length = 7 */
  201:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x05,   /*Endpoint descriptor type */
  202:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   MSC_EPOUT_ADDR,   /*Endpoint address (OUT, address 1) */
-ARM GAS  /tmp/ccPbIz0P.s 			page 5
+ARM GAS  /tmp/cctWGn3F.s 			page 5
 
 
  203:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x02,   /*Bulk endpoint type */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  257:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x00,
  258:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x00,
  259:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   0x00,
-ARM GAS  /tmp/ccPbIz0P.s 			page 6
+ARM GAS  /tmp/cctWGn3F.s 			page 6
 
 
  260:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   MSC_MAX_FS_PACKET,
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  314:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** 
  315:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** /**
  316:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   * @brief  USBD_MSC_DeInit
-ARM GAS  /tmp/ccPbIz0P.s 			page 7
+ARM GAS  /tmp/cctWGn3F.s 			page 7
 
 
  317:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   *         DeInitilaize  the mass storage configuration
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  371:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           else
  372:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           {
  373:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****             USBD_CtlError(pdev, req);
-ARM GAS  /tmp/ccPbIz0P.s 			page 8
+ARM GAS  /tmp/cctWGn3F.s 			page 8
 
 
  374:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****             ret = USBD_FAIL;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  428:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****             hmsc->interface = (uint8_t)(req->wValue);
  429:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           }
  430:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           else
-ARM GAS  /tmp/ccPbIz0P.s 			page 9
+ARM GAS  /tmp/cctWGn3F.s 			page 9
 
 
  431:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           {
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  485:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           ret = USBD_FAIL;
  486:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           break;
  487:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****       }
-ARM GAS  /tmp/ccPbIz0P.s 			page 10
+ARM GAS  /tmp/cctWGn3F.s 			page 10
 
 
  488:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****       break;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
   34              		.loc 1 535 11 is_stmt 0 view .LVU2
   35 0000 2023     		movs	r3, #32
   36 0002 0380     		strh	r3, [r0]
-ARM GAS  /tmp/ccPbIz0P.s 			page 11
+ARM GAS  /tmp/cctWGn3F.s 			page 11
 
 
  536:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
   77 0006 7047     		bx	lr
   78              	.L6:
   79              		.align	2
-ARM GAS  /tmp/ccPbIz0P.s 			page 12
+ARM GAS  /tmp/cctWGn3F.s 			page 12
 
 
   80              	.L5:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  124              		.thumb_func
  125              		.fpu softvfp
  127              	USBD_MSC_GetDeviceQualifierDescriptor:
-ARM GAS  /tmp/ccPbIz0P.s 			page 13
+ARM GAS  /tmp/cctWGn3F.s 			page 13
 
 
  128              	.LVL6:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  170              	.LCFI0:
  171              		.cfi_def_cfa_offset 16
  172              		.cfi_offset 4, -16
-ARM GAS  /tmp/ccPbIz0P.s 			page 14
+ARM GAS  /tmp/cctWGn3F.s 			page 14
 
 
  173              		.cfi_offset 5, -12
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  215              	.LVL12:
  302:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c **** 
  216              		.loc 1 302 20 view .LVU38
-ARM GAS  /tmp/ccPbIz0P.s 			page 15
+ARM GAS  /tmp/cctWGn3F.s 			page 15
 
 
  217 0036 AE23     		movs	r3, #174
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  259 0066 FFF7FEFF 		bl	USBD_LL_OpenEP
  260              	.LVL18:
  300:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   }
-ARM GAS  /tmp/ccPbIz0P.s 			page 16
+ARM GAS  /tmp/cctWGn3F.s 			page 16
 
 
  261              		.loc 1 300 5 view .LVU51
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  308              		.loc 1 330 3 is_stmt 1 view .LVU60
  309 0012 8121     		movs	r1, #129
  310 0014 2000     		movs	r0, r4
-ARM GAS  /tmp/ccPbIz0P.s 			page 17
+ARM GAS  /tmp/cctWGn3F.s 			page 17
 
 
  311 0016 FFF7FEFF 		bl	USBD_LL_CloseEP
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  354              		.fpu softvfp
  356              	USBD_MSC_Setup:
  357              	.LVL26:
-ARM GAS  /tmp/ccPbIz0P.s 			page 18
+ARM GAS  /tmp/cctWGn3F.s 			page 18
 
 
  358              	.LFB45:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  402 0020 1E40     		ands	r6, r3
  358:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****   {
  403              		.loc 1 358 3 view .LVU83
-ARM GAS  /tmp/ccPbIz0P.s 			page 19
+ARM GAS  /tmp/cctWGn3F.s 			page 19
 
 
  404 0022 1A42     		tst	r2, r3
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  444 004c 2800     		movs	r0, r5
  445              	.LVL32:
  373:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****             ret = USBD_FAIL;
-ARM GAS  /tmp/ccPbIz0P.s 			page 20
+ARM GAS  /tmp/cctWGn3F.s 			page 20
 
 
  446              		.loc 1 373 13 view .LVU98
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  486              		.loc 1 379 19 is_stmt 0 view .LVU112
  487 0078 4A88     		ldrh	r2, [r1, #2]
  379:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****               ((req->bmRequest & 0x80U) != 0x80U))
-ARM GAS  /tmp/ccPbIz0P.s 			page 21
+ARM GAS  /tmp/cctWGn3F.s 			page 21
 
 
  488              		.loc 1 379 14 view .LVU113
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  528 00a0 0A2F     		cmp	r7, #10
  529 00a2 48D0     		beq	.L29
  530 00a4 2CD8     		bhi	.L30
-ARM GAS  /tmp/ccPbIz0P.s 			page 22
+ARM GAS  /tmp/cctWGn3F.s 			page 22
 
 
  531 00a6 002F     		cmp	r7, #0
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  572 00dc 002B     		cmp	r3, #0
  573 00de 59D1     		bne	.L42
  467:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****                              MSC_MAX_HS_PACKET);
-ARM GAS  /tmp/ccPbIz0P.s 			page 23
+ARM GAS  /tmp/cctWGn3F.s 			page 23
 
 
  574              		.loc 1 467 15 is_stmt 1 view .LVU141
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  617              	.L31:
  402:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           {
  618              		.loc 1 402 11 is_stmt 1 view .LVU153
-ARM GAS  /tmp/ccPbIz0P.s 			page 24
+ARM GAS  /tmp/cctWGn3F.s 			page 24
 
 
  402:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           {
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  421:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           }
  660              		.loc 1 421 17 is_stmt 0 view .LVU167
  661 0144 0226     		movs	r6, #2
-ARM GAS  /tmp/ccPbIz0P.s 			page 25
+ARM GAS  /tmp/cctWGn3F.s 			page 25
 
 
  662 0146 35E0     		b	.L27
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  702              		.loc 1 447 16 view .LVU181
  703 016e 002B     		cmp	r3, #0
  704 0170 09D1     		bne	.L39
-ARM GAS  /tmp/ccPbIz0P.s 			page 26
+ARM GAS  /tmp/cctWGn3F.s 			page 26
 
 
  450:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****                              MSC_MAX_HS_PACKET);
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  749              		.loc 1 486 11 view .LVU191
  485:Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c ****           break;
  750              		.loc 1 485 15 is_stmt 0 view .LVU192
-ARM GAS  /tmp/ccPbIz0P.s 			page 27
+ARM GAS  /tmp/cctWGn3F.s 			page 27
 
 
  751 01aa 0226     		movs	r6, #2
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  797 0000 10B5     		push	{r4, lr}
  798              	.LCFI5:
  799              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccPbIz0P.s 			page 28
+ARM GAS  /tmp/cctWGn3F.s 			page 28
 
 
  800              		.cfi_offset 4, -8
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  849              		.code	16
  850              		.thumb_func
  851              		.fpu softvfp
-ARM GAS  /tmp/ccPbIz0P.s 			page 29
+ARM GAS  /tmp/cctWGn3F.s 			page 29
 
 
  853              	USBD_MSC_RegisterStorage:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  894 000c 00000000 		.word	0
  895 0010 00000000 		.word	0
  896 0014 00000000 		.word	USBD_MSC_DataIn
-ARM GAS  /tmp/ccPbIz0P.s 			page 30
+ARM GAS  /tmp/cctWGn3F.s 			page 30
 
 
  897 0018 00000000 		.word	USBD_MSC_DataOut
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  939              		.text
  940              	.Letext0:
  941              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
-ARM GAS  /tmp/ccPbIz0P.s 			page 31
+ARM GAS  /tmp/cctWGn3F.s 			page 31
 
 
  942              		.file 3 "/usr/arm-none-eabi/include/sys/lock.h"
@@ -1817,45 +1817,45 @@ ARM GAS  /tmp/ccPbIz0P.s 			page 1
  955              		.file 16 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h"
  956              		.file 17 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
  957              		.file 18 "Inc/usbd_conf.h"
-ARM GAS  /tmp/ccPbIz0P.s 			page 32
+ARM GAS  /tmp/cctWGn3F.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_msc.c
-     /tmp/ccPbIz0P.s:16     .text.USBD_MSC_GetHSCfgDesc:0000000000000000 $t
-     /tmp/ccPbIz0P.s:24     .text.USBD_MSC_GetHSCfgDesc:0000000000000000 USBD_MSC_GetHSCfgDesc
-     /tmp/ccPbIz0P.s:47     .text.USBD_MSC_GetHSCfgDesc:0000000000000008 $d
-     /tmp/ccPbIz0P.s:52     .text.USBD_MSC_GetFSCfgDesc:0000000000000000 $t
-     /tmp/ccPbIz0P.s:59     .text.USBD_MSC_GetFSCfgDesc:0000000000000000 USBD_MSC_GetFSCfgDesc
-     /tmp/ccPbIz0P.s:81     .text.USBD_MSC_GetFSCfgDesc:0000000000000008 $d
-     /tmp/ccPbIz0P.s:86     .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000000 $t
-     /tmp/ccPbIz0P.s:93     .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000000 USBD_MSC_GetOtherSpeedCfgDesc
-     /tmp/ccPbIz0P.s:115    .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000008 $d
-     /tmp/ccPbIz0P.s:120    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000000 $t
-     /tmp/ccPbIz0P.s:127    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000000 USBD_MSC_GetDeviceQualifierDescriptor
-     /tmp/ccPbIz0P.s:149    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000008 $d
-     /tmp/ccPbIz0P.s:154    .text.USBD_MSC_Init:0000000000000000 $t
-     /tmp/ccPbIz0P.s:161    .text.USBD_MSC_Init:0000000000000000 USBD_MSC_Init
-     /tmp/ccPbIz0P.s:273    .text.USBD_MSC_DeInit:0000000000000000 $t
-     /tmp/ccPbIz0P.s:280    .text.USBD_MSC_DeInit:0000000000000000 USBD_MSC_DeInit
-     /tmp/ccPbIz0P.s:349    .text.USBD_MSC_Setup:0000000000000000 $t
-     /tmp/ccPbIz0P.s:356    .text.USBD_MSC_Setup:0000000000000000 USBD_MSC_Setup
-     /tmp/ccPbIz0P.s:782    .text.USBD_MSC_DataIn:0000000000000000 $t
-     /tmp/ccPbIz0P.s:789    .text.USBD_MSC_DataIn:0000000000000000 USBD_MSC_DataIn
-     /tmp/ccPbIz0P.s:814    .text.USBD_MSC_DataOut:0000000000000000 $t
-     /tmp/ccPbIz0P.s:821    .text.USBD_MSC_DataOut:0000000000000000 USBD_MSC_DataOut
-     /tmp/ccPbIz0P.s:846    .text.USBD_MSC_RegisterStorage:0000000000000000 $t
-     /tmp/ccPbIz0P.s:853    .text.USBD_MSC_RegisterStorage:0000000000000000 USBD_MSC_RegisterStorage
-     /tmp/ccPbIz0P.s:928    .data.USBD_MSC_DeviceQualifierDesc:0000000000000000 USBD_MSC_DeviceQualifierDesc
-     /tmp/ccPbIz0P.s:935    .data.USBD_MSC_OtherSpeedCfgDesc:0000000000000000 USBD_MSC_OtherSpeedCfgDesc
-     /tmp/ccPbIz0P.s:910    .data.USBD_MSC_CfgFSDesc:0000000000000000 USBD_MSC_CfgFSDesc
-     /tmp/ccPbIz0P.s:919    .data.USBD_MSC_CfgHSDesc:0000000000000000 USBD_MSC_CfgHSDesc
-     /tmp/ccPbIz0P.s:890    .data.USBD_MSC:0000000000000000 USBD_MSC
-     /tmp/ccPbIz0P.s:887    .data.USBD_MSC:0000000000000000 $d
-     /tmp/ccPbIz0P.s:906    .data.USBD_MSC_CfgFSDesc:0000000000000000 $d
-     /tmp/ccPbIz0P.s:915    .data.USBD_MSC_CfgHSDesc:0000000000000000 $d
-     /tmp/ccPbIz0P.s:924    .data.USBD_MSC_DeviceQualifierDesc:0000000000000000 $d
-     /tmp/ccPbIz0P.s:931    .data.USBD_MSC_OtherSpeedCfgDesc:0000000000000000 $d
+     /tmp/cctWGn3F.s:16     .text.USBD_MSC_GetHSCfgDesc:0000000000000000 $t
+     /tmp/cctWGn3F.s:24     .text.USBD_MSC_GetHSCfgDesc:0000000000000000 USBD_MSC_GetHSCfgDesc
+     /tmp/cctWGn3F.s:47     .text.USBD_MSC_GetHSCfgDesc:0000000000000008 $d
+     /tmp/cctWGn3F.s:52     .text.USBD_MSC_GetFSCfgDesc:0000000000000000 $t
+     /tmp/cctWGn3F.s:59     .text.USBD_MSC_GetFSCfgDesc:0000000000000000 USBD_MSC_GetFSCfgDesc
+     /tmp/cctWGn3F.s:81     .text.USBD_MSC_GetFSCfgDesc:0000000000000008 $d
+     /tmp/cctWGn3F.s:86     .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000000 $t
+     /tmp/cctWGn3F.s:93     .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000000 USBD_MSC_GetOtherSpeedCfgDesc
+     /tmp/cctWGn3F.s:115    .text.USBD_MSC_GetOtherSpeedCfgDesc:0000000000000008 $d
+     /tmp/cctWGn3F.s:120    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000000 $t
+     /tmp/cctWGn3F.s:127    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000000 USBD_MSC_GetDeviceQualifierDescriptor
+     /tmp/cctWGn3F.s:149    .text.USBD_MSC_GetDeviceQualifierDescriptor:0000000000000008 $d
+     /tmp/cctWGn3F.s:154    .text.USBD_MSC_Init:0000000000000000 $t
+     /tmp/cctWGn3F.s:161    .text.USBD_MSC_Init:0000000000000000 USBD_MSC_Init
+     /tmp/cctWGn3F.s:273    .text.USBD_MSC_DeInit:0000000000000000 $t
+     /tmp/cctWGn3F.s:280    .text.USBD_MSC_DeInit:0000000000000000 USBD_MSC_DeInit
+     /tmp/cctWGn3F.s:349    .text.USBD_MSC_Setup:0000000000000000 $t
+     /tmp/cctWGn3F.s:356    .text.USBD_MSC_Setup:0000000000000000 USBD_MSC_Setup
+     /tmp/cctWGn3F.s:782    .text.USBD_MSC_DataIn:0000000000000000 $t
+     /tmp/cctWGn3F.s:789    .text.USBD_MSC_DataIn:0000000000000000 USBD_MSC_DataIn
+     /tmp/cctWGn3F.s:814    .text.USBD_MSC_DataOut:0000000000000000 $t
+     /tmp/cctWGn3F.s:821    .text.USBD_MSC_DataOut:0000000000000000 USBD_MSC_DataOut
+     /tmp/cctWGn3F.s:846    .text.USBD_MSC_RegisterStorage:0000000000000000 $t
+     /tmp/cctWGn3F.s:853    .text.USBD_MSC_RegisterStorage:0000000000000000 USBD_MSC_RegisterStorage
+     /tmp/cctWGn3F.s:928    .data.USBD_MSC_DeviceQualifierDesc:0000000000000000 USBD_MSC_DeviceQualifierDesc
+     /tmp/cctWGn3F.s:935    .data.USBD_MSC_OtherSpeedCfgDesc:0000000000000000 USBD_MSC_OtherSpeedCfgDesc
+     /tmp/cctWGn3F.s:910    .data.USBD_MSC_CfgFSDesc:0000000000000000 USBD_MSC_CfgFSDesc
+     /tmp/cctWGn3F.s:919    .data.USBD_MSC_CfgHSDesc:0000000000000000 USBD_MSC_CfgHSDesc
+     /tmp/cctWGn3F.s:890    .data.USBD_MSC:0000000000000000 USBD_MSC
+     /tmp/cctWGn3F.s:887    .data.USBD_MSC:0000000000000000 $d
+     /tmp/cctWGn3F.s:906    .data.USBD_MSC_CfgFSDesc:0000000000000000 $d
+     /tmp/cctWGn3F.s:915    .data.USBD_MSC_CfgHSDesc:0000000000000000 $d
+     /tmp/cctWGn3F.s:924    .data.USBD_MSC_DeviceQualifierDesc:0000000000000000 $d
+     /tmp/cctWGn3F.s:931    .data.USBD_MSC_OtherSpeedCfgDesc:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 USBD_LL_OpenEP

@@ -35,9 +35,7 @@ build/usbd_conf.o: Src/usbd_conf.c \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h \
+ Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 
 Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:
@@ -118,10 +116,6 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
 
-Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h:
+Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
