@@ -388,14 +388,99 @@ Wire Wire Line
 Wire Wire Line
 	5000 3000 5400 3000
 $Comp
-L Reference_Voltage:LM285D-1.2 U?
-U 1 1 5E809BF6
-P 5150 2300
-F 0 "U?" H 5150 2516 50  0000 C CNN
-F 1 "LM285D-1.2" H 5150 2425 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5150 2100 50  0001 C CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/LM285-D.PDF" H 5150 2300 50  0001 C CIN
-	1    5150 2300
+L Reference_Voltage:LM4040DBZ-2.0 U?
+U 1 1 5E80BE56
+P 5250 2350
+F 0 "U?" H 5300 2550 50  0000 C CNN
+F 1 "LM4040DBZ-2.0" H 5250 2450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5250 2150 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf" H 5250 2350 50  0001 C CIN
+	1    5250 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 2900 5100 2900
+Wire Wire Line
+	5100 2900 5100 2350
+Connection ~ 5100 2350
+Wire Wire Line
+	5100 2350 5100 2150
+$Comp
+L Device:R_Small R?
+U 1 1 5E810E10
+P 5100 1950
+F 0 "R?" H 4950 2000 50  0000 L CNN
+F 1 "1kOhm" H 4800 1900 50  0000 L CNN
+F 2 "" H 5100 1950 50  0001 C CNN
+F 3 "~" H 5100 1950 50  0001 C CNN
+	1    5100 1950
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E811657
+P 5250 2150
+F 0 "C?" V 5021 2150 50  0000 C CNN
+F 1 "1uF" V 5112 2150 50  0000 C CNN
+F 2 "" H 5250 2150 50  0001 C CNN
+F 3 "~" H 5250 2150 50  0001 C CNN
+	1    5250 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 2350 5400 2150
+$Comp
+L power:VSS #PWR?
+U 1 1 5E8144B6
+P 5400 2050
+F 0 "#PWR?" H 5400 1900 50  0001 C CNN
+F 1 "VSS" H 5417 2223 50  0000 C CNN
+F 2 "" H 5400 2050 50  0001 C CNN
+F 3 "" H 5400 2050 50  0001 C CNN
+	1    5400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2150 5400 2150
+Connection ~ 5400 2150
+Wire Wire Line
+	5400 2150 5400 2050
+Wire Wire Line
+	5150 2150 5100 2150
+Connection ~ 5100 2150
+Wire Wire Line
+	5100 2150 5100 2050
+$Comp
+L power:VCC #PWR?
+U 1 1 5E817E31
+P 5100 1750
+F 0 "#PWR?" H 5100 1600 50  0001 C CNN
+F 1 "VCC" H 5117 1923 50  0000 C CNN
+F 2 "" H 5100 1750 50  0001 C CNN
+F 3 "" H 5100 1750 50  0001 C CNN
+	1    5100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1850 5100 1750
+Text GLabel 3300 3900 0    50   Input ~ 0
+BLANK
+Text GLabel 3300 4000 0    50   Input ~ 0
+SYNC
+Text GLabel 4700 4300 3    50   Input ~ 0
+CLK
+Text GLabel 4600 2550 1    50   Input ~ 0
+PSAVE
+Text GLabel 4700 2550 1    50   Input ~ 0
+RESET
+Text GLabel 2050 2100 2    50   Input ~ 0
+PSAVE
+Text GLabel 2050 2200 2    50   Input ~ 0
+RESET
+Text GLabel 2050 2400 2    50   Input ~ 0
+BLANK
+Text GLabel 2050 2300 2    50   Input ~ 0
+SYNC
+Text GLabel 2050 2500 2    50   Input ~ 0
+CLK
 $EndSCHEMATC
