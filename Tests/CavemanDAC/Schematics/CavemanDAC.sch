@@ -1,4 +1,548 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5E7FAA07
+P 4200 2400
+F 0 "J1" H 4118 1875 50  0000 C CNN
+F 1 "Red" H 4118 1966 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 4200 2400 50  0001 C CNN
+F 3 "~" H 4200 2400 50  0001 C CNN
+	1    4200 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5E7FAD4E
+P 4600 2100
+F 0 "R1" V 4600 2250 50  0000 C CNN
+F 1 "309" V 4600 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2100 50  0001 C CNN
+F 3 "~" H 4600 2100 50  0001 C CNN
+	1    4600 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E7FB5C9
+P 4600 2200
+F 0 "R2" V 4600 2350 50  0000 C CNN
+F 1 "619" V 4600 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2200 50  0001 C CNN
+F 3 "~" H 4600 2200 50  0001 C CNN
+	1    4600 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5E7FB8A1
+P 4600 2300
+F 0 "R3" V 4600 2450 50  0000 C CNN
+F 1 "1.24k" V 4600 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2300 50  0001 C CNN
+F 3 "~" H 4600 2300 50  0001 C CNN
+	1    4600 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5E7FBB0F
+P 4600 2400
+F 0 "R4" V 4600 2550 50  0000 C CNN
+F 1 "2.48k" V 4600 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2400 50  0001 C CNN
+F 3 "~" H 4600 2400 50  0001 C CNN
+	1    4600 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5E7FC14A
+P 4600 2500
+F 0 "R5" V 4600 2650 50  0000 C CNN
+F 1 "4.96k" V 4600 2500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2500 50  0001 C CNN
+F 3 "~" H 4600 2500 50  0001 C CNN
+	1    4600 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5E7FC457
+P 4600 2600
+F 0 "R6" V 4600 2750 50  0000 C CNN
+F 1 "9.92k" V 4600 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 2600 50  0001 C CNN
+F 3 "~" H 4600 2600 50  0001 C CNN
+	1    4600 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 2100 4500 2100
+Wire Wire Line
+	4700 2100 4850 2100
+Wire Wire Line
+	4850 2100 4850 2200
+Wire Wire Line
+	4400 2200 4500 2200
+Wire Wire Line
+	4500 2300 4400 2300
+Wire Wire Line
+	4400 2400 4500 2400
+Wire Wire Line
+	4500 2500 4400 2500
+Wire Wire Line
+	4400 2600 4500 2600
+Wire Wire Line
+	4700 2200 4850 2200
+Connection ~ 4850 2200
+Wire Wire Line
+	4850 2200 4850 2300
+Wire Wire Line
+	4700 2300 4850 2300
+Connection ~ 4850 2300
+Wire Wire Line
+	4850 2300 4850 2400
+Wire Wire Line
+	4700 2400 4850 2400
+Connection ~ 4850 2400
+Wire Wire Line
+	4850 2400 4850 2500
+Wire Wire Line
+	4700 2500 4850 2500
+Connection ~ 4850 2500
+Wire Wire Line
+	4850 2500 4850 2600
+Wire Wire Line
+	4700 2600 4850 2600
+$Comp
+L Device:R_Small R7
+U 1 1 5E7FF1EA
+P 4700 2700
+F 0 "R7" V 4700 2850 50  0000 C CNN
+F 1 "130" V 4700 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4700 2700 50  0001 C CNN
+F 3 "~" H 4700 2700 50  0001 C CNN
+	1    4700 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR01
+U 1 1 5E7FFD28
+P 4500 2700
+F 0 "#PWR01" H 4500 2550 50  0001 C CNN
+F 1 "VSS" H 4518 2873 50  0000 C CNN
+F 2 "" H 4500 2700 50  0001 C CNN
+F 3 "" H 4500 2700 50  0001 C CNN
+	1    4500 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 2700 4600 2700
+Wire Wire Line
+	4800 2700 4850 2700
+Wire Wire Line
+	4850 2700 4850 2600
+Connection ~ 4850 2600
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 5E80A397
+P 4200 3350
+F 0 "J2" H 4118 2825 50  0000 C CNN
+F 1 "Green" H 4118 2916 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 4200 3350 50  0001 C CNN
+F 3 "~" H 4200 3350 50  0001 C CNN
+	1    4200 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5E80A3A1
+P 4600 3050
+F 0 "R8" V 4600 3200 50  0000 C CNN
+F 1 "309" V 4600 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3050 50  0001 C CNN
+F 3 "~" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5E80A3AB
+P 4600 3150
+F 0 "R9" V 4600 3300 50  0000 C CNN
+F 1 "619" V 4600 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3150 50  0001 C CNN
+F 3 "~" H 4600 3150 50  0001 C CNN
+	1    4600 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 5E80A3B5
+P 4600 3250
+F 0 "R10" V 4600 3400 50  0000 C CNN
+F 1 "1.24k" V 4600 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3250 50  0001 C CNN
+F 3 "~" H 4600 3250 50  0001 C CNN
+	1    4600 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 5E80A3BF
+P 4600 3350
+F 0 "R11" V 4600 3500 50  0000 C CNN
+F 1 "2.48k" V 4600 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3350 50  0001 C CNN
+F 3 "~" H 4600 3350 50  0001 C CNN
+	1    4600 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5E80A3C9
+P 4600 3450
+F 0 "R12" V 4600 3600 50  0000 C CNN
+F 1 "4.96k" V 4600 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3450 50  0001 C CNN
+F 3 "~" H 4600 3450 50  0001 C CNN
+	1    4600 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 5E80A3D3
+P 4600 3550
+F 0 "R13" V 4600 3700 50  0000 C CNN
+F 1 "9.92k" V 4600 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 3550 50  0001 C CNN
+F 3 "~" H 4600 3550 50  0001 C CNN
+	1    4600 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 3050 4500 3050
+Wire Wire Line
+	4700 3050 4850 3050
+Wire Wire Line
+	4850 3050 4850 3150
+Wire Wire Line
+	4400 3150 4500 3150
+Wire Wire Line
+	4500 3250 4400 3250
+Wire Wire Line
+	4400 3350 4500 3350
+Wire Wire Line
+	4500 3450 4400 3450
+Wire Wire Line
+	4400 3550 4500 3550
+Wire Wire Line
+	4700 3150 4850 3150
+Connection ~ 4850 3150
+Wire Wire Line
+	4850 3150 4850 3250
+Wire Wire Line
+	4700 3250 4850 3250
+Connection ~ 4850 3250
+Wire Wire Line
+	4850 3250 4850 3350
+Wire Wire Line
+	4700 3350 4850 3350
+Connection ~ 4850 3350
+Wire Wire Line
+	4850 3350 4850 3450
+Wire Wire Line
+	4700 3450 4850 3450
+Connection ~ 4850 3450
+Wire Wire Line
+	4850 3450 4850 3550
+Wire Wire Line
+	4700 3550 4850 3550
+$Comp
+L Device:R_Small R14
+U 1 1 5E80A3F2
+P 4700 3650
+F 0 "R14" V 4700 3800 50  0000 C CNN
+F 1 "130" V 4700 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4700 3650 50  0001 C CNN
+F 3 "~" H 4700 3650 50  0001 C CNN
+	1    4700 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR02
+U 1 1 5E80A3FC
+P 4500 3650
+F 0 "#PWR02" H 4500 3500 50  0001 C CNN
+F 1 "VSS" H 4518 3823 50  0000 C CNN
+F 2 "" H 4500 3650 50  0001 C CNN
+F 3 "" H 4500 3650 50  0001 C CNN
+	1    4500 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 3650 4600 3650
+Wire Wire Line
+	4800 3650 4850 3650
+Wire Wire Line
+	4850 3650 4850 3550
+Connection ~ 4850 3550
+$Comp
+L Connector_Generic:Conn_01x06 J3
+U 1 1 5E81153C
+P 4200 4300
+F 0 "J3" H 4118 3775 50  0000 C CNN
+F 1 "Blue" H 4118 3866 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 4200 4300 50  0001 C CNN
+F 3 "~" H 4200 4300 50  0001 C CNN
+	1    4200 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 5E811546
+P 4600 4000
+F 0 "R15" V 4600 4150 50  0000 C CNN
+F 1 "309" V 4600 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4000 50  0001 C CNN
+F 3 "~" H 4600 4000 50  0001 C CNN
+	1    4600 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 5E811550
+P 4600 4100
+F 0 "R16" V 4600 4250 50  0000 C CNN
+F 1 "619" V 4600 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4100 50  0001 C CNN
+F 3 "~" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R17
+U 1 1 5E81155A
+P 4600 4200
+F 0 "R17" V 4600 4350 50  0000 C CNN
+F 1 "1.24k" V 4600 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4200 50  0001 C CNN
+F 3 "~" H 4600 4200 50  0001 C CNN
+	1    4600 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5E811564
+P 4600 4300
+F 0 "R18" V 4600 4450 50  0000 C CNN
+F 1 "2.48k" V 4600 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4300 50  0001 C CNN
+F 3 "~" H 4600 4300 50  0001 C CNN
+	1    4600 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R19
+U 1 1 5E81156E
+P 4600 4400
+F 0 "R19" V 4600 4550 50  0000 C CNN
+F 1 "4.96k" V 4600 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4400 50  0001 C CNN
+F 3 "~" H 4600 4400 50  0001 C CNN
+	1    4600 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R20
+U 1 1 5E811578
+P 4600 4500
+F 0 "R20" V 4600 4650 50  0000 C CNN
+F 1 "9.92k" V 4600 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4600 4500 50  0001 C CNN
+F 3 "~" H 4600 4500 50  0001 C CNN
+	1    4600 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 4000 4500 4000
+Wire Wire Line
+	4700 4000 4850 4000
+Wire Wire Line
+	4850 4000 4850 4100
+Wire Wire Line
+	4400 4100 4500 4100
+Wire Wire Line
+	4500 4200 4400 4200
+Wire Wire Line
+	4400 4300 4500 4300
+Wire Wire Line
+	4500 4400 4400 4400
+Wire Wire Line
+	4400 4500 4500 4500
+Wire Wire Line
+	4700 4100 4850 4100
+Connection ~ 4850 4100
+Wire Wire Line
+	4850 4100 4850 4200
+Wire Wire Line
+	4700 4200 4850 4200
+Connection ~ 4850 4200
+Wire Wire Line
+	4850 4200 4850 4300
+Wire Wire Line
+	4700 4300 4850 4300
+Connection ~ 4850 4300
+Wire Wire Line
+	4850 4300 4850 4400
+Wire Wire Line
+	4700 4400 4850 4400
+Connection ~ 4850 4400
+Wire Wire Line
+	4850 4400 4850 4500
+Wire Wire Line
+	4700 4500 4850 4500
+$Comp
+L Device:R_Small R21
+U 1 1 5E811597
+P 4700 4600
+F 0 "R21" V 4700 4750 50  0000 C CNN
+F 1 "130" V 4700 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4700 4600 50  0001 C CNN
+F 3 "~" H 4700 4600 50  0001 C CNN
+	1    4700 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR05
+U 1 1 5E8115A1
+P 4500 4600
+F 0 "#PWR05" H 4500 4450 50  0001 C CNN
+F 1 "VSS" H 4518 4773 50  0000 C CNN
+F 2 "" H 4500 4600 50  0001 C CNN
+F 3 "" H 4500 4600 50  0001 C CNN
+	1    4500 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 4600 4600 4600
+Wire Wire Line
+	4800 4600 4850 4600
+Wire Wire Line
+	4850 4600 4850 4500
+Connection ~ 4850 4500
+Wire Wire Line
+	4850 2700 5700 2700
+Wire Wire Line
+	5700 2700 5700 3000
+Wire Wire Line
+	5700 3000 6350 3000
+Connection ~ 4850 2700
+Wire Wire Line
+	6350 3100 5100 3100
+Wire Wire Line
+	5100 3100 5100 3650
+Wire Wire Line
+	5100 3650 4850 3650
+Connection ~ 4850 3650
+Wire Wire Line
+	4850 4600 5300 4600
+Wire Wire Line
+	5300 4600 5300 3200
+Wire Wire Line
+	5300 3200 6350 3200
+Connection ~ 4850 4600
+$Comp
+L power:VSS #PWR03
+U 1 1 5E81D4D9
+P 6150 3700
+F 0 "#PWR03" H 6150 3550 50  0001 C CNN
+F 1 "VSS" H 6168 3873 50  0000 C CNN
+F 2 "" H 6150 3700 50  0001 C CNN
+F 3 "" H 6150 3700 50  0001 C CNN
+	1    6150 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 3700 6350 3700
+$Comp
+L power:VSS #PWR04
+U 1 1 5E82080B
+P 6150 3900
+F 0 "#PWR04" H 6150 3750 50  0001 C CNN
+F 1 "VSS" H 6168 4073 50  0000 C CNN
+F 2 "" H 6150 3900 50  0001 C CNN
+F 3 "" H 6150 3900 50  0001 C CNN
+	1    6150 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 3900 6350 3900
+Wire Wire Line
+	6200 4100 6350 4100
+Wire Wire Line
+	6350 4200 6200 4200
+Wire Wire Line
+	6200 4300 6350 4300
+Wire Wire Line
+	6350 4400 6200 4400
+NoConn ~ 6350 4000
+NoConn ~ 6350 3800
+NoConn ~ 6350 3300
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 5E832A44
+P 6000 4200
+F 0 "J4" H 5918 3775 50  0000 C CNN
+F 1 "Conn_01x05" V 6100 4200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 6000 4200 50  0001 C CNN
+F 3 "~" H 6000 4200 50  0001 C CNN
+	1    6000 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR06
+U 1 1 5E8340D1
+P 6200 4000
+F 0 "#PWR06" H 6200 3850 50  0001 C CNN
+F 1 "VSS" V 6150 4000 50  0000 L CNN
+F 2 "" H 6200 4000 50  0001 C CNN
+F 3 "" H 6200 4000 50  0001 C CNN
+	1    6200 4000
+	0    1    1    0   
+$EndComp
+Connection ~ 6350 3700
+Wire Wire Line
+	6350 3600 6350 3700
+Connection ~ 6350 3600
+Wire Wire Line
+	6350 3500 6350 3600
+Wire Wire Line
+	6350 3400 6350 3500
+Connection ~ 6350 3500
+$Comp
+L V3s:VGA U1
+U 1 1 5E8009D0
+P 6750 3300
+F 0 "U1" H 7278 2946 50  0000 L CNN
+F 1 "VGA" H 7278 2855 50  0000 L CNN
+F 2 "ADV7123:VGA-002" H 6750 3350 50  0001 C CNN
+F 3 "" H 6750 3350 50  0001 C CNN
+	1    6750 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

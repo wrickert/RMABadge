@@ -145,7 +145,7 @@
     (descr "SMD pad as test Point, diameter 3.0mm")
     (tags "test point SMD pad")
     (attr virtual)
-    (fp_text reference REF** (at 0 2.398) (layer B.SilkS)
+    (fp_text reference REF** (at 0 2.398) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value TestPoint_Pad_D3.0mm (at 0 -2.55) (layer B.Fab)
