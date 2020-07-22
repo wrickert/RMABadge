@@ -244,3 +244,5 @@ dPairViaGap=0.25
 [eeschema]
 version=1
 LibDir=
+[sheetnames]
+1=2e933ef2-be6d-4577-ad9e-2216180c6d3c:
