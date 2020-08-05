@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc71PIQN.s 			page 1
+ARM GAS  /tmp/ccLNvkld.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
   30:Src/system_stm32f0xx.c ****   *-----------------------------------------------------------------------------
   31:Src/system_stm32f0xx.c ****   *        SYSCLK(Hz)                             | 8000000
   32:Src/system_stm32f0xx.c ****   *-----------------------------------------------------------------------------
-ARM GAS  /tmp/cc71PIQN.s 			page 2
+ARM GAS  /tmp/ccLNvkld.s 			page 2
 
 
   33:Src/system_stm32f0xx.c ****   *        HCLK(Hz)                               | 8000000
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
   87:Src/system_stm32f0xx.c **** 
   88:Src/system_stm32f0xx.c **** #if !defined  (HSI_VALUE)
   89:Src/system_stm32f0xx.c ****   #define HSI_VALUE    ((uint32_t)8000000) /*!< Default value of the Internal oscillator in Hz.
-ARM GAS  /tmp/cc71PIQN.s 			page 3
+ARM GAS  /tmp/ccLNvkld.s 			page 3
 
 
   90:Src/system_stm32f0xx.c ****                                                 This value can be provided and adapted by the user 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  144:Src/system_stm32f0xx.c ****   * @retval None
  145:Src/system_stm32f0xx.c ****   */
  146:Src/system_stm32f0xx.c **** void SystemInit(void)
-ARM GAS  /tmp/cc71PIQN.s 			page 4
+ARM GAS  /tmp/ccLNvkld.s 			page 4
 
 
  147:Src/system_stm32f0xx.c **** {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  181:Src/system_stm32f0xx.c ****   *         (**) HSE_VALUE is a constant defined in stm32f0xx_hal.h file (default value
  182:Src/system_stm32f0xx.c ****   *              8 MHz), user has to ensure that HSE_VALUE is same as the real
  183:Src/system_stm32f0xx.c ****   *              frequency of the crystal used. Otherwise, this function may
-ARM GAS  /tmp/cc71PIQN.s 			page 5
+ARM GAS  /tmp/ccLNvkld.s 			page 5
 
 
  184:Src/system_stm32f0xx.c ****   *              have wrong result.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  212:Src/system_stm32f0xx.c ****       predivfactor = (RCC->CFGR2 & RCC_CFGR2_PREDIV) + 1;
  213:Src/system_stm32f0xx.c **** 
  214:Src/system_stm32f0xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
-ARM GAS  /tmp/cc71PIQN.s 			page 6
+ARM GAS  /tmp/ccLNvkld.s 			page 6
 
 
  215:Src/system_stm32f0xx.c ****       {
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
   96 0022 1A60     		str	r2, [r3]
  203:Src/system_stm32f0xx.c ****     case RCC_CFGR_SWS_HSE:  /* HSE used as system clock */
   97              		.loc 1 203 7 is_stmt 1 view .LVU17
-ARM GAS  /tmp/cc71PIQN.s 			page 7
+ARM GAS  /tmp/ccLNvkld.s 			page 7
 
 
   98              	.LVL7:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  138 0044 144A     		ldr	r2, .L12
  139 0046 5068     		ldr	r0, [r2, #4]
  140              	.LVL13:
-ARM GAS  /tmp/cc71PIQN.s 			page 8
+ARM GAS  /tmp/ccLNvkld.s 			page 8
 
 
  210:Src/system_stm32f0xx.c ****       pllmull = ( pllmull >> 18) + 2;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  232:Src/system_stm32f0xx.c **** #else
  180              		.loc 1 232 9 is_stmt 1 view .LVU47
  232:Src/system_stm32f0xx.c **** #else
-ARM GAS  /tmp/cc71PIQN.s 			page 9
+ARM GAS  /tmp/ccLNvkld.s 			page 9
 
 
  181              		.loc 1 232 37 is_stmt 0 view .LVU48
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  225              		.cfi_endproc
  226              	.LFE41:
  228              		.global	APBPrescTable
-ARM GAS  /tmp/cc71PIQN.s 			page 10
+ARM GAS  /tmp/ccLNvkld.s 			page 10
 
 
  229              		.global	AHBPrescTable
@@ -569,22 +569,22 @@ ARM GAS  /tmp/cc71PIQN.s 			page 1
  256              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
  257              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
  258              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/cc71PIQN.s 			page 11
+ARM GAS  /tmp/ccLNvkld.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32f0xx.c
-     /tmp/cc71PIQN.s:16     .text.SystemInit:0000000000000000 $t
-     /tmp/cc71PIQN.s:24     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/cc71PIQN.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/cc71PIQN.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/cc71PIQN.s:220    .text.SystemCoreClockUpdate:0000000000000098 $d
-     /tmp/cc71PIQN.s:250    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-     /tmp/cc71PIQN.s:243    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-     /tmp/cc71PIQN.s:236    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/cc71PIQN.s:232    .data.SystemCoreClock:0000000000000000 $d
-     /tmp/cc71PIQN.s:239    .rodata.AHBPrescTable:0000000000000000 $d
-     /tmp/cc71PIQN.s:247    .rodata.APBPrescTable:0000000000000000 $d
+     /tmp/ccLNvkld.s:16     .text.SystemInit:0000000000000000 $t
+     /tmp/ccLNvkld.s:24     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccLNvkld.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccLNvkld.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccLNvkld.s:220    .text.SystemCoreClockUpdate:0000000000000098 $d
+     /tmp/ccLNvkld.s:250    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+     /tmp/ccLNvkld.s:243    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+     /tmp/ccLNvkld.s:236    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccLNvkld.s:232    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccLNvkld.s:239    .rodata.AHBPrescTable:0000000000000000 $d
+     /tmp/ccLNvkld.s:247    .rodata.APBPrescTable:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

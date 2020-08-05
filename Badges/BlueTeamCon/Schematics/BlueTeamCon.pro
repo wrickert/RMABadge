@@ -1,5 +1,5 @@
 
-update=Mon 16 Mar 2020 11:05:39 AM CDT
+update=Fri 24 Jul 2020 08:08:02 PM CDT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -246,3 +246,5 @@ version=1
 LibDir=
 [sheetnames]
 1=2e933ef2-be6d-4577-ad9e-2216180c6d3c:
+[SchematicFrame]
+version=1
