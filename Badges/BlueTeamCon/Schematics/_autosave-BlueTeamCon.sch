@@ -111,42 +111,42 @@ Connection ~ 9700 950
 Connection ~ 9700 1150
 Connection ~ 10000 950 
 Connection ~ 10000 1150
-NoConn ~ 2050 2500
-NoConn ~ 5250 5500
-NoConn ~ 2050 2000
-NoConn ~ 1300 6000
-NoConn ~ 2050 2600
-NoConn ~ 1300 5900
-NoConn ~ 7700 5600
-NoConn ~ 1800 6000
-NoConn ~ 9600 5000
+NoConn ~ 2050 3100
 NoConn ~ 1800 5900
-NoConn ~ 9650 4300
-NoConn ~ 1300 5400
-NoConn ~ 1800 5300
-NoConn ~ 8300 5000
-NoConn ~ 2050 2800
-NoConn ~ 2150 900 
-NoConn ~ 1300 5300
-NoConn ~ 2550 1000
-NoConn ~ 7700 5700
 NoConn ~ 2050 2200
-NoConn ~ 5250 5600
-NoConn ~ 9600 4500
-NoConn ~ 2050 1900
-NoConn ~ 2150 1000
-NoConn ~ 3150 6500
-NoConn ~ 1800 5400
-NoConn ~ 2050 3200
-NoConn ~ 3150 6600
-NoConn ~ 7700 5500
-NoConn ~ 5050 6300
-NoConn ~ 8300 2800
-NoConn ~ 8300 2900
-NoConn ~ 2050 2300
 NoConn ~ 2550 900 
 NoConn ~ 2050 2900
-NoConn ~ 2050 3100
+NoConn ~ 2150 1000
+NoConn ~ 1800 5300
+NoConn ~ 8300 5000
+NoConn ~ 1300 6000
+NoConn ~ 9600 4500
+NoConn ~ 7700 5500
+NoConn ~ 9650 4300
+NoConn ~ 2150 900 
+NoConn ~ 5250 5500
+NoConn ~ 1800 6000
+NoConn ~ 7700 5700
+NoConn ~ 1300 5400
+NoConn ~ 2050 2000
+NoConn ~ 1300 5300
+NoConn ~ 7700 5600
+NoConn ~ 8300 2800
+NoConn ~ 2050 2300
+NoConn ~ 9600 5000
+NoConn ~ 8300 2900
+NoConn ~ 1800 5400
+NoConn ~ 2050 2600
+NoConn ~ 2050 2800
+NoConn ~ 1300 5900
+NoConn ~ 2050 1900
+NoConn ~ 3150 6500
+NoConn ~ 3150 6600
+NoConn ~ 5250 5600
+NoConn ~ 2550 1000
+NoConn ~ 2050 3200
+NoConn ~ 5050 6300
+NoConn ~ 2050 2500
 Wire Wire Line
 	1150 3500 1150 3700
 Wire Wire Line
@@ -787,6 +787,10 @@ Wire Wire Line
 	10000 950  10250 950 
 Wire Wire Line
 	10000 1150 10250 1150
+Wire Wire Line
+	12774 2822 12774 2830
+Wire Wire Line
+	13100 2830 12774 2830
 Text Notes 7800 5800 1    50   ~ 0
 ADC Input
 Text GLabel 1550 4450 2    50   Input ~ 0
@@ -2046,12 +2050,12 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 00000000
-P 10992 2742
-F 0 "C?" H 11084 2787 50  0000 L CNN
-F 1 "C_Small" H 11084 2697 50  0000 L CNN
-F 2 "" H 10992 2742 50  0001 C CNN
-F 3 "~" H 10992 2742 50  0001 C CNN
-	1    10992 2742
+P 12774 2720
+F 0 "C?" H 12866 2765 50  0000 L CNN
+F 1 "100nF" H 12866 2675 50  0000 L CNN
+F 2 "" H 12774 2720 50  0001 C CNN
+F 3 "~" H 12774 2720 50  0001 C CNN
+	1    12774 2720
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2253,17 +2257,6 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1600 19
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2020-06-11_01-53-57:STM32G071GBU6 U?
-U 1 1 00000000
-P 11344 2642
-F 0 "U?" H 11712 758 60  0000 C CNN
-F 1 "STM32G071GBU6" H 12188 2908 60  0000 C CNN
-F 2 "UFQFPN-28_STM" H 12844 2882 60  0001 C CNN
-F 3 "" H 11344 2642 60  0000 C CNN
-	1    11344 2642
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_ST_STM32F0:STM32F072CBTx U1
 U 1 1 5E757D55
 P 9000 3700
@@ -2272,6 +2265,17 @@ F 1 "STM32F072CBTx" H 9450 2250 50  0000 C CNN
 F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 8400 2300 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 9000 3700 50  0001 C CNN
 	1    9000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2020-09-01_22-15-04:STM32G070CBT6 U?
+U 1 1 00000000
+P 13100 2330
+F 0 "U?" H 14600 2717 60  0000 C CNN
+F 1 "STM32G070CBT6" H 14600 2611 60  0000 C CNN
+F 2 "LQFP-48_STM" H 14600 2570 60  0001 C CNN
+F 3 "" H 13100 2330 60  0000 C CNN
+	1    13100 2330
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
