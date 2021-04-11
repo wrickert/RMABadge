@@ -1,0 +1,26 @@
+Id,Designator,Package,Quantity,Designation,OLD Price per part,New Price Per Part,Total per board,New Total per board,Shipping,Link and Ref
+1,U2,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,otter_CH330,0.3163,0.3162,0.3163,0.3162,,https://lcsc.com/product-detail/USB_CH330N_C108996.html
+2,"0101,0001,0100,1000,1100,0010,1010,0110,1110,1001",WS2812B-Sunken,10,WS2812B,0.045,0.039,0.45,0.39,33,alibaba
+3,U1,ESP32-WROOM,1,ESP32-WROOM,3.7,2.6,3.7,2.6,28,alibaba
+4,BT1,Keystone_3009_1x2450-CoinCell,1,Battery_Cell,0.45,0.48,0.45,0.48,45,alibaba
+,Battery Holder,,1,,0,0.1,0,0.1,30,
+5,"C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C15,C19",C_0805_HandSoldering,14,0.1uF,0.00828,0.0065,0.11592,0.091,,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21F104ZBCNNNC/1276-1007-2-ND/3886665
+6,C13,C_0805_HandSoldering,3,10uF,0.0259,0.0131,0.0259,0.0393,,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KQCLRNC/1276-2405-1-ND/3890491
+7,R1,R_0805_HandSoldering,1,10k,0.0075,0.0018,0.0075,0.0018,,https://www.digikey.com/product-detail/en/bourns-inc/CR0805-JW-103ELF/CR0805-JW-103ELFCT-ND/3592918
+16,LS1,XDCR_PKMCS0909E4000-R1,1,PKMCS0909E4000-R1,0.90448,0.22,0.90448,0.22,25,https://www.digikey.com/product-detail/en/murata-electronics-north-america/PKMCS0909E4000-R1/490-9647-1-ND/4878401
+19,"C16,C18",C_0805_HandSoldering,2,1uF,0.0266,0.011,0.0532,0.022,,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B105KAFNFNE/1276-2926-1-ND/3891012
+21,R2,R_0805_HandSoldering,1,1k,0.0085,0.0018,0.0085,0.0018,,https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805JT2K00/RMCF0805JT2K00CT-ND/1942562
+22,U4,SOT-223-3_TabPin2,1,TLV1117-33,0.43,0.11,0.43,0.11,,https://www.digikey.com/product-detail/en/texas-instruments/TLV1117-33CDCYR/296-21112-1-ND/1217055
+23,J10,USB_Micro-B_Molex_47346-0001,1,USB_B_Micro,0.5629,0.04,0.5629,0.04,,https://lcsc.com/product-detail/USB-Connectors_MOLEX_47346-0001_47346-0001_C132560.html
+24,R3,R_0805_HandSoldering,1,0ohm,0,0,0,0,,
+25,U3,SOT-23-5_HandSoldering,1,MCP73831-2-OT,0.4326,0.045,0.4326,0.045,,https://www.digikey.com/product-detail/en/microchip-technology/MCP73831T-2ACI-OT/MCP73831T-2ACI-OTCT-ND/1979802
+26,R4,R_0805_HandSoldering,1,22ohm,0.0085,0.0085,0.0085,0.0085,,https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805JT22R0/RMCF0805JT22R0CT-ND/1942533
+,,,,,,,,,,
+,,,1,Circuit board from jlcpcb,0.66,0.66,0.66,0.66,,
+,,,,,,,,,,
+,,,,,Total per board:,,8.23116,5.1256,,
+,,,,,Total Order:,,2057.79,1281.4,161,
+,,,,,,,,,,
+,,,,,,,,Total shipping per board:,0.644,
+,,,,,,,,,,
+,,,,,,,Grand Total:,1442.4,,

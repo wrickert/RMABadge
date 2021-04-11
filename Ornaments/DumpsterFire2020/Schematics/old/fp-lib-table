@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "dumpsterFire2020")(type KiCad)(uri "$(KIPRJMOD)/dumpsterFire2020.pretty")(options "")(descr ""))
+)
