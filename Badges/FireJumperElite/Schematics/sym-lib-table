@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name badge-rescue)(type Legacy)(uri /home/william/Documents/Projects/badge/Schematic/Badge/badge-rescue.lib)(options "")(descr ""))
+  (lib (name "badge-rescue")(type "Legacy")(uri "/home/william/Documents/Projects/badge/Schematic/Badge/badge-rescue.lib")(options "")(descr ""))
+  (lib (name "FJE-Badge-rescue")(type "Legacy")(uri "${KIPRJMOD}/FJE Badge-rescue.lib")(options "")(descr ""))
 )

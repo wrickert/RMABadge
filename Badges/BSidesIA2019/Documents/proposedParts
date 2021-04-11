@@ -1,0 +1,13 @@
+STM32F0
+	https://www.digikey.com/product-detail/en/stmicroelectronics/STM32F030F4P6TR/497-17333-1-ND/7650385 - $1.34 each
+STM32L0
+	https://www.digikey.com/product-detail/en/stmicroelectronics/STM32L011F3P6/497-17476-ND/6166957  - $1.50 each
+ESP8266
+	https://www.alibaba.com/product-detail/Esp8266-series-Module-Wireless-Module-Remote_60682125599.html?spm=a2700.7724838.2017115.1.44de38c7qUrwPQ - ~$1 each
+SK8612 - addresable 5050 smd
+	https://www.alibaba.com/product-detail/0-2w-addressable-smd-5050-rgb_60432306076.html?spm=a2700.7724838.2017115.21.47031aae6rBuzl&s=p - ~$0.05 each
+
+Use Capacitive touch
+	ESP32 only
+	3 channel cap touch module ~ $0.50
+	https://youtu.be/QzOkSeeqB8g
