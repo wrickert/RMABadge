@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccuPWxjq.s 			page 1
+ARM GAS  /tmp/ccdVhhU0.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
   31:Src/usbd_dfu_if.c **** 
   32:Src/usbd_dfu_if.c **** /* USER CODE BEGIN PV */
   33:Src/usbd_dfu_if.c **** /* Private variables ---------------------------------------------------------*/
-ARM GAS  /tmp/ccuPWxjq.s 			page 2
+ARM GAS  /tmp/ccdVhhU0.s 			page 2
 
 
   34:Src/usbd_dfu_if.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
   88:Src/usbd_dfu_if.c **** /** @defgroup USBD_DFU_Private_Variables
   89:Src/usbd_dfu_if.c ****   * @brief Private variables.
   90:Src/usbd_dfu_if.c ****   * @{
-ARM GAS  /tmp/ccuPWxjq.s 			page 3
+ARM GAS  /tmp/ccdVhhU0.s 			page 3
 
 
   91:Src/usbd_dfu_if.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
  145:Src/usbd_dfu_if.c ****     MEM_If_Write_FS,
  146:Src/usbd_dfu_if.c ****     MEM_If_Read_FS,
  147:Src/usbd_dfu_if.c ****     MEM_If_GetStatus_FS
-ARM GAS  /tmp/ccuPWxjq.s 			page 4
+ARM GAS  /tmp/ccdVhhU0.s 			page 4
 
 
  148:Src/usbd_dfu_if.c **** };
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
   58              		.cfi_endproc
   59              	.LFE44:
   61              		.section	.text.MEM_If_Erase_FS,"ax",%progbits
-ARM GAS  /tmp/ccuPWxjq.s 			page 5
+ARM GAS  /tmp/ccdVhhU0.s 			page 5
 
 
   62              		.align	1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
   96              		.loc 1 194 1 is_stmt 1 view -0
   97              		.cfi_startproc
   98              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccuPWxjq.s 			page 6
+ARM GAS  /tmp/ccdVhhU0.s 			page 6
 
 
   99              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
  137              		.align	1
  138              		.syntax unified
  139              		.code	16
-ARM GAS  /tmp/ccuPWxjq.s 			page 7
+ARM GAS  /tmp/ccdVhhU0.s 			page 7
 
 
  140              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
  167 0033 3036344B 		.ascii	"064Kg,07*128Kg,04*016Kg,01*064Kg,07*128Kg\000"
  167      672C3037 
  167      2A313238 
-ARM GAS  /tmp/ccuPWxjq.s 			page 8
+ARM GAS  /tmp/ccdVhhU0.s 			page 8
 
 
  167      4B672C30 
@@ -436,36 +436,29 @@ ARM GAS  /tmp/ccuPWxjq.s 			page 1
  180              		.text
  181              	.Letext0:
  182              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 183              		.file 3 "/usr/lib/gcc/arm-none-eabi/9.3.0/include/stddef.h"
- 184              		.file 4 "/usr/arm-none-eabi/include/sys/_types.h"
- 185              		.file 5 "/usr/arm-none-eabi/include/sys/reent.h"
- 186              		.file 6 "/usr/arm-none-eabi/include/sys/lock.h"
- 187              		.file 7 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 188              		.file 8 "/usr/arm-none-eabi/include/stdlib.h"
- 189              		.file 9 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
- 190              		.file 10 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
- 191              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 192              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h"
- 193              		.file 13 "Inc/usbd_dfu_if.h"
-ARM GAS  /tmp/ccuPWxjq.s 			page 9
+ 183              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 184              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h"
+ 185              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 186              		.file 6 "Inc/usbd_dfu_if.h"
+ARM GAS  /tmp/ccdVhhU0.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_dfu_if.c
-     /tmp/ccuPWxjq.s:16     .text.MEM_If_Init_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:23     .text.MEM_If_Init_FS:0000000000000000 MEM_If_Init_FS
-     /tmp/ccuPWxjq.s:40     .text.MEM_If_DeInit_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:46     .text.MEM_If_DeInit_FS:0000000000000000 MEM_If_DeInit_FS
-     /tmp/ccuPWxjq.s:62     .text.MEM_If_Erase_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:68     .text.MEM_If_Erase_FS:0000000000000000 MEM_If_Erase_FS
-     /tmp/ccuPWxjq.s:87     .text.MEM_If_Write_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:93     .text.MEM_If_Write_FS:0000000000000000 MEM_If_Write_FS
-     /tmp/ccuPWxjq.s:112    .text.MEM_If_Read_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:118    .text.MEM_If_Read_FS:0000000000000000 MEM_If_Read_FS
-     /tmp/ccuPWxjq.s:137    .text.MEM_If_GetStatus_FS:0000000000000000 $t
-     /tmp/ccuPWxjq.s:143    .text.MEM_If_GetStatus_FS:0000000000000000 MEM_If_GetStatus_FS
-     /tmp/ccuPWxjq.s:172    .data.USBD_DFU_fops_FS:0000000000000000 USBD_DFU_fops_FS
-     /tmp/ccuPWxjq.s:164    .rodata.str1.4:0000000000000000 $d
-     /tmp/ccuPWxjq.s:169    .data.USBD_DFU_fops_FS:0000000000000000 $d
+     /tmp/ccdVhhU0.s:16     .text.MEM_If_Init_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:23     .text.MEM_If_Init_FS:0000000000000000 MEM_If_Init_FS
+     /tmp/ccdVhhU0.s:40     .text.MEM_If_DeInit_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:46     .text.MEM_If_DeInit_FS:0000000000000000 MEM_If_DeInit_FS
+     /tmp/ccdVhhU0.s:62     .text.MEM_If_Erase_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:68     .text.MEM_If_Erase_FS:0000000000000000 MEM_If_Erase_FS
+     /tmp/ccdVhhU0.s:87     .text.MEM_If_Write_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:93     .text.MEM_If_Write_FS:0000000000000000 MEM_If_Write_FS
+     /tmp/ccdVhhU0.s:112    .text.MEM_If_Read_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:118    .text.MEM_If_Read_FS:0000000000000000 MEM_If_Read_FS
+     /tmp/ccdVhhU0.s:137    .text.MEM_If_GetStatus_FS:0000000000000000 $t
+     /tmp/ccdVhhU0.s:143    .text.MEM_If_GetStatus_FS:0000000000000000 MEM_If_GetStatus_FS
+     /tmp/ccdVhhU0.s:172    .data.USBD_DFU_fops_FS:0000000000000000 USBD_DFU_fops_FS
+     /tmp/ccdVhhU0.s:164    .rodata.str1.4:0000000000000000 $d
+     /tmp/ccdVhhU0.s:169    .data.USBD_DFU_fops_FS:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

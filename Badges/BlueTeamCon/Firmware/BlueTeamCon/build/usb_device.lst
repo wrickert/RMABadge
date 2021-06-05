@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccvTnHJJ.s 			page 1
+ARM GAS  /tmp/cchoEQeN.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccvTnHJJ.s 			page 1
   30:Src/usb_device.c **** /* USER CODE BEGIN Includes */
   31:Src/usb_device.c **** 
   32:Src/usb_device.c **** /* USER CODE END Includes */
-ARM GAS  /tmp/ccvTnHJJ.s 			page 2
+ARM GAS  /tmp/cchoEQeN.s 			page 2
 
 
   33:Src/usb_device.c **** 
@@ -107,18 +107,18 @@ ARM GAS  /tmp/ccvTnHJJ.s 			page 1
   67:Src/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
   68:Src/usb_device.c ****   
   69:Src/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PreTreatment */
-  70:Src/usb_device.c ****   
+  70:Src/usb_device.c **** 
   71:Src/usb_device.c ****   /* Init Device Library, add supported class and start the library. */
   72:Src/usb_device.c ****   if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
   36              		.loc 1 72 3 view .LVU1
   37              		.loc 1 72 7 is_stmt 0 view .LVU2
-  38 0002 0022     		movs	r2, #0
-  39 0004 1149     		ldr	r1, .L10
-  40 0006 1248     		ldr	r0, .L10+4
+  38 0002 1249     		ldr	r1, .L10
+  39 0004 1248     		ldr	r0, .L10+4
+  40 0006 0022     		movs	r2, #0
   41 0008 FFF7FEFF 		bl	USBD_Init
   42              	.LVL0:
   43              		.loc 1 72 6 view .LVU3
-ARM GAS  /tmp/ccvTnHJJ.s 			page 3
+ARM GAS  /tmp/cchoEQeN.s 			page 3
 
 
   44 000c 0028     		cmp	r0, #0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccvTnHJJ.s 			page 1
   78 0032 10BD     		pop	{r4, pc}
   79              	.L6:
   74:Src/usb_device.c ****   }
-ARM GAS  /tmp/ccvTnHJJ.s 			page 4
+ARM GAS  /tmp/cchoEQeN.s 			page 4
 
 
   80              		.loc 1 74 5 is_stmt 1 view .LVU14
@@ -213,33 +213,35 @@ ARM GAS  /tmp/ccvTnHJJ.s 			page 1
  106 0058 00000000 		.word	USBD_DFU_fops_FS
  107              		.cfi_endproc
  108              	.LFE43:
- 110              		.comm	hUsbDeviceFS,708,4
- 111              		.text
- 112              	.Letext0:
- 113              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 114              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 115              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
- 116              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
- 117              		.file 6 "/usr/lib/gcc/arm-none-eabi/9.3.0/include/stddef.h"
- 118              		.file 7 "/usr/arm-none-eabi/include/sys/_types.h"
- 119              		.file 8 "/usr/arm-none-eabi/include/sys/reent.h"
- 120              		.file 9 "/usr/arm-none-eabi/include/sys/lock.h"
- 121              		.file 10 "/usr/arm-none-eabi/include/stdlib.h"
- 122              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 123              		.file 12 "Inc/usbd_desc.h"
- 124              		.file 13 "Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h"
- 125              		.file 14 "Inc/usbd_dfu_if.h"
- 126              		.file 15 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
- 127              		.file 16 "Inc/main.h"
-ARM GAS  /tmp/ccvTnHJJ.s 			page 5
+ 110              		.global	hUsbDeviceFS
+ 111              		.section	.bss.hUsbDeviceFS,"aw",%nobits
+ 112              		.align	2
+ 115              	hUsbDeviceFS:
+ 116 0000 00000000 		.space	708
+ 116      00000000 
+ 116      00000000 
+ 116      00000000 
+ 116      00000000 
+ 117              		.text
+ 118              	.Letext0:
+ 119              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 120              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 121              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 122              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h"
+ 123              		.file 6 "Inc/usbd_desc.h"
+ 124              		.file 7 "Inc/usbd_dfu_if.h"
+ 125              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
+ 126              		.file 9 "Inc/main.h"
+ARM GAS  /tmp/cchoEQeN.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_device.c
-     /tmp/ccvTnHJJ.s:16     .text.MX_USB_DEVICE_Init:0000000000000000 $t
-     /tmp/ccvTnHJJ.s:24     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
-     /tmp/ccvTnHJJ.s:103    .text.MX_USB_DEVICE_Init:000000000000004c $d
-                            *COM*:00000000000002c4 hUsbDeviceFS
+     /tmp/cchoEQeN.s:16     .text.MX_USB_DEVICE_Init:0000000000000000 $t
+     /tmp/cchoEQeN.s:24     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
+     /tmp/cchoEQeN.s:103    .text.MX_USB_DEVICE_Init:000000000000004c $d
+     /tmp/cchoEQeN.s:115    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
+     /tmp/cchoEQeN.s:112    .bss.hUsbDeviceFS:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 USBD_Init
