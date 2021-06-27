@@ -8,6 +8,7 @@ build/usbd_conf.o: Src/usbd_conf.c \
  Inc/stm32f0xx_hal_conf.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h \
@@ -31,7 +32,7 @@ build/usbd_conf.o: Src/usbd_conf.c \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h \
+ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:
 Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h:
@@ -44,6 +45,7 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 Inc/stm32f0xx_hal_conf.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:
+Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h:
@@ -68,5 +70,5 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
-Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h:
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:

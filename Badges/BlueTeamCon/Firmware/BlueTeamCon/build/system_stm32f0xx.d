@@ -8,6 +8,7 @@ build/system_stm32f0xx.o: Src/system_stm32f0xx.c \
  Inc/stm32f0xx_hal_conf.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h \
+ Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h \
@@ -35,6 +36,7 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 Inc/stm32f0xx_hal_conf.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:
+Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h:

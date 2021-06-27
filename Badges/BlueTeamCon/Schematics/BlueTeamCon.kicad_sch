@@ -2987,6 +2987,11 @@
     (uuid 23f81f05-fc77-4c02-bcd2-465959f61fbd)
   )
 
+  (text "This was a mistake. I should have kept the matrix whole. \nThis adds significantly more programming"
+    (at 167.64 17.78 0)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid d64c7b9d-3167-41a5-8b65-b8263731d4c4)
+  )
   (text "ADC Input" (at 198.12 147.32 90)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3b02c697-5ea1-4555-ba7d-f06419f59672)
@@ -4265,7 +4270,7 @@
   (symbol (lib_id "Device:R_Small") (at 205.74 66.04 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005ef139af)
-    (property "Reference" "R1" (id 0) (at 205.74 61.0616 90))
+    (property "Reference" "R1" (id 0) (at 201.93 63.6016 90))
     (property "Value" "100k" (id 1) (at 205.74 63.373 90))
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 205.74 66.04 0)
       (effects (font (size 1.27 1.27)) hide)

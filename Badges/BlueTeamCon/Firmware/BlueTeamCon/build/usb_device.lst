@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cchoEQeN.s 			page 1
+ARM GAS  /tmp/cc00p4xm.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -52,13 +52,13 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
   24:Src/usb_device.c **** #include "usb_device.h"
   25:Src/usb_device.c **** #include "usbd_core.h"
   26:Src/usb_device.c **** #include "usbd_desc.h"
-  27:Src/usb_device.c **** #include "usbd_dfu.h"
-  28:Src/usb_device.c **** #include "usbd_dfu_if.h"
+  27:Src/usb_device.c **** #include "usbd_cdc.h"
+  28:Src/usb_device.c **** #include "usbd_cdc_if.h"
   29:Src/usb_device.c **** 
   30:Src/usb_device.c **** /* USER CODE BEGIN Includes */
   31:Src/usb_device.c **** 
   32:Src/usb_device.c **** /* USER CODE END Includes */
-ARM GAS  /tmp/cchoEQeN.s 			page 2
+ARM GAS  /tmp/cc00p4xm.s 			page 2
 
 
   33:Src/usb_device.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
   41 0008 FFF7FEFF 		bl	USBD_Init
   42              	.LVL0:
   43              		.loc 1 72 6 view .LVU3
-ARM GAS  /tmp/cchoEQeN.s 			page 3
+ARM GAS  /tmp/cc00p4xm.s 			page 3
 
 
   44 000c 0028     		cmp	r0, #0
@@ -127,7 +127,7 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
   73:Src/usb_device.c ****   {
   74:Src/usb_device.c ****     Error_Handler();
   75:Src/usb_device.c ****   }
-  76:Src/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_DFU) != USBD_OK)
+  76:Src/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC) != USBD_OK)
   47              		.loc 1 76 3 is_stmt 1 view .LVU4
   48              		.loc 1 76 7 is_stmt 0 view .LVU5
   49 0010 1049     		ldr	r1, .L10+8
@@ -141,12 +141,12 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
   77:Src/usb_device.c ****   {
   78:Src/usb_device.c ****     Error_Handler();
   79:Src/usb_device.c ****   }
-  80:Src/usb_device.c ****   if (USBD_DFU_RegisterMedia(&hUsbDeviceFS, &USBD_DFU_fops_FS) != USBD_OK)
+  80:Src/usb_device.c ****   if (USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS) != USBD_OK)
   57              		.loc 1 80 3 is_stmt 1 view .LVU7
   58              		.loc 1 80 7 is_stmt 0 view .LVU8
   59 001c 0E49     		ldr	r1, .L10+12
   60 001e 0C48     		ldr	r0, .L10+4
-  61 0020 FFF7FEFF 		bl	USBD_DFU_RegisterMedia
+  61 0020 FFF7FEFF 		bl	USBD_CDC_RegisterInterface
   62              	.LVL2:
   63              		.loc 1 80 6 view .LVU9
   64 0024 0028     		cmp	r0, #0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
   78 0032 10BD     		pop	{r4, pc}
   79              	.L6:
   74:Src/usb_device.c ****   }
-ARM GAS  /tmp/cchoEQeN.s 			page 4
+ARM GAS  /tmp/cc00p4xm.s 			page 4
 
 
   80              		.loc 1 74 5 is_stmt 1 view .LVU14
@@ -209,8 +209,8 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
  102              	.L10:
  103 004c 00000000 		.word	FS_Desc
  104 0050 00000000 		.word	hUsbDeviceFS
- 105 0054 00000000 		.word	USBD_DFU
- 106 0058 00000000 		.word	USBD_DFU_fops_FS
+ 105 0054 00000000 		.word	USBD_CDC
+ 106 0058 00000000 		.word	USBD_Interface_fops_FS
  107              		.cfi_endproc
  108              	.LFE43:
  110              		.global	hUsbDeviceFS
@@ -227,28 +227,28 @@ ARM GAS  /tmp/cchoEQeN.s 			page 1
  119              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
  120              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
  121              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 122              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc/usbd_dfu.h"
+ 122              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
  123              		.file 6 "Inc/usbd_desc.h"
- 124              		.file 7 "Inc/usbd_dfu_if.h"
+ 124              		.file 7 "Inc/usbd_cdc_if.h"
  125              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
  126              		.file 9 "Inc/main.h"
-ARM GAS  /tmp/cchoEQeN.s 			page 5
+ARM GAS  /tmp/cc00p4xm.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_device.c
-     /tmp/cchoEQeN.s:16     .text.MX_USB_DEVICE_Init:0000000000000000 $t
-     /tmp/cchoEQeN.s:24     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
-     /tmp/cchoEQeN.s:103    .text.MX_USB_DEVICE_Init:000000000000004c $d
-     /tmp/cchoEQeN.s:115    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
-     /tmp/cchoEQeN.s:112    .bss.hUsbDeviceFS:0000000000000000 $d
+     /tmp/cc00p4xm.s:16     .text.MX_USB_DEVICE_Init:0000000000000000 $t
+     /tmp/cc00p4xm.s:24     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
+     /tmp/cc00p4xm.s:103    .text.MX_USB_DEVICE_Init:000000000000004c $d
+     /tmp/cc00p4xm.s:115    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
+     /tmp/cc00p4xm.s:112    .bss.hUsbDeviceFS:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 USBD_Init
 USBD_RegisterClass
-USBD_DFU_RegisterMedia
+USBD_CDC_RegisterInterface
 USBD_Start
 Error_Handler
 FS_Desc
-USBD_DFU
-USBD_DFU_fops_FS
+USBD_CDC
+USBD_Interface_fops_FS

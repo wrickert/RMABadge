@@ -1,4 +1,4 @@
 
 (fp_lib_table
-  (lib (name "BernieMittensMetal")(type KiCad)(uri "$(KIPRJMOD)/BernieMittensMetal.pretty")(options "")(descr ""))
+  (lib (name "BernieMittensNoChair")(type KiCad)(uri "$(KIPRJMOD)/BernieMittensNoChair.pretty")(options "")(descr ""))
 )
