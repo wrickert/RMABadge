@@ -9,6 +9,9 @@
    id="svg5"
    sodipodi:docname="QuestionLogo.svg"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   inkscape:export-filename="/home/william/Documents/Projects/RMABadge/Documents/UELogo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,16 +31,29 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="2.0704479"
-     inkscape:cx="216.3783"
-     inkscape:cy="86.696215"
+     inkscape:cx="196.57582"
+     inkscape:cy="86.696217"
      inkscape:window-width="1920"
      inkscape:window-height="1021"
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     objecttolerance="2.1" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <inkscape:path-effect
+       effect="dashed_stroke"
+       id="path-effect44096"
+       is_visible="true"
+       lpeversion="1"
+       numberdashes="4"
+       holefactor="0"
+       splitsegments="true"
+       halfextreme="true"
+       unifysegment="true"
+       message="Add &lt;b&gt;&quot;Fill Between Many LPE&quot;&lt;/b&gt; to add fill." />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -46,51 +62,39 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="92.570236"
-       y="73.080467"
+       x="89.619827"
+       y="72.675484"
        id="text18214"><tspan
          sodipodi:role="line"
          id="tspan18212"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="92.570236"
-         y="73.080467">Untitled Electronics</tspan></text>
+         x="89.619827"
+         y="72.675484">Untitled Electronics</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="93.145554"
-       y="81.021744"
+       x="90.195145"
+       y="80.61676"
        id="text27038"><tspan
          sodipodi:role="line"
          id="tspan27036"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="93.145554"
-         y="81.021744">404 Name Not Found</tspan></text>
+         x="90.195145"
+         y="80.61676">404 Name Not Found</tspan></text>
     <g
-       id="g64622"
-       transform="translate(-1.1512054,0.77331958)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:6.9195px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.172988"
-         x="71.502159"
-         y="85.964157"
-         id="text8218"
-         transform="scale(1.1544253,0.86623188)"><tspan
-           sodipodi:role="line"
-           id="tspan8216"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.9195px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.172988"
-           x="71.502159"
-           y="85.964157">?</tspan></text>
+       id="g43927"
+       transform="translate(-2.2890889,-0.9154554)">
       <rect
-         style="fill:none;stroke:#000000;stroke-width:0.567;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.45927;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect846"
-         width="11.788238"
-         height="11.788238"
-         x="78.523926"
-         y="66.426971"
-         ry="1.8089416" />
+         width="9.5484724"
+         height="9.5484724"
+         x="78.492378"
+         y="68.324593"
+         ry="1.4652427" />
       <g
          id="g12242"
-         transform="matrix(0.36251834,0,0,0.69072191,57.513028,21.812358)">
+         transform="matrix(0.29363986,0,0,0.55948475,61.473558,32.186752)">
         <path
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 90.715467,67.151768 4.406604,0.0047"
@@ -134,7 +138,7 @@
       </g>
       <g
          id="g12394"
-         transform="matrix(0.36251834,0,0,0.69072191,43.951246,21.812358)">
+         transform="matrix(0.29363986,0,0,0.55948475,50.488514,32.186752)">
         <path
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 90.715467,67.151768 4.406604,0.0047"
@@ -178,7 +182,7 @@
       </g>
       <g
          id="g12572"
-         transform="matrix(0,0.36251834,-0.69072191,0,134.92678,31.931095)">
+         transform="matrix(0,0.29363986,-0.55948475,0,124.17869,40.382929)">
         <path
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 90.715467,67.151768 4.406604,0.0047"
@@ -222,7 +226,7 @@
       </g>
       <g
          id="g12590"
-         transform="matrix(0,0.36251834,-0.69072191,0,134.92678,45.388043)">
+         transform="matrix(0,0.29363986,-0.55948475,0,124.17869,51.283057)">
         <path
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 90.715467,67.151768 4.406604,0.0047"
@@ -265,12 +269,21 @@
            sodipodi:nodetypes="cc" />
       </g>
       <ellipse
-         style="fill:none;stroke:#000000;stroke-width:0.567;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.45927;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path40088"
-         cx="80.256195"
-         cy="67.98645"
-         rx="0.27196068"
-         ry="0.2996538" />
+         cx="79.895523"
+         cy="69.587776"
+         rx="0.22028816"
+         ry="0.24271959" />
     </g>
+    <g
+       id="g33509"
+       transform="translate(-0.01600941,0.19346544)" />
+    <path
+       id="rect43951"
+       style="fill:none;stroke:#000000;stroke-width:0.22;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 78.176044,70.214357 v -0.488036 h 0.488037 m 0.976073,0 h 0.976073 m 0.976074,0 h 0.976073 m 0.976073,0 h 0.488037 v 0.488036 m 0,0.976073 v 0.976073 m 0,0.976073 v 0.976073 m 0,0.976073 v 0.488036 h -0.488037 m -0.976073,0 h -0.976073 m -0.976074,0 h -0.976073 m -0.976073,0 h -0.488037 l 0,-0.488036 m 0,-0.976073 v -0.976073 m 0,-0.976073 V 71.19043 m 0,-0.976073 v -0.488036"
+       inkscape:path-effect="#path-effect44096"
+       inkscape:original-d="m 78.176044,69.726321 h 5.85644 v 5.856437 h -5.85644 z" />
   </g>
 </svg>

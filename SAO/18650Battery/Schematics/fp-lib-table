@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "18650Battery")(type KiCad)(uri "$(KIPRJMOD)/18650Battery.pretty")(options "")(descr ""))
+)

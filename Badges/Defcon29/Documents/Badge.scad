@@ -10,14 +10,14 @@ legends = ["A","B","C","D","E","F","/","7","4","1","Tab","*","8","5","2","0"];
 le2 = ["?","9","6","3",".","Backspace","-","+","Enter"];
 ent = ["E","n","t","e","r"];
 
-/*
+
 //Row 0
 //A
 translate_u(0,1) no_stem_support() rounded_cherry()  dcs_row(0) legend(legends[0], [0,0], 6) key();
 for (x = [0:1:4]) {
     translate_u(0,-x) no_stem_support() rounded_cherry()  dcs_row(x) legend(legends[(x+1)], [0,0], 6) key();
 } 
-*/
+
 
 //Row 1
 for (x = [0:1:3]) {
