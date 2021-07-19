@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccT3btxY.s 			page 1
+ARM GAS  /tmp/ccjzD7jO.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
   29:Inc/lis3dh_reg.c **** 
   30:Inc/lis3dh_reg.c **** /**
   31:Inc/lis3dh_reg.c ****   * @defgroup  LIS3DH_Interfaces_Functions
-ARM GAS  /tmp/ccT3btxY.s 			page 2
+ARM GAS  /tmp/ccjzD7jO.s 			page 2
 
 
   32:Inc/lis3dh_reg.c ****   * @brief     This section provide a set of functions used to read and
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
   57              		.global	lis3dh_write_reg
   58              		.syntax unified
   59              		.code	16
-ARM GAS  /tmp/ccT3btxY.s 			page 3
+ARM GAS  /tmp/ccjzD7jO.s 			page 3
 
 
   60              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
   95              		.section	.text.lis3dh_from_fs2_hr_to_mg,"ax",%progbits
   96              		.align	1
   97              		.global	lis3dh_from_fs2_hr_to_mg
-ARM GAS  /tmp/ccT3btxY.s 			page 4
+ARM GAS  /tmp/ccjzD7jO.s 			page 4
 
 
   98              		.syntax unified
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  137              		.thumb_func
  138              		.fpu softvfp
  140              	lis3dh_from_fs4_hr_to_mg:
-ARM GAS  /tmp/ccT3btxY.s 			page 5
+ARM GAS  /tmp/ccjzD7jO.s 			page 5
 
 
  141              	.LVL9:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  189              	.LCFI4:
  190              		.cfi_def_cfa_offset 8
  191              		.cfi_offset 4, -8
-ARM GAS  /tmp/ccT3btxY.s 			page 6
+ARM GAS  /tmp/ccjzD7jO.s 			page 6
 
 
  192              		.cfi_offset 14, -4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  242              	.LVL19:
  243              		.loc 1 109 33 view .LVU43
  244 000e 0249     		ldr	r1, .L7
-ARM GAS  /tmp/ccT3btxY.s 			page 7
+ARM GAS  /tmp/ccjzD7jO.s 			page 7
 
 
  245 0010 FFF7FEFF 		bl	__aeabi_fmul
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  115:Inc/lis3dh_reg.c **** }
  296              		.loc 1 115 1 view .LVU52
  297              		@ sp needed
-ARM GAS  /tmp/ccT3btxY.s 			page 8
+ARM GAS  /tmp/ccjzD7jO.s 			page 8
 
 
  298 001c 10BD     		pop	{r4, pc}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  350              		.syntax unified
  351              		.code	16
  352              		.thumb_func
-ARM GAS  /tmp/ccT3btxY.s 			page 9
+ARM GAS  /tmp/ccjzD7jO.s 			page 9
 
 
  353              		.fpu softvfp
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  402              		@ frame_needed = 0, uses_anonymous_args = 0
  403              		.loc 1 128 1 is_stmt 0 view .LVU68
  404 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccT3btxY.s 			page 10
+ARM GAS  /tmp/ccjzD7jO.s 			page 10
 
 
  405              	.LCFI9:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  455 0006 F221     		movs	r1, #242
  456 0008 8905     		lsls	r1, r1, #22
  457 000a FFF7FEFF 		bl	__aeabi_fmul
-ARM GAS  /tmp/ccT3btxY.s 			page 11
+ARM GAS  /tmp/ccjzD7jO.s 			page 11
 
 
  458              	.LVL40:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  509 0016 0249     		ldr	r1, .L19
  510 0018 FFF7FEFF 		bl	__aeabi_fadd
  511              	.LVL46:
-ARM GAS  /tmp/ccT3btxY.s 			page 12
+ARM GAS  /tmp/ccjzD7jO.s 			page 12
 
 
  140:Inc/lis3dh_reg.c **** }
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  563              		.section	.text.lis3dh_from_fs4_lp_to_mg,"ax",%progbits
  564              		.align	1
  565              		.global	lis3dh_from_fs4_lp_to_mg
-ARM GAS  /tmp/ccT3btxY.s 			page 13
+ARM GAS  /tmp/ccjzD7jO.s 			page 13
 
 
  566              		.syntax unified
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  615              		.loc 1 153 1 is_stmt 1 view -0
  616              		.cfi_startproc
  617              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccT3btxY.s 			page 14
+ARM GAS  /tmp/ccjzD7jO.s 			page 14
 
 
  618              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  668 0002 FFF7FEFF 		bl	__aeabi_i2f
  669              	.LVL60:
  670              		.loc 1 159 24 view .LVU114
-ARM GAS  /tmp/ccT3btxY.s 			page 15
+ARM GAS  /tmp/ccjzD7jO.s 			page 15
 
 
  671 0006 EE21     		movs	r1, #238
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  722              	.LVL66:
  165:Inc/lis3dh_reg.c **** }
  723              		.loc 1 165 1 view .LVU123
-ARM GAS  /tmp/ccT3btxY.s 			page 16
+ARM GAS  /tmp/ccjzD7jO.s 			page 16
 
 
  724              		@ sp needed
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  190:Inc/lis3dh_reg.c **** 
  191:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_STATUS_REG_AUX, buff, 1);
  756              		.loc 1 191 3 view .LVU127
-ARM GAS  /tmp/ccT3btxY.s 			page 17
+ARM GAS  /tmp/ccjzD7jO.s 			page 17
 
 
  757              		.loc 1 191 9 is_stmt 0 view .LVU128
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  798              		.loc 1 206 3 view .LVU135
  207:Inc/lis3dh_reg.c **** 
  208:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_STATUS_REG_AUX,
-ARM GAS  /tmp/ccT3btxY.s 			page 18
+ARM GAS  /tmp/ccjzD7jO.s 			page 18
 
 
  799              		.loc 1 208 3 view .LVU136
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  840              		@ frame_needed = 0, uses_anonymous_args = 0
  841              		.loc 1 223 1 is_stmt 0 view .LVU146
  842 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  /tmp/ccT3btxY.s 			page 19
+ARM GAS  /tmp/ccjzD7jO.s 			page 19
 
 
  843              	.LCFI20:
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  890              	.LVL78:
  891              	.LFB20:
  233:Inc/lis3dh_reg.c **** /**
-ARM GAS  /tmp/ccT3btxY.s 			page 20
+ARM GAS  /tmp/ccjzD7jO.s 			page 20
 
 
  234:Inc/lis3dh_reg.c ****   * @brief  Temperature output value.[get]
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  931              		.loc 1 248 8 view .LVU172
  932 001e 2380     		strh	r3, [r4]
  249:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 21
+ARM GAS  /tmp/ccjzD7jO.s 			page 21
 
 
  250:Inc/lis3dh_reg.c ****   return ret;
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  964 0002 82B0     		sub	sp, sp, #8
  965              	.LCFI25:
  966              		.cfi_def_cfa_offset 16
-ARM GAS  /tmp/ccT3btxY.s 			page 22
+ARM GAS  /tmp/ccjzD7jO.s 			page 22
 
 
  967 0004 0C00     		movs	r4, r1
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1012              		.loc 1 283 12 is_stmt 0 view .LVU200
  1013 0030 6B46     		mov	r3, sp
  1014 0032 5B79     		ldrb	r3, [r3, #5]
-ARM GAS  /tmp/ccT3btxY.s 			page 23
+ARM GAS  /tmp/ccjzD7jO.s 			page 23
 
 
  1015              		.loc 1 283 10 view .LVU201
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  307:Inc/lis3dh_reg.c ****     if (val != LIS3DH_AUX_DISABLE)
  308:Inc/lis3dh_reg.c ****     {
  309:Inc/lis3dh_reg.c ****       /* Required in order to use auxiliary adc */
-ARM GAS  /tmp/ccT3btxY.s 			page 24
+ARM GAS  /tmp/ccjzD7jO.s 			page 24
 
 
  310:Inc/lis3dh_reg.c ****       ret = lis3dh_block_data_update_set(ctx, PROPERTY_ENABLE);
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1073 000e FFF7FEFF 		bl	lis3dh_read_reg
  1074              	.LVL88:
  339:Inc/lis3dh_reg.c ****                         (uint8_t *)&temp_cfg_reg, 1);
-ARM GAS  /tmp/ccT3btxY.s 			page 25
+ARM GAS  /tmp/ccjzD7jO.s 			page 25
 
 
  340:Inc/lis3dh_reg.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  344:Inc/lis3dh_reg.c ****   }
  1109              		.loc 1 344 5 is_stmt 1 view .LVU229
  344:Inc/lis3dh_reg.c ****   }
-ARM GAS  /tmp/ccT3btxY.s 			page 26
+ARM GAS  /tmp/ccjzD7jO.s 			page 26
 
 
  1110              		.loc 1 344 10 is_stmt 0 view .LVU230
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1150              		.loc 1 373 3 is_stmt 1 view .LVU235
  374:Inc/lis3dh_reg.c ****   lis3dh_ctrl_reg4_t ctrl_reg4;
  1151              		.loc 1 374 3 view .LVU236
-ARM GAS  /tmp/ccT3btxY.s 			page 27
+ARM GAS  /tmp/ccjzD7jO.s 			page 27
 
 
  375:Inc/lis3dh_reg.c ****   int32_t ret;
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1189 0032 1370     		strb	r3, [r2]
  1190              	.L44:
  392:Inc/lis3dh_reg.c ****     }
-ARM GAS  /tmp/ccT3btxY.s 			page 28
+ARM GAS  /tmp/ccjzD7jO.s 			page 28
 
 
  393:Inc/lis3dh_reg.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1222 004e 30BD     		pop	{r4, r5, pc}
  1223              	.LVL97:
  1224              	.L48:
-ARM GAS  /tmp/ccT3btxY.s 			page 29
+ARM GAS  /tmp/ccjzD7jO.s 			page 29
 
 
  382:Inc/lis3dh_reg.c ****                           (uint8_t *)&ctrl_reg4, 1);
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1267 0086 6A46     		mov	r2, sp
  1268 0088 1370     		strb	r3, [r2]
  1269 008a D7E7     		b	.L46
-ARM GAS  /tmp/ccT3btxY.s 			page 30
+ARM GAS  /tmp/ccjzD7jO.s 			page 30
 
 
  1270              	.L51:
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1309 0002 83B0     		sub	sp, sp, #12
  1310              	.LCFI31:
  1311              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/ccT3btxY.s 			page 31
+ARM GAS  /tmp/ccjzD7jO.s 			page 31
 
 
  1312 0004 0500     		movs	r5, r0
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1338              	.LVL107:
  1339              	.L56:
  436:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 32
+ARM GAS  /tmp/ccjzD7jO.s 			page 32
 
 
  1340              		.loc 1 436 5 is_stmt 1 view .LVU291
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  454:Inc/lis3dh_reg.c **** }
  1380              		.loc 1 454 3 is_stmt 1 view .LVU306
  454:Inc/lis3dh_reg.c **** }
-ARM GAS  /tmp/ccT3btxY.s 			page 33
+ARM GAS  /tmp/ccjzD7jO.s 			page 33
 
 
  1381              		.loc 1 454 10 is_stmt 0 view .LVU307
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1422 000e FFF7FEFF 		bl	lis3dh_read_reg
  1423              	.LVL112:
  471:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 34
+ARM GAS  /tmp/ccjzD7jO.s 			page 34
 
 
  472:Inc/lis3dh_reg.c ****   if (ret == 0)
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1462              		.cfi_endproc
  1463              	.LFE26:
  1465              		.section	.text.lis3dh_data_rate_get,"ax",%progbits
-ARM GAS  /tmp/ccT3btxY.s 			page 35
+ARM GAS  /tmp/ccjzD7jO.s 			page 35
 
 
  1466              		.align	1
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1504              		.loc 1 496 20 is_stmt 0 view .LVU335
  1505 0012 2A78     		ldrb	r2, [r5]
  1506 0014 1309     		lsrs	r3, r2, #4
-ARM GAS  /tmp/ccT3btxY.s 			page 36
+ARM GAS  /tmp/ccjzD7jO.s 			page 36
 
 
  1507              		.loc 1 496 3 view .LVU336
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  523:Inc/lis3dh_reg.c ****       *val = LIS3DH_ODR_200Hz;
  524:Inc/lis3dh_reg.c ****       break;
  525:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 37
+ARM GAS  /tmp/ccjzD7jO.s 			page 37
 
 
  526:Inc/lis3dh_reg.c ****     case LIS3DH_ODR_400Hz:
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1561              		.loc 1 512 7 is_stmt 1 view .LVU350
  1562 003a F4E7     		b	.L60
  1563              	.L68:
-ARM GAS  /tmp/ccT3btxY.s 			page 38
+ARM GAS  /tmp/ccjzD7jO.s 			page 38
 
 
  515:Inc/lis3dh_reg.c ****       break;
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1601 005a 0923     		movs	r3, #9
  1602 005c 2370     		strb	r3, [r4]
  536:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 39
+ARM GAS  /tmp/ccjzD7jO.s 			page 39
 
 
  1603              		.loc 1 536 7 is_stmt 1 view .LVU368
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1641              		.cfi_offset 5, -8
  1642              		.cfi_offset 14, -4
  1643 0002 83B0     		sub	sp, sp, #12
-ARM GAS  /tmp/ccT3btxY.s 			page 40
+ARM GAS  /tmp/ccjzD7jO.s 			page 40
 
 
  1644              	.LCFI37:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1683 002c 1371     		strb	r3, [r2, #4]
  566:Inc/lis3dh_reg.c ****   }
  1684              		.loc 1 566 5 is_stmt 1 view .LVU387
-ARM GAS  /tmp/ccT3btxY.s 			page 41
+ARM GAS  /tmp/ccjzD7jO.s 			page 41
 
 
  566:Inc/lis3dh_reg.c ****   }
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1724              		.cfi_def_cfa_offset 24
  1725 0004 0C00     		movs	r4, r1
  584:Inc/lis3dh_reg.c ****   lis3dh_ctrl_reg2_t ctrl_reg2;
-ARM GAS  /tmp/ccT3btxY.s 			page 42
+ARM GAS  /tmp/ccjzD7jO.s 			page 42
 
 
  1726              		.loc 1 584 3 is_stmt 1 view .LVU394
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  601:Inc/lis3dh_reg.c ****   *
  602:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
  603:Inc/lis3dh_reg.c ****   * @param  val      change the values of hpcf in reg CTRL_REG2
-ARM GAS  /tmp/ccT3btxY.s 			page 43
+ARM GAS  /tmp/ccjzD7jO.s 			page 43
 
 
  604:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1801              	.LVL136:
  1802              		.loc 1 622 1 view .LVU415
  1803 0018 30BD     		pop	{r4, r5, pc}
-ARM GAS  /tmp/ccT3btxY.s 			page 44
+ARM GAS  /tmp/ccjzD7jO.s 			page 44
 
 
  1804              	.LVL137:
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  631:Inc/lis3dh_reg.c ****   * LIGHT        0.002Hz 0.02Hz 0.05Hz 0.1Hz 0.2Hz  0.5Hz  1Hz    4Hz    12Hz
  632:Inc/lis3dh_reg.c ****   *
  633:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
-ARM GAS  /tmp/ccT3btxY.s 			page 45
+ARM GAS  /tmp/ccjzD7jO.s 			page 45
 
 
  634:Inc/lis3dh_reg.c ****   * @param  val      get the values of hpcf in reg CTRL_REG2
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  648:Inc/lis3dh_reg.c ****     case LIS3DH_AGGRESSIVE:
  649:Inc/lis3dh_reg.c ****       *val = LIS3DH_AGGRESSIVE;
  650:Inc/lis3dh_reg.c ****       break;
-ARM GAS  /tmp/ccT3btxY.s 			page 46
+ARM GAS  /tmp/ccjzD7jO.s 			page 46
 
 
  651:Inc/lis3dh_reg.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1915              	.L84:
  657:Inc/lis3dh_reg.c ****       break;
  1916              		.loc 1 657 7 is_stmt 1 view .LVU445
-ARM GAS  /tmp/ccT3btxY.s 			page 47
+ARM GAS  /tmp/ccjzD7jO.s 			page 47
 
 
  657:Inc/lis3dh_reg.c ****       break;
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1955              		.cfi_offset 14, -4
  1956 0002 83B0     		sub	sp, sp, #12
  1957              	.LCFI45:
-ARM GAS  /tmp/ccT3btxY.s 			page 48
+ARM GAS  /tmp/ccjzD7jO.s 			page 48
 
 
  1958              		.cfi_def_cfa_offset 24
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  1996 002a 6A46     		mov	r2, sp
  1997 002c 1371     		strb	r3, [r2, #4]
  690:Inc/lis3dh_reg.c ****   }
-ARM GAS  /tmp/ccT3btxY.s 			page 49
+ARM GAS  /tmp/ccjzD7jO.s 			page 49
 
 
  1998              		.loc 1 690 5 is_stmt 1 view .LVU467
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2038              		.cfi_def_cfa_offset 24
  2039 0004 0C00     		movs	r4, r1
  707:Inc/lis3dh_reg.c ****   lis3dh_ctrl_reg2_t ctrl_reg2;
-ARM GAS  /tmp/ccT3btxY.s 			page 50
+ARM GAS  /tmp/ccjzD7jO.s 			page 50
 
 
  2040              		.loc 1 707 3 is_stmt 1 view .LVU474
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  727:Inc/lis3dh_reg.c ****       *val = LIS3DH_AUTORST_ON_INT;
  2074              		.loc 1 727 7 is_stmt 1 view .LVU486
  2075              		.loc 1 727 12 is_stmt 0 view .LVU487
-ARM GAS  /tmp/ccT3btxY.s 			page 51
+ARM GAS  /tmp/ccjzD7jO.s 			page 51
 
 
  2076 002e 0323     		movs	r3, #3
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2110              		.cfi_endproc
  2111              	.LFE33:
  2113              		.section	.text.lis3dh_full_scale_set,"ax",%progbits
-ARM GAS  /tmp/ccT3btxY.s 			page 52
+ARM GAS  /tmp/ccjzD7jO.s 			page 52
 
 
  2114              		.align	1
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2152              		.loc 1 753 6 is_stmt 0 view .LVU510
  2153 0012 0028     		cmp	r0, #0
  2154 0014 01D0     		beq	.L104
-ARM GAS  /tmp/ccT3btxY.s 			page 53
+ARM GAS  /tmp/ccjzD7jO.s 			page 53
 
 
  2155              	.L102:
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2196              		.code	16
  2197              		.thumb_func
  2198              		.fpu softvfp
-ARM GAS  /tmp/ccT3btxY.s 			page 54
+ARM GAS  /tmp/ccjzD7jO.s 			page 54
 
 
  2200              	lis3dh_full_scale_get:
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2237 001a 10D0     		beq	.L106
  2238 001c 06D8     		bhi	.L107
  2239 001e 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccT3btxY.s 			page 55
+ARM GAS  /tmp/ccjzD7jO.s 			page 55
 
 
  2240 0020 09D0     		beq	.L108
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2266              		.loc 1 801 1 is_stmt 0 view .LVU540
  2267 003a 03B0     		add	sp, sp, #12
  2268              		@ sp needed
-ARM GAS  /tmp/ccT3btxY.s 			page 56
+ARM GAS  /tmp/ccjzD7jO.s 			page 56
 
 
  2269              	.LVL167:
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2306              		@ frame_needed = 0, uses_anonymous_args = 0
  2307              		.loc 1 812 1 is_stmt 0 view .LVU551
  2308 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  /tmp/ccT3btxY.s 			page 57
+ARM GAS  /tmp/ccjzD7jO.s 			page 57
 
 
  2309              	.LCFI52:
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2348 0020 7F23     		movs	r3, #127
  2349 0022 1340     		ands	r3, r2
  2350 0024 2B43     		orrs	r3, r5
-ARM GAS  /tmp/ccT3btxY.s 			page 58
+ARM GAS  /tmp/ccjzD7jO.s 			page 58
 
 
  2351 0026 6A46     		mov	r2, sp
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2398              		.loc 1 300 3 view .LVU571
  302:Inc/lis3dh_reg.c ****                         (uint8_t *)&temp_cfg_reg, 1);
  2399              		.loc 1 302 3 view .LVU572
-ARM GAS  /tmp/ccT3btxY.s 			page 59
+ARM GAS  /tmp/ccjzD7jO.s 			page 59
 
 
  302:Inc/lis3dh_reg.c ****                         (uint8_t *)&temp_cfg_reg, 1);
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2440              	.L120:
  316:Inc/lis3dh_reg.c ****     temp_cfg_reg.adc_pd  = (uint8_t) val &  0x01U;
  2441              		.loc 1 316 5 is_stmt 1 view .LVU587
-ARM GAS  /tmp/ccT3btxY.s 			page 60
+ARM GAS  /tmp/ccjzD7jO.s 			page 60
 
 
  316:Inc/lis3dh_reg.c ****     temp_cfg_reg.adc_pd  = (uint8_t) val &  0x01U;
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  826:Inc/lis3dh_reg.c **** 
  827:Inc/lis3dh_reg.c **** /**
  828:Inc/lis3dh_reg.c ****   * @brief  Block Data Update.[get]
-ARM GAS  /tmp/ccT3btxY.s 			page 61
+ARM GAS  /tmp/ccjzD7jO.s 			page 61
 
 
  829:Inc/lis3dh_reg.c ****   *
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2527              		.loc 1 844 1 view .LVU609
  2528 001a 30BD     		pop	{r4, r5, pc}
  2529              		.cfi_endproc
-ARM GAS  /tmp/ccT3btxY.s 			page 62
+ARM GAS  /tmp/ccjzD7jO.s 			page 62
 
 
  2530              	.LFE37:
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2568              	.LFE38:
  2570              		.section	.text.lis3dh_filter_reference_get,"ax",%progbits
  2571              		.align	1
-ARM GAS  /tmp/ccT3btxY.s 			page 63
+ARM GAS  /tmp/ccjzD7jO.s 			page 63
 
 
  2572              		.global	lis3dh_filter_reference_get
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2610              		.global	lis3dh_xl_data_ready_get
  2611              		.syntax unified
  2612              		.code	16
-ARM GAS  /tmp/ccT3btxY.s 			page 64
+ARM GAS  /tmp/ccjzD7jO.s 			page 64
 
 
  2613              		.thumb_func
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  896:Inc/lis3dh_reg.c **** 
  897:Inc/lis3dh_reg.c ****   return ret;
  2653              		.loc 1 897 3 is_stmt 1 view .LVU636
-ARM GAS  /tmp/ccT3btxY.s 			page 65
+ARM GAS  /tmp/ccjzD7jO.s 			page 65
 
 
  898:Inc/lis3dh_reg.c **** }
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2695 000a 2A00     		movs	r2, r5
  2696 000c 2721     		movs	r1, #39
  2697              	.LVL200:
-ARM GAS  /tmp/ccT3btxY.s 			page 66
+ARM GAS  /tmp/ccjzD7jO.s 			page 66
 
 
  2698              		.loc 1 912 9 view .LVU645
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2740              		.cfi_def_cfa_offset 16
  2741 0004 0C00     		movs	r4, r1
  927:Inc/lis3dh_reg.c ****   uint8_t buff[6];
-ARM GAS  /tmp/ccT3btxY.s 			page 67
+ARM GAS  /tmp/ccjzD7jO.s 			page 67
 
 
  2742              		.loc 1 927 3 is_stmt 1 view .LVU654
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2788 0032 5B79     		ldrb	r3, [r3, #5]
  2789              		.loc 1 935 10 view .LVU677
  2790 0034 A380     		strh	r3, [r4, #4]
-ARM GAS  /tmp/ccT3btxY.s 			page 68
+ARM GAS  /tmp/ccjzD7jO.s 			page 68
 
 
  936:Inc/lis3dh_reg.c ****   val[2] = (val[2] * 256) + (int16_t)buff[4];
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  961:Inc/lis3dh_reg.c **** {
  2822              		.loc 1 961 1 is_stmt 1 view -0
  2823              		.cfi_startproc
-ARM GAS  /tmp/ccT3btxY.s 			page 69
+ARM GAS  /tmp/ccjzD7jO.s 			page 69
 
 
  2824              		@ args = 0, pretend = 0, frame = 0
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2864              		.loc 1 977 1 is_stmt 0 view .LVU695
  2865 0000 30B5     		push	{r4, r5, lr}
  2866              	.LCFI67:
-ARM GAS  /tmp/ccT3btxY.s 			page 70
+ARM GAS  /tmp/ccjzD7jO.s 			page 70
 
 
  2867              		.cfi_def_cfa_offset 12
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2906 0022 1B79     		ldrb	r3, [r3, #4]
  2907 0024 0621     		movs	r1, #6
  2908 0026 8B43     		bics	r3, r1
-ARM GAS  /tmp/ccT3btxY.s 			page 71
+ARM GAS  /tmp/ccjzD7jO.s 			page 71
 
 
  2909 0028 1343     		orrs	r3, r2
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  2949              		.cfi_offset 14, -4
  2950 0002 83B0     		sub	sp, sp, #12
  2951              	.LCFI70:
-ARM GAS  /tmp/ccT3btxY.s 			page 72
+ARM GAS  /tmp/ccjzD7jO.s 			page 72
 
 
  2952              		.cfi_def_cfa_offset 24
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1025:Inc/lis3dh_reg.c **** 
 1026:Inc/lis3dh_reg.c ****   return ret;
  2983              		.loc 1 1026 3 view .LVU725
-ARM GAS  /tmp/ccT3btxY.s 			page 73
+ARM GAS  /tmp/ccjzD7jO.s 			page 73
 
 
  2984              		.loc 1 1026 10 is_stmt 0 view .LVU726
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1031:Inc/lis3dh_reg.c ****   *
 1032:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
 1033:Inc/lis3dh_reg.c ****   * @param  val      change the values of ble in reg CTRL_REG4
-ARM GAS  /tmp/ccT3btxY.s 			page 74
+ARM GAS  /tmp/ccjzD7jO.s 			page 74
 
 
 1034:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3063              		.loc 1 1051 1 view .LVU748
  3064 0018 30BD     		pop	{r4, r5, pc}
  3065              	.LVL226:
-ARM GAS  /tmp/ccT3btxY.s 			page 75
+ARM GAS  /tmp/ccjzD7jO.s 			page 75
 
 
  3066              	.L139:
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1061:Inc/lis3dh_reg.c **** int32_t lis3dh_data_format_get(stmdev_ctx_t *ctx, lis3dh_ble_t *val)
 1062:Inc/lis3dh_reg.c **** {
  3106              		.loc 1 1062 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccT3btxY.s 			page 76
+ARM GAS  /tmp/ccjzD7jO.s 			page 76
 
 
  3107              		.cfi_startproc
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3144              		.loc 1 1079 12 is_stmt 0 view .LVU767
  3145 0020 0023     		movs	r3, #0
  3146 0022 2B70     		strb	r3, [r5]
-ARM GAS  /tmp/ccT3btxY.s 			page 77
+ARM GAS  /tmp/ccjzD7jO.s 			page 77
 
 
 1080:Inc/lis3dh_reg.c ****       break;
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1091:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
 1092:Inc/lis3dh_reg.c ****   *
 1093:Inc/lis3dh_reg.c ****   */
-ARM GAS  /tmp/ccT3btxY.s 			page 78
+ARM GAS  /tmp/ccjzD7jO.s 			page 78
 
 
 1094:Inc/lis3dh_reg.c **** int32_t lis3dh_boot_set(stmdev_ctx_t *ctx, uint8_t val)
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3225              	.L148:
 1103:Inc/lis3dh_reg.c ****     ret = lis3dh_write_reg(ctx, LIS3DH_CTRL_REG5, (uint8_t *)&ctrl_reg5, 1);
  3226              		.loc 1 1103 5 is_stmt 1 view .LVU790
-ARM GAS  /tmp/ccT3btxY.s 			page 79
+ARM GAS  /tmp/ccjzD7jO.s 			page 79
 
 
 1103:Inc/lis3dh_reg.c ****     ret = lis3dh_write_reg(ctx, LIS3DH_CTRL_REG5, (uint8_t *)&ctrl_reg5, 1);
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3266              		@ frame_needed = 0, uses_anonymous_args = 0
  3267              		.loc 1 1119 1 is_stmt 0 view .LVU798
  3268 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  /tmp/ccT3btxY.s 			page 80
+ARM GAS  /tmp/ccjzD7jO.s 			page 80
 
 
  3269              	.LCFI77:
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1128:Inc/lis3dh_reg.c **** 
 1129:Inc/lis3dh_reg.c **** /**
 1130:Inc/lis3dh_reg.c ****   * @brief  Info about device status.[get]
-ARM GAS  /tmp/ccT3btxY.s 			page 81
+ARM GAS  /tmp/ccjzD7jO.s 			page 81
 
 
 1131:Inc/lis3dh_reg.c ****   *
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1149:Inc/lis3dh_reg.c **** 
 1150:Inc/lis3dh_reg.c **** /**
 1151:Inc/lis3dh_reg.c ****   * @defgroup   LIS3DH_Interrupts_generator_1
-ARM GAS  /tmp/ccT3btxY.s 			page 82
+ARM GAS  /tmp/ccjzD7jO.s 			page 82
 
 
 1152:Inc/lis3dh_reg.c ****   * @brief      This section group all the functions that manage the first
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3387              		.thumb_func
  3388              		.fpu softvfp
  3390              	lis3dh_int1_gen_conf_get:
-ARM GAS  /tmp/ccT3btxY.s 			page 83
+ARM GAS  /tmp/ccjzD7jO.s 			page 83
 
 
  3391              	.LVL251:
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3429              	.LVL254:
  3430              	.LFB53:
 1193:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 84
+ARM GAS  /tmp/ccjzD7jO.s 			page 84
 
 
 1194:Inc/lis3dh_reg.c **** /**
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1212:Inc/lis3dh_reg.c ****   * @brief  User-defined threshold value for xl interrupt event on
 1213:Inc/lis3dh_reg.c ****   *         generator 1.[set]
 1214:Inc/lis3dh_reg.c ****   *         LSb = 16mg@2g / 32mg@4g / 62mg@8g / 186mg@16g
-ARM GAS  /tmp/ccT3btxY.s 			page 85
+ARM GAS  /tmp/ccjzD7jO.s 			page 85
 
 
 1215:Inc/lis3dh_reg.c ****   *
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3502 0016 03B0     		add	sp, sp, #12
  3503              		@ sp needed
  3504              	.LVL260:
-ARM GAS  /tmp/ccT3btxY.s 			page 86
+ARM GAS  /tmp/ccjzD7jO.s 			page 86
 
 
  3505              		.loc 1 1235 1 view .LVU852
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1243:Inc/lis3dh_reg.c ****   * @param  val      change the values of ths in reg INT1_THS
 1244:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
 1245:Inc/lis3dh_reg.c ****   *
-ARM GAS  /tmp/ccT3btxY.s 			page 87
+ARM GAS  /tmp/ccjzD7jO.s 			page 87
 
 
 1246:Inc/lis3dh_reg.c ****   */
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3591              		.section	.text.lis3dh_int1_gen_duration_set,"ax",%progbits
  3592              		.align	1
  3593              		.global	lis3dh_int1_gen_duration_set
-ARM GAS  /tmp/ccT3btxY.s 			page 88
+ARM GAS  /tmp/ccjzD7jO.s 			page 88
 
 
  3594              		.syntax unified
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3630              		.loc 1 1275 6 is_stmt 0 view .LVU881
  3631 0012 0028     		cmp	r0, #0
  3632 0014 01D0     		beq	.L160
-ARM GAS  /tmp/ccT3btxY.s 			page 89
+ARM GAS  /tmp/ccjzD7jO.s 			page 89
 
 
  3633              	.L158:
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3673              		.code	16
  3674              		.thumb_func
  3675              		.fpu softvfp
-ARM GAS  /tmp/ccT3btxY.s 			page 90
+ARM GAS  /tmp/ccjzD7jO.s 			page 90
 
 
  3677              	lis3dh_int1_gen_duration_get:
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3713 0018 2370     		strb	r3, [r4]
 1302:Inc/lis3dh_reg.c **** 
 1303:Inc/lis3dh_reg.c ****   return ret;
-ARM GAS  /tmp/ccT3btxY.s 			page 91
+ARM GAS  /tmp/ccjzD7jO.s 			page 91
 
 
  3714              		.loc 1 1303 3 is_stmt 1 view .LVU901
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3744              		.cfi_offset 14, -4
  3745 0002 0A00     		movs	r2, r1
 1330:Inc/lis3dh_reg.c ****   int32_t ret;
-ARM GAS  /tmp/ccT3btxY.s 			page 92
+ARM GAS  /tmp/ccjzD7jO.s 			page 92
 
 
  3746              		.loc 1 1330 3 is_stmt 1 view .LVU906
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3784              		.loc 1 1348 3 is_stmt 1 view .LVU914
 1349:Inc/lis3dh_reg.c **** 
 1350:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_INT2_CFG, (uint8_t *) val, 1);
-ARM GAS  /tmp/ccT3btxY.s 			page 93
+ARM GAS  /tmp/ccjzD7jO.s 			page 93
 
 
  3785              		.loc 1 1350 3 view .LVU915
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3824              		.loc 1 1367 9 is_stmt 0 view .LVU924
  3825 0004 0123     		movs	r3, #1
  3826 0006 3521     		movs	r1, #53
-ARM GAS  /tmp/ccT3btxY.s 			page 94
+ARM GAS  /tmp/ccjzD7jO.s 			page 94
 
 
  3827              	.LVL286:
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3866              		.loc 1 1384 3 view .LVU931
 1385:Inc/lis3dh_reg.c **** 
 1386:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_INT2_THS, (uint8_t *)&int2_ths, 1);
-ARM GAS  /tmp/ccT3btxY.s 			page 95
+ARM GAS  /tmp/ccjzD7jO.s 			page 95
 
 
  3867              		.loc 1 1386 3 view .LVU932
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3907              		.loc 1 1391 11 view .LVU943
  3908 0034 FFF7FEFF 		bl	lis3dh_write_reg
  3909              	.LVL294:
-ARM GAS  /tmp/ccT3btxY.s 			page 96
+ARM GAS  /tmp/ccjzD7jO.s 			page 96
 
 
 1394:Inc/lis3dh_reg.c **** }
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3947 0008 0123     		movs	r3, #1
  3948 000a 2A00     		movs	r2, r5
  3949 000c 3621     		movs	r1, #54
-ARM GAS  /tmp/ccT3btxY.s 			page 97
+ARM GAS  /tmp/ccjzD7jO.s 			page 97
 
 
  3950              	.LVL296:
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  3990              		.cfi_offset 4, -12
  3991              		.cfi_offset 5, -8
  3992              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccT3btxY.s 			page 98
+ARM GAS  /tmp/ccjzD7jO.s 			page 98
 
 
  3993 0002 83B0     		sub	sp, sp, #12
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4030 0026 1343     		orrs	r3, r2
  4031 0028 6A46     		mov	r2, sp
  4032 002a 1371     		strb	r3, [r2, #4]
-ARM GAS  /tmp/ccT3btxY.s 			page 99
+ARM GAS  /tmp/ccjzD7jO.s 			page 99
 
 
 1438:Inc/lis3dh_reg.c ****                            (uint8_t *)&int2_duration, 1);
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4072              	.LCFI101:
  4073              		.cfi_def_cfa_offset 24
  4074 0004 0C00     		movs	r4, r1
-ARM GAS  /tmp/ccT3btxY.s 			page 100
+ARM GAS  /tmp/ccjzD7jO.s 			page 100
 
 
 1456:Inc/lis3dh_reg.c ****   lis3dh_int2_duration_t int2_duration;
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1472:Inc/lis3dh_reg.c ****   * @defgroup  LIS3DH_Interrupt_pins
 1473:Inc/lis3dh_reg.c ****   * @brief     This section group all the functions that manage interrupt pins
 1474:Inc/lis3dh_reg.c ****   * @{
-ARM GAS  /tmp/ccT3btxY.s 			page 101
+ARM GAS  /tmp/ccjzD7jO.s 			page 101
 
 
 1475:Inc/lis3dh_reg.c ****   *
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1497:Inc/lis3dh_reg.c ****     ret = lis3dh_write_reg(ctx, LIS3DH_CTRL_REG2, (uint8_t *)&ctrl_reg2, 1);
 1498:Inc/lis3dh_reg.c ****   }
 1499:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 102
+ARM GAS  /tmp/ccjzD7jO.s 			page 102
 
 
 1500:Inc/lis3dh_reg.c ****   return ret;
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1503:Inc/lis3dh_reg.c **** /**
 1504:Inc/lis3dh_reg.c ****   * @brief  High-pass filter on interrupts/tap generator.[get]
 1505:Inc/lis3dh_reg.c ****   *
-ARM GAS  /tmp/ccT3btxY.s 			page 103
+ARM GAS  /tmp/ccjzD7jO.s 			page 103
 
 
 1506:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4233              		.align	2
  4234              	.L179:
  4235 0000 24000000 		.word	.L186
-ARM GAS  /tmp/ccT3btxY.s 			page 104
+ARM GAS  /tmp/ccjzD7jO.s 			page 104
 
 
  4236 0004 2C000000 		.word	.L185
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1559:Inc/lis3dh_reg.c **** }
  4251              		.loc 1 1559 1 is_stmt 0 view .LVU1021
  4252 0028 03B0     		add	sp, sp, #12
-ARM GAS  /tmp/ccT3btxY.s 			page 105
+ARM GAS  /tmp/ccjzD7jO.s 			page 105
 
 
  4253              		@ sp needed
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4292 0048 EEE7     		b	.L176
  4293              	.L180:
 1546:Inc/lis3dh_reg.c ****       break;
-ARM GAS  /tmp/ccT3btxY.s 			page 106
+ARM GAS  /tmp/ccjzD7jO.s 			page 106
 
 
  4294              		.loc 1 1546 7 view .LVU1038
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1566:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
 1567:Inc/lis3dh_reg.c ****   *
 1568:Inc/lis3dh_reg.c ****   */
-ARM GAS  /tmp/ccT3btxY.s 			page 107
+ARM GAS  /tmp/ccjzD7jO.s 			page 107
 
 
 1569:Inc/lis3dh_reg.c **** int32_t lis3dh_pin_int1_config_set(stmdev_ctx_t *ctx,
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1587:Inc/lis3dh_reg.c **** int32_t lis3dh_pin_int1_config_get(stmdev_ctx_t *ctx,
 1588:Inc/lis3dh_reg.c ****                                    lis3dh_ctrl_reg3_t *val)
 1589:Inc/lis3dh_reg.c **** {
-ARM GAS  /tmp/ccT3btxY.s 			page 108
+ARM GAS  /tmp/ccjzD7jO.s 			page 108
 
 
  4372              		.loc 1 1589 1 is_stmt 1 view -0
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4410              		.loc 1 1607 1 is_stmt 1 view -0
  4411              		.cfi_startproc
  4412              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/ccT3btxY.s 			page 109
+ARM GAS  /tmp/ccjzD7jO.s 			page 109
 
 
  4413              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4452 001a 0122     		movs	r2, #1
  4453 001c 2A40     		ands	r2, r5
  4454 001e 6B46     		mov	r3, sp
-ARM GAS  /tmp/ccT3btxY.s 			page 110
+ARM GAS  /tmp/ccjzD7jO.s 			page 110
 
 
  4455 0020 1B79     		ldrb	r3, [r3, #4]
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4494              	.LCFI110:
  4495              		.cfi_def_cfa_offset 12
  4496              		.cfi_offset 4, -12
-ARM GAS  /tmp/ccT3btxY.s 			page 111
+ARM GAS  /tmp/ccjzD7jO.s 			page 111
 
 
  4497              		.cfi_offset 5, -8
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1643:Inc/lis3dh_reg.c ****   * @brief   Latch interrupt request on INT2_SRC (35h) register, with
 1644:Inc/lis3dh_reg.c ****   *          INT2_SRC (35h) register cleared by reading INT2_SRC(35h)
 1645:Inc/lis3dh_reg.c ****   *          itself.[set]
-ARM GAS  /tmp/ccT3btxY.s 			page 112
+ARM GAS  /tmp/ccjzD7jO.s 			page 112
 
 
 1646:Inc/lis3dh_reg.c ****   *
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4575              		.loc 1 1667 1 view .LVU1105
  4576 0016 03B0     		add	sp, sp, #12
  4577              		@ sp needed
-ARM GAS  /tmp/ccT3btxY.s 			page 113
+ARM GAS  /tmp/ccjzD7jO.s 			page 113
 
 
  4578              	.LVL342:
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1673:Inc/lis3dh_reg.c ****   *
 1674:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
 1675:Inc/lis3dh_reg.c ****   * @param  val      Get the values of lir_int2 in reg CTRL_REG5
-ARM GAS  /tmp/ccT3btxY.s 			page 114
+ARM GAS  /tmp/ccjzD7jO.s 			page 114
 
 
 1676:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1693:Inc/lis3dh_reg.c ****     case LIS3DH_INT2_LATCHED:
 1694:Inc/lis3dh_reg.c ****       *val = LIS3DH_INT2_LATCHED;
 1695:Inc/lis3dh_reg.c ****       break;
-ARM GAS  /tmp/ccT3btxY.s 			page 115
+ARM GAS  /tmp/ccjzD7jO.s 			page 115
 
 
 1696:Inc/lis3dh_reg.c **** 
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4701              	.LFB73:
 1704:Inc/lis3dh_reg.c **** 
 1705:Inc/lis3dh_reg.c **** /**
-ARM GAS  /tmp/ccT3btxY.s 			page 116
+ARM GAS  /tmp/ccjzD7jO.s 			page 116
 
 
 1706:Inc/lis3dh_reg.c ****   * @brief  4D enable: 4D detection is enabled on INT1 pin when 6D bit
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1728:Inc/lis3dh_reg.c **** }
  4734              		.loc 1 1728 1 view .LVU1146
  4735 0016 03B0     		add	sp, sp, #12
-ARM GAS  /tmp/ccT3btxY.s 			page 117
+ARM GAS  /tmp/ccjzD7jO.s 			page 117
 
 
  4736              		@ sp needed
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1733:Inc/lis3dh_reg.c ****   *
 1734:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
 1735:Inc/lis3dh_reg.c ****   * @param  val      change the values of d4d_int1 in reg CTRL_REG5
-ARM GAS  /tmp/ccT3btxY.s 			page 118
+ARM GAS  /tmp/ccjzD7jO.s 			page 118
 
 
 1736:Inc/lis3dh_reg.c ****   * @retval          interface status (MANDATORY: return 0 -> no Error)
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4822              		.cfi_endproc
  4823              	.LFE74:
  4825              		.section	.text.lis3dh_int1_pin_notification_mode_set,"ax",%progbits
-ARM GAS  /tmp/ccT3btxY.s 			page 119
+ARM GAS  /tmp/ccjzD7jO.s 			page 119
 
 
  4826              		.align	1
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 1767:Inc/lis3dh_reg.c ****   if (ret == 0)
  4863              		.loc 1 1767 3 is_stmt 1 view .LVU1175
  4864              		.loc 1 1767 6 is_stmt 0 view .LVU1176
-ARM GAS  /tmp/ccT3btxY.s 			page 120
+ARM GAS  /tmp/ccjzD7jO.s 			page 120
 
 
  4865 0012 0028     		cmp	r0, #0
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4906              		.global	lis3dh_int1_pin_notification_mode_get
  4907              		.syntax unified
  4908              		.code	16
-ARM GAS  /tmp/ccT3btxY.s 			page 121
+ARM GAS  /tmp/ccjzD7jO.s 			page 121
 
 
  4909              		.thumb_func
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4945 0014 1B07     		lsls	r3, r3, #28
  4946 0016 DA0F     		lsrs	r2, r3, #31
  4947              		.loc 1 1793 3 view .LVU1195
-ARM GAS  /tmp/ccT3btxY.s 			page 122
+ARM GAS  /tmp/ccjzD7jO.s 			page 122
 
 
  4948 0018 002B     		cmp	r3, #0
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  4980 0032 FAE7     		b	.L212
  4981              		.cfi_endproc
  4982              	.LFE76:
-ARM GAS  /tmp/ccT3btxY.s 			page 123
+ARM GAS  /tmp/ccjzD7jO.s 			page 123
 
 
  4984              		.section	.text.lis3dh_pin_int2_config_set,"ax",%progbits
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5022              		.section	.text.lis3dh_pin_int2_config_get,"ax",%progbits
  5023              		.align	1
  5024              		.global	lis3dh_pin_int2_config_get
-ARM GAS  /tmp/ccT3btxY.s 			page 124
+ARM GAS  /tmp/ccjzD7jO.s 			page 124
 
 
  5025              		.syntax unified
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5063              		.syntax unified
  5064              		.code	16
  5065              		.thumb_func
-ARM GAS  /tmp/ccT3btxY.s 			page 125
+ARM GAS  /tmp/ccjzD7jO.s 			page 125
 
 
  5066              		.fpu softvfp
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5095              		.loc 1 1871 9 view .LVU1231
  5096 000e FFF7FEFF 		bl	lis3dh_read_reg
  5097              	.LVL382:
-ARM GAS  /tmp/ccT3btxY.s 			page 126
+ARM GAS  /tmp/ccjzD7jO.s 			page 126
 
 
 1872:Inc/lis3dh_reg.c **** 
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5136              		.cfi_endproc
  5137              	.LFE79:
  5139              		.section	.text.lis3dh_fifo_get,"ax",%progbits
-ARM GAS  /tmp/ccT3btxY.s 			page 127
+ARM GAS  /tmp/ccjzD7jO.s 			page 127
 
 
  5140              		.align	1
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5179 0012 2B78     		ldrb	r3, [r5]
  5180 0014 5B06     		lsls	r3, r3, #25
  5181 0016 DB0F     		lsrs	r3, r3, #31
-ARM GAS  /tmp/ccT3btxY.s 			page 128
+ARM GAS  /tmp/ccjzD7jO.s 			page 128
 
 
  5182              		.loc 1 1896 8 view .LVU1252
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5222              		.loc 1 1912 3 view .LVU1259
 1913:Inc/lis3dh_reg.c **** 
 1914:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_FIFO_CTRL_REG,
-ARM GAS  /tmp/ccT3btxY.s 			page 129
+ARM GAS  /tmp/ccjzD7jO.s 			page 129
 
 
  5223              		.loc 1 1914 3 view .LVU1260
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5262              	.LVL396:
 1920:Inc/lis3dh_reg.c ****                            (uint8_t *)&fifo_ctrl_reg, 1);
  5263              		.loc 1 1920 11 view .LVU1271
-ARM GAS  /tmp/ccT3btxY.s 			page 130
+ARM GAS  /tmp/ccjzD7jO.s 			page 130
 
 
  5264 0034 FFF7FEFF 		bl	lis3dh_write_reg
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5303 0008 0123     		movs	r3, #1
  5304 000a 2A00     		movs	r2, r5
  5305 000c 2E21     		movs	r1, #46
-ARM GAS  /tmp/ccT3btxY.s 			page 131
+ARM GAS  /tmp/ccjzD7jO.s 			page 131
 
 
  5306              	.LVL399:
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5345              		.cfi_def_cfa_offset 12
  5346              		.cfi_offset 4, -12
  5347              		.cfi_offset 5, -8
-ARM GAS  /tmp/ccT3btxY.s 			page 132
+ARM GAS  /tmp/ccjzD7jO.s 			page 132
 
 
  5348              		.cfi_offset 14, -4
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5385 0024 2021     		movs	r1, #32
  5386 0026 8B43     		bics	r3, r1
  5387 0028 1343     		orrs	r3, r2
-ARM GAS  /tmp/ccT3btxY.s 			page 133
+ARM GAS  /tmp/ccjzD7jO.s 			page 133
 
 
  5388 002a 6A46     		mov	r2, sp
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5427              		.cfi_offset 14, -4
  5428 0002 83B0     		sub	sp, sp, #12
  5429              	.LCFI137:
-ARM GAS  /tmp/ccT3btxY.s 			page 134
+ARM GAS  /tmp/ccjzD7jO.s 			page 134
 
 
  5430              		.cfi_def_cfa_offset 24
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5462              	.L232:
 1994:Inc/lis3dh_reg.c ****       break;
  5463              		.loc 1 1994 7 is_stmt 1 view .LVU1320
-ARM GAS  /tmp/ccT3btxY.s 			page 135
+ARM GAS  /tmp/ccjzD7jO.s 			page 135
 
 
 1994:Inc/lis3dh_reg.c ****       break;
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5503              	.LCFI138:
  5504              		.cfi_def_cfa_offset 12
  5505              		.cfi_offset 4, -12
-ARM GAS  /tmp/ccT3btxY.s 			page 136
+ARM GAS  /tmp/ccjzD7jO.s 			page 136
 
 
  5506              		.cfi_offset 5, -8
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5542 001e 9201     		lsls	r2, r2, #6
  5543 0020 6B46     		mov	r3, sp
  5544 0022 1979     		ldrb	r1, [r3, #4]
-ARM GAS  /tmp/ccT3btxY.s 			page 137
+ARM GAS  /tmp/ccjzD7jO.s 			page 137
 
 
  5545 0024 3F23     		movs	r3, #63
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5585              		.cfi_offset 4, -12
  5586              		.cfi_offset 5, -8
  5587              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccT3btxY.s 			page 138
+ARM GAS  /tmp/ccjzD7jO.s 			page 138
 
 
  5588 0002 83B0     		sub	sp, sp, #12
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2060:Inc/lis3dh_reg.c **** 
 2061:Inc/lis3dh_reg.c ****     case LIS3DH_DYNAMIC_STREAM_MODE:
 2062:Inc/lis3dh_reg.c ****       *val = LIS3DH_DYNAMIC_STREAM_MODE;
-ARM GAS  /tmp/ccT3btxY.s 			page 139
+ARM GAS  /tmp/ccjzD7jO.s 			page 139
 
 
 2063:Inc/lis3dh_reg.c ****       break;
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5658              		.loc 1 2071 7 is_stmt 1 view .LVU1374
 2074:Inc/lis3dh_reg.c **** }
  5659              		.loc 1 2074 3 view .LVU1375
-ARM GAS  /tmp/ccT3btxY.s 			page 140
+ARM GAS  /tmp/ccjzD7jO.s 			page 140
 
 
 2074:Inc/lis3dh_reg.c **** }
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5697              		.loc 1 2093 1 is_stmt 0 view .LVU1384
  5698              		@ sp needed
  5699 000c 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccT3btxY.s 			page 141
+ARM GAS  /tmp/ccjzD7jO.s 			page 141
 
 
  5700              		.cfi_endproc
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2109:Inc/lis3dh_reg.c ****   *val = (uint8_t)fifo_src_reg.fss;
  5741              		.loc 1 2109 3 is_stmt 1 view .LVU1392
  5742              		.loc 1 2109 31 is_stmt 0 view .LVU1393
-ARM GAS  /tmp/ccT3btxY.s 			page 142
+ARM GAS  /tmp/ccjzD7jO.s 			page 142
 
 
  5743 0012 2B78     		ldrb	r3, [r5]
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2124:Inc/lis3dh_reg.c ****   int32_t ret;
  5785              		.loc 1 2124 3 view .LVU1401
 2125:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 143
+ARM GAS  /tmp/ccjzD7jO.s 			page 143
 
 
 2126:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_FIFO_SRC_REG,
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5826              		@ args = 0, pretend = 0, frame = 8
  5827              		@ frame_needed = 0, uses_anonymous_args = 0
  5828              		.loc 1 2141 1 is_stmt 0 view .LVU1412
-ARM GAS  /tmp/ccT3btxY.s 			page 144
+ARM GAS  /tmp/ccjzD7jO.s 			page 144
 
 
  5829 0000 30B5     		push	{r4, r5, lr}
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5876              	lis3dh_fifo_fth_flag_get:
  5877              	.LVL441:
  5878              	.LFB91:
-ARM GAS  /tmp/ccT3btxY.s 			page 145
+ARM GAS  /tmp/ccjzD7jO.s 			page 145
 
 
 2151:Inc/lis3dh_reg.c **** /**
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5914 0018 03B0     		add	sp, sp, #12
  5915              		@ sp needed
  5916              	.LVL444:
-ARM GAS  /tmp/ccT3btxY.s 			page 146
+ARM GAS  /tmp/ccjzD7jO.s 			page 146
 
 
  5917              		.loc 1 2169 1 view .LVU1436
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5946              		.loc 1 2196 9 is_stmt 0 view .LVU1441
  5947 0004 0123     		movs	r3, #1
  5948 0006 3821     		movs	r1, #56
-ARM GAS  /tmp/ccT3btxY.s 			page 147
+ARM GAS  /tmp/ccjzD7jO.s 			page 147
 
 
  5949              	.LVL446:
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  5987              	.LVL449:
  5988              		.loc 1 2214 9 view .LVU1450
  5989 0008 FFF7FEFF 		bl	lis3dh_read_reg
-ARM GAS  /tmp/ccT3btxY.s 			page 148
+ARM GAS  /tmp/ccjzD7jO.s 			page 148
 
 
  5990              	.LVL450:
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2232:Inc/lis3dh_reg.c **** 
 2233:Inc/lis3dh_reg.c ****   return ret;
  6029              		.loc 1 2233 3 is_stmt 1 view .LVU1459
-ARM GAS  /tmp/ccT3btxY.s 			page 149
+ARM GAS  /tmp/ccjzD7jO.s 			page 149
 
 
 2234:Inc/lis3dh_reg.c **** }
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6070              	.LVL455:
  6071              		.loc 1 2249 9 view .LVU1467
  6072 000e FFF7FEFF 		bl	lis3dh_read_reg
-ARM GAS  /tmp/ccT3btxY.s 			page 150
+ARM GAS  /tmp/ccjzD7jO.s 			page 150
 
 
  6073              	.LVL456:
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6111              		.cfi_endproc
  6112              	.LFE95:
  6114              		.section	.text.lis3dh_tap_threshold_get,"ax",%progbits
-ARM GAS  /tmp/ccT3btxY.s 			page 151
+ARM GAS  /tmp/ccjzD7jO.s 			page 151
 
 
  6115              		.align	1
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6153              		.loc 1 2275 28 is_stmt 0 view .LVU1487
  6154 0012 2B78     		ldrb	r3, [r5]
  6155 0014 5B06     		lsls	r3, r3, #25
-ARM GAS  /tmp/ccT3btxY.s 			page 152
+ARM GAS  /tmp/ccjzD7jO.s 			page 152
 
 
  6156 0016 5B0E     		lsrs	r3, r3, #25
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6194 0004 0400     		movs	r4, r0
  6195 0006 0D00     		movs	r5, r1
 2294:Inc/lis3dh_reg.c ****   lis3dh_click_ths_t click_ths;
-ARM GAS  /tmp/ccT3btxY.s 			page 153
+ARM GAS  /tmp/ccjzD7jO.s 			page 153
 
 
  6196              		.loc 1 2294 3 is_stmt 1 view .LVU1494
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2302:Inc/lis3dh_reg.c ****   }
  6234              		.loc 1 2302 11 is_stmt 0 view .LVU1507
  6235 002e 0123     		movs	r3, #1
-ARM GAS  /tmp/ccT3btxY.s 			page 154
+ARM GAS  /tmp/ccjzD7jO.s 			page 154
 
 
  6236 0030 01AA     		add	r2, sp, #4
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6274 0004 0D00     		movs	r5, r1
 2322:Inc/lis3dh_reg.c ****   lis3dh_click_ths_t click_ths;
  6275              		.loc 1 2322 3 is_stmt 1 view .LVU1513
-ARM GAS  /tmp/ccT3btxY.s 			page 155
+ARM GAS  /tmp/ccjzD7jO.s 			page 155
 
 
 2323:Inc/lis3dh_reg.c ****   int32_t ret;
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2331:Inc/lis3dh_reg.c **** 
  6308              		.loc 1 2331 7 is_stmt 1 view .LVU1528
  6309              	.L263:
-ARM GAS  /tmp/ccT3btxY.s 			page 156
+ARM GAS  /tmp/ccjzD7jO.s 			page 156
 
 
 2343:Inc/lis3dh_reg.c **** }
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6349 0002 83B0     		sub	sp, sp, #12
  6350              	.LCFI163:
  6351              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/ccT3btxY.s 			page 157
+ARM GAS  /tmp/ccjzD7jO.s 			page 157
 
 
  6352 0004 0400     		movs	r4, r0
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2365:Inc/lis3dh_reg.c ****   }
  6390              		.loc 1 2365 11 is_stmt 0 view .LVU1548
  6391 002c 0123     		movs	r3, #1
-ARM GAS  /tmp/ccT3btxY.s 			page 158
+ARM GAS  /tmp/ccjzD7jO.s 			page 158
 
 
  6392 002e 01AA     		add	r2, sp, #4
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6431              		.loc 1 2383 3 is_stmt 1 view .LVU1554
 2384:Inc/lis3dh_reg.c ****   int32_t ret;
  6432              		.loc 1 2384 3 view .LVU1555
-ARM GAS  /tmp/ccT3btxY.s 			page 159
+ARM GAS  /tmp/ccjzD7jO.s 			page 159
 
 
 2385:Inc/lis3dh_reg.c **** 
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2403:Inc/lis3dh_reg.c **** int32_t lis3dh_quiet_dur_set(stmdev_ctx_t *ctx, uint8_t val)
 2404:Inc/lis3dh_reg.c **** {
  6471              		.loc 1 2404 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccT3btxY.s 			page 160
+ARM GAS  /tmp/ccjzD7jO.s 			page 160
 
 
  6472              		.cfi_startproc
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2413:Inc/lis3dh_reg.c ****     ret = lis3dh_write_reg(ctx, LIS3DH_TIME_LATENCY,
  6511              		.loc 1 2413 5 is_stmt 1 view .LVU1576
 2413:Inc/lis3dh_reg.c ****     ret = lis3dh_write_reg(ctx, LIS3DH_TIME_LATENCY,
-ARM GAS  /tmp/ccT3btxY.s 			page 161
+ARM GAS  /tmp/ccjzD7jO.s 			page 161
 
 
  6512              		.loc 1 2413 22 is_stmt 0 view .LVU1577
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6549              		.cfi_offset 4, -12
  6550              		.cfi_offset 5, -8
  6551              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccT3btxY.s 			page 162
+ARM GAS  /tmp/ccjzD7jO.s 			page 162
 
 
  6552 0002 83B0     		sub	sp, sp, #12
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2448:Inc/lis3dh_reg.c ****   *         for double-click detection.[set]
 2449:Inc/lis3dh_reg.c ****   *
 2450:Inc/lis3dh_reg.c ****   * @param  ctx      read / write interface definitions
-ARM GAS  /tmp/ccT3btxY.s 			page 163
+ARM GAS  /tmp/ccjzD7jO.s 			page 163
 
 
 2451:Inc/lis3dh_reg.c ****   * @param  val      change the values of tw in reg TIME_WINDOW
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6627 0016 03B0     		add	sp, sp, #12
  6628              		@ sp needed
  6629              	.LVL502:
-ARM GAS  /tmp/ccT3btxY.s 			page 164
+ARM GAS  /tmp/ccjzD7jO.s 			page 164
 
 
  6630              		.loc 1 2471 1 view .LVU1606
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6665              		.cfi_startproc
  6666              		@ args = 0, pretend = 0, frame = 8
  6667              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccT3btxY.s 			page 165
+ARM GAS  /tmp/ccjzD7jO.s 			page 165
 
 
  6668              		.loc 1 2485 1 is_stmt 0 view .LVU1615
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6715              	.LVL510:
  6716              	.LFB105:
 2495:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 166
+ARM GAS  /tmp/ccjzD7jO.s 			page 166
 
 
 2496:Inc/lis3dh_reg.c **** /**
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6742 000e FFF7FEFF 		bl	lis3dh_read_reg
  6743              	.LVL512:
 2525:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 167
+ARM GAS  /tmp/ccjzD7jO.s 			page 167
 
 
 2526:Inc/lis3dh_reg.c ****   if (ret == 0)
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6784              		.section	.text.lis3dh_act_threshold_get,"ax",%progbits
  6785              		.align	1
  6786              		.global	lis3dh_act_threshold_get
-ARM GAS  /tmp/ccT3btxY.s 			page 168
+ARM GAS  /tmp/ccjzD7jO.s 			page 168
 
 
  6787              		.syntax unified
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6824 0012 2B78     		ldrb	r3, [r5]
  6825 0014 5B06     		lsls	r3, r3, #25
  6826 0016 5B0E     		lsrs	r3, r3, #25
-ARM GAS  /tmp/ccT3btxY.s 			page 169
+ARM GAS  /tmp/ccjzD7jO.s 			page 169
 
 
  6827              		.loc 1 2551 8 view .LVU1654
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2568:Inc/lis3dh_reg.c ****   int32_t ret;
  6867              		.loc 1 2568 3 view .LVU1661
 2569:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 170
+ARM GAS  /tmp/ccjzD7jO.s 			page 170
 
 
 2570:Inc/lis3dh_reg.c ****   ret = lis3dh_read_reg(ctx, LIS3DH_ACT_DUR, (uint8_t *)&act_dur, 1);
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6905 0028 F5E7     		b	.L285
  6906              		.cfi_endproc
  6907              	.LFE107:
-ARM GAS  /tmp/ccT3btxY.s 			page 171
+ARM GAS  /tmp/ccjzD7jO.s 			page 171
 
 
  6909              		.section	.text.lis3dh_act_timeout_get,"ax",%progbits
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6947              		.loc 1 2596 3 is_stmt 1 view .LVU1683
  6948              		.loc 1 2596 26 is_stmt 0 view .LVU1684
  6949 0012 2B78     		ldrb	r3, [r5]
-ARM GAS  /tmp/ccT3btxY.s 			page 172
+ARM GAS  /tmp/ccjzD7jO.s 			page 172
 
 
  6950              		.loc 1 2596 8 view .LVU1685
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  6978 0000 30B5     		push	{r4, r5, lr}
  6979              	.LCFI182:
  6980              		.cfi_def_cfa_offset 12
-ARM GAS  /tmp/ccT3btxY.s 			page 173
+ARM GAS  /tmp/ccjzD7jO.s 			page 173
 
 
  6981              		.cfi_offset 4, -12
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7019 0020 6B46     		mov	r3, sp
  7020 0022 1979     		ldrb	r1, [r3, #4]
  7021 0024 7F23     		movs	r3, #127
-ARM GAS  /tmp/ccT3btxY.s 			page 174
+ARM GAS  /tmp/ccjzD7jO.s 			page 174
 
 
  7022 0026 0B40     		ands	r3, r1
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7061              		.cfi_offset 4, -12
  7062              		.cfi_offset 5, -8
  7063              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccT3btxY.s 			page 175
+ARM GAS  /tmp/ccjzD7jO.s 			page 175
 
 
  7064 0002 83B0     		sub	sp, sp, #12
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
 2658:Inc/lis3dh_reg.c ****       break;
  7097              		.loc 1 2658 7 is_stmt 1 view .LVU1723
 2658:Inc/lis3dh_reg.c ****       break;
-ARM GAS  /tmp/ccT3btxY.s 			page 176
+ARM GAS  /tmp/ccjzD7jO.s 			page 176
 
 
  7098              		.loc 1 2658 12 is_stmt 0 view .LVU1724
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7138              		.cfi_def_cfa_offset 12
  7139              		.cfi_offset 4, -12
  7140              		.cfi_offset 5, -8
-ARM GAS  /tmp/ccT3btxY.s 			page 177
+ARM GAS  /tmp/ccjzD7jO.s 			page 177
 
 
  7141              		.cfi_offset 14, -4
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7180 0028 6A46     		mov	r2, sp
  7181 002a 1371     		strb	r3, [r2, #4]
 2691:Inc/lis3dh_reg.c ****   }
-ARM GAS  /tmp/ccT3btxY.s 			page 178
+ARM GAS  /tmp/ccjzD7jO.s 			page 178
 
 
  7182              		.loc 1 2691 5 is_stmt 1 view .LVU1744
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7223 0004 0D00     		movs	r5, r1
 2707:Inc/lis3dh_reg.c ****   lis3dh_ctrl_reg4_t ctrl_reg4;
  7224              		.loc 1 2707 3 is_stmt 1 view .LVU1751
-ARM GAS  /tmp/ccT3btxY.s 			page 179
+ARM GAS  /tmp/ccjzD7jO.s 			page 179
 
 
 2708:Inc/lis3dh_reg.c ****   int32_t ret;
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7257 0026 0023     		movs	r3, #0
  7258 0028 2B70     		strb	r3, [r5]
 2716:Inc/lis3dh_reg.c **** 
-ARM GAS  /tmp/ccT3btxY.s 			page 180
+ARM GAS  /tmp/ccjzD7jO.s 			page 180
 
 
  7259              		.loc 1 2716 7 is_stmt 1 view .LVU1766
@@ -10769,259 +10769,259 @@ ARM GAS  /tmp/ccT3btxY.s 			page 1
  7281              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
  7282              		.file 4 "/usr/arm-none-eabi/include/math.h"
  7283              		.file 5 "Inc/lis3dh_reg.h"
-ARM GAS  /tmp/ccT3btxY.s 			page 181
+ARM GAS  /tmp/ccjzD7jO.s 			page 181
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 lis3dh_reg.c
-     /tmp/ccT3btxY.s:16     .text.lis3dh_read_reg:0000000000000000 $t
-     /tmp/ccT3btxY.s:24     .text.lis3dh_read_reg:0000000000000000 lis3dh_read_reg
-     /tmp/ccT3btxY.s:56     .text.lis3dh_write_reg:0000000000000000 $t
-     /tmp/ccT3btxY.s:63     .text.lis3dh_write_reg:0000000000000000 lis3dh_write_reg
-     /tmp/ccT3btxY.s:96     .text.lis3dh_from_fs2_hr_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:103    .text.lis3dh_from_fs2_hr_to_mg:0000000000000000 lis3dh_from_fs2_hr_to_mg
-     /tmp/ccT3btxY.s:133    .text.lis3dh_from_fs4_hr_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:140    .text.lis3dh_from_fs4_hr_to_mg:0000000000000000 lis3dh_from_fs4_hr_to_mg
-     /tmp/ccT3btxY.s:173    .text.lis3dh_from_fs8_hr_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:180    .text.lis3dh_from_fs8_hr_to_mg:0000000000000000 lis3dh_from_fs8_hr_to_mg
-     /tmp/ccT3btxY.s:214    .text.lis3dh_from_fs16_hr_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:221    .text.lis3dh_from_fs16_hr_to_mg:0000000000000000 lis3dh_from_fs16_hr_to_mg
-     /tmp/ccT3btxY.s:253    .text.lis3dh_from_fs16_hr_to_mg:0000000000000018 $d
-     /tmp/ccT3btxY.s:258    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000000 $t
-     /tmp/ccT3btxY.s:265    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000000 lis3dh_from_lsb_hr_to_celsius
-     /tmp/ccT3btxY.s:302    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000020 $d
-     /tmp/ccT3btxY.s:307    .text.lis3dh_from_fs2_nm_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:314    .text.lis3dh_from_fs2_nm_to_mg:0000000000000000 lis3dh_from_fs2_nm_to_mg
-     /tmp/ccT3btxY.s:348    .text.lis3dh_from_fs4_nm_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:355    .text.lis3dh_from_fs4_nm_to_mg:0000000000000000 lis3dh_from_fs4_nm_to_mg
-     /tmp/ccT3btxY.s:389    .text.lis3dh_from_fs8_nm_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:396    .text.lis3dh_from_fs8_nm_to_mg:0000000000000000 lis3dh_from_fs8_nm_to_mg
-     /tmp/ccT3btxY.s:430    .text.lis3dh_from_fs16_nm_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:437    .text.lis3dh_from_fs16_nm_to_mg:0000000000000000 lis3dh_from_fs16_nm_to_mg
-     /tmp/ccT3btxY.s:469    .text.lis3dh_from_fs16_nm_to_mg:0000000000000018 $d
-     /tmp/ccT3btxY.s:474    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000000 $t
-     /tmp/ccT3btxY.s:481    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000000 lis3dh_from_lsb_nm_to_celsius
-     /tmp/ccT3btxY.s:518    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000020 $d
-     /tmp/ccT3btxY.s:523    .text.lis3dh_from_fs2_lp_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:530    .text.lis3dh_from_fs2_lp_to_mg:0000000000000000 lis3dh_from_fs2_lp_to_mg
-     /tmp/ccT3btxY.s:564    .text.lis3dh_from_fs4_lp_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:571    .text.lis3dh_from_fs4_lp_to_mg:0000000000000000 lis3dh_from_fs4_lp_to_mg
-     /tmp/ccT3btxY.s:605    .text.lis3dh_from_fs8_lp_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:612    .text.lis3dh_from_fs8_lp_to_mg:0000000000000000 lis3dh_from_fs8_lp_to_mg
-     /tmp/ccT3btxY.s:646    .text.lis3dh_from_fs16_lp_to_mg:0000000000000000 $t
-     /tmp/ccT3btxY.s:653    .text.lis3dh_from_fs16_lp_to_mg:0000000000000000 lis3dh_from_fs16_lp_to_mg
-     /tmp/ccT3btxY.s:685    .text.lis3dh_from_fs16_lp_to_mg:0000000000000018 $d
-     /tmp/ccT3btxY.s:690    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000000 $t
-     /tmp/ccT3btxY.s:697    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000000 lis3dh_from_lsb_lp_to_celsius
-     /tmp/ccT3btxY.s:729    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000018 $d
-     /tmp/ccT3btxY.s:734    .text.lis3dh_temp_status_reg_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:741    .text.lis3dh_temp_status_reg_get:0000000000000000 lis3dh_temp_status_reg_get
-     /tmp/ccT3btxY.s:772    .text.lis3dh_temp_data_ready_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:779    .text.lis3dh_temp_data_ready_get:0000000000000000 lis3dh_temp_data_ready_get
-     /tmp/ccT3btxY.s:827    .text.lis3dh_temp_data_ovr_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:834    .text.lis3dh_temp_data_ovr_get:0000000000000000 lis3dh_temp_data_ovr_get
-     /tmp/ccT3btxY.s:882    .text.lis3dh_temperature_raw_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:889    .text.lis3dh_temperature_raw_get:0000000000000000 lis3dh_temperature_raw_get
-     /tmp/ccT3btxY.s:944    .text.lis3dh_adc_raw_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:951    .text.lis3dh_adc_raw_get:0000000000000000 lis3dh_adc_raw_get
-     /tmp/ccT3btxY.s:1038   .text.lis3dh_aux_adc_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:1045   .text.lis3dh_aux_adc_get:0000000000000000 lis3dh_aux_adc_get
-     /tmp/ccT3btxY.s:1124   .text.lis3dh_operating_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:1131   .text.lis3dh_operating_mode_set:0000000000000000 lis3dh_operating_mode_set
-     /tmp/ccT3btxY.s:1288   .text.lis3dh_operating_mode_get:0000000000000000 $t
-ARM GAS  /tmp/ccT3btxY.s 			page 182
+     /tmp/ccjzD7jO.s:16     .text.lis3dh_read_reg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:24     .text.lis3dh_read_reg:0000000000000000 lis3dh_read_reg
+     /tmp/ccjzD7jO.s:56     .text.lis3dh_write_reg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:63     .text.lis3dh_write_reg:0000000000000000 lis3dh_write_reg
+     /tmp/ccjzD7jO.s:96     .text.lis3dh_from_fs2_hr_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:103    .text.lis3dh_from_fs2_hr_to_mg:0000000000000000 lis3dh_from_fs2_hr_to_mg
+     /tmp/ccjzD7jO.s:133    .text.lis3dh_from_fs4_hr_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:140    .text.lis3dh_from_fs4_hr_to_mg:0000000000000000 lis3dh_from_fs4_hr_to_mg
+     /tmp/ccjzD7jO.s:173    .text.lis3dh_from_fs8_hr_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:180    .text.lis3dh_from_fs8_hr_to_mg:0000000000000000 lis3dh_from_fs8_hr_to_mg
+     /tmp/ccjzD7jO.s:214    .text.lis3dh_from_fs16_hr_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:221    .text.lis3dh_from_fs16_hr_to_mg:0000000000000000 lis3dh_from_fs16_hr_to_mg
+     /tmp/ccjzD7jO.s:253    .text.lis3dh_from_fs16_hr_to_mg:0000000000000018 $d
+     /tmp/ccjzD7jO.s:258    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000000 $t
+     /tmp/ccjzD7jO.s:265    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000000 lis3dh_from_lsb_hr_to_celsius
+     /tmp/ccjzD7jO.s:302    .text.lis3dh_from_lsb_hr_to_celsius:0000000000000020 $d
+     /tmp/ccjzD7jO.s:307    .text.lis3dh_from_fs2_nm_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:314    .text.lis3dh_from_fs2_nm_to_mg:0000000000000000 lis3dh_from_fs2_nm_to_mg
+     /tmp/ccjzD7jO.s:348    .text.lis3dh_from_fs4_nm_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:355    .text.lis3dh_from_fs4_nm_to_mg:0000000000000000 lis3dh_from_fs4_nm_to_mg
+     /tmp/ccjzD7jO.s:389    .text.lis3dh_from_fs8_nm_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:396    .text.lis3dh_from_fs8_nm_to_mg:0000000000000000 lis3dh_from_fs8_nm_to_mg
+     /tmp/ccjzD7jO.s:430    .text.lis3dh_from_fs16_nm_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:437    .text.lis3dh_from_fs16_nm_to_mg:0000000000000000 lis3dh_from_fs16_nm_to_mg
+     /tmp/ccjzD7jO.s:469    .text.lis3dh_from_fs16_nm_to_mg:0000000000000018 $d
+     /tmp/ccjzD7jO.s:474    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000000 $t
+     /tmp/ccjzD7jO.s:481    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000000 lis3dh_from_lsb_nm_to_celsius
+     /tmp/ccjzD7jO.s:518    .text.lis3dh_from_lsb_nm_to_celsius:0000000000000020 $d
+     /tmp/ccjzD7jO.s:523    .text.lis3dh_from_fs2_lp_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:530    .text.lis3dh_from_fs2_lp_to_mg:0000000000000000 lis3dh_from_fs2_lp_to_mg
+     /tmp/ccjzD7jO.s:564    .text.lis3dh_from_fs4_lp_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:571    .text.lis3dh_from_fs4_lp_to_mg:0000000000000000 lis3dh_from_fs4_lp_to_mg
+     /tmp/ccjzD7jO.s:605    .text.lis3dh_from_fs8_lp_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:612    .text.lis3dh_from_fs8_lp_to_mg:0000000000000000 lis3dh_from_fs8_lp_to_mg
+     /tmp/ccjzD7jO.s:646    .text.lis3dh_from_fs16_lp_to_mg:0000000000000000 $t
+     /tmp/ccjzD7jO.s:653    .text.lis3dh_from_fs16_lp_to_mg:0000000000000000 lis3dh_from_fs16_lp_to_mg
+     /tmp/ccjzD7jO.s:685    .text.lis3dh_from_fs16_lp_to_mg:0000000000000018 $d
+     /tmp/ccjzD7jO.s:690    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000000 $t
+     /tmp/ccjzD7jO.s:697    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000000 lis3dh_from_lsb_lp_to_celsius
+     /tmp/ccjzD7jO.s:729    .text.lis3dh_from_lsb_lp_to_celsius:0000000000000018 $d
+     /tmp/ccjzD7jO.s:734    .text.lis3dh_temp_status_reg_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:741    .text.lis3dh_temp_status_reg_get:0000000000000000 lis3dh_temp_status_reg_get
+     /tmp/ccjzD7jO.s:772    .text.lis3dh_temp_data_ready_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:779    .text.lis3dh_temp_data_ready_get:0000000000000000 lis3dh_temp_data_ready_get
+     /tmp/ccjzD7jO.s:827    .text.lis3dh_temp_data_ovr_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:834    .text.lis3dh_temp_data_ovr_get:0000000000000000 lis3dh_temp_data_ovr_get
+     /tmp/ccjzD7jO.s:882    .text.lis3dh_temperature_raw_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:889    .text.lis3dh_temperature_raw_get:0000000000000000 lis3dh_temperature_raw_get
+     /tmp/ccjzD7jO.s:944    .text.lis3dh_adc_raw_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:951    .text.lis3dh_adc_raw_get:0000000000000000 lis3dh_adc_raw_get
+     /tmp/ccjzD7jO.s:1038   .text.lis3dh_aux_adc_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1045   .text.lis3dh_aux_adc_get:0000000000000000 lis3dh_aux_adc_get
+     /tmp/ccjzD7jO.s:1124   .text.lis3dh_operating_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1131   .text.lis3dh_operating_mode_set:0000000000000000 lis3dh_operating_mode_set
+     /tmp/ccjzD7jO.s:1288   .text.lis3dh_operating_mode_get:0000000000000000 $t
+ARM GAS  /tmp/ccjzD7jO.s 			page 182
 
 
-     /tmp/ccT3btxY.s:1295   .text.lis3dh_operating_mode_get:0000000000000000 lis3dh_operating_mode_get
-     /tmp/ccT3btxY.s:1387   .text.lis3dh_data_rate_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:1394   .text.lis3dh_data_rate_set:0000000000000000 lis3dh_data_rate_set
-     /tmp/ccT3btxY.s:1466   .text.lis3dh_data_rate_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:1473   .text.lis3dh_data_rate_get:0000000000000000 lis3dh_data_rate_get
-     /tmp/ccT3btxY.s:1515   .rodata.lis3dh_data_rate_get:0000000000000000 $d
-     /tmp/ccT3btxY.s:1617   .text.lis3dh_data_rate_get:0000000000000068 $d
-     /tmp/ccT3btxY.s:1622   .text.lis3dh_high_pass_on_outputs_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:1629   .text.lis3dh_high_pass_on_outputs_set:0000000000000000 lis3dh_high_pass_on_outputs_set
-     /tmp/ccT3btxY.s:1701   .text.lis3dh_high_pass_on_outputs_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:1708   .text.lis3dh_high_pass_on_outputs_get:0000000000000000 lis3dh_high_pass_on_outputs_get
-     /tmp/ccT3btxY.s:1756   .text.lis3dh_high_pass_bandwidth_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:1763   .text.lis3dh_high_pass_bandwidth_set:0000000000000000 lis3dh_high_pass_bandwidth_set
-     /tmp/ccT3btxY.s:1835   .text.lis3dh_high_pass_bandwidth_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:1842   .text.lis3dh_high_pass_bandwidth_get:0000000000000000 lis3dh_high_pass_bandwidth_get
-     /tmp/ccT3btxY.s:1935   .text.lis3dh_high_pass_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:1942   .text.lis3dh_high_pass_mode_set:0000000000000000 lis3dh_high_pass_mode_set
-     /tmp/ccT3btxY.s:2015   .text.lis3dh_high_pass_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2022   .text.lis3dh_high_pass_mode_get:0000000000000000 lis3dh_high_pass_mode_get
-     /tmp/ccT3btxY.s:2114   .text.lis3dh_full_scale_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:2121   .text.lis3dh_full_scale_set:0000000000000000 lis3dh_full_scale_set
-     /tmp/ccT3btxY.s:2193   .text.lis3dh_full_scale_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2200   .text.lis3dh_full_scale_get:0000000000000000 lis3dh_full_scale_get
-     /tmp/ccT3btxY.s:2293   .text.lis3dh_block_data_update_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:2300   .text.lis3dh_block_data_update_set:0000000000000000 lis3dh_block_data_update_set
-     /tmp/ccT3btxY.s:2370   .text.lis3dh_aux_adc_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:2377   .text.lis3dh_aux_adc_set:0000000000000000 lis3dh_aux_adc_set
-     /tmp/ccT3btxY.s:2479   .text.lis3dh_block_data_update_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2486   .text.lis3dh_block_data_update_get:0000000000000000 lis3dh_block_data_update_get
-     /tmp/ccT3btxY.s:2533   .text.lis3dh_filter_reference_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:2540   .text.lis3dh_filter_reference_set:0000000000000000 lis3dh_filter_reference_set
-     /tmp/ccT3btxY.s:2571   .text.lis3dh_filter_reference_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2578   .text.lis3dh_filter_reference_get:0000000000000000 lis3dh_filter_reference_get
-     /tmp/ccT3btxY.s:2609   .text.lis3dh_xl_data_ready_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2616   .text.lis3dh_xl_data_ready_get:0000000000000000 lis3dh_xl_data_ready_get
-     /tmp/ccT3btxY.s:2664   .text.lis3dh_xl_data_ovr_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2671   .text.lis3dh_xl_data_ovr_get:0000000000000000 lis3dh_xl_data_ovr_get
-     /tmp/ccT3btxY.s:2718   .text.lis3dh_acceleration_raw_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2725   .text.lis3dh_acceleration_raw_get:0000000000000000 lis3dh_acceleration_raw_get
-     /tmp/ccT3btxY.s:2812   .text.lis3dh_device_id_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2819   .text.lis3dh_device_id_get:0000000000000000 lis3dh_device_id_get
-     /tmp/ccT3btxY.s:2850   .text.lis3dh_self_test_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:2857   .text.lis3dh_self_test_set:0000000000000000 lis3dh_self_test_set
-     /tmp/ccT3btxY.s:2929   .text.lis3dh_self_test_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:2936   .text.lis3dh_self_test_get:0000000000000000 lis3dh_self_test_get
-     /tmp/ccT3btxY.s:3017   .text.lis3dh_data_format_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3024   .text.lis3dh_data_format_set:0000000000000000 lis3dh_data_format_set
-     /tmp/ccT3btxY.s:3096   .text.lis3dh_data_format_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3103   .text.lis3dh_data_format_get:0000000000000000 lis3dh_data_format_get
-     /tmp/ccT3btxY.s:3176   .text.lis3dh_boot_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3183   .text.lis3dh_boot_set:0000000000000000 lis3dh_boot_set
-     /tmp/ccT3btxY.s:3253   .text.lis3dh_boot_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3260   .text.lis3dh_boot_get:0000000000000000 lis3dh_boot_get
-     /tmp/ccT3btxY.s:3307   .text.lis3dh_status_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3314   .text.lis3dh_status_get:0000000000000000 lis3dh_status_get
-     /tmp/ccT3btxY.s:3345   .text.lis3dh_int1_gen_conf_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3352   .text.lis3dh_int1_gen_conf_set:0000000000000000 lis3dh_int1_gen_conf_set
-ARM GAS  /tmp/ccT3btxY.s 			page 183
+     /tmp/ccjzD7jO.s:1295   .text.lis3dh_operating_mode_get:0000000000000000 lis3dh_operating_mode_get
+     /tmp/ccjzD7jO.s:1387   .text.lis3dh_data_rate_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1394   .text.lis3dh_data_rate_set:0000000000000000 lis3dh_data_rate_set
+     /tmp/ccjzD7jO.s:1466   .text.lis3dh_data_rate_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1473   .text.lis3dh_data_rate_get:0000000000000000 lis3dh_data_rate_get
+     /tmp/ccjzD7jO.s:1515   .rodata.lis3dh_data_rate_get:0000000000000000 $d
+     /tmp/ccjzD7jO.s:1617   .text.lis3dh_data_rate_get:0000000000000068 $d
+     /tmp/ccjzD7jO.s:1622   .text.lis3dh_high_pass_on_outputs_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1629   .text.lis3dh_high_pass_on_outputs_set:0000000000000000 lis3dh_high_pass_on_outputs_set
+     /tmp/ccjzD7jO.s:1701   .text.lis3dh_high_pass_on_outputs_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1708   .text.lis3dh_high_pass_on_outputs_get:0000000000000000 lis3dh_high_pass_on_outputs_get
+     /tmp/ccjzD7jO.s:1756   .text.lis3dh_high_pass_bandwidth_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1763   .text.lis3dh_high_pass_bandwidth_set:0000000000000000 lis3dh_high_pass_bandwidth_set
+     /tmp/ccjzD7jO.s:1835   .text.lis3dh_high_pass_bandwidth_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1842   .text.lis3dh_high_pass_bandwidth_get:0000000000000000 lis3dh_high_pass_bandwidth_get
+     /tmp/ccjzD7jO.s:1935   .text.lis3dh_high_pass_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:1942   .text.lis3dh_high_pass_mode_set:0000000000000000 lis3dh_high_pass_mode_set
+     /tmp/ccjzD7jO.s:2015   .text.lis3dh_high_pass_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2022   .text.lis3dh_high_pass_mode_get:0000000000000000 lis3dh_high_pass_mode_get
+     /tmp/ccjzD7jO.s:2114   .text.lis3dh_full_scale_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2121   .text.lis3dh_full_scale_set:0000000000000000 lis3dh_full_scale_set
+     /tmp/ccjzD7jO.s:2193   .text.lis3dh_full_scale_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2200   .text.lis3dh_full_scale_get:0000000000000000 lis3dh_full_scale_get
+     /tmp/ccjzD7jO.s:2293   .text.lis3dh_block_data_update_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2300   .text.lis3dh_block_data_update_set:0000000000000000 lis3dh_block_data_update_set
+     /tmp/ccjzD7jO.s:2370   .text.lis3dh_aux_adc_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2377   .text.lis3dh_aux_adc_set:0000000000000000 lis3dh_aux_adc_set
+     /tmp/ccjzD7jO.s:2479   .text.lis3dh_block_data_update_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2486   .text.lis3dh_block_data_update_get:0000000000000000 lis3dh_block_data_update_get
+     /tmp/ccjzD7jO.s:2533   .text.lis3dh_filter_reference_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2540   .text.lis3dh_filter_reference_set:0000000000000000 lis3dh_filter_reference_set
+     /tmp/ccjzD7jO.s:2571   .text.lis3dh_filter_reference_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2578   .text.lis3dh_filter_reference_get:0000000000000000 lis3dh_filter_reference_get
+     /tmp/ccjzD7jO.s:2609   .text.lis3dh_xl_data_ready_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2616   .text.lis3dh_xl_data_ready_get:0000000000000000 lis3dh_xl_data_ready_get
+     /tmp/ccjzD7jO.s:2664   .text.lis3dh_xl_data_ovr_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2671   .text.lis3dh_xl_data_ovr_get:0000000000000000 lis3dh_xl_data_ovr_get
+     /tmp/ccjzD7jO.s:2718   .text.lis3dh_acceleration_raw_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2725   .text.lis3dh_acceleration_raw_get:0000000000000000 lis3dh_acceleration_raw_get
+     /tmp/ccjzD7jO.s:2812   .text.lis3dh_device_id_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2819   .text.lis3dh_device_id_get:0000000000000000 lis3dh_device_id_get
+     /tmp/ccjzD7jO.s:2850   .text.lis3dh_self_test_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2857   .text.lis3dh_self_test_set:0000000000000000 lis3dh_self_test_set
+     /tmp/ccjzD7jO.s:2929   .text.lis3dh_self_test_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:2936   .text.lis3dh_self_test_get:0000000000000000 lis3dh_self_test_get
+     /tmp/ccjzD7jO.s:3017   .text.lis3dh_data_format_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3024   .text.lis3dh_data_format_set:0000000000000000 lis3dh_data_format_set
+     /tmp/ccjzD7jO.s:3096   .text.lis3dh_data_format_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3103   .text.lis3dh_data_format_get:0000000000000000 lis3dh_data_format_get
+     /tmp/ccjzD7jO.s:3176   .text.lis3dh_boot_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3183   .text.lis3dh_boot_set:0000000000000000 lis3dh_boot_set
+     /tmp/ccjzD7jO.s:3253   .text.lis3dh_boot_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3260   .text.lis3dh_boot_get:0000000000000000 lis3dh_boot_get
+     /tmp/ccjzD7jO.s:3307   .text.lis3dh_status_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3314   .text.lis3dh_status_get:0000000000000000 lis3dh_status_get
+     /tmp/ccjzD7jO.s:3345   .text.lis3dh_int1_gen_conf_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3352   .text.lis3dh_int1_gen_conf_set:0000000000000000 lis3dh_int1_gen_conf_set
+ARM GAS  /tmp/ccjzD7jO.s 			page 183
 
 
-     /tmp/ccT3btxY.s:3383   .text.lis3dh_int1_gen_conf_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3390   .text.lis3dh_int1_gen_conf_get:0000000000000000 lis3dh_int1_gen_conf_get
-     /tmp/ccT3btxY.s:3421   .text.lis3dh_int1_gen_source_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3428   .text.lis3dh_int1_gen_source_get:0000000000000000 lis3dh_int1_gen_source_get
-     /tmp/ccT3btxY.s:3459   .text.lis3dh_int1_gen_threshold_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3466   .text.lis3dh_int1_gen_threshold_set:0000000000000000 lis3dh_int1_gen_threshold_set
-     /tmp/ccT3btxY.s:3537   .text.lis3dh_int1_gen_threshold_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3544   .text.lis3dh_int1_gen_threshold_get:0000000000000000 lis3dh_int1_gen_threshold_get
-     /tmp/ccT3btxY.s:3592   .text.lis3dh_int1_gen_duration_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3599   .text.lis3dh_int1_gen_duration_set:0000000000000000 lis3dh_int1_gen_duration_set
-     /tmp/ccT3btxY.s:3670   .text.lis3dh_int1_gen_duration_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3677   .text.lis3dh_int1_gen_duration_get:0000000000000000 lis3dh_int1_gen_duration_get
-     /tmp/ccT3btxY.s:3725   .text.lis3dh_int2_gen_conf_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3732   .text.lis3dh_int2_gen_conf_set:0000000000000000 lis3dh_int2_gen_conf_set
-     /tmp/ccT3btxY.s:3763   .text.lis3dh_int2_gen_conf_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3770   .text.lis3dh_int2_gen_conf_get:0000000000000000 lis3dh_int2_gen_conf_get
-     /tmp/ccT3btxY.s:3801   .text.lis3dh_int2_gen_source_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3808   .text.lis3dh_int2_gen_source_get:0000000000000000 lis3dh_int2_gen_source_get
-     /tmp/ccT3btxY.s:3839   .text.lis3dh_int2_gen_threshold_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3846   .text.lis3dh_int2_gen_threshold_set:0000000000000000 lis3dh_int2_gen_threshold_set
-     /tmp/ccT3btxY.s:3917   .text.lis3dh_int2_gen_threshold_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:3924   .text.lis3dh_int2_gen_threshold_get:0000000000000000 lis3dh_int2_gen_threshold_get
-     /tmp/ccT3btxY.s:3972   .text.lis3dh_int2_gen_duration_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:3979   .text.lis3dh_int2_gen_duration_set:0000000000000000 lis3dh_int2_gen_duration_set
-     /tmp/ccT3btxY.s:4050   .text.lis3dh_int2_gen_duration_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4057   .text.lis3dh_int2_gen_duration_get:0000000000000000 lis3dh_int2_gen_duration_get
-     /tmp/ccT3btxY.s:4105   .text.lis3dh_high_pass_int_conf_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4112   .text.lis3dh_high_pass_int_conf_set:0000000000000000 lis3dh_high_pass_int_conf_set
-     /tmp/ccT3btxY.s:4183   .text.lis3dh_high_pass_int_conf_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4190   .text.lis3dh_high_pass_int_conf_get:0000000000000000 lis3dh_high_pass_int_conf_get
-     /tmp/ccT3btxY.s:4233   .rodata.lis3dh_high_pass_int_conf_get:0000000000000000 $d
-     /tmp/ccT3btxY.s:4319   .text.lis3dh_high_pass_int_conf_get:000000000000005c $d
-     /tmp/ccT3btxY.s:4324   .text.lis3dh_pin_int1_config_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4331   .text.lis3dh_pin_int1_config_set:0000000000000000 lis3dh_pin_int1_config_set
-     /tmp/ccT3btxY.s:4362   .text.lis3dh_pin_int1_config_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4369   .text.lis3dh_pin_int1_config_get:0000000000000000 lis3dh_pin_int1_config_get
-     /tmp/ccT3btxY.s:4400   .text.lis3dh_int2_pin_detect_4d_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4407   .text.lis3dh_int2_pin_detect_4d_set:0000000000000000 lis3dh_int2_pin_detect_4d_set
-     /tmp/ccT3btxY.s:4478   .text.lis3dh_int2_pin_detect_4d_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4485   .text.lis3dh_int2_pin_detect_4d_get:0000000000000000 lis3dh_int2_pin_detect_4d_get
-     /tmp/ccT3btxY.s:4533   .text.lis3dh_int2_pin_notification_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4540   .text.lis3dh_int2_pin_notification_mode_set:0000000000000000 lis3dh_int2_pin_notification_mode_set
-     /tmp/ccT3btxY.s:4612   .text.lis3dh_int2_pin_notification_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4619   .text.lis3dh_int2_pin_notification_mode_get:0000000000000000 lis3dh_int2_pin_notification_mode_get
-     /tmp/ccT3btxY.s:4692   .text.lis3dh_int1_pin_detect_4d_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4699   .text.lis3dh_int1_pin_detect_4d_set:0000000000000000 lis3dh_int1_pin_detect_4d_set
-     /tmp/ccT3btxY.s:4771   .text.lis3dh_int1_pin_detect_4d_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4778   .text.lis3dh_int1_pin_detect_4d_get:0000000000000000 lis3dh_int1_pin_detect_4d_get
-     /tmp/ccT3btxY.s:4826   .text.lis3dh_int1_pin_notification_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4833   .text.lis3dh_int1_pin_notification_mode_set:0000000000000000 lis3dh_int1_pin_notification_mode_set
-     /tmp/ccT3btxY.s:4905   .text.lis3dh_int1_pin_notification_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:4912   .text.lis3dh_int1_pin_notification_mode_get:0000000000000000 lis3dh_int1_pin_notification_mode_get
-     /tmp/ccT3btxY.s:4985   .text.lis3dh_pin_int2_config_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:4992   .text.lis3dh_pin_int2_config_set:0000000000000000 lis3dh_pin_int2_config_set
-     /tmp/ccT3btxY.s:5023   .text.lis3dh_pin_int2_config_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5030   .text.lis3dh_pin_int2_config_get:0000000000000000 lis3dh_pin_int2_config_get
-     /tmp/ccT3btxY.s:5061   .text.lis3dh_fifo_set:0000000000000000 $t
-ARM GAS  /tmp/ccT3btxY.s 			page 184
+     /tmp/ccjzD7jO.s:3383   .text.lis3dh_int1_gen_conf_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3390   .text.lis3dh_int1_gen_conf_get:0000000000000000 lis3dh_int1_gen_conf_get
+     /tmp/ccjzD7jO.s:3421   .text.lis3dh_int1_gen_source_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3428   .text.lis3dh_int1_gen_source_get:0000000000000000 lis3dh_int1_gen_source_get
+     /tmp/ccjzD7jO.s:3459   .text.lis3dh_int1_gen_threshold_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3466   .text.lis3dh_int1_gen_threshold_set:0000000000000000 lis3dh_int1_gen_threshold_set
+     /tmp/ccjzD7jO.s:3537   .text.lis3dh_int1_gen_threshold_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3544   .text.lis3dh_int1_gen_threshold_get:0000000000000000 lis3dh_int1_gen_threshold_get
+     /tmp/ccjzD7jO.s:3592   .text.lis3dh_int1_gen_duration_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3599   .text.lis3dh_int1_gen_duration_set:0000000000000000 lis3dh_int1_gen_duration_set
+     /tmp/ccjzD7jO.s:3670   .text.lis3dh_int1_gen_duration_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3677   .text.lis3dh_int1_gen_duration_get:0000000000000000 lis3dh_int1_gen_duration_get
+     /tmp/ccjzD7jO.s:3725   .text.lis3dh_int2_gen_conf_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3732   .text.lis3dh_int2_gen_conf_set:0000000000000000 lis3dh_int2_gen_conf_set
+     /tmp/ccjzD7jO.s:3763   .text.lis3dh_int2_gen_conf_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3770   .text.lis3dh_int2_gen_conf_get:0000000000000000 lis3dh_int2_gen_conf_get
+     /tmp/ccjzD7jO.s:3801   .text.lis3dh_int2_gen_source_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3808   .text.lis3dh_int2_gen_source_get:0000000000000000 lis3dh_int2_gen_source_get
+     /tmp/ccjzD7jO.s:3839   .text.lis3dh_int2_gen_threshold_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3846   .text.lis3dh_int2_gen_threshold_set:0000000000000000 lis3dh_int2_gen_threshold_set
+     /tmp/ccjzD7jO.s:3917   .text.lis3dh_int2_gen_threshold_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3924   .text.lis3dh_int2_gen_threshold_get:0000000000000000 lis3dh_int2_gen_threshold_get
+     /tmp/ccjzD7jO.s:3972   .text.lis3dh_int2_gen_duration_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:3979   .text.lis3dh_int2_gen_duration_set:0000000000000000 lis3dh_int2_gen_duration_set
+     /tmp/ccjzD7jO.s:4050   .text.lis3dh_int2_gen_duration_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4057   .text.lis3dh_int2_gen_duration_get:0000000000000000 lis3dh_int2_gen_duration_get
+     /tmp/ccjzD7jO.s:4105   .text.lis3dh_high_pass_int_conf_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4112   .text.lis3dh_high_pass_int_conf_set:0000000000000000 lis3dh_high_pass_int_conf_set
+     /tmp/ccjzD7jO.s:4183   .text.lis3dh_high_pass_int_conf_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4190   .text.lis3dh_high_pass_int_conf_get:0000000000000000 lis3dh_high_pass_int_conf_get
+     /tmp/ccjzD7jO.s:4233   .rodata.lis3dh_high_pass_int_conf_get:0000000000000000 $d
+     /tmp/ccjzD7jO.s:4319   .text.lis3dh_high_pass_int_conf_get:000000000000005c $d
+     /tmp/ccjzD7jO.s:4324   .text.lis3dh_pin_int1_config_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4331   .text.lis3dh_pin_int1_config_set:0000000000000000 lis3dh_pin_int1_config_set
+     /tmp/ccjzD7jO.s:4362   .text.lis3dh_pin_int1_config_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4369   .text.lis3dh_pin_int1_config_get:0000000000000000 lis3dh_pin_int1_config_get
+     /tmp/ccjzD7jO.s:4400   .text.lis3dh_int2_pin_detect_4d_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4407   .text.lis3dh_int2_pin_detect_4d_set:0000000000000000 lis3dh_int2_pin_detect_4d_set
+     /tmp/ccjzD7jO.s:4478   .text.lis3dh_int2_pin_detect_4d_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4485   .text.lis3dh_int2_pin_detect_4d_get:0000000000000000 lis3dh_int2_pin_detect_4d_get
+     /tmp/ccjzD7jO.s:4533   .text.lis3dh_int2_pin_notification_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4540   .text.lis3dh_int2_pin_notification_mode_set:0000000000000000 lis3dh_int2_pin_notification_mode_set
+     /tmp/ccjzD7jO.s:4612   .text.lis3dh_int2_pin_notification_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4619   .text.lis3dh_int2_pin_notification_mode_get:0000000000000000 lis3dh_int2_pin_notification_mode_get
+     /tmp/ccjzD7jO.s:4692   .text.lis3dh_int1_pin_detect_4d_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4699   .text.lis3dh_int1_pin_detect_4d_set:0000000000000000 lis3dh_int1_pin_detect_4d_set
+     /tmp/ccjzD7jO.s:4771   .text.lis3dh_int1_pin_detect_4d_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4778   .text.lis3dh_int1_pin_detect_4d_get:0000000000000000 lis3dh_int1_pin_detect_4d_get
+     /tmp/ccjzD7jO.s:4826   .text.lis3dh_int1_pin_notification_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4833   .text.lis3dh_int1_pin_notification_mode_set:0000000000000000 lis3dh_int1_pin_notification_mode_set
+     /tmp/ccjzD7jO.s:4905   .text.lis3dh_int1_pin_notification_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4912   .text.lis3dh_int1_pin_notification_mode_get:0000000000000000 lis3dh_int1_pin_notification_mode_get
+     /tmp/ccjzD7jO.s:4985   .text.lis3dh_pin_int2_config_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:4992   .text.lis3dh_pin_int2_config_set:0000000000000000 lis3dh_pin_int2_config_set
+     /tmp/ccjzD7jO.s:5023   .text.lis3dh_pin_int2_config_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5030   .text.lis3dh_pin_int2_config_get:0000000000000000 lis3dh_pin_int2_config_get
+     /tmp/ccjzD7jO.s:5061   .text.lis3dh_fifo_set:0000000000000000 $t
+ARM GAS  /tmp/ccjzD7jO.s 			page 184
 
 
-     /tmp/ccT3btxY.s:5068   .text.lis3dh_fifo_set:0000000000000000 lis3dh_fifo_set
-     /tmp/ccT3btxY.s:5140   .text.lis3dh_fifo_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5147   .text.lis3dh_fifo_get:0000000000000000 lis3dh_fifo_get
-     /tmp/ccT3btxY.s:5195   .text.lis3dh_fifo_watermark_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:5202   .text.lis3dh_fifo_watermark_set:0000000000000000 lis3dh_fifo_watermark_set
-     /tmp/ccT3btxY.s:5273   .text.lis3dh_fifo_watermark_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5280   .text.lis3dh_fifo_watermark_get:0000000000000000 lis3dh_fifo_watermark_get
-     /tmp/ccT3btxY.s:5328   .text.lis3dh_fifo_trigger_event_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:5335   .text.lis3dh_fifo_trigger_event_set:0000000000000000 lis3dh_fifo_trigger_event_set
-     /tmp/ccT3btxY.s:5407   .text.lis3dh_fifo_trigger_event_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5414   .text.lis3dh_fifo_trigger_event_get:0000000000000000 lis3dh_fifo_trigger_event_get
-     /tmp/ccT3btxY.s:5487   .text.lis3dh_fifo_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:5494   .text.lis3dh_fifo_mode_set:0000000000000000 lis3dh_fifo_mode_set
-     /tmp/ccT3btxY.s:5567   .text.lis3dh_fifo_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5574   .text.lis3dh_fifo_mode_get:0000000000000000 lis3dh_fifo_mode_get
-     /tmp/ccT3btxY.s:5666   .text.lis3dh_fifo_status_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5673   .text.lis3dh_fifo_status_get:0000000000000000 lis3dh_fifo_status_get
-     /tmp/ccT3btxY.s:5704   .text.lis3dh_fifo_data_level_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5711   .text.lis3dh_fifo_data_level_get:0000000000000000 lis3dh_fifo_data_level_get
-     /tmp/ccT3btxY.s:5759   .text.lis3dh_fifo_empty_flag_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5766   .text.lis3dh_fifo_empty_flag_get:0000000000000000 lis3dh_fifo_empty_flag_get
-     /tmp/ccT3btxY.s:5814   .text.lis3dh_fifo_ovr_flag_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5821   .text.lis3dh_fifo_ovr_flag_get:0000000000000000 lis3dh_fifo_ovr_flag_get
-     /tmp/ccT3btxY.s:5869   .text.lis3dh_fifo_fth_flag_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5876   .text.lis3dh_fifo_fth_flag_get:0000000000000000 lis3dh_fifo_fth_flag_get
-     /tmp/ccT3btxY.s:5923   .text.lis3dh_tap_conf_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:5930   .text.lis3dh_tap_conf_set:0000000000000000 lis3dh_tap_conf_set
-     /tmp/ccT3btxY.s:5961   .text.lis3dh_tap_conf_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:5968   .text.lis3dh_tap_conf_get:0000000000000000 lis3dh_tap_conf_get
-     /tmp/ccT3btxY.s:5999   .text.lis3dh_tap_source_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6006   .text.lis3dh_tap_source_get:0000000000000000 lis3dh_tap_source_get
-     /tmp/ccT3btxY.s:6037   .text.lis3dh_tap_threshold_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6044   .text.lis3dh_tap_threshold_set:0000000000000000 lis3dh_tap_threshold_set
-     /tmp/ccT3btxY.s:6115   .text.lis3dh_tap_threshold_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6122   .text.lis3dh_tap_threshold_get:0000000000000000 lis3dh_tap_threshold_get
-     /tmp/ccT3btxY.s:6170   .text.lis3dh_tap_notification_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6177   .text.lis3dh_tap_notification_mode_set:0000000000000000 lis3dh_tap_notification_mode_set
-     /tmp/ccT3btxY.s:6250   .text.lis3dh_tap_notification_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6257   .text.lis3dh_tap_notification_mode_get:0000000000000000 lis3dh_tap_notification_mode_get
-     /tmp/ccT3btxY.s:6328   .text.lis3dh_shock_dur_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6335   .text.lis3dh_shock_dur_set:0000000000000000 lis3dh_shock_dur_set
-     /tmp/ccT3btxY.s:6406   .text.lis3dh_shock_dur_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6413   .text.lis3dh_shock_dur_get:0000000000000000 lis3dh_shock_dur_get
-     /tmp/ccT3btxY.s:6461   .text.lis3dh_quiet_dur_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6468   .text.lis3dh_quiet_dur_set:0000000000000000 lis3dh_quiet_dur_set
-     /tmp/ccT3btxY.s:6531   .text.lis3dh_quiet_dur_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6538   .text.lis3dh_quiet_dur_get:0000000000000000 lis3dh_quiet_dur_get
-     /tmp/ccT3btxY.s:6584   .text.lis3dh_double_tap_timeout_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6591   .text.lis3dh_double_tap_timeout_set:0000000000000000 lis3dh_double_tap_timeout_set
-     /tmp/ccT3btxY.s:6654   .text.lis3dh_double_tap_timeout_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6661   .text.lis3dh_double_tap_timeout_get:0000000000000000 lis3dh_double_tap_timeout_get
-     /tmp/ccT3btxY.s:6707   .text.lis3dh_act_threshold_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6714   .text.lis3dh_act_threshold_set:0000000000000000 lis3dh_act_threshold_set
-     /tmp/ccT3btxY.s:6785   .text.lis3dh_act_threshold_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6792   .text.lis3dh_act_threshold_get:0000000000000000 lis3dh_act_threshold_get
-     /tmp/ccT3btxY.s:6840   .text.lis3dh_act_timeout_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6847   .text.lis3dh_act_timeout_set:0000000000000000 lis3dh_act_timeout_set
-ARM GAS  /tmp/ccT3btxY.s 			page 185
+     /tmp/ccjzD7jO.s:5068   .text.lis3dh_fifo_set:0000000000000000 lis3dh_fifo_set
+     /tmp/ccjzD7jO.s:5140   .text.lis3dh_fifo_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5147   .text.lis3dh_fifo_get:0000000000000000 lis3dh_fifo_get
+     /tmp/ccjzD7jO.s:5195   .text.lis3dh_fifo_watermark_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5202   .text.lis3dh_fifo_watermark_set:0000000000000000 lis3dh_fifo_watermark_set
+     /tmp/ccjzD7jO.s:5273   .text.lis3dh_fifo_watermark_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5280   .text.lis3dh_fifo_watermark_get:0000000000000000 lis3dh_fifo_watermark_get
+     /tmp/ccjzD7jO.s:5328   .text.lis3dh_fifo_trigger_event_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5335   .text.lis3dh_fifo_trigger_event_set:0000000000000000 lis3dh_fifo_trigger_event_set
+     /tmp/ccjzD7jO.s:5407   .text.lis3dh_fifo_trigger_event_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5414   .text.lis3dh_fifo_trigger_event_get:0000000000000000 lis3dh_fifo_trigger_event_get
+     /tmp/ccjzD7jO.s:5487   .text.lis3dh_fifo_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5494   .text.lis3dh_fifo_mode_set:0000000000000000 lis3dh_fifo_mode_set
+     /tmp/ccjzD7jO.s:5567   .text.lis3dh_fifo_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5574   .text.lis3dh_fifo_mode_get:0000000000000000 lis3dh_fifo_mode_get
+     /tmp/ccjzD7jO.s:5666   .text.lis3dh_fifo_status_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5673   .text.lis3dh_fifo_status_get:0000000000000000 lis3dh_fifo_status_get
+     /tmp/ccjzD7jO.s:5704   .text.lis3dh_fifo_data_level_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5711   .text.lis3dh_fifo_data_level_get:0000000000000000 lis3dh_fifo_data_level_get
+     /tmp/ccjzD7jO.s:5759   .text.lis3dh_fifo_empty_flag_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5766   .text.lis3dh_fifo_empty_flag_get:0000000000000000 lis3dh_fifo_empty_flag_get
+     /tmp/ccjzD7jO.s:5814   .text.lis3dh_fifo_ovr_flag_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5821   .text.lis3dh_fifo_ovr_flag_get:0000000000000000 lis3dh_fifo_ovr_flag_get
+     /tmp/ccjzD7jO.s:5869   .text.lis3dh_fifo_fth_flag_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5876   .text.lis3dh_fifo_fth_flag_get:0000000000000000 lis3dh_fifo_fth_flag_get
+     /tmp/ccjzD7jO.s:5923   .text.lis3dh_tap_conf_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5930   .text.lis3dh_tap_conf_set:0000000000000000 lis3dh_tap_conf_set
+     /tmp/ccjzD7jO.s:5961   .text.lis3dh_tap_conf_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:5968   .text.lis3dh_tap_conf_get:0000000000000000 lis3dh_tap_conf_get
+     /tmp/ccjzD7jO.s:5999   .text.lis3dh_tap_source_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6006   .text.lis3dh_tap_source_get:0000000000000000 lis3dh_tap_source_get
+     /tmp/ccjzD7jO.s:6037   .text.lis3dh_tap_threshold_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6044   .text.lis3dh_tap_threshold_set:0000000000000000 lis3dh_tap_threshold_set
+     /tmp/ccjzD7jO.s:6115   .text.lis3dh_tap_threshold_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6122   .text.lis3dh_tap_threshold_get:0000000000000000 lis3dh_tap_threshold_get
+     /tmp/ccjzD7jO.s:6170   .text.lis3dh_tap_notification_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6177   .text.lis3dh_tap_notification_mode_set:0000000000000000 lis3dh_tap_notification_mode_set
+     /tmp/ccjzD7jO.s:6250   .text.lis3dh_tap_notification_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6257   .text.lis3dh_tap_notification_mode_get:0000000000000000 lis3dh_tap_notification_mode_get
+     /tmp/ccjzD7jO.s:6328   .text.lis3dh_shock_dur_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6335   .text.lis3dh_shock_dur_set:0000000000000000 lis3dh_shock_dur_set
+     /tmp/ccjzD7jO.s:6406   .text.lis3dh_shock_dur_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6413   .text.lis3dh_shock_dur_get:0000000000000000 lis3dh_shock_dur_get
+     /tmp/ccjzD7jO.s:6461   .text.lis3dh_quiet_dur_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6468   .text.lis3dh_quiet_dur_set:0000000000000000 lis3dh_quiet_dur_set
+     /tmp/ccjzD7jO.s:6531   .text.lis3dh_quiet_dur_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6538   .text.lis3dh_quiet_dur_get:0000000000000000 lis3dh_quiet_dur_get
+     /tmp/ccjzD7jO.s:6584   .text.lis3dh_double_tap_timeout_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6591   .text.lis3dh_double_tap_timeout_set:0000000000000000 lis3dh_double_tap_timeout_set
+     /tmp/ccjzD7jO.s:6654   .text.lis3dh_double_tap_timeout_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6661   .text.lis3dh_double_tap_timeout_get:0000000000000000 lis3dh_double_tap_timeout_get
+     /tmp/ccjzD7jO.s:6707   .text.lis3dh_act_threshold_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6714   .text.lis3dh_act_threshold_set:0000000000000000 lis3dh_act_threshold_set
+     /tmp/ccjzD7jO.s:6785   .text.lis3dh_act_threshold_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6792   .text.lis3dh_act_threshold_get:0000000000000000 lis3dh_act_threshold_get
+     /tmp/ccjzD7jO.s:6840   .text.lis3dh_act_timeout_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6847   .text.lis3dh_act_timeout_set:0000000000000000 lis3dh_act_timeout_set
+ARM GAS  /tmp/ccjzD7jO.s 			page 185
 
 
-     /tmp/ccT3btxY.s:6910   .text.lis3dh_act_timeout_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:6917   .text.lis3dh_act_timeout_get:0000000000000000 lis3dh_act_timeout_get
-     /tmp/ccT3btxY.s:6963   .text.lis3dh_pin_sdo_sa0_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:6970   .text.lis3dh_pin_sdo_sa0_mode_set:0000000000000000 lis3dh_pin_sdo_sa0_mode_set
-     /tmp/ccT3btxY.s:7043   .text.lis3dh_pin_sdo_sa0_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:7050   .text.lis3dh_pin_sdo_sa0_mode_get:0000000000000000 lis3dh_pin_sdo_sa0_mode_get
-     /tmp/ccT3btxY.s:7121   .text.lis3dh_spi_mode_set:0000000000000000 $t
-     /tmp/ccT3btxY.s:7128   .text.lis3dh_spi_mode_set:0000000000000000 lis3dh_spi_mode_set
-     /tmp/ccT3btxY.s:7199   .text.lis3dh_spi_mode_get:0000000000000000 $t
-     /tmp/ccT3btxY.s:7206   .text.lis3dh_spi_mode_get:0000000000000000 lis3dh_spi_mode_get
+     /tmp/ccjzD7jO.s:6910   .text.lis3dh_act_timeout_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6917   .text.lis3dh_act_timeout_get:0000000000000000 lis3dh_act_timeout_get
+     /tmp/ccjzD7jO.s:6963   .text.lis3dh_pin_sdo_sa0_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:6970   .text.lis3dh_pin_sdo_sa0_mode_set:0000000000000000 lis3dh_pin_sdo_sa0_mode_set
+     /tmp/ccjzD7jO.s:7043   .text.lis3dh_pin_sdo_sa0_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:7050   .text.lis3dh_pin_sdo_sa0_mode_get:0000000000000000 lis3dh_pin_sdo_sa0_mode_get
+     /tmp/ccjzD7jO.s:7121   .text.lis3dh_spi_mode_set:0000000000000000 $t
+     /tmp/ccjzD7jO.s:7128   .text.lis3dh_spi_mode_set:0000000000000000 lis3dh_spi_mode_set
+     /tmp/ccjzD7jO.s:7199   .text.lis3dh_spi_mode_get:0000000000000000 $t
+     /tmp/ccjzD7jO.s:7206   .text.lis3dh_spi_mode_get:0000000000000000 lis3dh_spi_mode_get
 
 UNDEFINED SYMBOLS
 __aeabi_i2f

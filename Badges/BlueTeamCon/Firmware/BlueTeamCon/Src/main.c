@@ -61,7 +61,8 @@ static void lis3dh_read_data_polling(void);
 I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
-
+int location = 0; 
+int change = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,7 +124,31 @@ uint8_t Buffer[25] = {0};
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      //starsON();
+      //cycleMatrix();
+      if(location == 0)
+         //cylon();
+         lines();
+      else if(location == 1)
+         cycleMatrix(500);
+      else if(location == 2)
+         cycleMatrix(100);
+      else if(location == 3)
+         allON();
+      else if(location == 4)
+         triangles();
+      else if(location == 5)
+         lines();
+
+      if(change > 0){
+         change = 0;
+         location++;
+         if(location >5)
+            location = 0;
+         allOFF();
+      }
 //     CDC_Transmit_FS(data, strlen(data));
+/*
 if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9) == 0)
 {
    lis3dh_read_data_polling();
@@ -132,7 +157,7 @@ uint8_t ret;
   for(uint8_t i=1; i<128; i++)
     {
     	ret = HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(i<<1), 3, 5);
-    	if (ret != HAL_OK) /* No ACK Received At That Address */
+    	if (ret != HAL_OK) 
     	{
     	    CDC_Transmit_FS(Space, sizeof(Space));
         }
@@ -143,8 +168,9 @@ uint8_t ret;
     	}
     }
     CDC_Transmit_FS(EndMSG, sizeof(EndMSG));
-    /*--[ Scanning Done ]--*/
 }
+*/
+
 
     /* USER CODE END WHILE */
 
@@ -296,15 +322,30 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Mode_IN_Pin */
-  GPIO_InitStruct.Pin = Mode_IN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pin : Mode_Pin */
+  GPIO_InitStruct.Pin = Mode_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(Mode_IN_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 }
 
 /* USER CODE BEGIN 4 */
+
+void HAL_GPIO_EXTI_Callback( uint16_t GPIO_Pin)
+{
+   //if(GPIO_Pin == Mode_Pin){
+         //This block will be triggered after pin activated.
+      //if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9 == 0)){
+         change = 1;
+        // tx_com(location, 16);
+       //  }
+   //}
+}
 
 static void tx_com(uint8_t *tx_buffer, uint16_t len){
 //  HAL_UART_Transmit(&huart2, tx_buffer, len, 1000);
@@ -408,7 +449,258 @@ void starsON(){
    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
 }
 
-void cycleMatrix(){
+void starsOFF(){
+   //Light our stars
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+}
+
+void allON(){
+   starsON();
+   cycleMatrix(1); 
+}
+
+void allOFF(){
+   //Blank our stars
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+
+   //Row 1
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+   //Row 2
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+   //Row 3
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+   //Row 4
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+   //Row 5
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+   //Row 6
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+   //Row 7
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+   //Row 8
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+   //Row 9
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+   
+   //C1
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+   //C2
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_RESET);
+   //C3
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_RESET);
+   //C4
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+   //C5
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
+   //C6
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
+   //C7
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
+   //C8
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
+   //C9
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
+}
+
+void triangles(){
+   int i = 1;
+   int j = 1;
+   while(change == 0){
+      if(i == 1){
+         singleMatrix(1,1);
+         singleMatrix(2,1);
+         singleMatrix(3,1);
+         singleMatrix(4,1);
+         singleMatrix(5,1);
+         singleMatrix(6,1);
+         singleMatrix(7,1);
+         singleMatrix(8,1);
+         singleMatrix(9,1);
+
+         singleMatrix(1,1);
+         singleMatrix(1,2);
+         singleMatrix(1,3);
+         singleMatrix(1,4);
+         singleMatrix(1,5);
+         singleMatrix(1,6);
+         singleMatrix(1,7);
+         singleMatrix(1,8);
+         singleMatrix(1,9);
+            
+         singleMatrix(8,2);
+         singleMatrix(7,3);
+         singleMatrix(6,4);
+         singleMatrix(5,5);
+         singleMatrix(4,6);
+         singleMatrix(3,7);
+         singleMatrix(8,8);
+      }
+      if(i == 2){
+         singleMatrix(1,2);
+         singleMatrix(2,2);
+         singleMatrix(3,2);
+         singleMatrix(4,2);
+         singleMatrix(5,2);
+         singleMatrix(6,2);
+         singleMatrix(7,2);
+         singleMatrix(8,2);
+
+         singleMatrix(2,3);
+         singleMatrix(2,4);
+         singleMatrix(2,5);
+         singleMatrix(2,6);
+         singleMatrix(2,7);
+            
+         singleMatrix(6,3);
+         singleMatrix(4,5);
+         singleMatrix(3,6);
+         
+      }
+      if(i == 3){
+         singleMatrix(3,5);
+         HAL_Delay(1);
+         }
+      if(j == 3000){
+         j = 1;
+         i++;
+         if(i == 4)
+            i = 1;
+      }
+      j++;
+      if(change > 0)
+         return;
+   }
+}
+
+void lines(){
+   int i =0;
+   int j =0;
+   while(change == 0){
+      if(j == 0){
+         allOFF(); 
+         starsON();
+         for(int k =0; k<600; k++) {}
+      }
+      if(j == 1){
+         starsOFF();
+         singleMatrix(1,1);
+         singleMatrix(2,1);
+         singleMatrix(3,1);
+         singleMatrix(4,1);
+         singleMatrix(5,1);
+         singleMatrix(6,1);
+         singleMatrix(7,1);
+         singleMatrix(8,1);
+         singleMatrix(9,1);
+      }
+      if(j == 2){
+         singleMatrix(1,2);
+         singleMatrix(2,2);
+         singleMatrix(3,2);
+         singleMatrix(4,2);
+         singleMatrix(5,2);
+         singleMatrix(6,2);
+         singleMatrix(7,2);
+         singleMatrix(8,2);
+      }
+      if(j == 3){
+         singleMatrix(1,3);
+         singleMatrix(2,3);
+         singleMatrix(3,3);
+         singleMatrix(4,3);
+         singleMatrix(5,3);
+         singleMatrix(6,3);
+         singleMatrix(7,3);
+      }
+      if(j == 4){
+         singleMatrix(1,4);
+         singleMatrix(2,4);
+         singleMatrix(6,4);
+         singleMatrix(7,4);
+         for(int k =0; k<300; k++) {}
+      }
+      if(j == 5){
+         singleMatrix(1,5);
+         singleMatrix(2,5);
+         singleMatrix(3,5);
+         singleMatrix(4,5);
+         singleMatrix(5,5);
+         for(int k =0; k<100; k++) {}
+      }
+      if(j == 6){
+         singleMatrix(1,6);
+         singleMatrix(2,6);
+         singleMatrix(3,6);
+         singleMatrix(4,6);
+         for(int k =0; k<200; k++) {}
+      }
+      if(j == 7){
+         singleMatrix(1,7);
+         singleMatrix(2,7);
+         singleMatrix(3,7);
+         for(int k =0; k<300; k++) {}
+      }
+      if(j == 8){
+         singleMatrix(1,8);
+         singleMatrix(2,8);
+         for(int k =0; k<400; k++) {}
+
+      }
+      if(j == 9){
+         singleMatrix(1,9);
+         for(int k =0; k<500; k++) {}
+      }
+
+      //if(change > 0)
+      //   return;
+
+      if(i == 3000){
+         i = 0;
+         if(j == 10)
+            j = 0;
+         else
+            j++;
+      }
+      i++;
+   }  
+}
+void cylon(){
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+   HAL_Delay(200);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
+   HAL_Delay(100);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
+   HAL_Delay(100);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+   HAL_Delay(200);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
+   HAL_Delay(100);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
+   HAL_Delay(100);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+   HAL_Delay(100);
+   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+   //HAL_Delay(150);
+}
+
+void cycleMatrix(int speed){
       for(int i=1; i<10; i++){
          for(int j=1; j<10; j++){
             //Second Row Mods
@@ -470,7 +762,9 @@ void cycleMatrix(){
 
             singleMatrix(i,j); 
            //Add matrix void jump here 
-           HAL_Delay(500);
+           HAL_Delay(speed);
+           if(change == 1)
+               return;
          }
          }
 }

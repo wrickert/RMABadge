@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6fgQkx.s 			page 1
+ARM GAS  /tmp/ccfGkWCi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
   30:Src/stm32f0xx_it.c **** 
   31:Src/stm32f0xx_it.c **** /* USER CODE END TD */
   32:Src/stm32f0xx_it.c **** 
-ARM GAS  /tmp/cc6fgQkx.s 			page 2
+ARM GAS  /tmp/ccfGkWCi.s 			page 2
 
 
   33:Src/stm32f0xx_it.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
   35              		.cfi_endproc
   36              	.LFE40:
   38              		.section	.text.HardFault_Handler,"ax",%progbits
-ARM GAS  /tmp/cc6fgQkx.s 			page 3
+ARM GAS  /tmp/ccfGkWCi.s 			page 3
 
 
   39              		.align	1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
   74              		@ args = 0, pretend = 0, frame = 0
   75              		@ frame_needed = 0, uses_anonymous_args = 0
   76              		@ link register save eliminated.
-ARM GAS  /tmp/cc6fgQkx.s 			page 4
+ARM GAS  /tmp/ccfGkWCi.s 			page 4
 
 
  100:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 0 */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
  121:Src/stm32f0xx_it.c **** /**
  122:Src/stm32f0xx_it.c ****   * @brief This function handles System tick timer.
  123:Src/stm32f0xx_it.c ****   */
-ARM GAS  /tmp/cc6fgQkx.s 			page 5
+ARM GAS  /tmp/ccfGkWCi.s 			page 5
 
 
  124:Src/stm32f0xx_it.c **** void SysTick_Handler(void)
@@ -268,14 +268,14 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
  128 0006 10BD     		pop	{r4, pc}
  129              		.cfi_endproc
  130              	.LFE44:
- 132              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 132              		.section	.text.EXTI4_15_IRQHandler,"ax",%progbits
  133              		.align	1
- 134              		.global	USB_IRQHandler
+ 134              		.global	EXTI4_15_IRQHandler
  135              		.syntax unified
  136              		.code	16
  137              		.thumb_func
  138              		.fpu softvfp
- 140              	USB_IRQHandler:
+ 140              	EXTI4_15_IRQHandler:
  141              	.LFB45:
  134:Src/stm32f0xx_it.c **** 
  135:Src/stm32f0xx_it.c **** /******************************************************************************/
@@ -286,9 +286,9 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
  140:Src/stm32f0xx_it.c **** /******************************************************************************/
  141:Src/stm32f0xx_it.c **** 
  142:Src/stm32f0xx_it.c **** /**
- 143:Src/stm32f0xx_it.c ****   * @brief This function handles USB global interrupt / USB wake-up interrupt through EXTI line 18.
+ 143:Src/stm32f0xx_it.c ****   * @brief This function handles EXTI line 4 to 15 interrupts.
  144:Src/stm32f0xx_it.c ****   */
- 145:Src/stm32f0xx_it.c **** void USB_IRQHandler(void)
+ 145:Src/stm32f0xx_it.c **** void EXTI4_15_IRQHandler(void)
  146:Src/stm32f0xx_it.c **** {
  142              		.loc 1 146 1 is_stmt 1 view -0
  143              		.cfi_startproc
@@ -298,60 +298,109 @@ ARM GAS  /tmp/cc6fgQkx.s 			page 1
  147              	.LCFI1:
  148              		.cfi_def_cfa_offset 8
  149              		.cfi_offset 4, -8
-ARM GAS  /tmp/cc6fgQkx.s 			page 6
+ARM GAS  /tmp/ccfGkWCi.s 			page 6
 
 
  150              		.cfi_offset 14, -4
- 147:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN USB_IRQn 0 */
+ 147:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
  148:Src/stm32f0xx_it.c **** 
- 149:Src/stm32f0xx_it.c ****   /* USER CODE END USB_IRQn 0 */
- 150:Src/stm32f0xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_FS);
+ 149:Src/stm32f0xx_it.c ****   /* USER CODE END EXTI4_15_IRQn 0 */
+ 150:Src/stm32f0xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
  151              		.loc 1 150 3 view .LVU14
- 152 0002 0248     		ldr	r0, .L8
- 153 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
- 154              	.LVL1:
- 151:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN USB_IRQn 1 */
+ 152 0002 8020     		movs	r0, #128
+ 153 0004 8000     		lsls	r0, r0, #2
+ 154 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 155              	.LVL1:
+ 151:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
  152:Src/stm32f0xx_it.c **** 
- 153:Src/stm32f0xx_it.c ****   /* USER CODE END USB_IRQn 1 */
+ 153:Src/stm32f0xx_it.c ****   /* USER CODE END EXTI4_15_IRQn 1 */
  154:Src/stm32f0xx_it.c **** }
- 155              		.loc 1 154 1 is_stmt 0 view .LVU15
- 156              		@ sp needed
- 157 0008 10BD     		pop	{r4, pc}
- 158              	.L9:
- 159 000a C046     		.align	2
- 160              	.L8:
- 161 000c 00000000 		.word	hpcd_USB_FS
- 162              		.cfi_endproc
- 163              	.LFE45:
- 165              		.text
- 166              	.Letext0:
- 167              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 168              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 169              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
- 170              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
- 171              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_usb.h"
- 172              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h"
- 173              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/cc6fgQkx.s 			page 7
+ 156              		.loc 1 154 1 is_stmt 0 view .LVU15
+ 157              		@ sp needed
+ 158 000a 10BD     		pop	{r4, pc}
+ 159              		.cfi_endproc
+ 160              	.LFE45:
+ 162              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	USB_IRQHandler
+ 165              		.syntax unified
+ 166              		.code	16
+ 167              		.thumb_func
+ 168              		.fpu softvfp
+ 170              	USB_IRQHandler:
+ 171              	.LFB46:
+ 155:Src/stm32f0xx_it.c **** 
+ 156:Src/stm32f0xx_it.c **** /**
+ 157:Src/stm32f0xx_it.c ****   * @brief This function handles USB global interrupt / USB wake-up interrupt through EXTI line 18.
+ 158:Src/stm32f0xx_it.c ****   */
+ 159:Src/stm32f0xx_it.c **** void USB_IRQHandler(void)
+ 160:Src/stm32f0xx_it.c **** {
+ 172              		.loc 1 160 1 is_stmt 1 view -0
+ 173              		.cfi_startproc
+ 174              		@ args = 0, pretend = 0, frame = 0
+ 175              		@ frame_needed = 0, uses_anonymous_args = 0
+ 176 0000 10B5     		push	{r4, lr}
+ 177              	.LCFI2:
+ 178              		.cfi_def_cfa_offset 8
+ 179              		.cfi_offset 4, -8
+ 180              		.cfi_offset 14, -4
+ 161:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN USB_IRQn 0 */
+ 162:Src/stm32f0xx_it.c **** 
+ 163:Src/stm32f0xx_it.c ****   /* USER CODE END USB_IRQn 0 */
+ 164:Src/stm32f0xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_FS);
+ 181              		.loc 1 164 3 view .LVU17
+ 182 0002 0248     		ldr	r0, .L9
+ 183 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 184              	.LVL2:
+ 165:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN USB_IRQn 1 */
+ 166:Src/stm32f0xx_it.c **** 
+ 167:Src/stm32f0xx_it.c ****   /* USER CODE END USB_IRQn 1 */
+ 168:Src/stm32f0xx_it.c **** }
+ 185              		.loc 1 168 1 is_stmt 0 view .LVU18
+ 186              		@ sp needed
+ARM GAS  /tmp/ccfGkWCi.s 			page 7
+
+
+ 187 0008 10BD     		pop	{r4, pc}
+ 188              	.L10:
+ 189 000a C046     		.align	2
+ 190              	.L9:
+ 191 000c 00000000 		.word	hpcd_USB_FS
+ 192              		.cfi_endproc
+ 193              	.LFE46:
+ 195              		.text
+ 196              	.Letext0:
+ 197              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 198              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 199              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
+ 200              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 201              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_usb.h"
+ 202              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h"
+ 203              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
+ 204              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ARM GAS  /tmp/ccfGkWCi.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_it.c
-     /tmp/cc6fgQkx.s:16     .text.NMI_Handler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
-     /tmp/cc6fgQkx.s:39     .text.HardFault_Handler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:46     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-     /tmp/cc6fgQkx.s:63     .text.SVC_Handler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:70     .text.SVC_Handler:0000000000000000 SVC_Handler
-     /tmp/cc6fgQkx.s:84     .text.PendSV_Handler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:91     .text.PendSV_Handler:0000000000000000 PendSV_Handler
-     /tmp/cc6fgQkx.s:105    .text.SysTick_Handler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:112    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-     /tmp/cc6fgQkx.s:133    .text.USB_IRQHandler:0000000000000000 $t
-     /tmp/cc6fgQkx.s:140    .text.USB_IRQHandler:0000000000000000 USB_IRQHandler
-     /tmp/cc6fgQkx.s:161    .text.USB_IRQHandler:000000000000000c $d
+     /tmp/ccfGkWCi.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccfGkWCi.s:39     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:46     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccfGkWCi.s:63     .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:70     .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccfGkWCi.s:84     .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:91     .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccfGkWCi.s:105    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:112    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/ccfGkWCi.s:133    .text.EXTI4_15_IRQHandler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:140    .text.EXTI4_15_IRQHandler:0000000000000000 EXTI4_15_IRQHandler
+     /tmp/ccfGkWCi.s:163    .text.USB_IRQHandler:0000000000000000 $t
+     /tmp/ccfGkWCi.s:170    .text.USB_IRQHandler:0000000000000000 USB_IRQHandler
+     /tmp/ccfGkWCi.s:191    .text.USB_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
+HAL_GPIO_EXTI_IRQHandler
 HAL_PCD_IRQHandler
 hpcd_USB_FS

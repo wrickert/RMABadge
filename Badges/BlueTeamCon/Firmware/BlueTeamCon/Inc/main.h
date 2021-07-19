@@ -92,8 +92,9 @@ void Error_Handler(void);
 #define S2_GPIO_Port GPIOB
 #define S1_Pin GPIO_PIN_12
 #define S1_GPIO_Port GPIOB
-#define Mode_IN_Pin GPIO_PIN_9
-#define Mode_IN_GPIO_Port GPIOA
+#define Mode_Pin GPIO_PIN_9
+#define Mode_GPIO_Port GPIOA
+#define Mode_EXTI_IRQn EXTI4_15_IRQn
 #define C9_Pin GPIO_PIN_3
 #define C9_GPIO_Port GPIOB
 #define C8_Pin GPIO_PIN_4

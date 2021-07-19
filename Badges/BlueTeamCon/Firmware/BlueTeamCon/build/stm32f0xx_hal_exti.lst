@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6hwwYP.s 			page 1
+ARM GAS  /tmp/cc2fqgaM.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
   29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****         interrupts pending registers which allow to distinguish which transition
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****         occurs:
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****         (++) Rising edge pending interrupt
-ARM GAS  /tmp/cc6hwwYP.s 			page 2
+ARM GAS  /tmp/cc2fqgaM.s 			page 2
 
 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****         (++) Falling
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
   86:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** /* Includes ------------------------------------------------------------------*/
   87:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** #include "stm32f0xx_hal.h"
   88:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
-ARM GAS  /tmp/cc6hwwYP.s 			page 3
+ARM GAS  /tmp/cc2fqgaM.s 			page 3
 
 
   89:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** /** @addtogroup STM32F0xx_HAL_Driver
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  143:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig
  144:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** {
   28              		.loc 1 144 1 view -0
-ARM GAS  /tmp/cc6hwwYP.s 			page 4
+ARM GAS  /tmp/cc2fqgaM.s 			page 4
 
 
   29              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
   63              		.loc 1 164 12 is_stmt 0 view .LVU16
   64 0012 0122     		movs	r2, #1
   65 0014 9A40     		lsls	r2, r2, r3
-ARM GAS  /tmp/cc6hwwYP.s 			page 5
+ARM GAS  /tmp/cc2fqgaM.s 			page 5
 
 
   66              	.LVL2:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
   98              	.L7:
  187:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     }
  188:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     else
-ARM GAS  /tmp/cc6hwwYP.s 			page 6
+ARM GAS  /tmp/cc2fqgaM.s 			page 6
 
 
  189:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     {
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  218:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   /* Configure event mode : read current mode */
  219:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   /* Mask or set line */
  220:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   if ((pExtiConfig->Mode & EXTI_MODE_EVENT) != 0x00u)
-ARM GAS  /tmp/cc6hwwYP.s 			page 7
+ARM GAS  /tmp/cc2fqgaM.s 			page 7
 
 
  124              		.loc 1 220 3 is_stmt 1 view .LVU39
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  163              		.loc 1 197 7 is_stmt 1 view .LVU51
  198:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
  164              		.loc 1 198 7 view .LVU52
-ARM GAS  /tmp/cc6hwwYP.s 			page 8
+ARM GAS  /tmp/cc2fqgaM.s 			page 8
 
 
  200:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       regval &= ~(SYSCFG_EXTICR1_EXTI0 << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  215:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   }
  204              		.loc 1 215 5 is_stmt 1 view .LVU68
  215:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   }
-ARM GAS  /tmp/cc6hwwYP.s 			page 9
+ARM GAS  /tmp/cc2fqgaM.s 			page 9
 
 
  205              		.loc 1 215 15 is_stmt 0 view .LVU69
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  253              	HAL_EXTI_GetConfigLine:
  254              	.LVL19:
  255              	.LFB41:
-ARM GAS  /tmp/cc6hwwYP.s 			page 10
+ARM GAS  /tmp/cc2fqgaM.s 			page 10
 
 
  231:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  257:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   linepos = (pExtiConfig->Line & EXTI_PIN_MASK);
  284              		.loc 1 257 3 is_stmt 1 view .LVU90
  285              		.loc 1 257 11 is_stmt 0 view .LVU91
-ARM GAS  /tmp/cc6hwwYP.s 			page 11
+ARM GAS  /tmp/cc2fqgaM.s 			page 11
 
 
  286 000e 1F24     		movs	r4, #31
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  278:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
  279:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   /* 2] Get trigger for configurable lines : rising */
  280:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   if ((pExtiConfig->Line & EXTI_CONFIG) != 0x00u)
-ARM GAS  /tmp/cc6hwwYP.s 			page 12
+ARM GAS  /tmp/cc2fqgaM.s 			page 12
 
 
  320              		.loc 1 280 3 is_stmt 1 view .LVU104
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  354 0052 C022     		movs	r2, #192
  355 0054 D204     		lsls	r2, r2, #19
  356 0056 1040     		ands	r0, r2
-ARM GAS  /tmp/cc6hwwYP.s 			page 13
+ARM GAS  /tmp/cc2fqgaM.s 			page 13
 
 
  357              		.loc 1 300 8 view .LVU119
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  385 0070 A308     		lsrs	r3, r4, #2
  304:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       pExtiConfig->GPIOSel = ((regval << (SYSCFG_EXTICR1_EXTI1_Pos * (3uL - (linepos & 0x03u)))) >>
  386              		.loc 1 304 14 view .LVU130
-ARM GAS  /tmp/cc6hwwYP.s 			page 14
+ARM GAS  /tmp/cc2fqgaM.s 			page 14
 
 
  387 0072 0233     		adds	r3, r3, #2
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  428              		.loc 1 247 12 view .LVU145
  429 0094 0120     		movs	r0, #1
  430              	.LVL32:
-ARM GAS  /tmp/cc6hwwYP.s 			page 15
+ARM GAS  /tmp/cc2fqgaM.s 			page 15
 
 
  247:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   }
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  473              		.loc 1 331 3 view .LVU153
  332:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
  333:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   /* Check null pointer */
-ARM GAS  /tmp/cc6hwwYP.s 			page 16
+ARM GAS  /tmp/cc2fqgaM.s 			page 16
 
 
  334:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   if (hexti == NULL)
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  508              		.loc 1 353 3 is_stmt 1 view .LVU171
  509              		.loc 1 353 13 is_stmt 0 view .LVU172
  510 0020 0368     		ldr	r3, [r0]
-ARM GAS  /tmp/cc6hwwYP.s 			page 17
+ARM GAS  /tmp/cc2fqgaM.s 			page 17
 
 
  511              	.LVL38:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  363:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       regval &= ~(SYSCFG_EXTICR1_EXTI0 << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
  548              		.loc 1 363 7 view .LVU189
  363:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       regval &= ~(SYSCFG_EXTICR1_EXTI0 << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
-ARM GAS  /tmp/cc6hwwYP.s 			page 18
+ARM GAS  /tmp/cc2fqgaM.s 			page 18
 
 
  549              		.loc 1 363 39 is_stmt 0 view .LVU190
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  591              		.loc 1 370 1 view .LVU204
  592              		@ sp needed
  593 0066 70BD     		pop	{r4, r5, r6, pc}
-ARM GAS  /tmp/cc6hwwYP.s 			page 19
+ARM GAS  /tmp/cc2fqgaM.s 			page 19
 
 
  594              	.L39:
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  390:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     default:
  391:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       status = HAL_ERROR;
  392:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****       break;
-ARM GAS  /tmp/cc6hwwYP.s 			page 20
+ARM GAS  /tmp/cc2fqgaM.s 			page 20
 
 
  393:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  412:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   {
  413:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     return HAL_ERROR;
  414:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   }
-ARM GAS  /tmp/cc6hwwYP.s 			page 21
+ARM GAS  /tmp/cc2fqgaM.s 			page 21
 
 
  415:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   else
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  437:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   * @{
  438:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   */
  439:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
-ARM GAS  /tmp/cc6hwwYP.s 			page 22
+ARM GAS  /tmp/cc2fqgaM.s 			page 22
 
 
  440:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** /**
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  732              		.loc 1 458 14 view .LVU241
  733 0016 5361     		str	r3, [r2, #20]
  459:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** 
-ARM GAS  /tmp/cc6hwwYP.s 			page 23
+ARM GAS  /tmp/cc2fqgaM.s 			page 23
 
 
  460:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****     /* Call callback */
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  479:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   uint32_t regval;
  771              		.loc 1 479 3 view .LVU248
  480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c ****   uint32_t linepos;
-ARM GAS  /tmp/cc6hwwYP.s 			page 24
+ARM GAS  /tmp/cc2fqgaM.s 			page 24
 
 
  772              		.loc 1 480 3 view .LVU249
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  812              		.section	.text.HAL_EXTI_ClearPending,"ax",%progbits
  813              		.align	1
  814              		.global	HAL_EXTI_ClearPending
-ARM GAS  /tmp/cc6hwwYP.s 			page 25
+ARM GAS  /tmp/cc2fqgaM.s 			page 25
 
 
  815              		.syntax unified
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  520:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c **** }
  846              		.loc 1 520 1 view .LVU277
  847              		@ sp needed
-ARM GAS  /tmp/cc6hwwYP.s 			page 26
+ARM GAS  /tmp/cc2fqgaM.s 			page 26
 
 
  848 000e 7047     		bx	lr
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  885              		.loc 1 539 3 is_stmt 1 view .LVU286
  886              		.loc 1 539 15 is_stmt 0 view .LVU287
  887 000a 014A     		ldr	r2, .L57
-ARM GAS  /tmp/cc6hwwYP.s 			page 27
+ARM GAS  /tmp/cc2fqgaM.s 			page 27
 
 
  888 000c 1361     		str	r3, [r2, #16]
@@ -1579,35 +1579,35 @@ ARM GAS  /tmp/cc6hwwYP.s 			page 1
  903              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
  904              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
  905              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_exti.h"
-ARM GAS  /tmp/cc6hwwYP.s 			page 28
+ARM GAS  /tmp/cc2fqgaM.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_exti.c
-     /tmp/cc6hwwYP.s:16     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
-     /tmp/cc6hwwYP.s:24     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
-     /tmp/cc6hwwYP.s:240    .text.HAL_EXTI_SetConfigLine:00000000000000b8 $d
-     /tmp/cc6hwwYP.s:246    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
-     /tmp/cc6hwwYP.s:253    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
-     /tmp/cc6hwwYP.s:443    .text.HAL_EXTI_GetConfigLine:000000000000009c $d
-     /tmp/cc6hwwYP.s:449    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
-     /tmp/cc6hwwYP.s:456    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
-     /tmp/cc6hwwYP.s:597    .text.HAL_EXTI_ClearConfigLine:0000000000000068 $d
-     /tmp/cc6hwwYP.s:603    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
-     /tmp/cc6hwwYP.s:610    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
-     /tmp/cc6hwwYP.s:645    .text.HAL_EXTI_GetHandle:0000000000000000 $t
-     /tmp/cc6hwwYP.s:652    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
-     /tmp/cc6hwwYP.s:687    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
-     /tmp/cc6hwwYP.s:694    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
-     /tmp/cc6hwwYP.s:751    .text.HAL_EXTI_IRQHandler:0000000000000024 $d
-     /tmp/cc6hwwYP.s:756    .text.HAL_EXTI_GetPending:0000000000000000 $t
-     /tmp/cc6hwwYP.s:763    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
-     /tmp/cc6hwwYP.s:808    .text.HAL_EXTI_GetPending:0000000000000014 $d
-     /tmp/cc6hwwYP.s:813    .text.HAL_EXTI_ClearPending:0000000000000000 $t
-     /tmp/cc6hwwYP.s:820    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
-     /tmp/cc6hwwYP.s:852    .text.HAL_EXTI_ClearPending:0000000000000010 $d
-     /tmp/cc6hwwYP.s:857    .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
-     /tmp/cc6hwwYP.s:864    .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
-     /tmp/cc6hwwYP.s:895    .text.HAL_EXTI_GenerateSWI:0000000000000010 $d
+     /tmp/cc2fqgaM.s:16     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
+     /tmp/cc2fqgaM.s:24     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
+     /tmp/cc2fqgaM.s:240    .text.HAL_EXTI_SetConfigLine:00000000000000b8 $d
+     /tmp/cc2fqgaM.s:246    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
+     /tmp/cc2fqgaM.s:253    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
+     /tmp/cc2fqgaM.s:443    .text.HAL_EXTI_GetConfigLine:000000000000009c $d
+     /tmp/cc2fqgaM.s:449    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
+     /tmp/cc2fqgaM.s:456    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
+     /tmp/cc2fqgaM.s:597    .text.HAL_EXTI_ClearConfigLine:0000000000000068 $d
+     /tmp/cc2fqgaM.s:603    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
+     /tmp/cc2fqgaM.s:610    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
+     /tmp/cc2fqgaM.s:645    .text.HAL_EXTI_GetHandle:0000000000000000 $t
+     /tmp/cc2fqgaM.s:652    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
+     /tmp/cc2fqgaM.s:687    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
+     /tmp/cc2fqgaM.s:694    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
+     /tmp/cc2fqgaM.s:751    .text.HAL_EXTI_IRQHandler:0000000000000024 $d
+     /tmp/cc2fqgaM.s:756    .text.HAL_EXTI_GetPending:0000000000000000 $t
+     /tmp/cc2fqgaM.s:763    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
+     /tmp/cc2fqgaM.s:808    .text.HAL_EXTI_GetPending:0000000000000014 $d
+     /tmp/cc2fqgaM.s:813    .text.HAL_EXTI_ClearPending:0000000000000000 $t
+     /tmp/cc2fqgaM.s:820    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
+     /tmp/cc2fqgaM.s:852    .text.HAL_EXTI_ClearPending:0000000000000010 $d
+     /tmp/cc2fqgaM.s:857    .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
+     /tmp/cc2fqgaM.s:864    .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
+     /tmp/cc2fqgaM.s:895    .text.HAL_EXTI_GenerateSWI:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS
