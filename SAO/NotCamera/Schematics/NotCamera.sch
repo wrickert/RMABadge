@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:NotCamera-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,40 +14,40 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J1
+L NotCamera-rescue:Conn_02x03_Odd_Even-Connector_Generic J1
 U 1 1 5D1A87FB
-P 1500 1900
-F 0 "J1" V 1596 1712 50  0000 R CNN
-F 1 "Conn_02x03_Odd_Even" V 1505 1712 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD" H 1500 1900 50  0001 C CNN
-F 3 "~" H 1500 1900 50  0001 C CNN
-	1    1500 1900
+P 4950 2600
+F 0 "J1" V 5046 2412 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 4955 2412 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD" H 4950 2600 50  0001 C CNN
+F 3 "~" H 4950 2600 50  0001 C CNN
+	1    4950 2600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+3V3 #PWR0101
+L NotCamera-rescue:+3V3-power #PWR0101
 U 1 1 5CF15C4F
-P 1400 2100
-F 0 "#PWR0101" H 1400 1950 50  0001 C CNN
-F 1 "+3V3" H 1415 2273 50  0000 C CNN
-F 2 "" H 1400 2100 50  0001 C CNN
-F 3 "" H 1400 2100 50  0001 C CNN
-	1    1400 2100
+P 4850 2800
+F 0 "#PWR0101" H 4850 2650 50  0001 C CNN
+F 1 "+3V3" H 4865 2973 50  0000 C CNN
+F 2 "" H 4850 2800 50  0001 C CNN
+F 3 "" H 4850 2800 50  0001 C CNN
+	1    4850 2800
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VSS #PWR0102
+L NotCamera-rescue:VSS-power #PWR0102
 U 1 1 5D1A87FD
-P 1400 1600
-F 0 "#PWR0102" H 1400 1450 50  0001 C CNN
-F 1 "VSS" H 1418 1773 50  0000 C CNN
-F 2 "" H 1400 1600 50  0001 C CNN
-F 3 "" H 1400 1600 50  0001 C CNN
-	1    1400 1600
+P 4850 2300
+F 0 "#PWR0102" H 4850 2150 50  0001 C CNN
+F 1 "VSS" H 4868 2473 50  0000 C CNN
+F 2 "" H 4850 2300 50  0001 C CNN
+F 3 "" H 4850 2300 50  0001 C CNN
+	1    4850 2300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0103
+L NotCamera-rescue:+3V3-power #PWR0103
 U 1 1 5D1A87FE
 P 1100 7300
 F 0 "#PWR0103" H 1100 7150 50  0001 C CNN
@@ -59,7 +58,7 @@ F 3 "" H 1100 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0104
+L NotCamera-rescue:VCC-power #PWR0104
 U 1 1 5D1A87FF
 P 1550 7300
 F 0 "#PWR0104" H 1550 7150 50  0001 C CNN
@@ -70,7 +69,7 @@ F 3 "" H 1550 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VSS #PWR0105
+L NotCamera-rescue:VSS-power #PWR0105
 U 1 1 5CF30D17
 P 2000 7300
 F 0 "#PWR0105" H 2000 7150 50  0001 C CNN
@@ -81,7 +80,7 @@ F 3 "" H 2000 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0101
+L NotCamera-rescue:PWR_FLAG-power #FLG0101
 U 1 1 5CF31B19
 P 1100 7300
 F 0 "#FLG0101" H 1100 7375 50  0001 C CNN
@@ -92,7 +91,7 @@ F 3 "~" H 1100 7300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0102
+L NotCamera-rescue:PWR_FLAG-power #FLG0102
 U 1 1 5CF31DA6
 P 1550 7300
 F 0 "#FLG0102" H 1550 7375 50  0001 C CNN
@@ -103,7 +102,7 @@ F 3 "~" H 1550 7300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0103
+L NotCamera-rescue:PWR_FLAG-power #FLG0103
 U 1 1 5CF31EBB
 P 2000 7300
 F 0 "#FLG0103" H 2000 7375 50  0001 C CNN
@@ -113,46 +112,46 @@ F 3 "~" H 2000 7300 50  0001 C CNN
 	1    2000 7300
 	-1   0    0    1   
 $EndComp
-NoConn ~ 1500 1600
-NoConn ~ 1500 2100
-NoConn ~ 1600 2100
-NoConn ~ 1600 1600
+NoConn ~ 4950 2300
+NoConn ~ 4950 2800
+NoConn ~ 5050 2800
+NoConn ~ 5050 2300
 $Comp
-L Switch:SW_SPDT SW1
+L NotCamera-rescue:SW_SPDT-Switch SW1
 U 1 1 5CF4F32A
-P 1500 2950
-F 0 "SW1" H 1500 3235 50  0000 C CNN
-F 1 "SW_SPDT" H 1500 3144 50  0000 C CNN
-F 2 "BreadBoardPwr:SK-3296S_switch" H 1500 2950 50  0001 C CNN
-F 3 "~" H 1500 2950 50  0001 C CNN
-	1    1500 2950
+P 4950 3650
+F 0 "SW1" H 4950 3935 50  0000 C CNN
+F 1 "SW_SPDT" H 4950 3844 50  0000 C CNN
+F 2 "BreadBoardPwr:SK-3296S_switch" H 4950 3650 50  0001 C CNN
+F 3 "~" H 4950 3650 50  0001 C CNN
+	1    4950 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0106
+L NotCamera-rescue:+3V3-power #PWR0106
 U 1 1 5D1A8805
-P 1300 2950
-F 0 "#PWR0106" H 1300 2800 50  0001 C CNN
-F 1 "+3V3" V 1315 3078 50  0000 L CNN
-F 2 "" H 1300 2950 50  0001 C CNN
-F 3 "" H 1300 2950 50  0001 C CNN
-	1    1300 2950
+P 4750 3650
+F 0 "#PWR0106" H 4750 3500 50  0001 C CNN
+F 1 "+3V3" V 4765 3778 50  0000 L CNN
+F 2 "" H 4750 3650 50  0001 C CNN
+F 3 "" H 4750 3650 50  0001 C CNN
+	1    4750 3650
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #PWR0107
+L NotCamera-rescue:VCC-power #PWR0107
 U 1 1 5D1A8806
-P 1700 3050
-F 0 "#PWR0107" H 1700 2900 50  0001 C CNN
-F 1 "VCC" V 1717 3178 50  0000 L CNN
-F 2 "" H 1700 3050 50  0001 C CNN
-F 3 "" H 1700 3050 50  0001 C CNN
-	1    1700 3050
+P 5150 3750
+F 0 "#PWR0107" H 5150 3600 50  0001 C CNN
+F 1 "VCC" V 5167 3878 50  0000 L CNN
+F 2 "" H 5150 3750 50  0001 C CNN
+F 3 "" H 5150 3750 50  0001 C CNN
+	1    5150 3750
 	0    1    1    0   
 $EndComp
-NoConn ~ 1700 2850
+NoConn ~ 5150 3550
 $Comp
-L Device:Q_PNP_BCE Q1
+L NotCamera-rescue:Q_PNP_BCE-Device Q1
 U 1 1 5D15A376
 P 7450 2550
 F 0 "Q1" H 7641 2504 50  0000 L CNN
@@ -163,7 +162,7 @@ F 3 "~" H 7450 2550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Q_PNP_BCE Q2
+L NotCamera-rescue:Q_PNP_BCE-Device Q2
 U 1 1 5D15A6F6
 P 8450 2550
 F 0 "Q2" H 8640 2596 50  0000 L CNN
@@ -174,7 +173,7 @@ F 3 "~" H 8450 2550 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:CP_Small C1
+L NotCamera-rescue:CP_Small-Device C1
 U 1 1 5D15F29C
 P 7950 2800
 F 0 "C1" V 8175 2800 50  0000 C CNN
@@ -185,7 +184,7 @@ F 3 "~" H 7950 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:CP_Small C2
+L NotCamera-rescue:CP_Small-Device C2
 U 1 1 5D15FA0B
 P 7950 3000
 F 0 "C2" V 8050 3000 50  0000 C CNN
@@ -196,7 +195,7 @@ F 3 "~" H 7950 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:LED D1
+L NotCamera-rescue:LED-Device D1
 U 1 1 5D1613A2
 P 7350 3500
 F 0 "D1" V 7389 3383 50  0000 R CNN
@@ -207,7 +206,7 @@ F 3 "~" H 7350 3500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R1
+L NotCamera-rescue:R_Small-Device R1
 U 1 1 5D1622FC
 P 7350 3200
 F 0 "R1" H 7409 3246 50  0000 L CNN
@@ -218,7 +217,7 @@ F 3 "~" H 7350 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R2
+L NotCamera-rescue:R_Small-Device R2
 U 1 1 5D1625E1
 P 8550 3200
 F 0 "R2" H 8609 3246 50  0000 L CNN
@@ -235,7 +234,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 2150 8550 2150
 $Comp
-L power:VSS #PWR0108
+L NotCamera-rescue:VSS-power #PWR0108
 U 1 1 5D163A14
 P 6350 4000
 F 0 "#PWR0108" H 6350 3850 50  0001 C CNN
@@ -251,7 +250,7 @@ Connection ~ 7350 4000
 Wire Wire Line
 	7350 4000 7750 4000
 $Comp
-L Device:R_Small R3
+L NotCamera-rescue:R_Small-Device R3
 U 1 1 5D165EEE
 P 7750 3600
 F 0 "R3" H 7809 3646 50  0000 L CNN
@@ -262,7 +261,7 @@ F 3 "~" H 7750 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R4
+L NotCamera-rescue:R_Small-Device R4
 U 1 1 5D16646D
 P 8150 3600
 F 0 "R4" H 8209 3646 50  0000 L CNN
@@ -321,7 +320,7 @@ Wire Wire Line
 Wire Wire Line
 	8550 3300 8550 4000
 $Comp
-L power:VCC #PWR0109
+L NotCamera-rescue:VCC-power #PWR0109
 U 1 1 5D1BB464
 P 6350 2150
 F 0 "#PWR0109" H 6350 2000 50  0001 C CNN
