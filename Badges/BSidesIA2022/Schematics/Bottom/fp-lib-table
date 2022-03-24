@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "LayoutBottom")(type KiCad)(uri "$(KIPRJMOD)/LayoutBottom.pretty")(options "")(descr ""))
+)
