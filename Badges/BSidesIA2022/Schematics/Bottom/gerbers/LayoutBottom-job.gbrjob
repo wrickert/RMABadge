@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "(6.99.0-1239-g6d82490b59-dirty)"
     },
-    "CreationDate": "2022-03-22T11:17:59-05:00"
+    "CreationDate": "2022-03-26T15:26:58-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -14,19 +14,22 @@
       "Revision": "rev?"
     },
     "Size": {
-      "X": 127.5671,
-      "Y": 139.7784
+      "X": 70.0276,
+      "Y": 136.7644
     },
     "LayerNumber": 2,
-    "BoardThickness": 1.6,
+    "BoardThickness": 0.0,
     "Finish": "None"
   },
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
-      "TrackToTrack": 0.2
+      "PadToPad": 0.13,
+      "PadToTrack": 0.13,
+      "TrackToTrack": 0.13,
+      "MinLineWidth": 0.25,
+      "TrackToRegion": 0.508,
+      "RegionToRegion": 0.508
     }
   ],
   "FilesAttributes": [
@@ -38,6 +41,11 @@
     {
       "Path": "LayoutBottom-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "LayoutBottom-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
