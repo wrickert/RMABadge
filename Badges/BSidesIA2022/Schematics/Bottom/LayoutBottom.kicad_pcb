@@ -22828,7 +22828,7 @@
       (stroke (width 0.05) (type solid)) (layer "B.CrtYd") (tstamp 04c41233-12fb-4aef-8c1a-dcb237893292))
     (fp_arc (start 9.124695 -10.025305) (mid 9.595109 -10.339626) (end 10.15 -10.45)
       (stroke (width 0.05) (type solid)) (layer "B.CrtYd") (tstamp 1026e333-7177-4230-8e61-76e9148747d7))
-    (fp_arc (start 9.15 -10.05) (mid 8.840692 -9.798785) (end 8.524488 -9.556307)
+    (fp_arc (start 9.15 -10.05) (mid 8.840691 -9.798786) (end 8.524488 -9.556307)
       (stroke (width 0.05) (type solid)) (layer "B.CrtYd") (tstamp 16118b86-8e60-4d14-9a46-23fff50dff1a))
     (fp_arc (start 10.15 -10.45) (mid 12.412742 -9.512742) (end 13.35 -7.25)
       (stroke (width 0.05) (type solid)) (layer "B.CrtYd") (tstamp f463ca45-243f-4008-b691-ef338cd7061f))
