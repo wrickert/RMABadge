@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "DeauthBottom")(type KiCad)(uri "$(KIPRJMOD)/DeauthBottom.pretty")(options "")(descr ""))
+)
